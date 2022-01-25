@@ -1,0 +1,8 @@
+[
+  {
+    "id": "TextualJSONEditor",
+    "title": "TextualJSONEditor",
+    "panel": "panels/TextualJSONEditor/TextualJSONEditorPanel",
+    "DEBUG_ONLY": false
+  }
+]

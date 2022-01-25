@@ -1,0 +1,7 @@
+[
+  '/usr/local/bin/node',
+  '/var/lib/cwl/stgdbea7f71-ba7b-42e7-b2f5-393f6cec6ce4/test2.js',
+  '/var/lib/cwl/stge3820db8-29af-4e51-82fe-469f9cd13ef2/output-python.txt'
+]
+Some text for the next step.
+thats the one
