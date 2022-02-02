@@ -1,0 +1,40 @@
+{
+    "cwlVersion": "v1.2.0-dev1",
+    "class": "Workflow",
+    "inputs": {},
+    "outputs":{
+        "stdout":{
+            "type": "File",
+            "outputSource": "echo/stdout"
+        }
+    },
+    "requirements":{
+        "InitialWorkDirRequirement": {
+            "listing":[{
+                "class": "File",
+                "location": "./test1.py"
+            }]
+        }
+    },
+    "steps":{
+        "echo": {
+            "in":[],
+            "out":["stdout"],
+            "run":{
+                "class": "CommandLineTool",
+                "baseCommand":["echo","test1.py"],
+                "inputs":{},
+                "outputs":{
+                    "stdout": {
+                        "type": "File",
+                        "streamable": true,
+                        "outputBinding": {
+                          "glob": "std.out.txt"
+                        }
+                      }
+                },
+                "stdout":"std.out.txt"
+            }
+        }
+    }
+}

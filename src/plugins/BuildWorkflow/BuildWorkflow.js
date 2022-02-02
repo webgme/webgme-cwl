@@ -12,13 +12,19 @@ define([
     'text!./metadata.json',
     'plugin/PluginBase',
     'webgme-cwl/graph',
-    'q'
+    'webgme-cwl/naming',
+    'webgme-json/jsonFunctions',
+    'q',
+    'lodash'
 ], function (
     PluginConfig,
     pluginMetadata,
     PluginBase,
     Graph,
-    Q) {
+    NAMING,
+    JSONFunctions,
+    Q,
+    _) {
     'use strict';
 
     pluginMetadata = JSON.parse(pluginMetadata);
@@ -34,6 +40,7 @@ define([
         // Call base class' constructor.
         PluginBase.call(this);
         this.pluginMetadata = pluginMetadata;
+        console.log(_.isEqual);
     }
 
     /**
@@ -64,7 +71,7 @@ define([
         const activeNodePath = core.getPath(activeNode);
         const nodes = {};
         const allNodes = {};
-        const isSimpleStep = false;
+        let isSimpleStep = true;
 
         this.core.loadSubTree(activeNode)
         .then(allNodes_ => {
@@ -91,16 +98,11 @@ define([
             if (isSimpleStep) {
                 return partialResult;
             } else {
-                //we need to order steps and create the upper level step description
-                const graph = new Graph(core, nodes, META);
-                if (!graph.isDAG()) {
-                    throw new Error('cannot work with flows having loops!');
-                } 
-
-                stepOrder = graph.getStepOrder();
-
+                return this.processCompositeStep(nodes, partialResult);
+            }
         })
         .then(result => {
+            console.log(result);
             if (this.callDepth > 0) {
                 //invoked - we just create a message and put the result there
                 this.createMessage(this.activeNode, JSON.stringify(result));
@@ -111,9 +113,9 @@ define([
             }
         })
         .then(artifactHash => {
-            if(artifactHash) {
-                this.result.addArtifact(artifactHash);
-            }
+            // if(artifactHash) {
+            //     this.result.addArtifact(artifactHash);
+            // }
             this.result.setSuccess(true);
             callback(null, this.result);
         })
@@ -124,34 +126,56 @@ define([
     };
 
     BuildWorkflow.prototype.buildSimpleStep = function(nodes) {
+        const core = this.core;
         const node = this.activeNode;
         const code = eval(core.getAttribute(node, 'exportCode') || '() => {return {}; }');
         const template = core.getAttribute(node, 'exportTemplate') || null;
+        const result =  code({
+            plugin: this, 
+            nodes: nodes, 
+            template: template, 
+            logger: this.logger.fork('Step[' + core.getAttribute(node, 'name') + ']'), 
+            Q: Q,
+            jsonFunctions: JSONFunctions
+        });
 
-        const returnValue = code(this.core, nodes, this.META, template, this.logger.fork('Step[' + core.getAttribute(node, 'name') + ']'));
-        return Q(returnValue);
+        let hasStepItem = false;
+        result.forEach(resultItem => {
+            if (resultItem.type === 'step') {
+                hasStepItem = true;
+            } else if (resultItem.type === 'data') {
+                resultItem.needsProcessing = true;
+            }
+        });
+
+        if (!hasStepItem) {
+            this.logger.error('Step item was not created!!!');
+        }
+
+        return result;
     };
 
     BuildWorkflow.prototype.buildCompositeStep = function(nodes) {
         const deferred = Q.defer();
+        const activeNode = this.activeNode;
         const core = this.core;
         const META = this.META;
         const subSteps = [];
-        const returnValue = {subSteps:{}};
+        let returnValue = [];
         const promises = [];
 
         core.getChildrenPaths(activeNode).forEach(path => {
             if (core.isInstanceOf(nodes[path], META['Step'])) {
                 subSteps.push(core.getAttribute(nodes[path], 'name'));
                 const context = {namespace:'', activeNode:nodes[path], activeSelection:[], pluginConfig:{}};
-                promises.push(this.invokePlugin(this.metadata.id, context));
+                promises.push(this.invokePlugin(this.pluginMetadata.id, context));
             }
         });
 
         Q.all(promises)
         .then(results => {
-            results.forEach(result, index => {
-                returnValue.subSteps[subSteps[index]] = JSON.parse(result.getCommitMessages()[0].message);
+            results.forEach(result => {
+                returnValue = returnValue.concat(JSON.parse(result.messages[0].message));
             });
             deferred.resolve(returnValue);
         })
@@ -160,10 +184,120 @@ define([
         return deferred.promise;
     };
 
-    BuildWorkflow.prototype.createArtifact = function(cwlObject) {
+    BuildWorkflow.prototype.createArtifact = function(files) {
         const artifact = {};
+        const guid = this.core.getGuid(this.activeNode);
+        const stepFileName = NAMING.getCwlFileName(guid);
+        const realFileName = this.core.getAttribute(this.activeNode, 'name') + '.cwl';
+        //The first element is the main workflow, here we can add the input directory requirement
+        //TODO - right now it simply stages the full input directory... we might want to filter things
+        const mainCwlWorkflow = JSON.parse(files[0].content);
 
-        return null;
+        mainCwlWorkflow.requirements = mainCwlWorkflow.requirements || {};
+        mainCwlWorkflow.requirements.InitialWorkDirRequirement = {
+            listing:[]
+        };
+        files.forEach(fileEntry => {
+            if (fileEntry.type === 'data') {
+                mainCwlWorkflow.requirements.InitialWorkDirRequirement.listing.push({
+                    class: 'File',
+                    location: fileEntry.name 
+                });
+            }
+        });
+        files[0].content = JSON.stringify(mainCwlWorkflow, null, 2);
+        
+        files.forEach(fileEntry => {
+            if (fileEntry.type === 'step' && fileEntry.name === stepFileName) {
+                artifact[realFileName] = fileEntry.content;
+            } else {
+                artifact[fileEntry.name] = fileEntry.content;
+            }
+        });
+
+        return this.addArtifact(this.core.getAttribute(this.activeNode, 'name'), artifact);
+    };
+
+    BuildWorkflow.prototype.processCompositeStep = function(nodes, results) {
+        const core = this.core;
+        const META = this.META;
+        const mainNode = this.activeNode;
+        const cwlObject = {
+            cwlVersion: "v1.1",
+            class: "Workflow",
+            inputs: {},
+            outputs: {},
+            steps: {}
+        };
+        const configInputs = {};
+
+        results.forEach(resultItem => {
+            if (resultItem.type === 'config') {
+                configInputs[resultItem.path] = resultItem.name;
+            }
+        });
+
+        core.getChildrenPaths(mainNode).forEach(childPath => {
+            const node = nodes[childPath];
+            if (core.isInstanceOf(node, META['Input'])) {
+                if (core.isInstanceOf(node, META['FileInput'])) {
+                    cwlObject.inputs[core.getAttribute(node, 'name')] = 'File';
+                } else if (core.isInstanceOf(node, META['StringInput'])) {
+                    cwlObject.inputs[core.getAttribute(node, 'name')] = 'string';
+                } else { //default is Number input
+                    cwlObject.inputs[core.getAttribute(node, 'name')] = 'double';
+                }
+            } else if (core.isInstanceOf(node, META['Output'])) {
+                if (core.isInstanceOf(node, META['FileOutput'])) {
+                    cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'File'};
+                } else if (core.isInstanceOf(node, META['StringOutput'])) {
+                    cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'string'};
+                } else { //default is Number input
+                    cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'double'};
+                }
+            } else if (core.isInstanceOf(node, META['Step'])) {
+                let name = core.getAttribute(node, 'name');
+                cwlObject.steps[name] = cwlObject.steps[name] || {
+                    run: NAMING.getCwlFileName(core.getGuid(node)),
+                    in: {},
+                    out: []
+                };
+            } 
+        });
+
+        //second round deals with flows (data-links)
+        core.getChildrenPaths(mainNode).forEach(childPath => {
+            const node = nodes[childPath];
+            if (core.isInstanceOf(node, META['Flow'])) {
+                const src = nodes[core.getPointerPath(node, 'src')];
+                const dst = nodes[core.getPointerPath(node, 'dst')];
+                const srcStep = core.getParent(src);
+                const dstStep = core.getParent(dst);
+                const srcStepName = core.getAttribute(srcStep, 'name');
+                const dstStepName = core.getAttribute(dstStep, 'name');
+
+                if (core.getPath(srcStep) === core.getPath(mainNode) &&
+                    core.getPath(dstStep) === core.getPath(mainNode)) {
+                    //passthrough
+                    cwlObject.outputs[core.getAttribute(dst, 'name')].outputSource = core.getAttribute(src, 'name');
+
+                } else if (core.getPath(srcStep) === core.getPath(mainNode)) {
+                    //input feed
+                    cwlObject.steps[dstStepName].in[core.getAttribute(dst, 'name')] = core.getAttribute(src, 'name');
+                } else if (core.getPath(dstStep) === core.getPath(mainNode)) {
+                    //output sourcing
+                    cwlObject.outputs[core.getAttribute(dst, 'name')].outputSource = srcStepName + '/' + core.getAttribute(src, 'name');
+                    cwlObject.steps[srcStepName].out.push(core.getAttribute(src, 'name'));
+                } else {
+                    //data transfer between steps
+                    cwlObject.steps[srcStepName].out.push(core.getAttribute(src, 'name'));
+                    cwlObject.steps[dstStepName].in[core.getAttribute(dst, 'name')] = srcStepName + '/' + core.getAttribute(src, 'name');
+                }
+            }
+        });
+
+        results.unshift({name:NAMING.getCwlFileName(core.getGuid(mainNode)), type:'step', content: JSON.stringify(cwlObject, null, 2)});
+        return results;
     };
 
     return BuildWorkflow;

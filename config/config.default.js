@@ -9,6 +9,7 @@ var config = require('./config.webgme'),
 
 //for the monaco-editor
 config.requirejsPaths['vs'] = './node_modules/monaco-editor/min/vs';
+config.requirejsPaths['lodash'] = './node_modules/lodash-amd/main';
 config.core.overlayShardSize = 100000;
 
 validateConfig(config);

@@ -2,15 +2,15 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: python
+baseCommand: [python, test1.py]
 hints:
   DockerRequirement:
     dockerPull: python
+requirements:
+  InitialWorkDirRequirement:
+    listing:
+      - ./test1.py
 inputs:
-  src:
-    type: File
-    inputBinding:
-        position: 1
   text:
     type: string
     inputBinding:

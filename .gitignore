@@ -35,3 +35,6 @@ blob-local-storage/
 
 # dont store package cache file
 package-lock.json
+
+# dont store manual tries
+test/manual/tries

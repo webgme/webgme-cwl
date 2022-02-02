@@ -1,0 +1,35 @@
+{
+    "cwlVersion": "v1.1",
+    "class": "Workflow",
+    "inputs":
+    {
+        "additional_line": "string",
+        "py_source": "File",
+        "js_source": "File"
+    },
+    "outputs":
+    {
+        "js_output":{
+            "type": "File",
+            "outputSource": "js/st_out"
+        }
+    },
+    "steps": {
+        "python": {
+            "run":"docker-python.cwl",
+            "in": {
+                "text": "additional_line",
+                "src": "py_source"
+            },
+            "out": ["file_out"]
+        },
+        "js": {
+            "run":"docker-js.cwl",
+            "in":{
+                "src": "js_source",
+                "text": "python/file_out"
+            },
+            "out": ["st_out"]
+        }
+    }
+}

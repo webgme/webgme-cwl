@@ -3,9 +3,13 @@
 cwlVersion: v1.0
 class: Workflow
 inputs:
-  additional_line: string
-  py_source: File
-  js_source: File
+  additional_line: 
+    type: string
+    default: "fixed string"
+  something:
+    type: File
+    streamable: true
+    location: ./test1.py
 
 outputs:
   js_output:
@@ -17,12 +21,10 @@ steps:
     run: docker-python.cwl
     in:
       text: additional_line
-      src: py_source
     out: [file_out]
 
   js:
     run: docker-js.cwl
     in:
-      src: js_source
       text: python/file_out
     out: [st_out]

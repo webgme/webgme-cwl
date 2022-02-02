@@ -1,7 +1,7 @@
 [
   '/usr/local/bin/node',
-  '/var/lib/cwl/stgdbea7f71-ba7b-42e7-b2f5-393f6cec6ce4/test2.js',
-  '/var/lib/cwl/stge3820db8-29af-4e51-82fe-469f9cd13ef2/output-python.txt'
+  '/var/lib/cwl/stgb975e554-0a20-4bea-98fb-5d567a56e8f8/test2.js',
+  '/var/lib/cwl/stgc240029c-6702-4056-bb7e-d8658f04c478/output-python.txt'
 ]
 Some text for the next step.
-thats the one
+fck
