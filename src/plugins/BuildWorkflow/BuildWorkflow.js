@@ -81,7 +81,7 @@ define([
                 allNodes[path] = node;
                 if (directChildrenPaths.indexOf(path) !== -1 ||
                 directChildrenPaths.indexOf(core.getPath(core.getParent(node))) !== -1) {
-                    if (core.isInstanceOf(node, META['Step'])) {
+                    if (core.isInstanceOf(node, META['Workflow'])) {
                         isSimpleStep = false;
                     }
                     nodes[path] = node;
@@ -242,8 +242,18 @@ define([
             if (core.isInstanceOf(node, META['Input'])) {
                 if (core.isInstanceOf(node, META['FileInput'])) {
                     cwlObject.inputs[core.getAttribute(node, 'name')] = 'File';
+                } else if (core.isInstanceOf(node, META['DirectoryInput'])) {
+                    cwlObject.inputs[core.getAttribute(node, 'name')] = 'Directory';
                 } else if (core.isInstanceOf(node, META['StringInput'])) {
-                    cwlObject.inputs[core.getAttribute(node, 'name')] = 'string';
+                    const value = core.getAttribute(node, 'value');
+                    if(value) {
+                        cwlObject.inputs[core.getAttribute(node, 'name')] = {
+                            type: 'string',
+                            default: value
+                        };
+                    } else {
+                        cwlObject.inputs[core.getAttribute(node, 'name')] = 'string';
+                    }
                 } else { //default is Number input
                     cwlObject.inputs[core.getAttribute(node, 'name')] = 'double';
                 }
@@ -252,6 +262,8 @@ define([
                     cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'File'};
                 } else if (core.isInstanceOf(node, META['StringOutput'])) {
                     cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'string'};
+                } else if (core.isInstanceOf(node, META['DirectoryOutput'])) {
+                        cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'Directory'};
                 } else { //default is Number input
                     cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'double'};
                 }

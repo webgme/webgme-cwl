@@ -37,4 +37,4 @@ blob-local-storage/
 package-lock.json
 
 # dont store manual tries
-test/manual/tries
+test/manual
