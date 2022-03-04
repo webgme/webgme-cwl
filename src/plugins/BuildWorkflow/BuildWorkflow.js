@@ -73,6 +73,9 @@ define([
         const allNodes = {};
         let isSimpleStep = true;
 
+        if (core.isInstanceOf(activeNode, META['Workflow'])) {
+            isSimpleStep = false;
+        }
         this.core.loadSubTree(activeNode)
         .then(allNodes_ => {
             const directChildrenPaths = core.getChildrenPaths(activeNode);
@@ -81,9 +84,6 @@ define([
                 allNodes[path] = node;
                 if (directChildrenPaths.indexOf(path) !== -1 ||
                 directChildrenPaths.indexOf(core.getPath(core.getParent(node))) !== -1) {
-                    if (core.isInstanceOf(node, META['Workflow'])) {
-                        isSimpleStep = false;
-                    }
                     nodes[path] = node;
                 }
             });
@@ -165,7 +165,7 @@ define([
         const promises = [];
 
         core.getChildrenPaths(activeNode).forEach(path => {
-            if (core.isInstanceOf(nodes[path], META['Step'])) {
+            if (core.isInstanceOf(nodes[path], META['Step']) || core.isInstanceOf(nodes[path], META['Workflow'])) {
                 subSteps.push(core.getAttribute(nodes[path], 'name'));
                 const context = {namespace:'', activeNode:nodes[path], activeSelection:[], pluginConfig:{}};
                 promises.push(this.invokePlugin(this.pluginMetadata.id, context));
