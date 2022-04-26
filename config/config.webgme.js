@@ -14,6 +14,7 @@ config.seedProjects.basePaths.push(__dirname + '/../src/seeds/CWL');
 
 
 config.visualization.panelPaths.push(__dirname + '/../node_modules/webgme-json/src/visualizers/panels');
+config.visualization.panelPaths.push(__dirname + '/../src/visualizers/panels');
 
 
 

@@ -4,5 +4,11 @@
     "title": "TextualJSONEditor",
     "panel": "panels/TextualJSONEditor/TextualJSONEditorPanel",
     "DEBUG_ONLY": false
+  },
+  {
+    "id": "CommonWorkflowEditor",
+    "title": "CommonWorkflowEditor",
+    "panel": "panels/CommonWorkflowEditor/CommonWorkflowEditorPanel",
+    "DEBUG_ONLY": false
   }
 ]

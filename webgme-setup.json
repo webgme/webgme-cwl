@@ -1,6 +1,14 @@
 {
   "components": {
-    "visualizers": {},
+    "visualizers": {
+      "CommonWorkflowEditor": {
+        "src": "panels/CommonWorkflowEditor/CommonWorkflowEditorPanel",
+        "title": "CommonWorkflowEditor",
+        "panel": "src/visualizers/panels/CommonWorkflowEditor",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/CommonWorkflowEditor"
+      }
+    },
     "addons": {},
     "decorators": {},
     "layouts": {},

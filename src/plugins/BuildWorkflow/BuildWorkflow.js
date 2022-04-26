@@ -13,6 +13,7 @@ define([
     'plugin/PluginBase',
     'webgme-cwl/graph',
     'webgme-cwl/naming',
+    'webgme-cwl/step',
     'webgme-json/jsonFunctions',
     'q',
     'lodash'
@@ -22,6 +23,7 @@ define([
     PluginBase,
     Graph,
     NAMING,
+    StepHelper,
     JSONFunctions,
     Q,
     _) {
@@ -73,6 +75,7 @@ define([
         const allNodes = {};
         let isSimpleStep = true;
 
+        this._stepHelper = null;
         if (core.isInstanceOf(activeNode, META['Workflow'])) {
             isSimpleStep = false;
         }
@@ -87,6 +90,7 @@ define([
                     nodes[path] = node;
                 }
             });
+            this._stepHelper = new StepHelper(core, META, allNodes, this.logger);
 
             if (isSimpleStep) {
                 return this.buildSimpleStep(allNodes);
@@ -139,7 +143,7 @@ define([
             jsonFunctions: JSONFunctions
         });
 
-        let hasStepItem = false;
+        /*let hasStepItem = false;
         result.forEach(resultItem => {
             if (resultItem.type === 'step') {
                 hasStepItem = true;
@@ -150,7 +154,7 @@ define([
 
         if (!hasStepItem) {
             this.logger.error('Step item was not created!!!');
-        }
+        }*/
 
         return result;
     };
@@ -184,7 +188,7 @@ define([
         return deferred.promise;
     };
 
-    BuildWorkflow.prototype.createArtifact = function(files) {
+    BuildWorkflow.prototype.createArtifact_ = function(files) {
         const artifact = {};
         const guid = this.core.getGuid(this.activeNode);
         const stepFileName = NAMING.getCwlFileName(guid);
@@ -218,10 +222,66 @@ define([
         return this.addArtifact(this.core.getAttribute(this.activeNode, 'name'), artifact);
     };
 
+    BuildWorkflow.prototype.createArtifact = function(files) {
+        const deferred = Q.defer();
+        const artifactName = this.core.getAttribute(this.activeNode, 'name'); 
+        const artifact = this.blobClient.createArtifact(artifactName);
+        const guid = this.core.getGuid(this.activeNode);
+        const stepFileName = NAMING.getCwlFileName(guid);
+        const realFileName = this.core.getAttribute(this.activeNode, 'name') + '.cwl';
+        const mainCwlWorkflow = JSON.parse(files[0].content);
+        const promises = [];
+
+        mainCwlWorkflow.requirements = mainCwlWorkflow.requirements || {};
+        mainCwlWorkflow.requirements.InitialWorkDirRequirement = {
+            listing:[]
+        };
+        files.forEach(fileEntry => {
+            if (fileEntry.type === 'data' || fileEntry.type === 'artifact') {
+                mainCwlWorkflow.requirements.InitialWorkDirRequirement.listing.push({
+                    class: 'File',
+                    location: fileEntry.name 
+                });
+            }
+        });
+        files[0].content = JSON.stringify(mainCwlWorkflow, null, 2);
+        let runContent = "#!/bin/bash\ncwltool --no-match-user "+ realFileName;
+        this._configuration = this._configuration || {};
+        Object.keys(this._configuration).forEach((key) =>{
+            runContent+=" --" + key + " " + this._configuration[key];
+        });
+        files.unshift({
+            name:'run.sh',
+            content: runContent
+        });
+        files.forEach(fileEntry => {
+            if (fileEntry.type === 'step' && fileEntry.name === stepFileName) {
+                promises.push(artifact.addFile(realFileName, fileEntry.content));
+            } else if (fileEntry.type === 'artifact') {
+                promises.push(artifact.addMetadataHash(fileEntry.name, fileEntry.content));
+            } else {
+                promises.push(artifact.addFile(fileEntry.name, fileEntry.content));
+            }
+        });
+
+        Q.all(promises)
+        .then(results => {
+            return artifact.save();
+        })
+        .then(artifactHash => {
+            this.result.addArtifact(artifactHash);
+            deferred.resolve(artifactHash);
+        })
+        .catch(deferred.reject);
+
+        return deferred.promise;
+    };
+
     BuildWorkflow.prototype.processCompositeStep = function(nodes, results) {
         const core = this.core;
         const META = this.META;
         const mainNode = this.activeNode;
+        let noIncoming = false;
         const cwlObject = {
             cwlVersion: "v1.1",
             class: "Workflow",
@@ -239,9 +299,28 @@ define([
 
         core.getChildrenPaths(mainNode).forEach(childPath => {
             const node = nodes[childPath];
+            if (core.getCollectionPaths(node, 'dst').length === 0) {
+                noIncoming = true;
+            }
+
             if (core.isInstanceOf(node, META['Input'])) {
                 if (core.isInstanceOf(node, META['FileInput'])) {
                     cwlObject.inputs[core.getAttribute(node, 'name')] = 'File';
+                    const value = core.getAttribute(node, 'value');
+                    if(value && noIncoming && this.callDepth === 0) {
+                        //We have to store the value among the artifacts of the workflow
+                        let outconfig = this._stepHelper.getNodeConfig(node);
+                        const name = outconfig.glob || outconfig.location || 'my_file.res';
+                        const inputFileItem = {
+                            name: name,
+                            content: value,
+                            type: 'artifact'
+                        };
+                        this._configuration = this._configuration || {};
+                        this._configuration[core.getAttribute(node, 'name')] = name; 
+                        results.unshift(inputFileItem);
+                    } 
+                    
                 } else if (core.isInstanceOf(node, META['DirectoryInput'])) {
                     cwlObject.inputs[core.getAttribute(node, 'name')] = 'Directory';
                 } else if (core.isInstanceOf(node, META['StringInput'])) {
