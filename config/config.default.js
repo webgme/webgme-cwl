@@ -10,6 +10,7 @@ var config = require('./config.webgme'),
 //for the monaco-editor
 config.requirejsPaths['vs'] = './node_modules/monaco-editor/min/vs';
 config.requirejsPaths['lodash'] = './node_modules/lodash-amd/main';
+config.requirejsPaths['ansi-up'] = './node_modules/ansi_up/ansi_up';
 config.core.overlayShardSize = 100000;
 
 validateConfig(config);

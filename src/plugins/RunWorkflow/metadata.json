@@ -1,0 +1,16 @@
+{
+  "id": "RunWorkflow",
+  "name": "RunWorkflow",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-dashboard",
+    "src": ""
+  },
+  "configWidget": "plugin/RunWorkflow/RunWorkflow/config",
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": true,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": []
+}

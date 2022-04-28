@@ -1,0 +1,105 @@
+/*
+ * Copyright (C) 2013 Vanderbilt University, All rights reserved.
+ * 
+ * Author: Robert Kereskenyi
+ */
+ .run-workflow-dialog .modal-header img.plugin-icon {
+    width: 28px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .run-workflow-dialog .modal-header i.plugin-icon {
+    font-size: 28px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .run-workflow-dialog .modal-body {
+    background-color: lightseagreen;
+    margin: 10px;
+    border-radius: 6px;
+    overflow: scroll;
+  }
+  .run-workflow-dialog .modal-body .global-and-plugin-divider {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .run-workflow-dialog .modal-body .dependency-title {
+    color: grey;
+    font-style: italic;
+    position: relative;
+  }
+  .run-workflow-dialog .plugin-config-details {
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    color: #363636;
+    margin: 5px;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .run-workflow-dialog .plugin-config-details .plugin-config-header-button {
+      margin: 0 5%;
+  }
+
+  .run-workflow-dialog .modal-footer {
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .run-workflow-dialog .form-group {
+    margin-bottom: 10px;
+  }
+  .run-workflow-dialog .form-group .row {
+    margin: 0 0;
+  }
+  .run-workflow-dialog .form-group .controls .widget span {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+  }
+  .run-workflow-dialog .form-group .controls .widget .iCheckBox {
+    margin-top: 6px;
+  }
+  .run-workflow-dialog .form-group .controls .widget div.color-picker {
+    height: 30px;
+    width: 100%;
+    margin-top: 0;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .run-workflow-dialog .form-group .controls .widget div.asset-widget {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin-top: 0;
+  }
+  .run-workflow-dialog .form-group .controls .widget div.asset-widget .btn-dialog-open {
+    padding: 3px;
+  }
+  .run-workflow-dialog .form-group .controls .widget input[type=text] {
+    width: 100%;
+    padding: 0.5ex;
+  }
+  .run-workflow-dialog .form-group div.desc {
+    font-size: 0.9em;
+    color: #444;
+  }
+
+  .run-workflow-dialog p {
+    margin: 2px 0px 2px 10px;
+  }
+  .run-workflow-dialog .stdout-line {
+    color: green;
+  }
+
+  .run-workflow-dialog .stderr-line {
+    color: yellowgreen;
+  }
+  
+  .run-workflow-dialog .code-line {
+    color: goldenrod;
+  }
+  /*# sourceMappingURL=PluginConfigDialog.css.map */
+  

@@ -16,6 +16,10 @@
       "BuildWorkflow": {
         "src": "src/plugins/BuildWorkflow",
         "test": "test/plugins/BuildWorkflow"
+      },
+      "RunWorkflow": {
+        "src": "src/plugins/RunWorkflow",
+        "test": "test/plugins/RunWorkflow"
       }
     },
     "routers": {},

@@ -42,7 +42,7 @@ define([
         // Call base class' constructor.
         PluginBase.call(this);
         this.pluginMetadata = pluginMetadata;
-        console.log(_.isEqual);
+        // console.log(_.isEqual);
     }
 
     /**
@@ -73,8 +73,12 @@ define([
         const activeNodePath = core.getPath(activeNode);
         const nodes = {};
         const allNodes = {};
+        const currentConfig = this.getCurrentConfig();
+        const saveDirectory = currentConfig.saveToDir ? currentConfig.savePath : null;
+        this._exitDepth = currentConfig.exitDepth || 0;
         let isSimpleStep = true;
 
+        console.log(this.callDepth, currentConfig);
         this._stepHelper = null;
         if (core.isInstanceOf(activeNode, META['Workflow'])) {
             isSimpleStep = false;
@@ -106,14 +110,14 @@ define([
             }
         })
         .then(result => {
-            console.log(result);
-            if (this.callDepth > 0) {
+            // console.log(result);
+            if (this.callDepth > this._exitDepth) {
                 //invoked - we just create a message and put the result there
                 this.createMessage(this.activeNode, JSON.stringify(result));
                 return Q(null);
             } else {
                 //we are the uppermost step, so we need to make all the artifacts...
-                return this.createArtifact(result);
+                return this.createArtifact(result, saveDirectory);
             }
         })
         .then(artifactHash => {
@@ -222,7 +226,32 @@ define([
         return this.addArtifact(this.core.getAttribute(this.activeNode, 'name'), artifact);
     };
 
-    BuildWorkflow.prototype.createArtifact = function(files) {
+    BuildWorkflow.prototype._saveArtifactToFile = function(fs, path, metadataHash) {
+        const deferred = Q.defer();
+        const writeStream = fs.createWriteStream(path);
+        writeStream.on('error', deferred.reject);
+        writeStream.on('finish', deferred.resolve);
+        this.blobClient.getStreamObject(metadataHash, writeStream);
+        return deferred.promise;
+    };
+
+    BuildWorkflow.prototype._saveContentToFile = function(fs, path, content, executable) {
+        const deferred = Q.defer();
+        const options = {};
+
+        if (executable) {
+            options.mode = 0o777;
+        }
+        fs.writeFile(path, content, options, err => {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(null);
+            }
+        });
+        return deferred.promise;
+    };
+    BuildWorkflow.prototype.createArtifact = function(files, saveDirectory) {
         const deferred = Q.defer();
         const artifactName = this.core.getAttribute(this.activeNode, 'name'); 
         const artifact = this.blobClient.createArtifact(artifactName);
@@ -231,6 +260,10 @@ define([
         const realFileName = this.core.getAttribute(this.activeNode, 'name') + '.cwl';
         const mainCwlWorkflow = JSON.parse(files[0].content);
         const promises = [];
+        let fs = null;
+        if (saveDirectory) {
+            fs = require('fs');
+        }
 
         mainCwlWorkflow.requirements = mainCwlWorkflow.requirements || {};
         mainCwlWorkflow.requirements.InitialWorkDirRequirement = {
@@ -255,12 +288,24 @@ define([
             content: runContent
         });
         files.forEach(fileEntry => {
-            if (fileEntry.type === 'step' && fileEntry.name === stepFileName) {
-                promises.push(artifact.addFile(realFileName, fileEntry.content));
-            } else if (fileEntry.type === 'artifact') {
-                promises.push(artifact.addMetadataHash(fileEntry.name, fileEntry.content));
+            if (saveDirectory) {
+                if (fileEntry.name === 'run.sh') {
+                    promises.push(this._saveContentToFile(fs, saveDirectory + '/' + fileEntry.name, fileEntry.content, true));
+                } else if (fileEntry.type === 'step' && fileEntry.name === stepFileName) {
+                    promises.push(this._saveContentToFile(fs, saveDirectory + '/' + realFileName, fileEntry.content, false));
+                } else if (fileEntry.type === 'artifact') {
+                    promises.push(this._saveArtifactToFile(fs, saveDirectory + '/' + fileEntry.name, fileEntry.content));
+                } else {
+                    promises.push(this._saveContentToFile(fs, saveDirectory + '/' + fileEntry.name, fileEntry.content, false));
+                }
             } else {
-                promises.push(artifact.addFile(fileEntry.name, fileEntry.content));
+                if (fileEntry.type === 'step' && fileEntry.name === stepFileName) {
+                    promises.push(artifact.addFile(realFileName, fileEntry.content));
+                } else if (fileEntry.type === 'artifact') {
+                    promises.push(artifact.addMetadataHash(fileEntry.name, fileEntry.content));
+                } else {
+                    promises.push(artifact.addFile(fileEntry.name, fileEntry.content));
+                }
             }
         });
 

@@ -18,6 +18,7 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
+    "ansi_up": "^5.1.0",
     "lodash-amd": "^4.17.15",
     "reaflow": "^4.2.16",
     "webgme": "webgme/webgme#azure",
