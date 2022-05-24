@@ -278,7 +278,7 @@ define([
             }
         });
         files[0].content = JSON.stringify(mainCwlWorkflow, null, 2);
-        let runContent = "#!/bin/bash\ncwltool --no-match-user "+ realFileName;
+        let runContent = "#!/bin/bash\ncwltool --no-match-user --no-read-only "+ realFileName;
         this._configuration = this._configuration || {};
         Object.keys(this._configuration).forEach((key) =>{
             runContent+=" --" + key + " " + this._configuration[key];
