@@ -22,7 +22,8 @@
     "lodash-amd": "^4.17.15",
     "reaflow": "^4.2.16",
     "webgme": "webgme/webgme#azure",
-    "webgme-json": "github:webgme/webgme-json"
+    "webgme-json": "github:webgme/webgme-json",
+    "zip-a-folder": "^1.1.3"
   },
   "description": "First, install the webgme-cwl following: - [NodeJS](https://nodejs.org/en/) (LTS recommended) - [MongoDB](https://www.mongodb.com/)",
   "main": "app.js",

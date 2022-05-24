@@ -70,9 +70,24 @@ define([
         const self = this;
         const logger = self.logger;
         const nodeObject = self.activeNode;
-        const saveDirectory = './OUTPUT/' + makeid()  //TODO how to properly set this and create a temporary directory
+        const executionId = makeid();
+        const resultId = executionId +'_result.zip';
+        const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
         const fs = require('fs');
+        const zip = require('zip-a-folder').zip;
+        const COMPRESSION_LEVEL = require('zip-a-folder').COMPRESSION_LEVEL;
+        const currentConfig = self.getCurrentConfig();
+        const consoleOutput = '';
         
+        async function ZipFolder (folderPath, output, callback) {
+            try {
+                await zip(folderPath, output, {compression:COMPRESSION_LEVEL.medium});
+                callback(null);
+            } catch (e) {
+                callback(e);
+            }
+        }
+
         fs.mkdir(saveDirectory, err=> {
             if (err) {
                 callback(new Error('cannot create execution directory'), this.result);
@@ -86,19 +101,40 @@ define([
                     child.stdout.setEncoding('utf8');
                     child.stdout.on('data', data => {
                         this.sendNotification(JSON.stringify({type:'stdout', message:data}));
+                        if (currentConfig.saveOutput) {
+                            consoleOutput += data;
+                        }
                     });
                     child.stderr.setEncoding('utf8');
                     child.stderr.on('data', data => {
                         this.sendNotification(JSON.stringify({type:'stderr', message:data}));
+                        if (currentConfig.saveOutput) {
+                            consoleOutput += data;
+                        }
                     });
                     child.on('close', code => {
                         //TODO maybe we want additional message here, but for now it is too much pain
                         // const message = '\u001b[1;41mExecution finished with code: \u001b[34m' + code + '\u001b[0';
                         // this.sendNotification(JSON.stringify({type:'code', message:message}));
+                        console.log('CODE:', code);
                         if (code === 0) {
                             self.result.setSuccess(true);
+                            //going through the directory recursively and put the files into an artifact
+                            console.log('start');
+                            ZipFolder(saveDirectory, './OUTPUT/' + resultId, (err) => {
+                                console.log('are we done???', err);
+                                fs.rmdir(saveDirectory,{recursive:true}, (err) => {
+                                    if (err) {
+                                        self.result.setSuccess(false);
+                                    }
+                                    callback(err, self.result);
+                                });
+                                callback(null, self.result);
+                            });
+                            console.log('finished');
+                        } else {
+                            callback(null, self.result);
                         }
-                        callback(null, self.result);
                     });
                 });
             }

@@ -79,6 +79,7 @@
             innerText = innerText.replace(/\n/g,'<br/>').replace(/\t/g, '&nbsp;&nbsp;');
             pElement.innerHTML = innerText;
             modalConsole.append(pElement);
+            modalConsole.scrollTop = modalConsole.scrollHeight;
         };
         const finishedEventFunction = (_client, event) => {
             this._client.removeEventListener(this._client.CONSTANTS.PLUGIN_FINISHED, finishedEventFunction);
