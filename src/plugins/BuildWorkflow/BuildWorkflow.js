@@ -402,6 +402,7 @@ define([
         });
 
         //second round deals with flows (data-links)
+        const sources = {};
         core.getChildrenPaths(mainNode).forEach(childPath => {
             const node = nodes[childPath];
             if (core.isInstanceOf(node, META['Flow'])) {
@@ -411,9 +412,11 @@ define([
                 const dstStep = core.getParent(dst);
                 const srcStepName = core.getAttribute(srcStep, 'name');
                 const dstStepName = core.getAttribute(dstStep, 'name');
+                const oldSource = sources[core.getPath(src)] === true;
+                sources[core.getPath(src)] = true;
 
                 if (core.getPath(srcStep) === core.getPath(mainNode) &&
-                    core.getPath(dstStep) === core.getPath(mainNode)) {
+                    core.getPath(dstStep) === core.getPath(mainNode) && !oldSource) {
                     //passthrough
                     cwlObject.outputs[core.getAttribute(dst, 'name')].outputSource = core.getAttribute(src, 'name');
 
@@ -422,11 +425,15 @@ define([
                     cwlObject.steps[dstStepName].in[core.getAttribute(dst, 'name')] = core.getAttribute(src, 'name');
                 } else if (core.getPath(dstStep) === core.getPath(mainNode)) {
                     //output sourcing
-                    cwlObject.outputs[core.getAttribute(dst, 'name')].outputSource = srcStepName + '/' + core.getAttribute(src, 'name');
-                    cwlObject.steps[srcStepName].out.push(core.getAttribute(src, 'name'));
+                    if(!oldSource) {
+                        cwlObject.outputs[core.getAttribute(dst, 'name')].outputSource = srcStepName + '/' + core.getAttribute(src, 'name');
+                        cwlObject.steps[srcStepName].out.push(core.getAttribute(src, 'name'));
+                    }
                 } else {
                     //data transfer between steps
-                    cwlObject.steps[srcStepName].out.push(core.getAttribute(src, 'name'));
+                    if (!oldSource) {
+                        cwlObject.steps[srcStepName].out.push(core.getAttribute(src, 'name'));
+                    }
                     cwlObject.steps[dstStepName].in[core.getAttribute(dst, 'name')] = srcStepName + '/' + core.getAttribute(src, 'name');
                 }
             }

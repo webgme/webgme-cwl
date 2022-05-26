@@ -1,0 +1,16 @@
+{
+  "id": "ConfigNode",
+  "name": "ConfigNode",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-cog",
+    "src": ""
+  },
+  "configWidget": "plugin/ConfigNode/ConfigNode/config",
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": false,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": []
+}

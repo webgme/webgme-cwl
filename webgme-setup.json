@@ -20,6 +20,10 @@
       "RunWorkflow": {
         "src": "src/plugins/RunWorkflow",
         "test": "test/plugins/RunWorkflow"
+      },
+      "ConfigNode": {
+        "src": "src/plugins/ConfigNode",
+        "test": "test/plugins/ConfigNode"
       }
     },
     "routers": {},
