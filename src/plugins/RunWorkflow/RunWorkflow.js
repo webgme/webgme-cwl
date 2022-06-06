@@ -119,7 +119,7 @@ define([
                         //TODO maybe we want additional message here, but for now it is too much pain
                         // const message = '\u001b[1;41mExecution finished with code: \u001b[34m' + code + '\u001b[0';
                         // this.sendNotification(JSON.stringify({type:'code', message:message}));
-                        console.log('CODE:', code);
+                        // console.log('CODE:', code);
                         if (code === 0) {
                             self.result.setSuccess(true);
                             if (true/*currentConfig.saveOutput*/){
@@ -130,7 +130,10 @@ define([
                                 return Q.nfcall(fs.rmdir, saveDirectory, {recursive:true});
                             })
                             .then(()=>{
-                                return self.blobClient.putFile(resultId, fs.createReadStream('./OUTPUT/' + resultId));
+                                const resultContent = fs.readFileSync('./OUTPUT/' + resultId);
+
+                                // return self.blobClient.putFile(resultId, fs.createReadStream('./OUTPUT/' + resultId));
+                                return self.blobClient.putFile(resultId, resultContent);
                             })
                             .then((resultHash)=>{
                                 self.result.artifacts.push(resultHash);
