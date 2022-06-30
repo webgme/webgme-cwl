@@ -75,6 +75,22 @@
       "CreateConfig": {
         "project": "webgme-json",
         "path": "node_modules/webgme-json/src/plugins/CreateConfig"
+      },
+      "ExportOntology": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/plugins/ExportOntology"
+      },
+      "ExportToJSONSchema": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/plugins/ExportToJSONSchema"
+      },
+      "SetStateFromJSON": {
+        "project": "webgme-json-importer",
+        "path": "node_modules/webgme-json-importer/src/plugins/SetStateFromJSON"
+      },
+      "ExportToJSON": {
+        "project": "webgme-json-importer",
+        "path": "node_modules/webgme-json-importer/src/plugins/ExportToJSON"
       }
     },
     "routers": {},
@@ -82,6 +98,10 @@
       "taxonomy": {
         "project": "webgme-taxonomy",
         "path": "node_modules/webgme-taxonomy/src/seeds/taxonomy"
+      },
+      "test": {
+        "project": "webgme-json-importer",
+        "path": "node_modules/webgme-json-importer/src/seeds/test"
       }
     }
   }

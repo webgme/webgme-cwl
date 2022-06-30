@@ -9,8 +9,11 @@ var config = require('webgme/config/config.default'),
 // The paths can be loaded from the webgme-setup.json
 config.plugin.basePaths.push(__dirname + '/../src/plugins');
 config.plugin.basePaths.push(__dirname + '/../node_modules/webgme-json/src/plugins');
+config.plugin.basePaths.push(__dirname + '/../node_modules/webgme-taxonomy/src/plugins');
+config.plugin.basePaths.push(__dirname + '/../node_modules/webgme-json-importer/src/plugins');
 config.seedProjects.basePaths.push(__dirname + '/../src/seeds/CWL');
 config.seedProjects.basePaths.push(__dirname + '/../node_modules/webgme-taxonomy/src/seeds/taxonomy');
+config.seedProjects.basePaths.push(__dirname + '/../node_modules/webgme-json-importer/src/seeds/test');
 
 
 
@@ -25,7 +28,12 @@ config.visualization.panelPaths.push(__dirname + '/../src/visualizers/panels');
 config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers/Visualizers.json');
 // Add requirejs paths
 config.requirejsPaths = {
+  'test': 'node_modules/webgme-json-importer/src/seeds/test',
   'taxonomy': 'node_modules/webgme-taxonomy/src/seeds/taxonomy',
+  'ExportToJSON': 'node_modules/webgme-json-importer/src/plugins/ExportToJSON',
+  'SetStateFromJSON': 'node_modules/webgme-json-importer/src/plugins/SetStateFromJSON',
+  'ExportToJSONSchema': 'node_modules/webgme-taxonomy/src/plugins/ExportToJSONSchema',
+  'ExportOntology': 'node_modules/webgme-taxonomy/src/plugins/ExportOntology',
   'CreateConfig': 'node_modules/webgme-json/src/plugins/CreateConfig',
   'JSONToModel': 'node_modules/webgme-json/src/plugins/JSONToModel',
   'ModelToJSON': 'node_modules/webgme-json/src/plugins/ModelToJSON',
@@ -41,6 +49,7 @@ config.requirejsPaths = {
   'widgets/TextualJSONEditor': './node_modules/webgme-json/src/visualizers/widgets/TextualJSONEditor',
   'webgme-json': './node_modules/webgme-json/src/common',
   'webgme-taxonomy': './node_modules/webgme-taxonomy/src/common',
+  'webgme-json-importer': './node_modules/webgme-json-importer/src/common',
   'webgme-cwl': './src/common'
 };
 

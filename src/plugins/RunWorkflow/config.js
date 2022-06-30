@@ -9,7 +9,7 @@
     'ansi-up',
     'blob/BlobClient',
     'css!./config.css',
- ], function (DialogTemplate, AnsiUp) {
+ ], function (DialogTemplate, AnsiUp, BlobClient) {
     'use strict';
 
     function ConfigWidget(params) {
