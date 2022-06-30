@@ -10,5 +10,11 @@
     "title": "CommonWorkflowEditor",
     "panel": "panels/CommonWorkflowEditor/CommonWorkflowEditorPanel",
     "DEBUG_ONLY": false
+  },
+  {
+    "id": "TagCreator",
+    "title": "TagCreator",
+    "panel": "panels/TagCreator/TagCreatorPanel",
+    "DEBUG_ONLY": false
   }
 ]

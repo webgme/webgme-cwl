@@ -1,14 +1,13 @@
 /*globals define, WebGMEGlobal*/
 /**
  * Example of custom plugin configuration. Typically a dialog would show up here.
- * @author kecso / https://github.com/kecso
+ * @author pmeijer / https://github.com/pmeijer
  */
 
  define([
     'text!./config.html',
-    'ansi-up',
-    'css!./config.css',
- ], function (DialogTemplate, AnsiUp) {
+    'js/Dialogs/PluginConfig/PluginConfigDialog',
+ ], function (DialogTemplate, PluginConfigDialog) {
     'use strict';
 
     function ConfigWidget(params) {
@@ -36,7 +35,6 @@
             activeNodeId = WebGMEGlobal.State.getActiveObject(),
             activeNode;
 
-        console.log('PSTART:', globalConfigStructure);
         // We use the default global config here..
         globalConfigStructure.forEach(function (globalOption) {
             globalConfig[globalOption.name] = globalOption.value;

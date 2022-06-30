@@ -13,5 +13,7 @@ config.requirejsPaths['lodash'] = './node_modules/lodash-amd/main';
 config.requirejsPaths['ansi-up'] = './node_modules/ansi_up/ansi_up';
 config.core.overlayShardSize = 100000;
 
+config.requirejsPaths.react = 'node_modules/webgme-taxonomy/src/visualizers/widgets/TagCreator/lib/react.production.min';
+
 validateConfig(config);
 module.exports = config;

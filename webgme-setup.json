@@ -42,6 +42,14 @@
         "secondary": false,
         "widget": "src/visualizers/widgets/TextualJSONEditor",
         "project": "webgme-json"
+      },
+      "TagCreator": {
+        "src": "panels/TagCreator/TagCreatorPanel",
+        "title": "TagCreator",
+        "panel": "src/visualizers/panels/TagCreator",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/TagCreator",
+        "project": "webgme-taxonomy"
       }
     },
     "addons": {},
@@ -70,6 +78,11 @@
       }
     },
     "routers": {},
-    "seeds": {}
+    "seeds": {
+      "taxonomy": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/seeds/taxonomy"
+      }
+    }
   }
 }
