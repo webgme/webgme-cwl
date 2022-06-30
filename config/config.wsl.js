@@ -3,7 +3,7 @@
 var config = require('./config.default'),
     validateConfig = require('webgme/config/validator');
 
-config.mongo.uri = 'mongodb://127.0.0.1:27017/webgme_cwl'; //you need to set the ip to your host machine to make it work
+config.mongo.uri = 'mongodb://172.22.208.1:27017/webgme_cwl'; //you need to set the ip to your host machine to make it work
 
 config.authentication.enable = false;
 config.authentication.allowGuests = false;

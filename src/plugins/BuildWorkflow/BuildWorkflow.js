@@ -42,7 +42,6 @@ define([
         // Call base class' constructor.
         PluginBase.call(this);
         this.pluginMetadata = pluginMetadata;
-        // console.log(_.isEqual);
     }
 
     /**
@@ -78,7 +77,6 @@ define([
         this._exitDepth = currentConfig.exitDepth || 0;
         let isSimpleStep = true;
 
-        console.log(this.callDepth, currentConfig);
         this._stepHelper = null;
         if (core.isInstanceOf(activeNode, META['Workflow'])) {
             isSimpleStep = false;
@@ -110,7 +108,6 @@ define([
             }
         })
         .then(result => {
-            // console.log(result);
             if (this.callDepth > this._exitDepth) {
                 //invoked - we just create a message and put the result there
                 this.createMessage(this.activeNode, JSON.stringify(result));
@@ -209,7 +206,8 @@ define([
             if (fileEntry.type === 'data') {
                 mainCwlWorkflow.requirements.InitialWorkDirRequirement.listing.push({
                     class: 'File',
-                    location: fileEntry.name 
+                    location: fileEntry.name,
+                    basename:'any'
                 });
             }
         });
@@ -230,7 +228,7 @@ define([
         const deferred = Q.defer();
         const writeStream = fs.createWriteStream(path);
         writeStream.on('error', deferred.reject);
-        writeStream.on('finish', deferred.resolve);
+        writeStream.on('finish',deferred.resolve);
         this.blobClient.getStreamObject(metadataHash, writeStream);
         return deferred.promise;
     };
@@ -261,6 +259,7 @@ define([
         const mainCwlWorkflow = JSON.parse(files[0].content);
         const promises = [];
         let fs = null;
+        let needsRoot = false;
         if (saveDirectory) {
             fs = require('fs');
         }
@@ -273,12 +272,20 @@ define([
             if (fileEntry.type === 'data' || fileEntry.type === 'artifact') {
                 mainCwlWorkflow.requirements.InitialWorkDirRequirement.listing.push({
                     class: 'File',
-                    location: fileEntry.name 
+                    location: fileEntry.name,
+                    basename:fileEntry.name 
                 });
+            } else if (fileEntry.type === 'step' && fileEntry.needsRoot) {
+                needsRoot = true;
             }
         });
         files[0].content = JSON.stringify(mainCwlWorkflow, null, 2);
-        let runContent = "#!/bin/bash\ncwltool --no-match-user --no-read-only "+ realFileName;
+        if (needsRoot) {
+            needsRoot = '--no-match-user ';
+        } else {
+            needsRoot = '';
+        }
+        let runContent = '#!/bin/bash\ncwltool ' + needsRoot + '--no-read-only '+ realFileName;
         this._configuration = this._configuration || {};
         Object.keys(this._configuration).forEach((key) =>{
             runContent+=" --" + key + " " + this._configuration[key];
@@ -332,7 +339,10 @@ define([
             class: "Workflow",
             inputs: {},
             outputs: {},
-            steps: {}
+            steps: {},
+            requirements: {
+                SubworkflowFeatureRequirement:{}
+            }
         };
         const configInputs = {};
 
@@ -352,7 +362,7 @@ define([
                 if (core.isInstanceOf(node, META['FileInput'])) {
                     cwlObject.inputs[core.getAttribute(node, 'name')] = 'File';
                     const value = core.getAttribute(node, 'value');
-                    if(value && noIncoming && this.callDepth === 0) {
+                    if(value && noIncoming && this.callDepth === this._exitDepth) {
                         //We have to store the value among the artifacts of the workflow
                         let outconfig = this._stepHelper.getNodeConfig(node);
                         const name = outconfig.glob || outconfig.location || 'my_file.res';
@@ -391,7 +401,7 @@ define([
                 } else { //default is Number input
                     cwlObject.outputs[core.getAttribute(node, 'name')] = {type: 'double'};
                 }
-            } else if (core.isInstanceOf(node, META['Step'])) {
+            } else if (core.isInstanceOf(node, META['Step']) || core.isInstanceOf(node, META['Workflow'])) {
                 let name = core.getAttribute(node, 'name');
                 cwlObject.steps[name] = cwlObject.steps[name] || {
                     run: NAMING.getCwlFileName(core.getGuid(node)),

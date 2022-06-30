@@ -7,6 +7,7 @@
  define([
     'text!./config.html',
     'ansi-up',
+    'blob/BlobClient',
     'css!./config.css',
  ], function (DialogTemplate, AnsiUp) {
     'use strict';
@@ -15,6 +16,7 @@
         this._client = params.client;
         this._logger = params.logger.fork('ConfigWidget');
         this._AU = new AnsiUp.default();
+        this._bc = new BlobClient({logger:this._logger.fork('BlobClient')});
     }
 
     /**
@@ -60,27 +62,39 @@
             //TODO we might want to handle something here
         });
         const btnClose = dialog.find('.btn-default');
+        const btnSave = dialog.find('.btn-primary');
         const modalConsole = dialog.find('#run-workflow-modal-console');
-        btnClose.on('click', function (event) {
+        /*btnClose.on('click', (event) => {
             //TODO do we even need this?
             // dialog.modal('hide');
-        });
+        });*/
+        /*btnSave.on('click', (event) => {
+            console.log(this._resultHash);
+            console.log(this._bc.getDownloadURL(this._resultHash));
+        });*/
 
         //showing dialog
         dialog.modal('show');
         btnClose.hide();
+        btnSave.hide();
 
         const eventFunction = (_clinet, event) => {
             const msg = JSON.parse(event.notification.message);
             // console.log(msg.message);
-            console.log(this._AU.ansi_to_html(msg.message));
-            const pElement = document.createElement('p');
-            let innerText = this._AU.ansi_to_html(msg.message);
-            //TODO unfortunately, we need to put line breaks and tabs manually
-            innerText = innerText.replace(/\n/g,'<br/>').replace(/\t/g, '&nbsp;&nbsp;');
-            pElement.innerHTML = innerText;
-            modalConsole.append(pElement);
-            modalConsole.scrollTop = modalConsole.scrollHeight;
+            if(msg.type === 'result') {
+                this._resultHash = msg.hash;
+                $(btnSave).attr('href',this._bc.getDownloadURL(msg.hash));
+                btnSave.show();
+            } else {
+                console.log(this._AU.ansi_to_html(msg.message));
+                const pElement = document.createElement('p');
+                let innerText = this._AU.ansi_to_html(msg.message);
+                //TODO unfortunately, we need to put line breaks and tabs manually
+                innerText = innerText.replace(/\n/g,'<br/>').replace(/\t/g, '&nbsp;&nbsp;');
+                pElement.innerHTML = innerText;
+                modalConsole.append(pElement);
+                modalConsole.scrollTop = modalConsole.scrollHeight;
+            }
         };
         const finishedEventFunction = (_client, event) => {
             this._client.removeEventListener(this._client.CONSTANTS.PLUGIN_FINISHED, finishedEventFunction);
