@@ -1,0 +1,42 @@
+.Browser {
+    text-align: center;
+}
+.display-linebreak {
+    white-space: pre-line;
+}
+
+.Browser-logo {
+    height: 80px;
+}
+
+.Browser-logo-loading {
+    animation: logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.Browser-header {
+    background-color: #222;
+    height: 210px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.Browser-title {
+    font-size: 1.5em;
+}
+
+.Browser-intro {
+    font-size: large;
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+        transform-origin: 50% 44%;
+    }
+    to {
+        transform: rotate(360deg);
+        transform-origin: 50% 44%;
+    }
+}

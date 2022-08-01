@@ -22,7 +22,11 @@ config.visualization.panelPaths.push(__dirname + '/../node_modules/webgme-taxono
 config.visualization.panelPaths.push(__dirname + '/../src/visualizers/panels');
 
 
-
+config.rest.components['DatabaseBrowser'] = {
+  src: __dirname + '/../src/routers/DatabaseBrowser/DatabaseBrowser.js',
+  mount: 'routers/DatabaseBrowser',
+  options: {}
+};
 
 // Visualizer descriptors
 config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers/Visualizers.json');
@@ -55,5 +59,6 @@ config.requirejsPaths = {
 
 
 config.mongo.uri = 'mongodb://127.0.0.1:27017/webgme_cwl';
+config.server.port = 12345;
 validateConfig(config);
 module.exports = config;

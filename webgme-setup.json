@@ -24,9 +24,19 @@
       "ConfigNode": {
         "src": "src/plugins/ConfigNode",
         "test": "test/plugins/ConfigNode"
+      },
+      "SelectDataSource": {
+        "src": "src/plugins/SelectDataSource",
+        "test": "test/plugins/SelectDataSource"
       }
     },
-    "routers": {},
+    "routers": {
+      "DatabaseBrowser": {
+        "src": "src/routers/DatabaseBrowser",
+        "test": "test/routers/DatabaseBrowser",
+        "mount": "routers/DatabaseBrowser"
+      }
+    },
     "seeds": {
       "CWL": {
         "src": "src/seeds/CWL"
