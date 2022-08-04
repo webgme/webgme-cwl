@@ -59,6 +59,5 @@ config.requirejsPaths = {
 
 
 config.mongo.uri = 'mongodb://127.0.0.1:27017/webgme_cwl';
-config.server.port = 12345;
 validateConfig(config);
 module.exports = config;
