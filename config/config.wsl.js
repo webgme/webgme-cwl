@@ -3,9 +3,10 @@
 var config = require('./config.default'),
     validateConfig = require('webgme/config/validator');
 
-config.mongo.uri = 'mongodb://172.22.208.1:27017/webgme_cwl'; //you need to set the ip to your host machine to make it work
+// config.mongo.uri = 'mongodb://172.22.208.1:27017/webgme_cwl'; //you need to set the ip to your host machine to make it work
 
-config.authentication.enable = false;
+config.server.port = 12345;
+config.authentication.enable = true;
 config.authentication.allowGuests = false;
 config.authentication.azureActiveDirectory.enable = true;
 config.authentication.azureActiveDirectory.clientId = 'c8971ee3-9e82-48ac-88d5-4df0f44a64b4';
@@ -13,6 +14,6 @@ config.authentication.azureActiveDirectory.authority = 'https://login.microsofto
 config.authentication.azureActiveDirectory.clientSecret = 'ez27Q~T68CKnMQLZcg8HRLu-svrUrBwEstNGe';
 config.plugin.allowServerExecution = true;
 config.plugin.suppressRegularNotifications = true;
-config.authentication.azureActiveDirectory.redirectUri = 'http://localhost:8888/aad';
+config.authentication.azureActiveDirectory.redirectUri = 'http://localhost:12345/aad';
 validateConfig(config);
 module.exports = config;

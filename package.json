@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "ansi_up": "^5.1.0",
+    "axios": "^0.27.2",
+    "jose": "^4.9.0",
     "lodash-amd": "^4.17.15",
     "reaflow": "^4.2.16",
     "webgme": "github:webgme/webgme#azure",

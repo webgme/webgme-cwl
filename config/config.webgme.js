@@ -22,7 +22,11 @@ config.visualization.panelPaths.push(__dirname + '/../node_modules/webgme-taxono
 config.visualization.panelPaths.push(__dirname + '/../src/visualizers/panels');
 
 
-
+config.rest.components['DatabaseSelector'] = {
+  src: __dirname + '/../src/routers/DatabaseSelector/DatabaseSelector.js',
+  mount: 'routers/DatabaseSelector',
+  options: {}
+};
 
 // Visualizer descriptors
 config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers/Visualizers.json');

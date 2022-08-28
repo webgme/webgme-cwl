@@ -26,7 +26,13 @@
         "test": "test/plugins/ConfigNode"
       }
     },
-    "routers": {},
+    "routers": {
+      "DatabaseSelector": {
+        "src": "src/routers/DatabaseSelector",
+        "test": "test/routers/DatabaseSelector",
+        "mount": "routers/DatabaseSelector"
+      }
+    },
     "seeds": {
       "CWL": {
         "src": "src/seeds/CWL"
