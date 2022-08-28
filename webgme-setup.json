@@ -24,6 +24,14 @@
       "ConfigNode": {
         "src": "src/plugins/ConfigNode",
         "test": "test/plugins/ConfigNode"
+      },
+      "SelectDataSource": {
+        "src": "src/plugins/SelectDataSource",
+        "test": "test/plugins/SelectDataSource"
+      },
+      "ReleaseWorkflow": {
+        "src": "src/plugins/ReleaseWorkflow",
+        "test": "test/plugins/ReleaseWorkflow"
       }
     },
     "routers": {
