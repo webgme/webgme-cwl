@@ -69,24 +69,58 @@ class Browser extends React.Component {
     }
     getCardEntry(index, entry) {
 
-        return (
-            <ListItem id={index}>
-                <Card sx={{ minWidth: 275 }}>
-                <CardContent>
-                    <Typography variant="h5" component="div">
-                    {entry.processId+'_'+entry.index+'_'+entry.version}
-                    </Typography>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    {'owner: ' + entry.observerId}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    {/*<Button size="small" variant="outlined" color="secondary" onClick={() => this.setState({detailedItem:entry})}>...More...</Button>*/}
-                    {this.getActionButton(entry)}
-                </CardActions>
-                </Card>
-            </ListItem>
-          );
+        if(this.state.type === 'data') {
+            return (
+                <ListItem id={index}>
+                    <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                        <Typography variant="h5" component="div">
+                        {entry.processId+'_'+entry.index+'_'+entry.version}
+                        </Typography>
+                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                        {'owner: ' + entry.observerId}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        {/*<Button size="small" variant="outlined" color="secondary" onClick={() => this.setState({detailedItem:entry})}>...More...</Button>*/}
+                        {this.getActionButton(entry)}
+                    </CardActions>
+                    </Card>
+                </ListItem>
+              );
+        } else {
+            console.log('processing-entry: ', entry);
+            let metaInfo = entry.data[0] || {};
+            console.log('PE-meta: ', metaInfo);
+            //TODO temp massage to not fail on old items
+            metaInfo.Project = metaInfo.Project || {Name:'too-old', Id:'missing!', Branch:'NaN'};
+            return (
+                <ListItem id={index}>
+                    <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                        <Typography variant="h5" component="div">
+                            {metaInfo.Project.Name}
+                        </Typography>
+                        <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
+                            {'id: ' + entry.processId+'_'+entry.index+'_'+entry.version}
+                        </Typography>
+                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                            {'owner: ' + entry.observerId}
+                        </Typography>
+                        <Typography sx={{ fontSize: 12 }} color="text.secondary" gutterBottom>
+                            {'StudioId: ' + metaInfo.Project.Id}
+                        </Typography>
+                        <Typography sx={{ fontSize: 12 }} color="text.secondary" gutterBottom>
+                            {'Branch: ' + metaInfo.Project.Branch}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        {this.getActionButton(entry)}
+                    </CardActions>
+                    </Card>
+                </ListItem>
+              );
+        }
     }
 
     shouldBeVisible(entry) {
@@ -129,7 +163,7 @@ class Browser extends React.Component {
         //TODO collect the processid and index from the entry or the commit and projectid if its a workflow import
         // console.log('now we closin:', entry);
         if(window.parent) {
-            window.parent.postMessage({processId:entry.pid}, '*');
+            window.parent.postMessage({processId:entry.processId,index:entry.index}, '*');
         }
     }
 

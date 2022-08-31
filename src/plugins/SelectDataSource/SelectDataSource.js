@@ -59,13 +59,14 @@ define([
         console.log(config);
 
         // Using the logger.
-        self.logger.debug('This is a debug message.');
-        self.logger.info('This is an info message.');
-        self.logger.warn('This is a warning message.');
-        self.logger.error('This is an error message.');
+        // self.logger.debug('This is a debug message.');
+        // self.logger.info('This is an info message.');
+        // self.logger.warn('This is a warning message.');
+        // self.logger.error('This is an error message.');
 
         // Using the coreAPI to make changes.
         const nodeObject = self.activeNode;
+        //TODO set the proper id with the index and use that during execution
         self.core.setAttribute(nodeObject, 'value', config.processId);
 
 

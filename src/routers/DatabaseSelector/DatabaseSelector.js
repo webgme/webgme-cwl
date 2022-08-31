@@ -322,7 +322,8 @@ const _getFileName = (fullPath) => {
 };
 
 const _getFile = (path, url) => {
-    // console.log('GF:',path,url);
+    console.log('GF:',path,url);
+    const deferred = Q.defer();
     const pathArray = path.split('/');
     for(let i=1;i<pathArray.length-1;i+=1) {
         let inpath = '';
@@ -340,8 +341,11 @@ const _getFile = (path, url) => {
         response.pipe(writeStream);
         writeStream.on('finish', () => {
             writeStream.close();
+            deferred.resolve(path);
         });
     });
+
+    return deferred.promise;
 };
 
 const _prepareDownloadDir = () => {
@@ -405,13 +409,13 @@ const uploadProjectFromPDPToBlob = (pid, index, token) => {
     let downloadDir = null;
     let downloadName = null;
     let downloadPath = null;
+    let promise = null;
 
     _getObsFiles(pid, index, token)
     .then(response => {
         console.log(response);
         downloadName = _prepareDownloadDir();
         downloadDir = './OUTPUT/' + downloadName;
-        let promise = null;
         response.files.forEach(file => {
             if(file.name.indexOf('webgmex') !== -1) {
                 promise = file;
@@ -419,9 +423,11 @@ const uploadProjectFromPDPToBlob = (pid, index, token) => {
         });
 
         downloadPath = _correctFilePath(downloadDir,promise.name, index);
+        console.log('file: ', downloadPath);
         return _getFile(downloadPath, promise.sasUrl);
     })
-    .then(() => {
+    .then((result) => {
+        console.log('if any: ', result);
         const projectObject = fs.readFileSync(downloadPath);
 
         return agent.get('/api/blob/createFile/' + _getFileName(downloadPath));
