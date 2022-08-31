@@ -105,9 +105,29 @@
       "ExportToJSON": {
         "project": "webgme-json-importer",
         "path": "node_modules/webgme-json-importer/src/plugins/ExportToJSON"
+      },
+      "ExportSearchFilterData": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/plugins/ExportSearchFilterData"
       }
     },
-    "routers": {},
+    "routers": {
+      "Search": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/routers/Search",
+        "mount": "routers/Search"
+      },
+      "TagFormat": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/routers/TagFormat",
+        "mount": "routers/TagFormat"
+      },
+      "TagCreator": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/routers/TagCreator",
+        "mount": "routers/TagCreator"
+      }
+    },
     "seeds": {
       "taxonomy": {
         "project": "webgme-taxonomy",

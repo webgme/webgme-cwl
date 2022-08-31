@@ -27,6 +27,21 @@ config.rest.components['DatabaseSelector'] = {
   mount: 'routers/DatabaseSelector',
   options: {}
 };
+config.rest.components['Search'] = {
+  src: __dirname + '/../node_modules/webgme-taxonomy/src/routers/Search/Search.js',
+  mount: 'routers/Search',
+  options: {}
+};
+config.rest.components['TagFormat'] = {
+  src: __dirname + '/../node_modules/webgme-taxonomy/src/routers/TagFormat/TagFormat.js',
+  mount: 'routers/TagFormat',
+  options: {}
+};
+config.rest.components['TagCreator'] = {
+  src: __dirname + '/../node_modules/webgme-taxonomy/src/routers/TagCreator/TagCreator.js',
+  mount: 'routers/TagCreator',
+  options: {}
+};
 
 // Visualizer descriptors
 config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers/Visualizers.json');
@@ -34,6 +49,10 @@ config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers
 config.requirejsPaths = {
   'test': 'node_modules/webgme-json-importer/src/seeds/test',
   'taxonomy': 'node_modules/webgme-taxonomy/src/seeds/taxonomy',
+  'TagCreator': 'node_modules/webgme-taxonomy/src/routers/TagCreator',
+  'TagFormat': 'node_modules/webgme-taxonomy/src/routers/TagFormat',
+  'Search': 'node_modules/webgme-taxonomy/src/routers/Search',
+  'ExportSearchFilterData': 'node_modules/webgme-taxonomy/src/plugins/ExportSearchFilterData',
   'ExportToJSON': 'node_modules/webgme-json-importer/src/plugins/ExportToJSON',
   'SetStateFromJSON': 'node_modules/webgme-json-importer/src/plugins/SetStateFromJSON',
   'ExportToJSONSchema': 'node_modules/webgme-taxonomy/src/plugins/ExportToJSONSchema',

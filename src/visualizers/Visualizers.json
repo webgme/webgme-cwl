@@ -16,5 +16,11 @@
     "title": "TagCreator",
     "panel": "panels/TagCreator/TagCreatorPanel",
     "DEBUG_ONLY": false
+  },
+  {
+    "id": "TagCreator1",
+    "title": "TagCreator",
+    "panel": "panels/TagCreator/TagCreatorPanel",
+    "DEBUG_ONLY": false
   }
 ]
