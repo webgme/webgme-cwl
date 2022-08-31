@@ -16,6 +16,11 @@
 // http://expressjs.com/en/guide/routing.html
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
+// const formidable = require('formidable');
+const multer = require('multer');
+// const upload = multer({dest:'./upload'});
+// const upload = require('express-fileupload');
 const agent = require('superagent');
 const Q = require('q');
 const https = require('https');
@@ -23,6 +28,13 @@ const url = require('url');
 const fs = require('fs');
 const zip = require('zip-a-folder').zip;
 const COMPRESSION_LEVEL = require('zip-a-folder').COMPRESSION_LEVEL;
+const upload = multer({storage:multer.memoryStorage(), preservePath:true});
+const busboy = require('busboy');
+
+// const multipart = require('connect-multiparty');
+// const multipartMiddleware = multipart();
+const multiparty = require('multiparty');
+const { seedProjects } = require('webgme/config/config.default');
 
 let mainConfig = null;
 
@@ -304,6 +316,11 @@ const _getObsFiles = (pid, index, token) => {
     return deferred.promise;
 };
 
+const _getFileName = (fullPath) => {
+    const pathArray = fullPath.split('/');
+    return pathArray[pathArray.length-1];
+};
+
 const _getFile = (path, url) => {
     // console.log('GF:',path,url);
     const pathArray = path.split('/');
@@ -383,6 +400,42 @@ const downloadObservation = (pid, index, token) => {
     return deferred.promise;
 };
 
+const uploadProjectFromPDPToBlob = (pid, index, token) => {
+    const deferred = Q.defer();
+    let downloadDir = null;
+    let downloadName = null;
+    let downloadPath = null;
+
+    _getObsFiles(pid, index, token)
+    .then(response => {
+        console.log(response);
+        downloadName = _prepareDownloadDir();
+        downloadDir = './OUTPUT/' + downloadName;
+        let promise = null;
+        response.files.forEach(file => {
+            if(file.name.indexOf('webgmex') !== -1) {
+                promise = file;
+            } 
+        });
+
+        downloadPath = _correctFilePath(downloadDir,promise.name, index);
+        return _getFile(downloadPath, promise.sasUrl);
+    })
+    .then(() => {
+        const projectObject = fs.readFileSync(downloadPath);
+
+        return agent.get('/api/blob/createFile/' + _getFileName(downloadPath));
+    })
+    .then(response => {
+        console.log(response.body);
+        fs.rmdirSync(downloadDir,{recursive:true});
+        deferred.resolve(response.body);
+    })
+    .catch(deferred.reject);
+
+    return deferred.promise;
+};
+
 /**
  * Called when the server is created but before it starts to listening to incoming requests.
  * N.B. gmeAuth, safeStorage and workerManager are not ready to use until the start function is called.
@@ -407,7 +460,7 @@ function initialize(middlewareOpts) {
     logger.debug('initializing ...');
 
     // Ensure authenticated can be used only after this rule.
-    router.use('*', function (req, res, next) {
+    router.use((req, res, next) => {
         // TODO: set all headers, check rate limit, etc.
 
         // This header ensures that any failures with authentication won't redirect.
@@ -416,7 +469,24 @@ function initialize(middlewareOpts) {
     });
 
     // Use ensureAuthenticated if the routes require authentication. (Can be set explicitly for each route.)
-    router.use('*', ensureAuthenticated);
+    router.use(ensureAuthenticated);
+
+    const myLogger = (req, res, next) => {
+        console.log('LOGGED:', req.body);
+        next();
+    };
+
+    // router.use(myLogger);
+    // router.use(upload());
+    // router.use(express.urlencoded({ extended: true }));
+    // for parsing application/json
+    router.use(bodyParser.json()); 
+    // router.use(upload.any());
+
+    // for parsing application/xwww-
+    // router.use(bodyParser.urlencoded({ extended: true })); 
+//form-urlencoded
+    // router.use(upload.array());
 
     // router.get('/data/:projectId?/:branch?/:path?', function (req, res/*, next*/) {
         // var userId = getUserId(req);
@@ -463,6 +533,54 @@ function initialize(middlewareOpts) {
             res.sendStatus(401);
         });
     });
+
+    router.get('/boot/:pid/:index/:name', (req, res) => {
+        console.log('we arrived');
+        uploadProjectFromPDPToBlob(req.params.pid, req.params.index, getAccessToken(req))
+        .then(hash => {
+            return seedProject(hash, req.params.name, getAccessToken(req));
+        })
+        .then((result) => {
+            res.status(200).json({success:true, name: result.actualName, projectId: result.projectId});
+        })
+        .catch(e => {
+            console.error(e);
+            return res.sendStatus(500);
+        });
+    });
+    /*const upfile = upload.single('file');
+    router.post('/data/:pid', (req, res) => {
+        console.log('fuckyeah:');
+        upfile(req,res, (err) => {
+            if (err) {
+                console.log(err);
+                return res.sendStatus(500);
+            }
+            console.log(req.body);
+            console.log(JSON.parse(req.body.meta));
+            console.log(req.file);
+            res.sendStatus(200); 
+        }); 
+    });*/
+
+    router.post('/data/:pid', (req, res) => {
+        console.log('here');
+
+        const bb = busboy({ headers: req.headers });
+        bb.on('file', (name, file, info) => {
+            console.log(name, info);
+            const saveTo = path.join(os.tmpdir(), `busboy-upload-${random()}`);
+            file.pipe(fs.createWriteStream(saveTo));
+          });
+          bb.on('close', () => {
+            res.writeHead(200, { 'Connection': 'close' });
+            res.end(`That's all folks!`);
+          });
+          req.pipe(bb);
+      });
+      
+
+
     // router.patch('/patchExample', function (req, res/*, next*/) {
     //     res.sendStatus(200);
     // });

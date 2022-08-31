@@ -7,7 +7,7 @@ var config = require('./config.default'),
 
 config.server.port = 12345;
 config.authentication.enable = true;
-config.authentication.allowGuests = false;
+config.authentication.allowGuests = true;
 config.authentication.azureActiveDirectory.enable = true;
 config.authentication.azureActiveDirectory.clientId = 'c8971ee3-9e82-48ac-88d5-4df0f44a64b4';
 config.authentication.azureActiveDirectory.authority = 'https://login.microsoftonline.com/ba5a7f39-e3be-4ab3-b450-67fa80faecad';

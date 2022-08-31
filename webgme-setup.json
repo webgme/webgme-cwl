@@ -35,6 +35,11 @@
       }
     },
     "routers": {
+      "DatabaseBrowser": {
+        "src": "src/routers/DatabaseBrowser",
+        "test": "test/routers/DatabaseBrowser",
+        "mount": "routers/DatabaseBrowser"
+      },
       "DatabaseSelector": {
         "src": "src/routers/DatabaseSelector",
         "test": "test/routers/DatabaseSelector",

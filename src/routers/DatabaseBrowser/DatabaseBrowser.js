@@ -18,7 +18,6 @@ var express = require('express'),
     path = require('path'),
     fs = require('fs'),
     router = express.Router(),
-    fetch = require('whatwg-fetch'),
     https = require('https'),
     Q = require('q');
 
@@ -44,23 +43,6 @@ function getAccessToken(server, userId) {
 function gatherDataFromLake (type, accessToken) {
     console.log('getting data from the lake');
     const deferred = Q.defer();
-
-    /*
-    fetch(datalakeBaseUrl+'Process/ListProcesses?permission=read')
-    .then(res => {
-        console.log(res);
-        return res.json();
-    })
-    .then(res => {
-        console.log(res);
-        deferred.resolve(res);
-    })
-    .catch(err => {
-        console.log(err);
-        deferred.reject;
-    });
-
-    */
     const options = {
         hostname: 'leappremonitiondev.azurewebsites.net',
         path:'/v2/Process/ListProcesses/?permission=read',
@@ -174,18 +156,36 @@ function initialize(middlewareOpts) {
     // Use ensureAuthenticated if the routes require authentication. (Can be set explicitly for each route.)
     router.use('*', ensureAuthenticated);
 
-    const startSearch = (type, req, res) => {
-        res.cookie('searchDataType', type);
+    const startSearch = (type, embedded, req, res) => {
+        res.cookie('webgme-pdp-search-info', JSON.stringify({type:type,embedded:embedded}));
         const userId = getUserId(req);
         return res.sendFile(path.join(__dirname,'./dist/index.html'));
     };
 
     router.get('/start/workflow', (req, res) => {
-        return startSearch('workflow', req, res);
+        return startSearch('workflow', true, req, res);
     });
 
     router.get('/start/data', (req, res) => {
-        return startSearch('data', req, res);
+        return startSearch('data', true, req, res);
+    });
+
+    router.get('/list/workflow', (req, res) => {
+        return startSearch('workflow', false, req, res);
+    });
+
+    router.get('/list/data', (req, res) => {
+        return startSearch('data', false, req, res);
+    });
+
+    router.get('/check', (req, res) => {
+        try {
+            const info = JSON.parse(req.cookies['webgme-pdp-search-info']);
+            res.status(200).json(info).end();
+        } catch (e) {
+            console.error(e);
+            res.sendStatus(500);
+        }
     });
 
     router.get('/data', (req, res) => {
