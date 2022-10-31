@@ -21,16 +21,7 @@ config.visualization.panelPaths.push(__dirname + '/../node_modules/webgme-json/s
 config.visualization.panelPaths.push(__dirname + '/../node_modules/webgme-taxonomy/src/visualizers/panels');
 config.visualization.panelPaths.push(__dirname + '/../src/visualizers/panels');
 
-config.rest.components['DatabaseBrowser'] = {
-  src: __dirname + '/../src/routers/DatabaseBrowser/DatabaseBrowser.js',
-  mount: 'routers/DatabaseBrowser',
-  options: {}
-};
-config.rest.components['DatabaseSelector'] = {
-  src: __dirname + '/../src/routers/DatabaseSelector/DatabaseSelector.js',
-  mount: 'routers/DatabaseSelector',
-  options: {}
-};
+
 config.rest.components['Search'] = {
   src: __dirname + '/../node_modules/webgme-taxonomy/src/routers/Search/Search.js',
   mount: 'routers/Search',
