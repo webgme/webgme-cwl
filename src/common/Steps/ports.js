@@ -37,7 +37,7 @@ define([], function() {
                     artifacts.push({input:name, name:location, content:value});
                 }
             } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
-                inputs[name] = {type:'String',inputBinding:{position: maxPosition+1, prefix:prefix}, default: value};
+                inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition+1, prefix:prefix}, default: value};
             } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                 inputs[name] = {type:'Directory',position: maxPosition+1, prefix:prefix};
             } else {
@@ -45,9 +45,9 @@ define([], function() {
             }
         } else {
             //Inputs needs to be in the working directory
-            if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
+            if (core.isInstanceOf(portNode, CWLMETA['FileInput'])) {
+                inputs[name] = 'File';
                 if(hasSource) {
-                    inputs[name] = 'File';
                     if (location) {
                         cwlStep.arguments[0].valueFrom = 
                             'ln -s $(inputs.' + name + '.path) ' + 
@@ -58,18 +58,15 @@ define([], function() {
                         writable: true
                     });
                 } else if (value) {
-                    inputs[name] = 'File';
                     /*staging.push({
                         writeable:true,
                         entryname: location,
                         entry: value
                     });*/
                     artifacts.push({input:name, name:location, content:value});
-                } else {
-                    inputs[name] = 'File';
-                }
+                } 
             } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
-                inputs[name] = {type:'String', default: value};
+                inputs[name] = {type:'string' + (value ? '?' : ''), default: value};
             } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                 inputs[name] = 'Directory';
                 if (location) {

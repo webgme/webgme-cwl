@@ -58,16 +58,14 @@ define([
         const config = self.getCurrentConfig();
         console.log(config);
 
-        // Using the logger.
-        // self.logger.debug('This is a debug message.');
-        // self.logger.info('This is an info message.');
-        // self.logger.warn('This is a warning message.');
-        // self.logger.error('This is an error message.');
+        if (!config.value) {
+            return callback(null, self.result);
+        }
 
         // Using the coreAPI to make changes.
         const nodeObject = self.activeNode;
         //TODO set the proper id with the index and use that during execution
-        self.core.setAttribute(nodeObject, 'value', config.processId);
+        self.core.setAttribute(nodeObject, 'value', config.value);
 
 
         // This will save the changes. If you don't want to save;

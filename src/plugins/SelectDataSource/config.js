@@ -66,7 +66,23 @@
             console.log('message arrived:', data);
             window.removeEventListener('message', listener);
             dialog.modal('hide');
-            callback(globalConfig, data.data, false); // Set third argument to true to store config in user.
+            if (data.origin === window.location.origin) {
+                try {
+                    const msg = JSON.parse(data.data);
+                    if (msg.type === 'selectArtifact') {
+                        callback(globalConfig, {value:msg.value}, false);
+                    } else {
+                        console.error('Invalid message type!');
+                        callback(globalConfig, {value:null}, false);
+                    }
+                } catch (e) {
+                    console.error(e);
+                    callback(globalConfig, {value:null}, false);
+                }
+            } else {
+                console.error('Only same origin clients can communicate!!!');
+                callback(globalConfig, {value:null}, false);
+            }
         };
         
         window.addEventListener('message', listener);
