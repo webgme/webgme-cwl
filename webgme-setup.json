@@ -120,6 +120,16 @@
         "project": "webgme-taxonomy",
         "path": "node_modules/webgme-taxonomy/src/routers/TagCreator",
         "mount": "routers/TagCreator"
+      },
+      "JSONSchema": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/routers/JSONSchema",
+        "mount": "routers/JSONSchema"
+      },
+      "Dashboard": {
+        "project": "webgme-taxonomy",
+        "path": "node_modules/webgme-taxonomy/src/routers/Dashboard",
+        "mount": "routers/Dashboard"
       }
     },
     "seeds": {

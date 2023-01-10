@@ -170,7 +170,7 @@
                     outputSource: flow.srcHost ? flow.srcHost + '/' + flow.src : flow.src 
                 }
             }
-            if(flow.srcHost) {
+            if(flow.srcHost && cwlContent.steps[flow.srcHost].out.indexOf(flow.src) === -1) {
                 cwlContent.steps[flow.srcHost].out.push(flow.src);
             }
         });

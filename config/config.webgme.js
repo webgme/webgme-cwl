@@ -37,6 +37,16 @@ config.rest.components['TagCreator'] = {
   mount: 'routers/TagCreator',
   options: {}
 };
+config.rest.components['JSONSchema'] = {
+  src: __dirname + '/../node_modules/webgme-taxonomy/src/routers/JSONSchema/JSONSchema.js',
+  mount: 'routers/JSONSchema',
+  options: {}
+};
+config.rest.components['Dashboard'] = {
+  src: __dirname + '/../node_modules/webgme-taxonomy/src/routers/Dashboard/Dashboard.js',
+  mount: 'routers/Dashboard',
+  options: {}
+};
 
 // Visualizer descriptors
 config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers/Visualizers.json');
@@ -44,6 +54,8 @@ config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers
 config.requirejsPaths = {
   'test': 'node_modules/webgme-json-importer/src/seeds/test',
   'taxonomy': 'node_modules/webgme-taxonomy/src/seeds/taxonomy',
+  'Dashboard': 'node_modules/webgme-taxonomy/src/routers/Dashboard',
+  'JSONSchema': 'node_modules/webgme-taxonomy/src/routers/JSONSchema',
   'TagCreator': 'node_modules/webgme-taxonomy/src/routers/TagCreator',
   'TagFormat': 'node_modules/webgme-taxonomy/src/routers/TagFormat',
   'Search': 'node_modules/webgme-taxonomy/src/routers/Search',
