@@ -10,7 +10,7 @@ Welcome to WebGME-CWL's documentation!
    :maxdepth: 1
    :caption: Introduction:
    
-   Inroduction/about.rst
+   Introduction/about.rst
 
 
 
