@@ -38,3 +38,6 @@ package-lock.json
 
 # dont store manual tries
 test/manual
+
+# readthedocs
+docs/_build

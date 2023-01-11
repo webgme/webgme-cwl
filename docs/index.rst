@@ -12,6 +12,11 @@ Welcome to WebGME-CWL's documentation!
    
    Introduction/about.rst
 
+.. toctree::
+   :maxdepth: 1
+   :caption: The domain:
+   
+   Introduction/domain.rst
 
 
 Indices and tables
