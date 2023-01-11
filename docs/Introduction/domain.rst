@@ -16,7 +16,8 @@ error-free development.
 The main concepts
 _________________
 
-.. image:: ./cwl-domain.jpg
+.. figure:: cwl-domain.jpg
+   :align: center
    :width: 600
    :alt: Main building blocks of the model language of common workflow language
 
