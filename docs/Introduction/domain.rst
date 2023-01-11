@@ -18,8 +18,8 @@ _________________
 
 .. figure:: cwl-domain.jpg
    :align: center
-   :width: 600
-   :alt: Main building blocks of the model language of common workflow language
+   
+   Main building blocks of the model language of common workflow language
 
 In a nutshell, the goal of the CWL language is to allow the description of 
 repretable command executions with proper environment setting. To achieve this 
