@@ -16,8 +16,9 @@ error-free development.
 The main concepts
 _________________
 
-.. figure:: cwl-domain.jpg
+.. figure:: workflow-core-meta.png
    :align: center
+   :figwidth: 95%
    
    Main building blocks of the model language of common workflow language
 
