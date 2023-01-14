@@ -1,0 +1,23 @@
+{
+    "GenericUITreeBrowserControl": {
+      "byProjectKind": {
+        "treeRoot": {"cwl":"/f"}
+      }
+    },
+    "GenericUIProjectNavigatorController": {
+        "byProjectKind": {
+          "rootNode": {"cwl":"/f"}
+        }
+      },
+      "GenericUIWebGMEStart": {
+        "pageTitle": "CWL Design Studio",
+        "byProjectKind": {
+          "nodeAtOpen": {"cwl":"/f"}
+        }
+      },
+      "GenericUIModelEditorControl": {
+        "byProjectKind": {
+          "topNode": {"cwl":"/f"}
+        }
+      }
+}

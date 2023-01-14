@@ -15,5 +15,7 @@ config.core.overlayShardSize = 100000;
 
 config.requirejsPaths.react = 'node_modules/webgme-taxonomy/src/visualizers/widgets/TagCreator/lib/react.production.min';
 
+config.seedProjects.defaultProject = 'cwl_base';
+
 validateConfig(config);
 module.exports = config;

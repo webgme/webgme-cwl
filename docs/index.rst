@@ -19,6 +19,18 @@ Welcome to WebGME-CWL's documentation!
    Introduction/domain.rst
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Before Hello World:
+   
+   HowTos/basic.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Hello World Example:
+   
+   HowTos/hello.rst
+
+.. toctree::
    :maxdepth: 2
    :caption: Steps:
    

@@ -17,31 +17,53 @@ define([], function() {
         const name = core.getAttribute(portNode,'name');
         const prefix = core.getAttribute(portNode,'prefix');
         const asArgument = core.getAttribute(portNode,'asArgument');
+        const position = core.getAttribute(portNode, 'position')
         const value = '' + core.getAttribute(portNode,'value');
         const inputs = cwlStep.inputs;
         const hasSource = core.getCollectionPaths(portNode,'dst').length > 0;
         const staging = cwlStep.requirements.InitialWorkDirRequirement.listing;
 
         if (asArgument) {
-            //Inputs used as arguments
-            const maxPosition = getMaxPosition(inputs);
-            if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
-                inputs[name] = {type:'File',inputBinding:{position: maxPosition+1, prefix:prefix}};
-                if (!hasSource && value) {
-                    /*inputs[name].type = 'File?';
-                    staging.push({
-                        writeable:true,
-                        entryname: location,
-                        entry: value
-                    });*/
-                    artifacts.push({input:name, name:location, content:value});
+            if (position === -1) {
+                //Inputs used as arguments
+                const maxPosition = getMaxPosition(inputs);
+                if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
+                    inputs[name] = {type:'File',inputBinding:{position: maxPosition+1, prefix:prefix}};
+                    if (!hasSource && value) {
+                        /*inputs[name].type = 'File?';
+                        staging.push({
+                            writeable:true,
+                            entryname: location,
+                            entry: value
+                        });*/
+                        artifacts.push({input:name, name:location, content:value});
+                    }
+                } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
+                    inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition+1, prefix:prefix}, default: value};
+                } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
+                    inputs[name] = {type:'Directory',position: maxPosition+1, prefix:prefix};
+                } else {
+                    throw new Error('missing processing for this input type!!!');
                 }
-            } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
-                inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition+1, prefix:prefix}, default: value};
-            } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
-                inputs[name] = {type:'Directory',position: maxPosition+1, prefix:prefix};
             } else {
-                throw new Error('missing processing for this input type!!!');
+                if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
+                    inputs[name] = {type:'File',inputBinding:{position: position}};
+                    if (!hasSource && value) {
+                        /*inputs[name].type = 'File?';
+                        staging.push({
+                            writeable:true,
+                            entryname: location,
+                            entry: value
+                        });*/
+                        artifacts.push({input:name, name:location, content:value});
+                    }
+                } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
+                    inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position, default: value}};
+                } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
+                    inputs[name] = {type:'Directory',position: position};
+                } else {
+                    throw new Error('missing processing for this input type!!!');
+                }
             }
         } else {
             //Inputs needs to be in the working directory
