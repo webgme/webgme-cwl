@@ -12,7 +12,7 @@ that the user has a basic understanding of the WebGME concepts - check either th
 `youtube videos <https://www.youtube.com/@webgme6963/videos>`_ (with special attention
 to the `basics of modeling <https://www.youtube.com/watch?v=YKi_256Vy_0>`_ example).
 
-How to create workflow models
+Create workflow model
 ______________________________
 
 As we have described in the :ref: `The Common Workflow Language modeling language` section
@@ -40,7 +40,12 @@ available elements and their visual depiction). This drag and drop operation wil
 for all further element creation so we are not going to described them in detail but 
 expect the user to follow this one with the apropriate element.
 
---- gif of drag and drop workflow onto screen ---
+.. figure:: agif_cwl_basics_001.gif
+   :align: center
+   :figwidth: 75%
+   
+   Components of the Workflow or the workflow itself can be created by
+   drag-and-drop from the *Part Browser*
 
 With our new workflow, the first steps should be to name it and to enter into this 
 new context so that we can create the parts of the workflow.
@@ -48,3 +53,11 @@ new context so that we can create the parts of the workflow.
 --- gif of naming and entering (using icon on selection) ---
 
 
+Adding and editing components
+______________________________
+
+When you add your components which falls into the category of either input, 
+output, or step/ sub-workflow, you just follow the drag and drop method using
+the *Part Browser*. Once your component is on the screen the main editing and
+configuration happens on the bottom right sidebar of the screen called the
+*Property Editor*.
