@@ -17,5 +17,14 @@ config.requirejsPaths.react = 'node_modules/webgme-taxonomy/src/visualizers/widg
 
 config.seedProjects.defaultProject = 'cwl_base';
 
+//removing all seeds but Taxonomy and CWL related ones
+const oldbases = config.seedProjects.basePaths;
+config.seedProjects.basePaths = [];
+oldbases.forEach(base => {
+    if (base.indexOf('/CWL') !== -1 || base.indexOf('/taxonomy') !== -1) {
+        config.seedProjects.basePaths.push(base);
+    }
+})
+console.log(config.seedProjects);
 validateConfig(config);
 module.exports = config;
