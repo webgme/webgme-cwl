@@ -28,7 +28,7 @@ define([], function() {
                 //Inputs used as arguments
                 const maxPosition = getMaxPosition(inputs);
                 if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
-                    inputs[name] = {type:'File',inputBinding:{position: maxPosition+1, prefix:prefix}};
+                    inputs[name] = {type:'File',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                     if (!hasSource && value) {
                         /*inputs[name].type = 'File?';
                         staging.push({
@@ -39,9 +39,9 @@ define([], function() {
                         artifacts.push({input:name, name:location, content:value});
                     }
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
-                    inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition+1, prefix:prefix}, default: value};
+                    inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition + 1, prefix:prefix + name}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
-                    inputs[name] = {type:'Directory',position: maxPosition+1, prefix:prefix};
+                    inputs[name] = {type:'Directory',position: maxPosition + 1, prefix:prefix + name};
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }

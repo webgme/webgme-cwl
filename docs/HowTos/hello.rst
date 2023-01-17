@@ -86,5 +86,47 @@ to accept arguments is by passing them as named arguments. To show this we
 are going to build a workflow that is going to call our image and pass a 
 string and a file arguments by name.
 
+First, let us create a workflow project using what we learned in the 
+:ref:`cwl modeling basics <How to create CWL models - the basics>`. 
+Using the drag-and-drop technique form the *PartBrowser* to the 
+*Composition* screen, we create a workflow, name it *HelloArg* and then 
+enter its context. On this level we first need our inputs and output. So 
+let us create a **FileInput** and name it *file*, and a **StringInput** with the 
+name *string*. As for our output, let us grab a **FileOutput** and name 
+it simply *result*. As a last component on this level, let us grab a 
+**DockerImage** step and name it *HelloWorld*. In addition, we are going to 
+set the *command* attribute to **'node arg.js'**, the *imageId* to 
+**'cwl:hello'**, and the *workdir* to **'/app'**. With these the framework 
+will execute the 'arg.js' in the '/app' directory inside the 'cwl:hello'
+container with our arguments.
+
+As we have all our components ready on the main level of the workflow 
+we need to make sure that data makes its way to where it is going to be 
+needed during execution. To allow us to create the flow in this workflow 
+we need the necessarry ports on our singular step. To do this we need to 
+enter the context of the *HelloWorld* step. Once inside the step, we again
+use the drag-and-drop to create a **FileInput** named *f*, and a 
+**StringInput** named *s* to follow the structure of our script (arg.js).
+ We also need to set the *asArgument* attribute of both input to **true**. 
+Finally, we create a **FileOutput** named *result* and we set its *pattern* 
+attribute to **'output.txt'** so that the execution would be able to 
+look for the resulting file.
+
+Finally, we return to the main workflow's context to add our flow. We simply
+create a flow from the *string* intput to the *s* port, another from the 
+*file* input to the *f* port, and a final one from the *result* port 
+to the *result* output.
+
+.. figure:: cwl_hello_arg.png
+   :align: center
+   :figwidth: 95%
+   
+   The first workflow that passes arguments by name.
+
+Passing arguments by position
+_____________________________ 
+
+
+
 
 
