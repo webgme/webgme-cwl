@@ -107,10 +107,10 @@ we need the necessarry ports on our singular step. To do this we need to
 enter the context of the *HelloWorld* step. Once inside the step, we again
 use the drag-and-drop to create a **FileInput** named *f*, and a 
 **StringInput** named *s* to follow the structure of our script (arg.js). We 
-also need to set the *asArgument* attribute of both input to **true** . Finally,
- we create a **FileOutput** named *result* and we set its *pattern* 
-attribute to **'output.txt'** so that the execution would be able to 
-look for the resulting file.
+also need to set the *asArgument* attribute of both input to **true** . To 
+complete the step, we create a **FileOutput** named *result* and we set 
+its *pattern* attribute to **'output.txt'** so that the execution would 
+be able to look for the resulting file.
 
 Finally, we return to the main workflow's context to add our flow. We simply
 create a flow from the *string* intput to the *s* port, another from the 
@@ -163,6 +163,7 @@ as *image*, and **'/app'** as *workdir*. The input can be renamed to
 **file** while the output to **result** just like in the previous cases. 
 
 Secondly, we setup the ports of the step the following way:
+
 - create a *FileInput* with the name **'f'**, let's leave the 
   *asArgument* the default **'false'** value, and set the *location* to 
   **'input.txt'**
