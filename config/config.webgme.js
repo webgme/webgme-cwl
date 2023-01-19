@@ -50,6 +50,8 @@ config.rest.components['Dashboard'] = {
 
 // Visualizer descriptors
 config.visualization.visualizerDescriptors.push(__dirname + '/../src/visualizers/Visualizers.json');
+config.visualization.visualizerDescriptors.push(__dirname + '/../node_modules/webgme-taxonomy/src/visualizers/Visualizers.json');
+
 // Add requirejs paths
 config.requirejsPaths = {
   'test': 'node_modules/webgme-json-importer/src/seeds/test',

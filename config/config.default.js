@@ -24,7 +24,7 @@ oldbases.forEach(base => {
     if (base.indexOf('/CWL') !== -1 || base.indexOf('/taxonomy') !== -1) {
         config.seedProjects.basePaths.push(base);
     }
-})
+});
 console.log(config.seedProjects);
 validateConfig(config);
 module.exports = config;

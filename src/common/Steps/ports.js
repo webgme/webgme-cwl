@@ -76,7 +76,7 @@ define([], function() {
                             location +'\n' + cwlStep.arguments[0].valueFrom;
                     }
                     staging.push({
-                        entry: '$(inputs.' + name + ')',
+                        entry: '$(inputs[\'' + name + '\'])',
                         writable: true
                     });
                 } else if (value) {
@@ -93,11 +93,11 @@ define([], function() {
                 inputs[name] = 'Directory';
                 if (location) {
                     cwlStep.arguments[0].valueFrom = 
-                        'ln -s $(inputs.' + name + '.path) ' + 
+                        'ln -s $(inputs[\'' + name + '\'].path) ' + 
                         location + '\n' + cwlStep.arguments[0].valueFrom;
                 }
                 staging.push({
-                    entry: '$(inputs.' + name + ')',
+                    entry: '$(inputs[\'' + name + '\'])',
                     writable: true
                 });
             } else {
