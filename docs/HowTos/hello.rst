@@ -154,7 +154,32 @@ As a final hello world example, we like to show how the configuration
 of modeling elements go when we expect the input to be named specifically 
 and be placed in a specific directory. This workflow - let's call it 
 *HelloDir* - is almost identical to the first example, but we lose the 
-string input and we are going to use **DockerPull** step for our execution. 
+string input and we are going to use **DockerPull** step for our execution.
+
+First, we create a new workflow - let's call it *HelloDir* - and add the 
+file input and the file output on top of the **DockerPull** step instance. 
+For the step we set **'node dir.js'** as *command*, **'kecso/cwl:hello'** 
+as *image*, and **'/app'** as *workdir*. The input can be renamed to 
+**file** while the output to **result** just like in the previous cases. 
+
+Secondly, we setup the ports of the step the following way:
+- create a *FileInput* with the name **'f'**, let's leave the 
+  *asArgument* the default **'false'** value, and set the *location* to 
+  **'input.txt'**
+- create a *FileOutput* identical to the previous examples (naming it 
+  **'result'** and setting the *pattern* to **'output.txt'** 
+
+Thirdly, to finish the workflow, we create our flows connecting input 
+to input and output to output.
+
+For the lazy reader, the examples are *pre-created* under the cwl_hello 
+seed name. Also, to help the understanding we recorded the creation session:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://youtu.be/YKi_256Vy_0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 
 
