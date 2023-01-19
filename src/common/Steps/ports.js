@@ -58,7 +58,7 @@ define([], function() {
                         artifacts.push({input:name, name:location, content:value});
                     }
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
-                    inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position, default: value}};
+                    inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',position: position};
                 } else {

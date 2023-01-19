@@ -106,9 +106,9 @@ needed during execution. To allow us to create the flow in this workflow
 we need the necessarry ports on our singular step. To do this we need to 
 enter the context of the *HelloWorld* step. Once inside the step, we again
 use the drag-and-drop to create a **FileInput** named *f*, and a 
-**StringInput** named *s* to follow the structure of our script (arg.js).
- We also need to set the *asArgument* attribute of both input to **true**. 
-Finally, we create a **FileOutput** named *result* and we set its *pattern* 
+**StringInput** named *s* to follow the structure of our script (arg.js). We 
+also need to set the *asArgument* attribute of both input to **true** . Finally,
+ we create a **FileOutput** named *result* and we set its *pattern* 
 attribute to **'output.txt'** so that the execution would be able to 
 look for the resulting file.
 
@@ -126,6 +126,35 @@ to the *result* output.
 Passing arguments by position
 _____________________________ 
 
+Another frequently used technique of passing arguments to 
+a command or script is to pass them by position. To this end 
+we are going to extend our project with another workflow, 
+that represent exactly that.
+
+We will start this workflow by copying our previous one. Using 
+the *ObjectBrowser* locate the **HelloArg** and drag it onto the 
+screen. Once dropped, select the **'Copy here'** option to duplicate 
+the workflow. Then rename it to **HelloPos**. (another way to copy 
+a complete workflow is to press down Ctrl and drag and drop its 
+block on the Composition editor)
+
+There are only a few difference between the two flavors of execution:
+
+- set the *command* of the step should be set to **node pos.js**
+- set the *position* attribute of the *f* port of the step to 3
+- set the *position* attribute of the *s* port of the step to 2 
+  (we use these positions as 0 and 1 are taken by *node* and *pos.js*)
+
+Once these changes are made, our new workflow is ready for execution!
+
+Fixed input parameters
+______________________ 
+
+As a final hello world example, we like to show how the configuration 
+of modeling elements go when we expect the input to be named specifically 
+and be placed in a specific directory. This workflow - let's call it 
+*HelloDir* - is almost identical to the first example, but we lose the 
+string input and we are going to use **DockerPull** step for our execution. 
 
 
 

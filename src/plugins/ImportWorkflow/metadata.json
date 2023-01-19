@@ -1,0 +1,24 @@
+{
+  "id": "ImportWorkflow",
+  "name": "ImportWorkflow",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-upload",
+    "src": ""
+  },
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": false,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": [
+    {
+      "name": "workflow",
+      "displayName": "WorkFlowFile",
+      "description": "The input CWL Workflow File (CWF)",
+      "value": "",
+      "valueType": "asset",
+      "readOnly": false
+    }
+  ]
+}

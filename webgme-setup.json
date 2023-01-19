@@ -32,6 +32,14 @@
       "ReleaseWorkflow": {
         "src": "src/plugins/ReleaseWorkflow",
         "test": "test/plugins/ReleaseWorkflow"
+      },
+      "ExportWorkflow": {
+        "src": "src/plugins/ExportWorkflow",
+        "test": "test/plugins/ExportWorkflow"
+      },
+      "ImportWorkflow": {
+        "src": "src/plugins/ImportWorkflow",
+        "test": "test/plugins/ImportWorkflow"
       }
     },
     "routers": {},
