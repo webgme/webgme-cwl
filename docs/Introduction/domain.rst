@@ -23,12 +23,13 @@ _________________
    Main building blocks of the model language of common workflow language
 
 In a nutshell, the goal of the CWL language is to allow the description of 
-repretable command executions with proper environment setting. To achieve this 
+repeatable command executions with proper environment setting. To achieve this 
 there is only a few basic concepts that needs to be understood:
+
 - **Step** is the atomic element that describes the execution of a command. It
   is capable of describing a command on the hosting machine or an execution in a 
   virtualized environment (like docker).
-- **Workflow** is the main container that describe a set of *steps* to be executed.
+- **Workflow** is the main container that describes a set of *steps* to be executed.
 - **Inputs** and **Outputs** are defining the artifacts that are used during 
   the exectution of a *step* or *workflow*. These artifatcs can be varied, but the
   main ones are files and directories. While the CWL language differentiates 

@@ -15,7 +15,7 @@ to the `basics of modeling <https://www.youtube.com/watch?v=YKi_256Vy_0>`_ examp
 Create workflow model
 ______________________________
 
-As we have described in the :ref: `The Common Workflow Language modeling language` section
+As we have described in the :ref:`domain intro section <The Common Workflow Language modeling language>`
 there are essentially only a few building blocks when you manipulate a workflow. However,
 to aim for absolute clarity and guide our users in the process (who might not be experienced
 in WebGME based Design Studio usage), here we provide a start to finish description
@@ -35,7 +35,7 @@ we will stick to the one project one workflow rule.
 
 Once the project is created, we are welcomed with an empty *Workflows* folder where our 
 initial action must be the creation of a Workflow that can be done with a simple drag and
-drop operation using the *Part Bworser* (bottom left sidebar section with the list of 
+drop operation using the *Part Browser* (bottom left sidebar section with the list of 
 available elements and their visual depiction). This drag and drop operation will be used
 for all further element creation so we are not going to described them in detail but 
 expect the user to follow this one with the apropriate element.
@@ -60,7 +60,7 @@ new context so that we can create the parts of the workflow.
 Adding and editing components
 ______________________________
 
-When you add your components which falls into the category of either input, 
+When you add your components which falls into the category of input, 
 output, or step/sub-workflow, you just follow the drag and drop method using
 the *Part Browser*. Once your component is on the screen the main editing and
 configuration happens on the bottom right sidebar of the screen called the

@@ -15,8 +15,8 @@ and ending with noting the execution of a composed workflow
 using the standrard implementation of the CWL framework 
 `cwltool <https://github.com/common-workflow-language/cwltool>`_ 
 . All necessary files can be found in our
-`repository <https://github.com/webgme/webgme-cwl/tree/master/tutorials/hello>`_ 
-. The hello world will follow the docerization of a few arbitrary, though 
+`repository <https://github.com/webgme/webgme-cwl/tree/master/tutorials/hello>`_ . 
+The hello world will follow the docerization of a few arbitrary, though 
 simple script - in our case written in javascript - then show different ways 
 how they might get called in a workflow step. This way we aim cover the 
 most essential issues that new users might face when they try to wrap their 
@@ -88,7 +88,7 @@ string and a file arguments by name.
 
 First, let us create a workflow project using what we learned in the 
 :ref:`cwl modeling basics <How to create CWL models - the basics>`. 
-Using the drag-and-drop technique form the *PartBrowser* to the 
+Using the drag-and-drop technique from the *PartBrowser* to the 
 *Composition* screen, we create a workflow, name it *HelloArg* and then 
 enter its context. On this level we first need our inputs and output. So 
 let us create a **FileInput** and name it *file*, and a **StringInput** with the 
