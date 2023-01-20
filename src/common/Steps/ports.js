@@ -72,7 +72,7 @@ define([], function() {
                 if(hasSource) {
                     if (location) {
                         cwlStep.arguments[0].valueFrom = 
-                            'ln -s $(inputs.' + name + '.path) ' + 
+                            'ln -s $(inputs[\'' + name + '\'].path) ' + 
                             location +'\n' + cwlStep.arguments[0].valueFrom;
                     }
                     staging.push({

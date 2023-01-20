@@ -104,7 +104,7 @@ define([
                 core.isInstanceOf(node, META['Output'])) {
                 result.ports[core.getRelid(node)] = this.portToJSON(node);
             } else if (core.isInstanceOf(node, META['Flow'])) {
-                result.flows[core.getRelid(node)] = this.portToJSON(node);
+                result.flows[core.getRelid(node)] = this.flowToJSON(node);
             }
         });
 
@@ -122,9 +122,9 @@ define([
         };
         core.getChildrenPaths(node).forEach(childPath => {
             const child = this._nodes[childPath];
-            if (core.isInstanceOf(node, META['Input']) ||
-                core.isInstanceOf(node, META['Output'])) {
-                result.ports[core.getRelid(node)] = this.portToJSON(node);
+            if (core.isInstanceOf(child, META['Input']) ||
+                core.isInstanceOf(child, META['Output'])) {
+                result.ports[core.getRelid(child)] = this.portToJSON(child);
             }
         });
 

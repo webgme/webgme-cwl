@@ -121,6 +121,10 @@ define([
         Object.keys(jsonNode.subs || {}).forEach(relid => {
             this.workflowFromJSON(node, jsonNode.subs[relid], relid);
         });
+
+        Object.keys(jsonNode.flows || {}).forEach(relid => {
+            this.flowFromJSON(node, jsonNode.flows[relid], relid);
+        });
     };
 
     ImportWorkflow.prototype.stepFromJSON = function (parentNode, jsonNode, relid) {
