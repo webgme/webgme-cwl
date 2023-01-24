@@ -110,20 +110,20 @@ define([
         this.setAttributes(node, jsonNode);
         this.setRegistry(node, jsonNode);
 
-        Object.keys(jsonNode.ports || {}).forEach(relid => {
-            this.portFromJSON(node, jsonNode.ports[relid], relid);
+        Object.keys(jsonNode.ports || {}).forEach(rid => {
+            this.portFromJSON(node, jsonNode.ports[rid], rid);
         });
 
-        Object.keys(jsonNode.steps || {}).forEach(relid => {
-            this.stepFromJSON(node, jsonNode.steps[relid], relid);
+        Object.keys(jsonNode.steps || {}).forEach(rid => {
+            this.stepFromJSON(node, jsonNode.steps[rid], rid);
         });
 
-        Object.keys(jsonNode.subs || {}).forEach(relid => {
-            this.workflowFromJSON(node, jsonNode.subs[relid], relid);
+        Object.keys(jsonNode.subs || {}).forEach(rid => {
+            this.workflowFromJSON(node, jsonNode.subs[rid], rid);
         });
 
-        Object.keys(jsonNode.flows || {}).forEach(relid => {
-            this.flowFromJSON(node, jsonNode.flows[relid], relid);
+        Object.keys(jsonNode.flows || {}).forEach(rid => {
+            this.flowFromJSON(node, jsonNode.flows[rid], rid);
         });
     };
 
@@ -139,18 +139,21 @@ define([
         this.setAttributes(node, jsonNode);
         this.setRegistry(node, jsonNode);
 
-        Object.keys(jsonNode.ports).forEach(relid => {
-            this.portFromJSON(node, jsonNode.ports[relid], relid);
+        Object.keys(jsonNode.ports).forEach(rid => {
+            this.portFromJSON(node, jsonNode.ports[rid], rid);
         });
     };
 
     ImportWorkflow.prototype.portFromJSON = function (parentNode, jsonNode, relid) {
         const {core, META} = this;
-        const node = core.createNode({
-            parent: parentNode, 
-            base: META[jsonNode.type.name],
-            relid: relid
-        });
+        const templatePorts = core.getChildrenRelids(parentNode);
+        const node = templatePorts.indexOf(relid) !== -1 ? 
+            core.getChild(parentNode, relid) :
+            core.createNode({
+                parent: parentNode, 
+                base: META[jsonNode.type.name],
+                relid: relid
+            });
         this._newNodes[this.getOwnPath(node)] = node;
 
         this.setAttributes(node, jsonNode);

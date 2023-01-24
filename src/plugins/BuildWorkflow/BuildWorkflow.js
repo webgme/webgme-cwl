@@ -165,7 +165,7 @@
             if (flow.dstHost) {
                 cwlContent.steps[flow.dstHost].in[flow.dst] = flow.srcHost ? flow.srcHost + '/' + flow.src : flow.src;
             } else {
-                cwlContent.outputs[flow.src] = {
+                cwlContent.outputs[flow.dst] = {
                     type: flow.type,
                     outputSource: flow.srcHost ? flow.srcHost + '/' + flow.src : flow.src 
                 }
