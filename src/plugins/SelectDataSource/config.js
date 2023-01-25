@@ -68,7 +68,8 @@
             dialog.modal('hide');
             if (data.origin === window.location.origin) {
                 try {
-                    const msg = JSON.parse(data.data);
+                    // const msg = JSON.parse(data.data);
+                    const msg = data.data;
                     if (msg.type === 'selectArtifact') {
                         callback(globalConfig, {value:msg.value}, false);
                     } else {
