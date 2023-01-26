@@ -66,108 +66,91 @@
      * @param {function(Error|null, plugin.PluginResult)} callback - the result callback
      */
     ReleaseWorkflow.prototype.main = function (callback) {
-        const self = this;
-        const core = this.core;
-        const logger = self.logger;
-        const nodeObject = self.activeNode;
+        const {core, logger, activeNode, project, result, commitHash} = this;
         const executionId = makeid();
-        // const executionId = 'release';
-        const resultId = executionId +'_result.zip';
         const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
-        const fs = require('fs');
-        const zip = require('zip-a-folder').zip;
-        const COMPRESSION_LEVEL = require('zip-a-folder').COMPRESSION_LEVEL;
-        const currentConfig = self.getCurrentConfig();
-        const serialization = requireJS('common/util/serialization');
-        const previousReleasePDP = core.getAttribute(nodeObject,'pdpId') || '98df2486-153f-4ce0-93bf-c06cdd94657a_1';
-        const previousVersion = core.getAttribute(nodeObject, 'version') || 0;
-        const previousIndexPDP = previousReleasePDP.split('_')[1]; //TODO proper index needed from get status or sg
-
-
-        console.log('saving');
-        core.setAttribute(nodeObject, 'pdpId', previousReleasePDP.split('_')[0] + '_' + (Number(previousIndexPDP) + 1));
-        core.setAttribute(nodeObject, 'version', Number(previousVersion) + 1);
-        this.save('releasing workflow')
-        .then(()=> {
-            const releaseMetadata = {
-                Project: {
-                    Id: this.projectId,
-                    Commit: this.currentHash,
-                    Name: this.projectName,
-                    Branch: this.branchName
-                },
-                InputDependency: this.getInputDependency(),
-                Previous: {
-                    version: previousVersion,
-                    PDPId: previousReleasePDP
-                }
-            };
-    
-            async function ZipFolder (folderPath, output, callback) {
-                try {
-                    await zip(folderPath, output, {compression:COMPRESSION_LEVEL.medium});
-                    callback(null);
-                } catch (e) {
-                    callback(e);
-                }
+        const fs = require('fs').promises;
+        const currentConfig = this.getCurrentConfig();
+        const workflowName = core.getAttribute(activeNode, 'name');
+        // 87dc1607-5d63-4073-9424-720f86ecef43 - workflow process
+        // const previousReleasePDP = core.getAttribute(nodeObject,'pdpId') || '98df2486-153f-4ce0-93bf-c06cdd94657a_1';
+        // const previousVersion = core.getAttribute(nodeObject, 'version') || 0;
+        // const previousIndexPDP = previousReleasePDP.split('_')[1]; //TODO proper index needed from get status or sg
+        // console.log(this.currentHash, this.commitHash, this.branchHash);
+        this.getUpcomingTag(currentConfig.isMajor)
+        .then(tag => {
+            return project.createTag(tag, commitHash);
+        })
+        .then(() => {return fs.mkdir(saveDirectory);})
+        .then(() => {return fs.mkdir(saveDirectory+'/cwl');})
+        .then(() => {return fs.mkdir(saveDirectory+'/cwl/cwl');})
+        .then(() => {return fs.mkdir(saveDirectory+'/cwl/ds');})
+        .then(() => {
+            return this.invokePlugin('ExportWorkflow',{pluginConfig:{}});
+        })
+        .then(innerResult => {
+            if(!innerResult.success || !innerResult.messages[0]) {
+                throw new Error ('cannot get the exchange format of thw workflow!');
             }
-    
-            try {
-                fs.mkdirSync(saveDirectory);
-                fs.mkdirSync(saveDirectory+'/cwl');
-                fs.mkdirSync(saveDirectory+'/cwl/cwl');
-                fs.mkdirSync(saveDirectory+'/cwl/ds');
-                this.invokePlugin('BuildWorkflow',{pluginConfig:{saveToDir:true,savePath:saveDirectory+'/cwl/cwl', exitDepth:1}}, (err, result) => {
-                    if (err) {
-                        callback(err);
-                    } else {
-                        serialization.exportProjectToFile(this.project, this.blobClient, {commitHash:this.commitHash, outName:'released', withAssets:true}, (err, result) => {
-                            if(err) {
-                                logger.error(err);
-                                return callback(err);
-                            }
-                            logger.error('saved project', result);
-                            const outproject = fs.createWriteStream(saveDirectory+'/cwl/ds/released.webgmex');
-                            
-                            outproject.on('error', function (err) {
-                                logger.error(err);
-                                return callback(new Error('cannot export project:', err));
-                            });
-                              
-                            outproject.on('finish', function () {
-                                fs.writeFileSync(saveDirectory+'/metadata.json', JSON.stringify(releaseMetadata));
-                                fs.writeFileSync(saveDirectory+'/release.sh', 'java -jar ~/pdp_cli/pdp_cli_secret.jar push -d ./cwl -p 98df2486-153f-4ce0-93bf-c06cdd94657a -f ./metadata.json');
-                                fs.chmodSync(saveDirectory+'/release.sh',0o777);
-                                const spawn = require('child_process').spawnSync;
-                                // const returnVal = spawn('java', ['-jar', '~/pdp_cli/pdp_cli_secret.jar','-p', '98df2486-153f-4ce0-93bf-c06cdd94657a', '-d', './cwl/'],{cwd:saveDirectory});
-                                const returnVal = spawn('./release.sh', [],{cwd:saveDirectory});
-                                logger.info(returnVal.stdout);
-                                logger.error(returnVal.stderr);
-                                logger.info(returnVal.status);
-                                if(returnVal.status !== 0) {
-                                    return callback(new Error('failed to push data to PDP :' + returnVal.stderr));
-                                }
-            
-                                fs.rmSync(saveDirectory, { recursive: true });
-                                console.info('workflow released');
-                                self.result.setSuccess(true);
-                                return callback(null, self.result);
-                            });
-                            
-                            this.blobClient.getStreamObject(result.hash, outproject);
-                        });
+
+            return fs.writeFile(
+                saveDirectory+'/cwl/ds/' + workflowName + '.CWF',
+                innerResult.messages[0].message,
+                'utf8'
+            );
+        })
+        .then(() => {
+            return this.invokePlugin(
+                'BuildWorkflow',
+                {
+                    pluginConfig:{
+                        saveToDir:true,
+                        savePath:saveDirectory + '/cwl/cwl'
                     }
                 });
-            } catch (e) {
-                logger.error(e);
-                return callback(e);
+        })
+        .then(innerResult => {
+            // console.log(innerResult);
+            if (!innerResult.success) {
+                throw new Error('unable to generate the workflow artifacts!!');
             }
+            const releaseMetadata = {
+                taxonomyVersion:{
+                    id:"AllLeap+TaxonomyBootcamp",
+                    branch:"master",
+                    commit:"#a6ca25a503ed11f3c004c60b0308c4aab4293e65",
+                    url:"wellcomewebgme.centralus.cloudapp.azure.com"
+                }
+            };
+            return fs.writeFile(
+                saveDirectory+'/metadata.json', 
+                JSON.stringify(releaseMetadata)
+            );
+
+        })
+        .then(() => {
+            result.setSuccess(true);
+            return callback(null, result);
         })
         .catch(e => {
             logger.error(e);
             return callback(e);
         });
-        
+    };
+
+    ReleaseWorkflow.prototype.getUpcomingTag = function (isMajor) {
+        //TODO - need to figure out proper versioning
+        const {core, logger, activeNode, project, result} = this;
+        const deferred = Q.defer();
+        project.getTags()
+        .then(tags => {
+            // console.log(tags);
+            const mytags = {};
+            deferred.resolve(makeid());
+        })
+        .catch(deferred.reject);
+
+        return deferred.promise;
     };
 
     ReleaseWorkflow.prototype.getInputDependency = function () {

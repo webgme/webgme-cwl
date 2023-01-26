@@ -24,7 +24,7 @@ define([], function () {
           arguments:[
             {
               shellQuote:false,
-              valueFrom: 'ln -s /LEAP/leap_cli.jar\nln -s /LEAP/.sample_cache.json\njava -jar leap_cli.jar download -p $(inputs.ID.split("_")[0]) -i $(inputs.ID.split("_")[1]) -d ./download'
+              valueFrom: 'ln -s $LEAP_CLI_DIR/leap_cli.jar\nln -s $LEAP_CLI_DIR/.sample_cache.json\njava -jar leap_cli.jar download -p $(inputs.ID.split("_")[0]) -i $(inputs.ID.split("_")[1]) -d ./download'
             }
           ]
       };

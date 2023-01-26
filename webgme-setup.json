@@ -42,7 +42,13 @@
         "test": "test/plugins/ImportWorkflow"
       }
     },
-    "routers": {},
+    "routers": {
+      "ufs": {
+        "src": "src/routers/ufs",
+        "test": "test/routers/ufs",
+        "mount": "routers/ufs"
+      }
+    },
     "seeds": {
       "CWL": {
         "src": "src/seeds/CWL"

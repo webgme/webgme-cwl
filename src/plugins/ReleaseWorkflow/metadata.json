@@ -11,5 +11,18 @@
   "disableBrowserSideExecution": true,
   "dependencies": [],
   "writeAccessRequired": false,
-  "configStructure": []
+  "configStructure": [
+    {
+      "name": "workflowType",
+      "displayName": "Type of Workflow",
+      "description": "We classsify the workflows into three categories: data curation, model training, and model use",
+      "value": "Data curation",
+      "valueType": "string",
+      "valueItems": [
+        "Data curation",
+        "Model training",
+        "Model use"
+      ]
+    }
+  ]
 }

@@ -98,7 +98,7 @@
             });
             files['README.md'] = Workflow.getReadMeContent(core, META, activeNode, this._nodes, defaultInfo);
 
-            return this.generateArtifact(files, artifacts,  saveDirectory);
+            return this.generateArtifact(files, artifacts, mainInputs, saveDirectory);
         })
         .then((/*artifactHash*/) => {
             this.result.setSuccess(true);
@@ -262,6 +262,7 @@
     };
 
     BuildWorkflow.prototype.generateArtifact = function(files, artifacts, mainInputs, saveDirectory) {
+        // console.log('SAVE?',saveDirectory);
         const deferred = Q.defer();
         const fileNames = Object.keys(files);
         let fs = null;
@@ -271,10 +272,13 @@
         const saveToDisc = (path, content) => {
             const defd = Q.defer();
             const options = {};
+            // console.log('WO:', path);
             fs.writeFile(path, content, options, err => {
                 if (err) {
+                    // console.log('WO-err:', path);
                     defd.reject(err);
                 } else {
+                    // console.log('WO-done:', path);
                     defd.resolve(null);
                 }
             });
