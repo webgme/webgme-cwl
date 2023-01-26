@@ -273,7 +273,7 @@
             const defd = Q.defer();
             const options = {};
             // console.log('WO:', path);
-            fs.writeFile(path, content, options, err => {
+            fs.writeFile(saveDirectory + '/' + path, content, err => {
                 if (err) {
                     // console.log('WO-err:', path);
                     defd.reject(err);

@@ -11,12 +11,14 @@
     'plugin/PluginConfig',
     'text!./metadata.json',
     'plugin/PluginBase',
-    'q'
+    'q',
+    'superagent'
 ], function (
     PluginConfig,
     pluginMetadata,
     PluginBase,
-    Q) {
+    Q,
+    superagent) {
     'use strict';
 
     pluginMetadata = JSON.parse(pluginMetadata);
@@ -114,19 +116,97 @@
             if (!innerResult.success) {
                 throw new Error('unable to generate the workflow artifacts!!');
             }
+            const timeStamp = new Date();
             const releaseMetadata = {
                 taxonomyVersion:{
                     id:"AllLeap+TaxonomyBootcamp",
                     branch:"master",
                     commit:"#a6ca25a503ed11f3c004c60b0308c4aab4293e65",
                     url:"wellcomewebgme.centralus.cloudapp.azure.com"
-                }
+                },
+                taxonomyTags:[
+                    {
+                        Workflow:{
+                            type:{
+                                value:currentConfig.workflowType
+                            }
+                        }
+                    },
+                    {
+                        Workflow:{
+                            source:{
+                                url:project.projectId + '_@_' + commitHash
+                            }
+                        }
+                    },
+                    {
+                        Base:{
+                            uploadTime:{
+                                value: timeStamp.toString()
+                            }
+                        }
+                    }
+                ]
             };
             return fs.writeFile(
                 saveDirectory+'/metadata.json', 
                 JSON.stringify(releaseMetadata)
             );
 
+        })
+        .then(()=> {
+            return fs.writeFile(
+                saveDirectory+'/release.sh', 
+                'java -jar ../../src/common/leap_cli.jar push -d ./cwl -p 87dc1607-5d63-4073-9424-720f86ecef43 -f ./metadata.json'
+            );
+        })
+        .then(() => {
+            return fs.chmod(saveDirectory+'/release.sh',0o777);
+        })
+        .then(() => {
+            const spawndef = Q.defer();
+            const { spawn } = require('node:child_process');
+            const pushing = spawn('./release.sh', [],{cwd:saveDirectory});
+            pushing.stdout.on('data', (data) => {
+                // console.log(`stdout: ${data}`);
+            });
+            
+            pushing.stderr.on('data', (data) => {
+                // console.error(`stderr: ${data}`);
+                spawndef.reject('FAILED pushing to PDP!');
+            });
+            
+            pushing.on('close', (code) => {
+                console.log(`child process exited with code ${code}`);
+                if (code === 0) {
+                    spawndef.resolve(null);
+                } else {
+                    spawndef.reject('Failed uploading content!');
+                }
+            });
+            return spawndef.promise;
+        })
+        /*.then(() => {
+            //release via router
+            // return superagent('GET','/routers/ufs/wf-release?' + saveDirectory);
+            // console.log(Object.keys(superagent));
+            // return superagent.get('/routers/ufs/wf-release');
+            // console.log(Object.keys(this.blobClient));
+            // console.log(this.blobClient.apiToken);
+            // console.log(this.blobClient.webgmeToken);
+            const webgme = require('webgme-engine');
+            const path = require('path');
+            // const gmeConfig = require(path.join(process.cwd(), 'config'));
+            // return webgme.getGmeAuth(gmeConfig);
+            console.log(process.cwd());
+            return Q(null);
+        })
+        .then(gmeAuth=> {
+            return Q(null);
+        })*/
+        .then((result) => {
+            console.log(result);
+            return fs.rm(saveDirectory, { recursive: true });
         })
         .then(() => {
             result.setSuccess(true);
