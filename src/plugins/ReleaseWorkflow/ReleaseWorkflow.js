@@ -72,6 +72,7 @@
         const executionId = makeid();
         const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
         const fs = require('fs').promises;
+        const path = require('path');
         const currentConfig = this.getCurrentConfig();
         const workflowName = core.getAttribute(activeNode, 'name');
         // 87dc1607-5d63-4073-9424-720f86ecef43 - workflow process
@@ -154,6 +155,9 @@
             );
 
         })
+        /*.then(() => {
+            return fs.copyFile(path.join(path.normalize(path.join(saveDirectory,'../../src/common')),'.sample_cache.json'), path.join(saveDirectory,'._sample_cache.json'));
+        })
         .then(()=> {
             return fs.writeFile(
                 saveDirectory+'/release.sh', 
@@ -162,17 +166,30 @@
         })
         .then(() => {
             return fs.chmod(saveDirectory+'/release.sh',0o777);
-        })
+        })*/
         .then(() => {
+            console.log(path.normalize(path.join(saveDirectory,'metadata.json')));
             const spawndef = Q.defer();
             const { spawn } = require('node:child_process');
-            const pushing = spawn('./release.sh', [],{cwd:saveDirectory});
+            // const pushing = spawn('./release.sh', [],{cwd:saveDirectory});
+            const pushing = spawn('java',
+                ['-jar',
+                'leap_cli.jar',
+                'upload', 
+                '-d', 
+                './' + executionId +'/cwl',
+                '-p',
+                '87dc1607-5d63-4073-9424-720f86ecef43',
+                '-f',
+                './' + executionId + '/metadata.json'],
+                {cwd:path.normalize('OUTPUT')}
+            );
             pushing.stdout.on('data', (data) => {
-                // console.log(`stdout: ${data}`);
+                console.log(`stdout: ${data}`);
             });
             
             pushing.stderr.on('data', (data) => {
-                // console.error(`stderr: ${data}`);
+                console.error(`stderr: ${data}`);
                 spawndef.reject('FAILED pushing to PDP!');
             });
             
