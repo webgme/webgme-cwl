@@ -41,7 +41,7 @@ define([], function() {
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition + 1, prefix:prefix + name}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
-                    inputs[name] = {type:'Directory',position: maxPosition + 1, prefix:prefix + name};
+                    inputs[name] = {type:'Directory',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
@@ -60,7 +60,7 @@ define([], function() {
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
-                    inputs[name] = {type:'Directory',position: position};
+                    inputs[name] = {type:'Directory',inputBinding:{position: position}};
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
