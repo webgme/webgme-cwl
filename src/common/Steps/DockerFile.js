@@ -7,6 +7,7 @@ define(['./ports'], function (Ports) {
           cwlVersion:'v1.1',
           class:'CommandLineTool',
           requirements: {
+              InlineJavascriptRequirement:{},
               DockerRequirement: {
                 dockerFile: core.getAttribute(stepNode,'dockerfile')
               },

@@ -17,7 +17,7 @@ define([], function () {
               output:{
                   type: 'Directory',
                   outputBinding: {
-                      glob: 'download/dat/$(inputs.ID.split("_")[1])'
+                      glob: ['download/dat/$(inputs.ID.split("_")[1])','download/dat/$(inputs.ID.split("_")[1])/$(inputs.ID.split("_")[2])','download/dat']
                   }
               }
           },
