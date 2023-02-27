@@ -1,5 +1,5 @@
 //This step fetches the given artifact from the PDP storage
-define([], function () {
+define(['text!./fetch_script.step'], function (Script) {
   return function(stepNode, context) {
       const result = [];
       const {core, META, inputs, outputs, nodes} = context;
@@ -9,6 +9,10 @@ define([], function () {
           requirements: {
             InlineJavascriptRequirement:{},
             ShellCommandRequirement: {},
+            LoadListingRequirement: {
+              class: 'LoadListingRequirement',
+              loadListing: 'deep_listing'
+            }
           },
           inputs:{
               ID:'string'
@@ -17,7 +21,9 @@ define([], function () {
               output:{
                   type: 'Directory',
                   outputBinding: {
-                      glob: ['download/dat/$(inputs.ID.split("_")[1])','download/dat/$(inputs.ID.split("_")[1])/$(inputs.ID.split("_")[2])','download/dat']
+                    loadListing: 'deep_listing',
+                    glob: 'download/dat',
+                    outputEval: '${' + Script + '}'
                   }
               }
           },

@@ -1,0 +1,29 @@
+var entries = []; 
+var longDir = 'download/dat/' + (inputs.ID.split('_')[1] || '_') + '/' + (inputs.ID.split('_')[2] || '_');
+var midDir = 'download/dat/' + (inputs.ID.split('_')[1] || '_');
+var shortDir = 'download/dat';
+var i = 0;
+var addDirectories = function(currentDir, elementsSoFar) {
+    elementsSoFar.push({location:currentDir.location, basename: currentDir.basename});
+    for (var i =0; i<currentDir.listing.length;i++) {
+        if(currentDir.listing[i].class === 'Directory') {
+            addDirectories(currentDir.listing[i], elementsSoFar);
+        }
+    }
+};
+addDirectories(self[0],entries);
+var dir = {class: 'Directory', path: '', basename: 'output'};
+for (i = 0; i < entries.length; i++) { 
+    if (entries[i].location.indexOf(longDir + '/') > -1) {
+        dir.path = longDir;
+        return dir;
+    }
+}
+for (i = 0; i < entries.length; i++) { 
+    if (entries[i].location.indexOf(midDir + '/') > -1) {
+        dir.path = midDir;
+        return dir;
+    }
+}
+dir.path = shortDir;
+return dir;

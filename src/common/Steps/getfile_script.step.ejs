@@ -1,0 +1,36 @@
+var entries = [];
+var pattern = /<%=pattern%>/;
+var i = 0;
+var collectFiles = function(currentLevel, filesSoFar) {
+    if(Array.isArray(currentLevel)) {
+        for(var i=0; i<currentLevel.length; i++) {
+            if(currentLevel[i].class === 'File') {
+                filesSoFar.push(currentLevel[i]);
+            } else if(currentLevel[i].class === 'Directory') {
+                collectFiles(currentLevel[i].listing, filesSoFar);
+            }
+        }
+    } else if (currentLevel.hasOwnProperty('listing')) {
+        for(var i=0; i<currentLevel.listing.length; i++) {
+            if(currentLevel.listing[i].class === 'File') {
+                filesSoFar.push(currentLevel.listing[i]);
+            } else if(currentLevel.listing[i].class === 'Directory') {
+                collectFiles(currentLevel.listing[i].listing, filesSoFar);
+            }
+        }
+    }
+};
+
+collectFiles(self, entries);
+var output = [];
+for (var i=0; i<entries.length; i++) {
+    if(pattern.test(entries[i].location)) {
+        output.push(entries[i]);
+    }
+}
+
+if(<%=isArray%>) {
+    return output;
+} else {
+    return output[0] || null;
+}
