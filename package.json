@@ -38,7 +38,7 @@
     "webgme": "github:webgme/webgme#azure",
     "webgme-json": "github:webgme/webgme-json",
     "webgme-json-importer": "^1.3.1",
-    "webgme-taxonomy": "github:webgme/webgme-taxonomy#install-fix",
+    "webgme-taxonomy": "^1.2.0",
     "zip-a-folder": "^1.1.3"
   },
   "description": "First, install the webgme-cwl following: - [NodeJS](https://nodejs.org/en/) (LTS recommended) - [MongoDB](https://www.mongodb.com/)",
