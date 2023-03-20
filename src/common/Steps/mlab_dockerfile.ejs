@@ -1,0 +1,13 @@
+#Image for Matlab standalone app execution <%=mversion%>
+FROM ubuntu:bionic-20230301
+
+RUN apt-get -y update
+RUN apt-get -y install wget
+RUN apt-get -y install xserver-xorg-video-dummy x11-apps
+RUN apt-get -y install unzip
+RUN mkdir mlab
+RUN wget <%=mlab%>
+RUN unzip <%=mfile%> -d mlab
+RUN rm <%=mfile%>
+RUN mlab/install -agreeToLicense yes
+RUN rm -r mlab

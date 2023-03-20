@@ -1,0 +1,12 @@
+const getMlabInfo = function(listing) {
+    const info = {script: null, file: null};
+    listing.forEach(item => {
+        if(item.class === 'File' && item.nameext === '.sh') {
+            info.script = item.basename;
+        } else if (item.class === 'File' && item.nameext === '') {
+            info.file = item.basename;
+        }
+    });
+
+    return info;
+};

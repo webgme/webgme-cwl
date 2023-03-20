@@ -3,14 +3,16 @@ define(['./ports',
 './DockerImage',
 './DockerFile', 
 './GetFile',
-'./FetchFromPDP'
+'./FetchFromPDP',
+'./SAMatlab'
 ], function (
     ports, 
     DockerPull, 
     DockerImage,
     DockerFile,
     GetFile, 
-    FetchFromPDP) {
+    FetchFromPDP,
+    SAMatlab) {
 
     return {
         processInput: ports.processInput,
@@ -19,6 +21,7 @@ define(['./ports',
         DockerImage: DockerImage,
         DockerFile: DockerFile,
         GetFile: GetFile,
-        FetchFromPDP: FetchFromPDP
+        FetchFromPDP: FetchFromPDP,
+        SAMatlab: SAMatlab
     };
 });
