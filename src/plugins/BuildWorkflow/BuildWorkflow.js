@@ -119,6 +119,7 @@
             outputs:{},
             steps:{},
             requirements:{
+                InlineJavascriptRequirement:{},
                 SubworkflowFeatureRequirement:{},
                 InitialWorkDirRequirement:{
                     listing:[]
@@ -137,6 +138,7 @@
             Steps.processInput(context.core, context.META, context.nodes[input], cwlContent, artifacts);
         });
         delete cwlContent.arguments;
+        delete cwlContent.requirements.InitialWorkDirRequirement;
 
         //Steps and sub-workflows
         context.steps.forEach(step => {

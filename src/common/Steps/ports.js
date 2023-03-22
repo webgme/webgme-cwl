@@ -23,6 +23,7 @@ define([], function() {
         const hasSource = core.getCollectionPaths(portNode,'dst').length > 0;
         const staging = cwlStep.requirements.InitialWorkDirRequirement.listing;
 
+        //TODO: by default we change all inputs to in/out values therefore, we are going to stage all inputs with writable
         if (asArgument) {
             if (position === -1) {
                 //Inputs used as arguments
@@ -30,18 +31,14 @@ define([], function() {
                 if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
                     inputs[name] = {type:'File',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                     if (!hasSource && value) {
-                        /*inputs[name].type = 'File?';
-                        staging.push({
-                            writeable:true,
-                            entryname: location,
-                            entry: value
-                        });*/
                         artifacts.push({input:name, name:location, content:value});
                     }
+                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition + 1, prefix:prefix + name}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
+                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
@@ -49,18 +46,14 @@ define([], function() {
                 if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
                     inputs[name] = {type:'File',inputBinding:{position: position}};
                     if (!hasSource && value) {
-                        /*inputs[name].type = 'File?';
-                        staging.push({
-                            writeable:true,
-                            entryname: location,
-                            entry: value
-                        });*/
                         artifacts.push({input:name, name:location, content:value});
                     }
+                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: position}};
+                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }

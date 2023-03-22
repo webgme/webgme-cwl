@@ -40,6 +40,10 @@
       "ImportWorkflow": {
         "src": "src/plugins/ImportWorkflow",
         "test": "test/plugins/ImportWorkflow"
+      },
+      "UpgradeCWLCore": {
+        "src": "src/plugins/UpgradeCWLCore",
+        "test": "test/plugins/UpgradeCWLCore"
       }
     },
     "routers": {
