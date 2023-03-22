@@ -36,6 +36,11 @@ Welcome to WebGME-CWL's documentation!
    
    Steps/index.rst
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples:
+   
+   Examples/examples.rst
 
 Indices and tables
 ==================
