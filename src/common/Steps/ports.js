@@ -99,7 +99,7 @@ define([], function() {
         }
     }
 
-    function processOutput (core, CWLMETA, portNode, cwlStep) {
+    function processOutput (core, CWLMETA, portNode, cwlStep, nodes) {
         const outputs = cwlStep.outputs;
         const pattern = core.getAttribute(portNode,'pattern');
         const name = core.getAttribute(portNode,'name');
@@ -111,6 +111,13 @@ define([], function() {
             outputs[name] = {type:'Directory',outputBinding:{glob: pattern}};
         } else {
             throw new Error('missing processing for this input type!!!');
+        }
+        
+        //TODO we always need to check if the source is correct or not and if this
+        //  part needs updating
+        if(core.getPointerPath(portNode,'source') && nodes[core.getPointerPath(portNode,'source')]) {
+            const sname = core.getAttribute(nodes[core.getPointerPath(portNode,'source')], 'name');
+            outputs[name].outputBinding.glob = '$(inputs[\'' + sname +'\'].path)';
         }
     }
 

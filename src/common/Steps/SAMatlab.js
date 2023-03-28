@@ -68,7 +68,7 @@ define(['./ports','text!./mlab_dockerfile.ejs', 'ejs', 'text!./mlab_func_scripts
         });
   
         outputs.forEach(output => {
-          Ports.processOutput(core, META, nodes[output], stepCwl);
+          Ports.processOutput(core, META, nodes[output], stepCwl, nodes);
         });
   
         stepCwl.inputs.app =  {

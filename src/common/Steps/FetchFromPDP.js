@@ -22,7 +22,7 @@ define(['text!./fetch_script.step'], function (Script) {
                   type: 'Directory',
                   outputBinding: {
                     loadListing: 'deep_listing',
-                    glob: 'download/dat',
+                    glob: '*',
                     outputEval: '${' + Script + '}'
                   }
               }

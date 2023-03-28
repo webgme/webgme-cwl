@@ -5,7 +5,8 @@ define(['./ports',
 './GetFile',
 './FetchFromPDP',
 './SAMatlab',
-'./UnzipFile'
+'./UnzipFile',
+'./BuildDockerFromDir'
 ], function (
     ports, 
     DockerPull, 
@@ -14,7 +15,8 @@ define(['./ports',
     GetFile, 
     FetchFromPDP,
     SAMatlab,
-    UnzipFile) {
+    UnzipFile,
+    BuildDockerFromDir) {
 
     return {
         processInput: ports.processInput,
@@ -25,6 +27,7 @@ define(['./ports',
         GetFile: GetFile,
         FetchFromPDP: FetchFromPDP,
         SAMatlab: SAMatlab,
-        UnzipFile: UnzipFile
+        UnzipFile: UnzipFile,
+        BuildDockerFromDir: BuildDockerFromDir
     };
 });

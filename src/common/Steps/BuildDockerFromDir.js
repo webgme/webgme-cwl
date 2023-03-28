@@ -1,27 +1,28 @@
-//This step executes the given command in the proposed image available locally
 define(['./ports'], function (Ports) {
     return function(stepNode, context) {
         const result = [];
-        const {core, META, inputs, outputs, nodes} = context;
+        const {core, META, inputs, nodes} = context;
         const stepCwl = {
             cwlVersion:'v1.1',
             class:'CommandLineTool',
             requirements: {
                 InlineJavascriptRequirement:{},
-                DockerRequirement: {
-                  dockerImageId: core.getAttribute(stepNode,'imageId')
-                },
                 ShellCommandRequirement: {},
                 InitialWorkDirRequirement: {
                   listing: []
                 }
               },
-            inputs:{},
-            outputs:{},
+            inputs:{
+                nametag:'string',
+                dir: 'Directory'
+            },
+            outputs:{
+                id: '$(inputs.nametag)'
+            },
             arguments:[
               {
                 shellQuote:false,
-                valueFrom: core.getAttribute(stepNode,'command') || ''
+                valueFrom: 'docker build -t $(inputs.nametag) $(inputs.dir.path)'
               }
             ]
         };
@@ -31,19 +32,11 @@ define(['./ports'], function (Ports) {
         }
   
         inputs.forEach(input => {
-          Ports.processInput(core, META, nodes[input], stepCwl);
+            if( core.getAttribute(nodes[input], 'name') === 'nametag') {
+                Ports.processInput(core, META, nodes[input], stepCwl);
+            }
         });
 
-        //imageId might come from an input string!!!
-        if (inputs.hasOwnProperty('imageId')) {
-          inputs.imageId = 'string';
-          stepCwl.requirements.DockerRequirement.dockerImageId = '$(inputs.imageId)';
-        }
-  
-        outputs.forEach(output => {
-          Ports.processOutput(core, META, nodes[output], stepCwl, nodes);
-        });
-  
         return stepCwl;
     };
   })

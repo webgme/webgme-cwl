@@ -35,7 +35,7 @@ define(['./ports'], function (Ports) {
       });
 
       outputs.forEach(output => {
-        Ports.processOutput(core, META, nodes[output], stepCwl);
+        Ports.processOutput(core, META, nodes[output], stepCwl, nodes);
       });
 
       return stepCwl;
