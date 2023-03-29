@@ -17,7 +17,12 @@ define(['./ports'], function (Ports) {
                 dir: 'Directory'
             },
             outputs:{
-                id: '$(inputs.nametag)'
+                id: {
+                    type: 'string',
+                    outputBinding: {
+                        outputEval: '$(inputs.nametag)'
+                    }
+                }
             },
             arguments:[
               {

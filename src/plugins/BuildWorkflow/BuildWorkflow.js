@@ -229,6 +229,11 @@
                         this.META['DirectoryOutput'])) {
                             element.type = 'Directory';
                         }
+                    else if(this.core.isInstanceOf(
+                        this._nodes[this.core.getPointerPath(this._nodes[childPath], 'dst')],
+                        this.META['StringOutput'])) {
+                            element.type = 'string';
+                        }
                 }
                 context.flows.push(element);
             }

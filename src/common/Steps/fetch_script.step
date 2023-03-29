@@ -11,7 +11,12 @@ var addDirectories = function(currentDir, elementsSoFar) {
         }
     }
 };
-addDirectories(self[0],entries);
+self.forEach(entry=>{
+    if(entry.class === 'Directory' && entry.basename === 'download') {
+        addDirectories(entry,entries);
+    }
+});
+
 var dir = {class: 'Directory', path: '', basename: 'output'};
 for (i = 0; i < entries.length; i++) { 
     if (entries[i].location.indexOf(longDir + '/') > -1) {
