@@ -2,6 +2,7 @@ define(['./ports'], function (Ports) {
     return function(stepNode, context) {
         const result = [];
         const {core, META, inputs, nodes} = context;
+        const tag = ('cwlbuilt:' + core.getAttribute(stepNode, 'name')).toLowerCase();
         const stepCwl = {
             cwlVersion:'v1.1',
             class:'CommandLineTool',
@@ -13,21 +14,20 @@ define(['./ports'], function (Ports) {
                 }
               },
             inputs:{
-                nametag:'string',
                 dir: 'Directory'
             },
             outputs:{
                 id: {
                     type: 'string',
                     outputBinding: {
-                        outputEval: '$(inputs.nametag)'
+                        outputEval: '${ return "' + tag + '";}'
                     }
                 }
             },
             arguments:[
               {
                 shellQuote:false,
-                valueFrom: 'docker build -t $(inputs.nametag) $(inputs.dir.path)'
+                valueFrom: 'docker build -t ' + tag + ' $(inputs.dir.path)'
               }
             ]
         };
