@@ -76,7 +76,14 @@ Workflow Execution
 ____________________________________
  
 
-To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from here and placed within the downloaded “GC_toxicity workflow”.  Once the data folder is placed and all dependencies outlined in section 'this', has been met, the following command may be invoked to launch the workflow. 
+To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from the `source <https://github.com/webgme/webgme-cwl/tree/master/docs/Examples/GraphML_workflow>` and placed within the downloaded “GC_toxicity” workflow.  Once the data folder is placed and all dependencies has been met, the following command may be invoked to launch the workflow. 
 
 .. code-block::dos
 cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR GC_toxicity.cwl.json --FileInput data/dataset.pkl
+
+
+In the following, we show how the execution of the workflow on local machine. 
+
+.. figure:: execution.gif
+   :align: center
+   :figwidth: 95%
