@@ -63,10 +63,10 @@ Finally, we'll create a FileOutput component and name it "results". Under the Do
    :align: center
    :figwidth: 95%
    
-Input Sample
+Input - sample graphs
 _________________
 
-The following figure shows four sample graphs that were used as input for the model. These graphs were obtained from the MUTAG dataset, which is a benchmark for graph classification. The graphs with red nodes are labelled as toxic, while the ones with blue nodes are labelled as non-toxic.
+The following figure shows four sample graphs that were used as part of the input for the model. These graphs were obtained from the MUTAG dataset, which is a benchmark for graph classification. The graphs with red nodes are labelled as toxic, while the ones with blue nodes are labelled as non-toxic.
 
 .. figure:: examples.png
    :align: center
