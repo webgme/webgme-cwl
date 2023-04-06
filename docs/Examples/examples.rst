@@ -63,3 +63,20 @@ Finally, we'll create a FileOutput component and name it "results". Under the Do
    :align: center
    :figwidth: 95%
    
+Input Sample
+_________________
+
+The following figure shows four sample graphs that were used as input for the model. These graphs were obtained from the MUTAG dataset, which is a benchmark for graph classification. The graphs with red nodes are labelled as toxic, while the ones with blue nodes are labelled as non-toxic.
+
+.. figure:: examples.png
+   :align: center
+   :figwidth: 95%
+
+Workflow Execution
+____________________________________
+ 
+
+To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from here and placed within the downloaded “GC_toxicity workflow”.  Once the data folder is placed and all dependencies outlined in section 'this', has been met, the following command may be invoked to launch the workflow. 
+
+.. code-block::dos
+cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR GC_toxicity.cwl.json --FileInput data/dataset.pkl
