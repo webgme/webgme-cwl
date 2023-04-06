@@ -82,7 +82,7 @@ To commence with the workflow execution process, the initial step would entail b
 cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR GC_toxicity.cwl.json --FileInput data/dataset.pkl
 
 
-In the following, we show how the execution of the workflow on local machine. 
+In the following, we show the execution of the workflow on local machine. 
 
 .. figure:: execution.gif
    :align: center
