@@ -61,7 +61,7 @@ Finally, we'll create a FileOutput component and name it "results". Under the Do
 
 .. figure:: gc_toxicity_cwl.png
    :align: center
-   :figwidth: 95%
+   :figwidth: 80%
    
 Input - sample graphs
 _________________
@@ -70,13 +70,13 @@ The following figure shows four sample graphs that were used as part of the inpu
 
 .. figure:: examples.png
    :align: center
-   :figwidth: 95%
+   :figwidth: 80%
 
 Workflow Execution
 ____________________________________
  
 
-To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from the `source <https://github.com/webgme/webgme-cwl/tree/master/docs/Examples/GraphML_workflow>` and placed within the downloaded “GC_toxicity” workflow.  Once the data folder is placed and all dependencies has been met, the following command may be invoked to launch the workflow. 
+To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from the `source <https://github.com/webgme/webgme-cwl/tree/master/docs/Examples/GraphML_workflow>`_ and placed within the downloaded “GC_toxicity” workflow.  Once the data folder is placed and all dependencies has been met, the following command may be invoked to launch the workflow. 
 
 .. code-block::dos
 cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR GC_toxicity.cwl.json --FileInput data/dataset.pkl
@@ -86,4 +86,4 @@ In the following, we show the execution of the workflow on local machine.
 
 .. figure:: execution.gif
    :align: center
-   :figwidth: 95%
+   :figwidth: 80%
