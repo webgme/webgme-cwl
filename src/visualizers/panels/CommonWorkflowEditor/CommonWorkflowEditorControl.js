@@ -22,7 +22,7 @@ define([
         this._client = options.client;
 
         // Initialize core collections and variables
-        this._widget = options.widget;
+        // this._widget = options.widget;
 
         this._currentNodeId = null;
         this._currentNodeParentId = undefined;
@@ -33,10 +33,10 @@ define([
     }
 
     CommonWorkflowEditorControl.prototype._initWidgetEventHandlers = function () {
-        this._widget.onNodeClick = function (id) {
+        // this._widget.onNodeClick = function (id) {
             // Change the current active object
-            WebGMEGlobal.State.registerActiveObject(id);
-        };
+            // WebGMEGlobal.State.registerActiveObject(id);
+        // };
     };
 
     /* * * * * * * * Visualizer content update callbacks * * * * * * * */
@@ -62,7 +62,7 @@ define([
             self._selfPatterns = {};
             self._selfPatterns[nodeId] = {children: 0};  // Territory "rule"
 
-            self._widget.setTitle(desc.name.toUpperCase());
+            // self._widget.setTitle(desc.name.toUpperCase());
 
             if (typeof desc.parentId === 'string') {
                 self.$btnModelHierarchyUp.show();
@@ -131,16 +131,16 @@ define([
 
     CommonWorkflowEditorControl.prototype._onLoad = function (gmeId) {
         var description = this._getObjectDescriptor(gmeId);
-        this._widget.addNode(description);
+        // this._widget.addNode(description);
     };
 
     CommonWorkflowEditorControl.prototype._onUpdate = function (gmeId) {
         var description = this._getObjectDescriptor(gmeId);
-        this._widget.updateNode(description);
+        // this._widget.updateNode(description);
     };
 
     CommonWorkflowEditorControl.prototype._onUnload = function (gmeId) {
-        this._widget.removeNode(gmeId);
+        // this._widget.removeNode(gmeId);
     };
 
     CommonWorkflowEditorControl.prototype._stateActiveObjectChanged = function (model, activeObjectId) {
