@@ -6,8 +6,9 @@
 define([
     'js/PanelBase/PanelBaseWithHeader',
     'js/PanelManager/IActivePanel',
-    'widgets/CommonWorkflowEditor/CommonWorkflowEditorWidget',
-    './CommonWorkflowEditorControl'
+    'widgets/CommonWorkflowEditor/CommonWorkflowEditorWidget.bundle',
+    './CommonWorkflowEditorControl',
+    'css!widgets/CommonWorkflowEditor/styles/CommonWorkflowEditorWidget.css'
 ], function (
     PanelBaseWithHeader,
     IActivePanel,
@@ -26,6 +27,7 @@ define([
         PanelBaseWithHeader.apply(this, [options, layoutManager]);
 
         this._client = params.client;
+        this.appId = `my-react-viz-id`;
 
         //initialize UI
         this._initialize();
@@ -40,14 +42,20 @@ define([
     CommonWorkflowEditorPanel.prototype._initialize = function () {
         var self = this;
 
+        this.$el.prop('id', this.appId);
+        this.$el.css({
+            width: '100%',
+            height: '100%',
+        });
+
         //set Widget title
-        this.setTitle('');
+        // this.setTitle('');
 
-        this.widget = new CommonWorkflowEditorWidget(this.logger, this.$el);
+        // this.widget = new CommonWorkflowEditorWidget(this.logger, this.$el);
 
-        this.widget.setTitle = function (title) {
-            self.setTitle(title);
-        };
+        // this.widget.setTitle = function (title) {
+            // self.setTitle(title);
+        // };
 
         this.control = new CommonWorkflowEditorControl({
             logger: this.logger,
@@ -56,6 +64,10 @@ define([
         });
 
         this.onActivate();
+    };
+
+    CommonWorkflowEditorPanel.prototype.afterAppend = function afterAppend() {
+        CommonWorkflowEditorWidget(this.appId, this.control, this);
     };
 
     /* OVERRIDE FROM WIDGET-WITH-HEADER */
@@ -68,13 +80,13 @@ define([
 
     CommonWorkflowEditorPanel.prototype.onResize = function (width, height) {
         this.logger.debug('onResize --> width: ' + width + ', height: ' + height);
-        this.widget.onWidgetContainerResize(width, height);
+        // this.widget.onWidgetContainerResize(width, height);
     };
 
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */
     CommonWorkflowEditorPanel.prototype.destroy = function () {
         this.control.destroy();
-        this.widget.destroy();
+        // this.widget.destroy();
 
         PanelBaseWithHeader.prototype.destroy.call(this);
         WebGMEGlobal.KeyboardManager.setListener(undefined);
@@ -82,14 +94,14 @@ define([
     };
 
     CommonWorkflowEditorPanel.prototype.onActivate = function () {
-        this.widget.onActivate();
+        // this.widget.onActivate();
         this.control.onActivate();
         WebGMEGlobal.KeyboardManager.setListener(this.widget);
         WebGMEGlobal.Toolbar.refresh();
     };
 
     CommonWorkflowEditorPanel.prototype.onDeactivate = function () {
-        this.widget.onDeactivate();
+        // this.widget.onDeactivate();
         this.control.onDeactivate();
         WebGMEGlobal.KeyboardManager.setListener(undefined);
         WebGMEGlobal.Toolbar.refresh();

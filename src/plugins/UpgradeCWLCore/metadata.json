@@ -8,8 +8,8 @@
     "src": ""
   },
   "disableServerSideExecution": false,
-  "disableBrowserSideExecution": false,
+  "disableBrowserSideExecution": true,
   "dependencies": [],
-  "writeAccessRequired": false,
+  "writeAccessRequired": true,
   "configStructure": []
 }
