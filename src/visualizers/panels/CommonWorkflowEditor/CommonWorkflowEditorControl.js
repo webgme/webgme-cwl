@@ -27,17 +27,10 @@ define([
         this._currentNodeId = null;
         this._currentNodeParentId = undefined;
 
-        this._initWidgetEventHandlers();
+        this._updateWidget = null;
 
         this._logger.debug('ctor finished');
     }
-
-    CommonWorkflowEditorControl.prototype._initWidgetEventHandlers = function () {
-        // this._widget.onNodeClick = function (id) {
-            // Change the current active object
-            // WebGMEGlobal.State.registerActiveObject(id);
-        // };
-    };
 
     /* * * * * * * * Visualizer content update callbacks * * * * * * * */
     // One major concept here is with managing the territory. The territory
@@ -107,7 +100,10 @@ define([
             event;
 
         this._logger.debug('_eventCallback \'' + i + '\' items');
-
+        if(this._updateWidget !== null) {
+            console.log('we got widget connection');
+            this._updateWidget([],[],{});
+        }
         while (i--) {
             event = events[i];
             switch (event.etype) {
@@ -178,6 +174,10 @@ define([
     CommonWorkflowEditorControl.prototype.onDeactivate = function () {
         this._detachClientEventListeners();
         this._hideToolbarItems();
+    };
+
+    CommonWorkflowEditorControl.prototype.registerUpdate = function (func) {
+        this._updateWidget = func;
     };
 
     /* * * * * * * * * * Updating the toolbar * * * * * * * * * */
