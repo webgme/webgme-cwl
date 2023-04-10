@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import ReactFlow, { useNodesState, useEdgesState, addEdge } from 'reactflow';
+import ReactFlow, { useNodesState, useEdgesState, addEdge, updateEdge } from 'reactflow';
 import 'reactflow/dist/style.css';
 
 import Fab from '@mui/material/Fab';
@@ -18,9 +18,17 @@ const initialNodes = [
 const initialEdges = [];
 
 export default function Flow(props) {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
+  const [global, setGlobal] = useState({initialized:false});
+  const onUpdateFromControl = useCallback((newNds,newEds,newGlob) => {
+    console.log('got update',newNds,newEds,newGlob);
+    setEdges(newEds);
+    setNodes(newNds);
+    setGlobal(newGlob);
+  });
+  WEBGME_CONTROL.registerUpdate(onUpdateFromControl);
   //const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
   const onConnect = useCallback(params=>{
@@ -36,13 +44,15 @@ export default function Flow(props) {
     console.log('OCS', params);
     if(params.nodeId === '1') {
       console.log('OCS-in');
-      setNodes((nds)=>nds.map((node)=>{
-        if(node.id === '1') {
-          console.log('OCS-set');
-          node.data.toolbarVisible = !node.data.toolbarVisible;
-        }
-        return node;
-      }));
+      setNodes((nds)=>{
+        const newNodes = JSON.parse(JSON.stringify(nds));
+        newNodes.forEach(node => {
+          if(node.id === '1') {
+            node.data.toolbarVisible = !node.data.toolbarVisible;
+          }
+        });
+        return newNodes;
+      });
     }
   },[setNodes]);
 
