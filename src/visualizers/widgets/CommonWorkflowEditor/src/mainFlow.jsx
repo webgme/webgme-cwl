@@ -8,63 +8,37 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 //custom nodes
 import PortNode from './portnode';
-const nodeTypes = {'port': PortNode}
+import StepNode from './stepNode';
+const nodeTypes = {'port': PortNode, 'step': StepNode}
 
-const initialNodes = [
-  { id: '1', type: 'port', position: { x: 100, y: 100 }, data:{toolbarVisible:true}},
-  { id: '2', position: { x: 200, y: 200 }, data: { label: '2' } },
-];
-// const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
-const initialEdges = [];
 
 export default function Flow(props) {
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  console.log('newprops?', props);
+  const [nodes, setNodes] = useNodesState([]);
+  const [edges, setEdges] = useEdgesState([]);
 
   const [global, setGlobal] = useState({initialized:false});
-  const onUpdateFromControl = useCallback((newNds,newEds,newGlob) => {
-    console.log('got update',newNds,newEds,newGlob);
-    setEdges(newEds);
-    setNodes(newNds);
-    setGlobal(newGlob);
+  const onUpdateFromControl = useCallback(descriptor => {
+    console.log('got update');
+    setNodes(descriptor.nodes);
+    setEdges(descriptor.edges);
+    // setGlobal(descriptor.global);
   });
+  
   WEBGME_CONTROL.registerUpdate(onUpdateFromControl);
+
   //const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
   const onConnect = useCallback(params=>{
-    setEdges(eds=>addEdge(params,eds));
-    setNodes(nds=>nds.map(node=>{
-      if(node.id === '2') {
-        node.data.label += '+';
-      }
-      return node;
-    }));
+    console.log(params);
   },[setEdges, setNodes]);
-  const onConnectStart = useCallback((event, params) => {
-    console.log('OCS', params);
-    if(params.nodeId === '1') {
-      console.log('OCS-in');
-      setNodes((nds)=>{
-        const newNodes = JSON.parse(JSON.stringify(nds));
-        newNodes.forEach(node => {
-          if(node.id === '1') {
-            node.data.toolbarVisible = !node.data.toolbarVisible;
-          }
-        });
-        return newNodes;
-      });
-    }
-  },[setNodes]);
 
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        onConnectStart={onConnectStart}
         nodeTypes={nodeTypes}
         fitView
       >

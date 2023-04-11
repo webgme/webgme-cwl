@@ -67,6 +67,7 @@ define([
     };
 
     CommonWorkflowEditorPanel.prototype.afterAppend = function afterAppend() {
+        console.log('AFTER APPEND');
         CommonWorkflowEditorWidget(this.appId, this.control, this);
     };
 
