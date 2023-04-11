@@ -10,5 +10,5 @@ window.WebGMEGlobal.WebGMEReactPanels[VISUALIZER_INSTANCE_ID].stateMediator.onDe
 };*/
 const container = document.getElementById(VISUALIZER_INSTANCE_ID);
 const root = ReactDOMClient.createRoot(container);
-
-root.render(<Flow control={WEBGME_CONTROL} panel={WEBGME_PANEL}></Flow>);
+console.log('doin once');
+root.render(<Flow></Flow>);
