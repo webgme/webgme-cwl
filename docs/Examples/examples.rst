@@ -40,7 +40,22 @@ ___________________________________________
 The implementation uses publicly available netlsd and dgsd python packages, scikit-learn and networkx. The package has been streamlined to main.py, requirement.txt and a dockerfile. 
 
 
-To create the docker image for this project, the following command can be executed. 
+To create the docker image, "requirment.txt" and dockerfile are necessary. The "requirement.txt" file should list all of the Python packages necessary to execute the project. We present an example of the requirement file that has been produced for this project below.
+
+.. code-block:: python
+
+   networkx
+   numpy
+   scikit-learn
+   netlsd
+   dgsd
+To create the dockerfile, the following template can be used.
+
+.. figure:: docker_file_image.png
+   :align: center
+   :figwidth: 60%
+
+Once the requirements and dockerfile have been created, the following command can be executed to build the docker. 
 
 .. code-block:: bash
 
@@ -96,6 +111,8 @@ In the following, we show the execution of the workflow on local machine.
    :align: center
    :figwidth: 80%
 
-`Link to the github repository of example <https://github.com/Anwar-Said/Graph_classification_cwl_example>`_
+`Link to the github repository of this example <https://github.com/Anwar-Said/Graph_classification_cwl_example>`_
+
 [1]. `Anwar Said, et al. "DGSD: Distributed graph representation via graph statistical properties." Future Generation Computer Systems 119 (2021): 166-175 <https://www.sciencedirect.com/science/article/pii/S0167739X21000571?casa_token=ICH0PA1ch3EAAAAA:qXYRK5oOEH8irGnKczcs3UDh1nnlgKtyKeDCyd65IKd1UGcqgBbGPoeS52wlRhBYowwNwG1m>`_
-[2].`Anton, Tsitsulin, et al. "Netlsd: hearing the shape of a graph." Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. 2018. <https://dl.acm.org/doi/abs/10.1145/3219819.3219991?casa_token=Fs34Ggee8E4AAAAA:oycODo6pu8y3PrwiUj9bD-uXI8uJ54_s1t4gcBhJb5uOK8ztjcdhwXcSZsUmwLJlX1jLZrHJszMH>`_
+
+[2]. `Anton, Tsitsulin, et al. Netlsd: hearing the shape of a graph. Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. 2018. <https://dl.acm.org/doi/abs/10.1145/3219819.3219991?casa_token=Fs34Ggee8E4AAAAA:oycODo6pu8y3PrwiUj9bD-uXI8uJ54_s1t4gcBhJb5uOK8ztjcdhwXcSZsUmwLJlX1jLZrHJszMH>`_
