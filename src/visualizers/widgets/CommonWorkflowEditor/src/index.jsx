@@ -10,5 +10,4 @@ window.WebGMEGlobal.WebGMEReactPanels[VISUALIZER_INSTANCE_ID].stateMediator.onDe
 };*/
 const container = document.getElementById(VISUALIZER_INSTANCE_ID);
 const root = ReactDOMClient.createRoot(container);
-console.log('doin once');
 root.render(<Flow></Flow>);
