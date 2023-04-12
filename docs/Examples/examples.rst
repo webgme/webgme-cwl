@@ -42,9 +42,13 @@ ________________
 
 The implementation uses publicly available netlsd and dgsd python packages, scikit-learn and networkx. The package has been streamlined to main.py, requirement.txt and a dockerfile. The docker image can be created with “gc_docker:latest” id as follows.
 
-```
+``
 docker build -t gc_docker:latest .
-```
+``
+
+
+::
+$ docker build -t gc_docker:latest .
 
 Create workflow model
 ______________________________
