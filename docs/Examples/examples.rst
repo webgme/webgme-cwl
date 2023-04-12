@@ -37,15 +37,14 @@ The graph classification framework consists of two stages, namely (a) graph repr
 
 To summarize, this workflow comprises of three components: input (pickle file), a model (docker image) and output as a csv file. Considering these three components, we define our workflow detailed below. 
 
-Implementation details
+Implementation details and dockerization
 ________________
 
 The implementation uses publicly available netlsd and dgsd python packages, scikit-learn and networkx. The package has been streamlined to main.py, requirement.txt and a dockerfile. The docker image can be created with “gc_docker:latest” id as follows.
 
-.. code-block::dos
-
+```console
 docker build -t gc_docker:latest .
-
+```
 
 Create workflow model
 ______________________________
