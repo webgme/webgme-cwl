@@ -95,7 +95,8 @@ define([
 
     CommonWorkflowEditorControl.prototype._createPortNodeDescriptor = function (nodeId) {
         const node = this._client.getNode(nodeId);
-        const descriptor = {id: nodeId, type:'port', position: node.getRegistry('position'), data:{name: node.getAttribute('name')}};
+        const input = node.isInstanceOf(this._META['CWL.Input'].getId());
+        const descriptor = {id: nodeId, type:'port', position: node.getRegistry('position'), data:{name: node.getAttribute('name'), isInput:input}};
 
         return descriptor;
     };
@@ -124,20 +125,22 @@ define([
         const sourceNode = this._client.getNode(node.getPointerId('src'));
         const destNode = this._client.getNode(node.getPointerId('dst'));
         const sourceIsPort = sourceNode.getParentId() === this._currentNodeId ? false : true;
-        const destIsPort = sourceNode.getParentId() === this._currentNodeId ? false : true;
+        const destIsPort = destNode.getParentId() === this._currentNodeId ? false : true;
 
         if(sourceIsPort) {
             descriptor.source = sourceNode.getParentId();
             descriptor.sourceHandle = sourceNode.getAttribute('name');
         } else {
             descriptor.source = sourceNode.getId();
+            descriptor.sourceHandle = null;
         }
 
         if(destIsPort) {
-            descriptor.source = destNode.getParentId();
-            descriptor.sourceHandle = destNode.getAttribute('name');
+            descriptor.target = destNode.getParentId();
+            descriptor.targetHandle = destNode.getAttribute('name');
         } else {
-            descriptor.source = destNode.getId();
+            descriptor.target = destNode.getId();
+            descriptor.targetHandle = null;
         }
 
         return descriptor;
@@ -151,6 +154,7 @@ define([
         this._descriptor = descriptor;
 
         if(this._updateWidget) {
+            this._updateWidget(descriptor);
             this._updateWidget(descriptor);
         }
     };
@@ -214,6 +218,7 @@ define([
         const firstTry = this._updateWidget === null ? true : false;
         this._updateWidget = func;
         if(this._descriptor && firstTry) {
+            this._updateWidget(this._descriptor);
             this._updateWidget(this._descriptor);
         }
     };

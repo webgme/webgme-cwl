@@ -175,28 +175,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faCog.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faCog.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar source = __webpack_require__(/*! ./faGear */ \"./node_modules/@fortawesome/free-solid-svg-icons/faGear.js\");\nexports.definition = {\n  prefix: source.prefix,\n  iconName: source.iconName,\n  icon: [\n    source.width,\n    source.height,\n    source.aliases,\n    source.unicode,\n    source.svgPathData\n  ]};\n\nexports.faCog = exports.definition;\nexports.prefix = source.prefix;\nexports.iconName = source.iconName;\nexports.width = source.width;\nexports.height = source.height;\nexports.ligatures = source.aliases;\nexports.unicode = source.unicode;\nexports.svgPathData = source.svgPathData;\nexports.aliases = source.aliases;\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/@fortawesome/free-solid-svg-icons/faCog.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@fortawesome/free-solid-svg-icons/faGear.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-solid-svg-icons/faGear.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar prefix = 'fas';\nvar iconName = 'gear';\nvar width = 512;\nvar height = 512;\nvar aliases = [9881,\"cog\"];\nvar unicode = 'f013';\nvar svgPathData = 'M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z';\n\nexports.definition = {\n  prefix: prefix,\n  iconName: iconName,\n  icon: [\n    width,\n    height,\n    aliases,\n    unicode,\n    svgPathData\n  ]};\n\nexports.faGear = exports.definition;\nexports.prefix = prefix;\nexports.iconName = iconName;\nexports.width = width;\nexports.height = height;\nexports.ligatures = aliases;\nexports.unicode = unicode;\nexports.svgPathData = svgPathData;\nexports.aliases = aliases;\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/@fortawesome/free-solid-svg-icons/faGear.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@fortawesome/free-solid-svg-icons/faPlus.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@fortawesome/free-solid-svg-icons/faPlus.js ***!
@@ -425,28 +403,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ \"./node_modules/@babel/runtime/helpers/esm/extends.js\");\n/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ \"./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/utils */ \"./node_modules/@mui/utils/esm/elementAcceptingRef.js\");\n/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-transition-group */ \"./node_modules/react-transition-group/esm/Transition.js\");\n/* harmony import */ var _styles_useTheme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/useTheme */ \"./node_modules/@mui/material/styles/useTheme.js\");\n/* harmony import */ var _transitions_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../transitions/utils */ \"./node_modules/@mui/material/transitions/utils.js\");\n/* harmony import */ var _utils_useForkRef__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/useForkRef */ \"./node_modules/@mui/material/utils/useForkRef.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\nconst _excluded = [\"addEndListener\", \"appear\", \"children\", \"easing\", \"in\", \"onEnter\", \"onEntered\", \"onEntering\", \"onExit\", \"onExited\", \"onExiting\", \"style\", \"timeout\", \"TransitionComponent\"];\n\n\n\n\n\n\n\n\nfunction getScale(value) {\n  return `scale(${value}, ${value ** 2})`;\n}\nconst styles = {\n  entering: {\n    opacity: 1,\n    transform: getScale(1)\n  },\n  entered: {\n    opacity: 1,\n    transform: 'none'\n  }\n};\n\n/*\n TODO v6: remove\n Conditionally apply a workaround for the CSS transition bug in Safari 15.4 / WebKit browsers.\n */\nconst isWebKit154 = typeof navigator !== 'undefined' && /^((?!chrome|android).)*(safari|mobile)/i.test(navigator.userAgent) && /(os |version\\/)15(.|_)4/i.test(navigator.userAgent);\n\n/**\n * The Grow transition is used by the [Tooltip](/material-ui/react-tooltip/) and\n * [Popover](/material-ui/react-popover/) components.\n * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.\n */\nconst Grow = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Grow(props, ref) {\n  const {\n      addEndListener,\n      appear = true,\n      children,\n      easing,\n      in: inProp,\n      onEnter,\n      onEntered,\n      onEntering,\n      onExit,\n      onExited,\n      onExiting,\n      style,\n      timeout = 'auto',\n      // eslint-disable-next-line react/prop-types\n      TransitionComponent = react_transition_group__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n    } = props,\n    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(props, _excluded);\n  const timer = react__WEBPACK_IMPORTED_MODULE_2__.useRef();\n  const autoTimeout = react__WEBPACK_IMPORTED_MODULE_2__.useRef();\n  const theme = (0,_styles_useTheme__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n  const nodeRef = react__WEBPACK_IMPORTED_MODULE_2__.useRef(null);\n  const handleRef = (0,_utils_useForkRef__WEBPACK_IMPORTED_MODULE_6__[\"default\"])(nodeRef, children.ref, ref);\n  const normalizedTransitionCallback = callback => maybeIsAppearing => {\n    if (callback) {\n      const node = nodeRef.current;\n\n      // onEnterXxx and onExitXxx callbacks have a different arguments.length value.\n      if (maybeIsAppearing === undefined) {\n        callback(node);\n      } else {\n        callback(node, maybeIsAppearing);\n      }\n    }\n  };\n  const handleEntering = normalizedTransitionCallback(onEntering);\n  const handleEnter = normalizedTransitionCallback((node, isAppearing) => {\n    (0,_transitions_utils__WEBPACK_IMPORTED_MODULE_7__.reflow)(node); // So the animation always start from the start.\n\n    const {\n      duration: transitionDuration,\n      delay,\n      easing: transitionTimingFunction\n    } = (0,_transitions_utils__WEBPACK_IMPORTED_MODULE_7__.getTransitionProps)({\n      style,\n      timeout,\n      easing\n    }, {\n      mode: 'enter'\n    });\n    let duration;\n    if (timeout === 'auto') {\n      duration = theme.transitions.getAutoHeightDuration(node.clientHeight);\n      autoTimeout.current = duration;\n    } else {\n      duration = transitionDuration;\n    }\n    node.style.transition = [theme.transitions.create('opacity', {\n      duration,\n      delay\n    }), theme.transitions.create('transform', {\n      duration: isWebKit154 ? duration : duration * 0.666,\n      delay,\n      easing: transitionTimingFunction\n    })].join(',');\n    if (onEnter) {\n      onEnter(node, isAppearing);\n    }\n  });\n  const handleEntered = normalizedTransitionCallback(onEntered);\n  const handleExiting = normalizedTransitionCallback(onExiting);\n  const handleExit = normalizedTransitionCallback(node => {\n    const {\n      duration: transitionDuration,\n      delay,\n      easing: transitionTimingFunction\n    } = (0,_transitions_utils__WEBPACK_IMPORTED_MODULE_7__.getTransitionProps)({\n      style,\n      timeout,\n      easing\n    }, {\n      mode: 'exit'\n    });\n    let duration;\n    if (timeout === 'auto') {\n      duration = theme.transitions.getAutoHeightDuration(node.clientHeight);\n      autoTimeout.current = duration;\n    } else {\n      duration = transitionDuration;\n    }\n    node.style.transition = [theme.transitions.create('opacity', {\n      duration,\n      delay\n    }), theme.transitions.create('transform', {\n      duration: isWebKit154 ? duration : duration * 0.666,\n      delay: isWebKit154 ? delay : delay || duration * 0.333,\n      easing: transitionTimingFunction\n    })].join(',');\n    node.style.opacity = 0;\n    node.style.transform = getScale(0.75);\n    if (onExit) {\n      onExit(node);\n    }\n  });\n  const handleExited = normalizedTransitionCallback(onExited);\n  const handleAddEndListener = next => {\n    if (timeout === 'auto') {\n      timer.current = setTimeout(next, autoTimeout.current || 0);\n    }\n    if (addEndListener) {\n      // Old call signature before `react-transition-group` implemented `nodeRef`\n      addEndListener(nodeRef.current, next);\n    }\n  };\n  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(() => {\n    return () => {\n      clearTimeout(timer.current);\n    };\n  }, []);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(TransitionComponent, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n    appear: appear,\n    in: inProp,\n    nodeRef: nodeRef,\n    onEnter: handleEnter,\n    onEntered: handleEntered,\n    onEntering: handleEntering,\n    onExit: handleExit,\n    onExited: handleExited,\n    onExiting: handleExiting,\n    addEndListener: handleAddEndListener,\n    timeout: timeout === 'auto' ? null : timeout\n  }, other, {\n    children: (state, childProps) => {\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.cloneElement(children, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n        style: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n          opacity: 0,\n          transform: getScale(0.75),\n          visibility: state === 'exited' && !inProp ? 'hidden' : undefined\n        }, styles[state], style, children.props.style),\n        ref: handleRef\n      }, childProps));\n    }\n  }));\n});\n true ? Grow.propTypes /* remove-proptypes */ = {\n  // ----------------------------- Warning --------------------------------\n  // | These PropTypes are generated from the TypeScript type definitions |\n  // |     To update them edit the d.ts file and run \"yarn proptypes\"     |\n  // ----------------------------------------------------------------------\n  /**\n   * Add a custom transition end trigger. Called with the transitioning DOM\n   * node and a done callback. Allows for more fine grained transition end\n   * logic. Note: Timeouts are still used as a fallback if provided.\n   */\n  addEndListener: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * Perform the enter transition when it first mounts if `in` is also `true`.\n   * Set this to `false` to disable this behavior.\n   * @default true\n   */\n  appear: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),\n  /**\n   * A single child content element.\n   */\n  children: _mui_utils__WEBPACK_IMPORTED_MODULE_9__[\"default\"].isRequired,\n  /**\n   * The transition timing function.\n   * You may specify a single easing or a object containing enter and exit values.\n   */\n  easing: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_8___default().shape({\n    enter: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),\n    exit: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string)\n  }), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string)]),\n  /**\n   * If `true`, the component will transition in.\n   */\n  in: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),\n  /**\n   * @ignore\n   */\n  onEnter: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * @ignore\n   */\n  onEntered: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * @ignore\n   */\n  onEntering: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * @ignore\n   */\n  onExit: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * @ignore\n   */\n  onExited: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * @ignore\n   */\n  onExiting: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),\n  /**\n   * @ignore\n   */\n  style: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),\n  /**\n   * The duration for the transition, in milliseconds.\n   * You may specify a single timeout for all transitions, or individually with an object.\n   *\n   * Set to 'auto' to automatically calculate transition time based on height.\n   * @default 'auto'\n   */\n  timeout: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOf(['auto']), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().number), prop_types__WEBPACK_IMPORTED_MODULE_8___default().shape({\n    appear: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().number),\n    enter: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().number),\n    exit: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().number)\n  })])\n} : 0;\nGrow.muiSupportAuto = true;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Grow);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/@mui/material/Grow/Grow.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/IconButton/IconButton.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@mui/material/IconButton/IconButton.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ \"./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js\");\n/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ \"./node_modules/@babel/runtime/helpers/esm/extends.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_13__);\n/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ \"./node_modules/clsx/dist/clsx.m.js\");\n/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/utils */ \"./node_modules/@mui/utils/esm/chainPropTypes.js\");\n/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/base */ \"./node_modules/@mui/utils/esm/composeClasses/composeClasses.js\");\n/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/system */ \"./node_modules/@mui/system/esm/colorManipulator.js\");\n/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styled */ \"./node_modules/@mui/material/styles/styled.js\");\n/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/useThemeProps */ \"./node_modules/@mui/material/styles/useThemeProps.js\");\n/* harmony import */ var _ButtonBase__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ButtonBase */ \"./node_modules/@mui/material/ButtonBase/ButtonBase.js\");\n/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/capitalize */ \"./node_modules/@mui/material/utils/capitalize.js\");\n/* harmony import */ var _iconButtonClasses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./iconButtonClasses */ \"./node_modules/@mui/material/IconButton/iconButtonClasses.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\nconst _excluded = [\"edge\", \"children\", \"className\", \"color\", \"disabled\", \"disableFocusRipple\", \"size\"];\n\n\n\n\n\n\n\n\n\n\n\n\nconst useUtilityClasses = ownerState => {\n  const {\n    classes,\n    disabled,\n    color,\n    edge,\n    size\n  } = ownerState;\n  const slots = {\n    root: ['root', disabled && 'disabled', color !== 'default' && `color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(color)}`, edge && `edge${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(edge)}`, `size${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(size)}`]\n  };\n  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_6__[\"default\"])(slots, _iconButtonClasses__WEBPACK_IMPORTED_MODULE_7__.getIconButtonUtilityClass, classes);\n};\nconst IconButtonRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__[\"default\"])(_ButtonBase__WEBPACK_IMPORTED_MODULE_9__[\"default\"], {\n  name: 'MuiIconButton',\n  slot: 'Root',\n  overridesResolver: (props, styles) => {\n    const {\n      ownerState\n    } = props;\n    return [styles.root, ownerState.color !== 'default' && styles[`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(ownerState.color)}`], ownerState.edge && styles[`edge${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(ownerState.edge)}`], styles[`size${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(ownerState.size)}`]];\n  }\n})(({\n  theme,\n  ownerState\n}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({\n  textAlign: 'center',\n  flex: '0 0 auto',\n  fontSize: theme.typography.pxToRem(24),\n  padding: 8,\n  borderRadius: '50%',\n  overflow: 'visible',\n  // Explicitly set the default value to solve a bug on IE11.\n  color: (theme.vars || theme).palette.action.active,\n  transition: theme.transitions.create('background-color', {\n    duration: theme.transitions.duration.shortest\n  })\n}, !ownerState.disableRipple && {\n  '&:hover': {\n    backgroundColor: theme.vars ? `rgba(${theme.vars.palette.action.activeChannel} / ${theme.vars.palette.action.hoverOpacity})` : (0,_mui_system__WEBPACK_IMPORTED_MODULE_10__.alpha)(theme.palette.action.active, theme.palette.action.hoverOpacity),\n    // Reset on touch devices, it doesn't add specificity\n    '@media (hover: none)': {\n      backgroundColor: 'transparent'\n    }\n  }\n}, ownerState.edge === 'start' && {\n  marginLeft: ownerState.size === 'small' ? -3 : -12\n}, ownerState.edge === 'end' && {\n  marginRight: ownerState.size === 'small' ? -3 : -12\n}), ({\n  theme,\n  ownerState\n}) => {\n  var _palette;\n  const palette = (_palette = (theme.vars || theme).palette) == null ? void 0 : _palette[ownerState.color];\n  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({}, ownerState.color === 'inherit' && {\n    color: 'inherit'\n  }, ownerState.color !== 'inherit' && ownerState.color !== 'default' && (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({\n    color: palette == null ? void 0 : palette.main\n  }, !ownerState.disableRipple && {\n    '&:hover': (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({}, palette && {\n      backgroundColor: theme.vars ? `rgba(${palette.mainChannel} / ${theme.vars.palette.action.hoverOpacity})` : (0,_mui_system__WEBPACK_IMPORTED_MODULE_10__.alpha)(palette.main, theme.palette.action.hoverOpacity)\n    }, {\n      // Reset on touch devices, it doesn't add specificity\n      '@media (hover: none)': {\n        backgroundColor: 'transparent'\n      }\n    })\n  }), ownerState.size === 'small' && {\n    padding: 5,\n    fontSize: theme.typography.pxToRem(18)\n  }, ownerState.size === 'large' && {\n    padding: 12,\n    fontSize: theme.typography.pxToRem(28)\n  }, {\n    [`&.${_iconButtonClasses__WEBPACK_IMPORTED_MODULE_7__[\"default\"].disabled}`]: {\n      backgroundColor: 'transparent',\n      color: (theme.vars || theme).palette.action.disabled\n    }\n  });\n});\n\n/**\n * Refer to the [Icons](/material-ui/icons/) section of the documentation\n * regarding the available icon options.\n */\nconst IconButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function IconButton(inProps, ref) {\n  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_11__[\"default\"])({\n    props: inProps,\n    name: 'MuiIconButton'\n  });\n  const {\n      edge = false,\n      children,\n      className,\n      color = 'default',\n      disabled = false,\n      disableFocusRipple = false,\n      size = 'medium'\n    } = props,\n    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(props, _excluded);\n  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({}, props, {\n    edge,\n    color,\n    disabled,\n    disableFocusRipple,\n    size\n  });\n  const classes = useUtilityClasses(ownerState);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(IconButtonRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({\n    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(classes.root, className),\n    centerRipple: true,\n    focusRipple: !disableFocusRipple,\n    disabled: disabled,\n    ref: ref,\n    ownerState: ownerState\n  }, other, {\n    children: children\n  }));\n});\n true ? IconButton.propTypes /* remove-proptypes */ = {\n  // ----------------------------- Warning --------------------------------\n  // | These PropTypes are generated from the TypeScript type definitions |\n  // |     To update them edit the d.ts file and run \"yarn proptypes\"     |\n  // ----------------------------------------------------------------------\n  /**\n   * The icon to display.\n   */\n  children: (0,_mui_utils__WEBPACK_IMPORTED_MODULE_12__[\"default\"])((prop_types__WEBPACK_IMPORTED_MODULE_13___default().node), props => {\n    const found = react__WEBPACK_IMPORTED_MODULE_2__.Children.toArray(props.children).some(child => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.isValidElement(child) && child.props.onClick);\n    if (found) {\n      return new Error(['MUI: You are providing an onClick event listener to a child of a button element.', 'Prefer applying it to the IconButton directly.', 'This guarantees that the whole <button> will be responsive to click events.'].join('\\n'));\n    }\n    return null;\n  }),\n  /**\n   * Override or extend the styles applied to the component.\n   */\n  classes: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object),\n  /**\n   * @ignore\n   */\n  className: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string),\n  /**\n   * The color of the component.\n   * It supports both default and custom theme colors, which can be added as shown in the\n   * [palette customization guide](https://mui.com/material-ui/customization/palette/#adding-new-colors).\n   * @default 'default'\n   */\n  color: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['inherit', 'default', 'primary', 'secondary', 'error', 'info', 'success', 'warning']), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string)]),\n  /**\n   * If `true`, the component is disabled.\n   * @default false\n   */\n  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool),\n  /**\n   * If `true`, the  keyboard focus ripple is disabled.\n   * @default false\n   */\n  disableFocusRipple: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool),\n  /**\n   * If `true`, the ripple effect is disabled.\n   *\n   * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure\n   * to highlight the element by applying separate styles with the `.Mui-focusVisible` class.\n   * @default false\n   */\n  disableRipple: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool),\n  /**\n   * If given, uses a negative margin to counteract the padding on one\n   * side (this is often helpful for aligning the left or right\n   * side of the icon with content above or below, without ruining the border\n   * size and shape).\n   * @default false\n   */\n  edge: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['end', 'start', false]),\n  /**\n   * The size of the component.\n   * `small` is equivalent to the dense button styling.\n   * @default 'medium'\n   */\n  size: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['small', 'medium', 'large']), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string)]),\n  /**\n   * The system prop that allows defining system overrides as well as additional CSS styles.\n   */\n  sx: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_13___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object)])\n} : 0;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IconButton);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/@mui/material/IconButton/IconButton.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/IconButton/iconButtonClasses.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@mui/material/IconButton/iconButtonClasses.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getIconButtonUtilityClass\": () => (/* binding */ getIconButtonUtilityClass)\n/* harmony export */ });\n/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/utils */ \"./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js\");\n/* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ \"./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js\");\n\n\nfunction getIconButtonUtilityClass(slot) {\n  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('MuiIconButton', slot);\n}\nconst iconButtonClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('MuiIconButton', ['root', 'disabled', 'colorInherit', 'colorPrimary', 'colorSecondary', 'colorError', 'colorInfo', 'colorSuccess', 'colorWarning', 'edgeStart', 'edgeEnd', 'sizeSmall', 'sizeMedium', 'sizeLarge']);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (iconButtonClasses);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/@mui/material/IconButton/iconButtonClasses.js?");
 
 /***/ }),
 
@@ -1990,17 +1946,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./node_modules/@reactflow/node-toolbar/dist/esm/index.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@reactflow/node-toolbar/dist/esm/index.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"NodeToolbar\": () => (/* binding */ NodeToolbar)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _reactflow_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @reactflow/core */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var classcat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classcat */ \"./node_modules/classcat/index.js\");\n/* harmony import */ var zustand_shallow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zustand/shallow */ \"./node_modules/zustand/esm/shallow.mjs\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\n\n\n\n\n\n\nconst selector = (state) => state.domNode?.querySelector('.react-flow__renderer');\nfunction NodeToolbarPortal({ children }) {\n    const wrapperRef = (0,_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.useStore)(selector);\n    if (!wrapperRef) {\n        return null;\n    }\n    return (0,react_dom__WEBPACK_IMPORTED_MODULE_3__.createPortal)(children, wrapperRef);\n}\n\nconst nodeEqualityFn = (a, b) => a?.positionAbsolute?.x === b?.positionAbsolute?.x &&\n    a?.positionAbsolute?.y === b?.positionAbsolute?.y &&\n    a?.width === b?.width &&\n    a?.height === b?.height &&\n    a?.selected === b?.selected &&\n    a?.[_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.internalsSymbol]?.z === b?.[_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.internalsSymbol]?.z;\nconst nodesEqualityFn = (a, b) => {\n    return a.length === b.length && a.every((node, i) => nodeEqualityFn(node, b[i]));\n};\nconst storeSelector = (state) => ({\n    transform: state.transform,\n    nodeOrigin: state.nodeOrigin,\n    selectedNodesCount: state.getNodes().filter((node) => node.selected).length,\n});\nfunction getTransform(nodeRect, transform, position, offset) {\n    // position === Position.Top\n    let xPos = (nodeRect.x + nodeRect.width / 2) * transform[2] + transform[0];\n    let yPos = nodeRect.y * transform[2] + transform[1] - offset;\n    let xShift = -50;\n    let yShift = -100;\n    switch (position) {\n        case _reactflow_core__WEBPACK_IMPORTED_MODULE_4__.Position.Right:\n            xPos = (nodeRect.x + nodeRect.width) * transform[2] + transform[0] + offset;\n            yPos = (nodeRect.y + nodeRect.height / 2) * transform[2] + transform[1];\n            xShift = 0;\n            yShift = -50;\n            break;\n        case _reactflow_core__WEBPACK_IMPORTED_MODULE_4__.Position.Bottom:\n            yPos = (nodeRect.y + nodeRect.height) * transform[2] + transform[1] + offset;\n            yShift = 0;\n            break;\n        case _reactflow_core__WEBPACK_IMPORTED_MODULE_4__.Position.Left:\n            xPos = nodeRect.x * transform[2] + transform[0] - offset;\n            yPos = (nodeRect.y + nodeRect.height / 2) * transform[2] + transform[1];\n            xShift = -100;\n            yShift = -50;\n            break;\n    }\n    return `translate(${xPos}px, ${yPos}px) translate(${xShift}%, ${yShift}%)`;\n}\nfunction NodeToolbar({ nodeId, children, className, style, isVisible, position = _reactflow_core__WEBPACK_IMPORTED_MODULE_4__.Position.Top, offset = 10, ...rest }) {\n    const contextNodeId = (0,_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.useNodeId)();\n    const nodesSelector = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)((state) => {\n        const nodeIds = Array.isArray(nodeId) ? nodeId : [nodeId || contextNodeId || ''];\n        return nodeIds.reduce((acc, id) => {\n            const node = state.nodeInternals.get(id);\n            if (node) {\n                acc.push(node);\n            }\n            return acc;\n        }, []);\n    }, [nodeId, contextNodeId]);\n    const nodes = (0,_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.useStore)(nodesSelector, nodesEqualityFn);\n    const { transform, nodeOrigin, selectedNodesCount } = (0,_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.useStore)(storeSelector, zustand_shallow__WEBPACK_IMPORTED_MODULE_5__.shallow);\n    const isActive = typeof isVisible === 'boolean' ? isVisible : nodes.length === 1 && nodes[0].selected && selectedNodesCount === 1;\n    if (!isActive || !nodes.length) {\n        return null;\n    }\n    const nodeRect = (0,_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.getRectOfNodes)(nodes, nodeOrigin);\n    const zIndex = Math.max(...nodes.map((node) => (node[_reactflow_core__WEBPACK_IMPORTED_MODULE_4__.internalsSymbol]?.z || 1) + 1));\n    const wrapperStyle = {\n        position: 'absolute',\n        transform: getTransform(nodeRect, transform, position, offset),\n        zIndex,\n        ...style,\n    };\n    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(NodeToolbarPortal, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", { style: wrapperStyle, className: (0,classcat__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(['react-flow__node-toolbar', className]), ...rest, children: children }) }));\n}\n\n\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/@reactflow/node-toolbar/dist/esm/index.js?");
-
-/***/ }),
-
 /***/ "./src/visualizers/widgets/CommonWorkflowEditor/src/index.jsx":
 /*!********************************************************************!*\
   !*** ./src/visualizers/widgets/CommonWorkflowEditor/src/index.jsx ***!
@@ -2008,7 +1953,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _mainFlow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainFlow */ \"./src/visualizers/widgets/CommonWorkflowEditor/src/mainFlow.jsx\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\n/*\r\nwindow.WebGMEGlobal.WebGMEReactPanels[VISUALIZER_INSTANCE_ID].initialized = true;\r\n\r\nwindow.WebGMEGlobal.WebGMEReactPanels[VISUALIZER_INSTANCE_ID].stateMediator.onDestroy = () => {\r\n    ReactDOM.unmountComponentAtNode(document.getElementById(VISUALIZER_INSTANCE_ID));\r\n};*/\n\nvar container = document.getElementById(VISUALIZER_INSTANCE_ID);\nvar root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(container);\nconsole.log('doin once');\nroot.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mainFlow__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}));\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/index.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _mainFlow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainFlow */ \"./src/visualizers/widgets/CommonWorkflowEditor/src/mainFlow.jsx\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\n/*\r\nwindow.WebGMEGlobal.WebGMEReactPanels[VISUALIZER_INSTANCE_ID].initialized = true;\r\n\r\nwindow.WebGMEGlobal.WebGMEReactPanels[VISUALIZER_INSTANCE_ID].stateMediator.onDestroy = () => {\r\n    ReactDOM.unmountComponentAtNode(document.getElementById(VISUALIZER_INSTANCE_ID));\r\n};*/\n\nvar container = document.getElementById(VISUALIZER_INSTANCE_ID);\nvar root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(container);\nroot.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mainFlow__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}));\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/index.jsx?");
 
 /***/ }),
 
@@ -2019,7 +1964,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Flow)\n/* harmony export */ });\n/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlus__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlus */ \"./node_modules/@fortawesome/free-solid-svg-icons/faPlus.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var reactflow_dist_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactflow/dist/style.css */ \"./node_modules/reactflow/dist/style.css\");\n/* harmony import */ var _mui_material_Fab__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/Fab */ \"./node_modules/@mui/material/Fab/Fab.js\");\n/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ \"./node_modules/@fortawesome/react-fontawesome/index.es.js\");\n/* harmony import */ var _portnode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./portnode */ \"./src/visualizers/widgets/CommonWorkflowEditor/src/portnode.jsx\");\n/* harmony import */ var _stepNode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stepNode */ \"./src/visualizers/widgets/CommonWorkflowEditor/src/stepNode.jsx\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i[\"return\"] && (_r = _i[\"return\"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n//custom nodes\n\n\n\nvar nodeTypes = {\n  'port': _portnode__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  'step': _stepNode__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n};\nfunction Flow(props) {\n  console.log('newprops?', props);\n  var _useNodesState = (0,reactflow__WEBPACK_IMPORTED_MODULE_6__.useNodesState)([]),\n    _useNodesState2 = _slicedToArray(_useNodesState, 2),\n    nodes = _useNodesState2[0],\n    setNodes = _useNodesState2[1];\n  var _useEdgesState = (0,reactflow__WEBPACK_IMPORTED_MODULE_6__.useEdgesState)([]),\n    _useEdgesState2 = _slicedToArray(_useEdgesState, 2),\n    edges = _useEdgesState2[0],\n    setEdges = _useEdgesState2[1];\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({\n      initialized: false\n    }),\n    _useState2 = _slicedToArray(_useState, 2),\n    global = _useState2[0],\n    setGlobal = _useState2[1];\n  var onUpdateFromControl = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (descriptor) {\n    console.log('got update');\n    setNodes(descriptor.nodes);\n    setEdges(descriptor.edges);\n    // setGlobal(descriptor.global);\n  });\n\n  WEBGME_CONTROL.registerUpdate(onUpdateFromControl);\n\n  //const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);\n\n  var onConnect = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (params) {\n    console.log(params);\n  }, [setEdges, setNodes]);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(\"div\", {\n    style: {\n      width: '100vw',\n      height: '100vh'\n    },\n    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_6__.ReactFlow, {\n      nodes: nodes,\n      edges: edges,\n      onConnect: onConnect,\n      nodeTypes: nodeTypes,\n      fitView: true,\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_Fab__WEBPACK_IMPORTED_MODULE_7__[\"default\"], {\n        size: \"small\",\n        style: {\n          position: 'fixed'\n        },\n        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {\n          icon: _fortawesome_free_solid_svg_icons_faPlus__WEBPACK_IMPORTED_MODULE_8__.faPlus\n        })\n      })\n    })\n  });\n}\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/mainFlow.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Flow)\n/* harmony export */ });\n/* harmony import */ var _fortawesome_free_solid_svg_icons_faPlus__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faPlus */ \"./node_modules/@fortawesome/free-solid-svg-icons/faPlus.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var dagre__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dagre */ \"./node_modules/dagre/index.js\");\n/* harmony import */ var dagre__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dagre__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var reactflow_dist_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactflow/dist/style.css */ \"./node_modules/reactflow/dist/style.css\");\n/* harmony import */ var _mui_material_Fab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material/Fab */ \"./node_modules/@mui/material/Fab/Fab.js\");\n/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ \"./node_modules/@fortawesome/react-fontawesome/index.es.js\");\n/* harmony import */ var _portnode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portnode */ \"./src/visualizers/widgets/CommonWorkflowEditor/src/portnode.jsx\");\n/* harmony import */ var _stepNode__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./stepNode */ \"./src/visualizers/widgets/CommonWorkflowEditor/src/stepNode.jsx\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i[\"return\"] && (_r = _i[\"return\"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\n//custom nodes\n\n\n\nvar nodeTypes = {\n  'port': _portnode__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  'step': _stepNode__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n};\nvar dagreGraph = new (dagre__WEBPACK_IMPORTED_MODULE_1___default().graphlib.Graph)();\ndagreGraph.setDefaultEdgeLabel(function () {\n  return {};\n});\nvar nodeWidth = 150;\nvar nodeHeight = 30;\nvar getLayoutedElements = function getLayoutedElements(nodes, edges) {\n  dagreGraph.setGraph({\n    rankdir: 'LR'\n  });\n  nodes.forEach(function (node) {\n    dagreGraph.setNode(node.id, {\n      width: nodeWidth,\n      height: nodeHeight\n    });\n  });\n  edges.forEach(function (edge) {\n    dagreGraph.setEdge(edge.source, edge.target);\n  });\n  dagre__WEBPACK_IMPORTED_MODULE_1___default().layout(dagreGraph);\n  nodes.forEach(function (node) {\n    var nodeWithPosition = dagreGraph.node(node.id);\n    node.targetPosition = 'left';\n    node.sourcePosition = 'right';\n\n    // We are shifting the dagre node position (anchor=center center) to the top left\n    // so it matches the React Flow node anchor point (top left).\n    node.position = {\n      x: nodeWithPosition.x - nodeWidth / 2,\n      y: nodeWithPosition.y - nodeHeight / 2\n    };\n    return node;\n  });\n  return {\n    nodes: nodes,\n    edges: edges\n  };\n};\nfunction Flow(props) {\n  var _useNodesState = (0,reactflow__WEBPACK_IMPORTED_MODULE_7__.useNodesState)([]),\n    _useNodesState2 = _slicedToArray(_useNodesState, 3),\n    nodes = _useNodesState2[0],\n    setNodes = _useNodesState2[1],\n    onNodesChange = _useNodesState2[2];\n  var _useEdgesState = (0,reactflow__WEBPACK_IMPORTED_MODULE_7__.useEdgesState)([]),\n    _useEdgesState2 = _slicedToArray(_useEdgesState, 3),\n    edges = _useEdgesState2[0],\n    setEdges = _useEdgesState2[1],\n    onEdgesChange = _useEdgesState2[2];\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({\n      initialized: false\n    }),\n    _useState2 = _slicedToArray(_useState, 2),\n    global = _useState2[0],\n    setGlobal = _useState2[1];\n  var onUpdateFromControl = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (descriptor) {\n    console.log('got update');\n    var _getLayoutedElements = getLayoutedElements(descriptor.nodes, descriptor.edges),\n      layoutedNodes = _getLayoutedElements.nodes,\n      layoutedEdges = _getLayoutedElements.edges;\n    setNodes(layoutedNodes);\n    setEdges(layoutedEdges);\n    // setGlobal(descriptor.global);\n  });\n\n  WEBGME_CONTROL.registerUpdate(onUpdateFromControl);\n\n  //const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);\n\n  var onConnect = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (params) {\n    console.log(params);\n  }, [setEdges, setNodes]);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(\"div\", {\n    style: {\n      width: '100vw',\n      height: '100vh'\n    },\n    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_7__.ReactFlow, {\n      nodes: nodes,\n      edges: edges,\n      onNodesChange: onNodesChange,\n      onEdgesChange: onEdgesChange,\n      onConnect: onConnect,\n      nodeTypes: nodeTypes,\n      fitView: true,\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material_Fab__WEBPACK_IMPORTED_MODULE_8__[\"default\"], {\n        size: \"small\",\n        style: {\n          position: 'fixed'\n        },\n        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {\n          icon: _fortawesome_free_solid_svg_icons_faPlus__WEBPACK_IMPORTED_MODULE_9__.faPlus\n        })\n      })\n    })\n  });\n}\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/mainFlow.jsx?");
 
 /***/ }),
 
@@ -2030,7 +1975,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ PortNode)\n/* harmony export */ });\n/* harmony import */ var _fortawesome_free_solid_svg_icons_faCog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons/faCog */ \"./node_modules/@fortawesome/free-solid-svg-icons/faCog.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/node-toolbar/dist/esm/index.js\");\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/IconButton */ \"./node_modules/@mui/material/IconButton/IconButton.js\");\n/* harmony import */ var react_bootstrap_FloatingLabel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/FloatingLabel */ \"./node_modules/react-bootstrap/esm/FloatingLabel.js\");\n/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ \"./node_modules/@fortawesome/react-fontawesome/index.es.js\");\n/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/Tooltip */ \"./node_modules/@mui/material/Tooltip/Tooltip.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i[\"return\"] && (_r = _i[\"return\"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\n\n\n\n\n\nfunction PortNode(_ref) {\n  var data = _ref.data;\n  // console.log(data);\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),\n    _useState2 = _slicedToArray(_useState, 2),\n    showToolbar = _useState2[0],\n    onFlipToolbar = _useState2[1];\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {\n    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactflow__WEBPACK_IMPORTED_MODULE_3__.NodeToolbar, {\n      isVisible: showToolbar,\n      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n        title: \"configure\",\n        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {\n            icon: _fortawesome_free_solid_svg_icons_faCog__WEBPACK_IMPORTED_MODULE_6__.faCog,\n            size: \"1x\"\n          })\n        })\n      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {\n          icon: _fortawesome_free_solid_svg_icons_faCog__WEBPACK_IMPORTED_MODULE_6__.faCog,\n          size: \"2x\"\n        })\n      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {\n          icon: _fortawesome_free_solid_svg_icons_faCog__WEBPACK_IMPORTED_MODULE_6__.faCog,\n          size: \"3x\"\n        })\n      })]\n    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(\"div\", {\n      className: \"react-flow__node-default\",\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(\"span\", {\n        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n          onClick: function onClick() {\n            var newvalue = showToolbar ? false : true;\n            onFlipToolbar(newvalue);\n          },\n          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {\n            icon: _fortawesome_free_solid_svg_icons_faCog__WEBPACK_IMPORTED_MODULE_6__.faCog,\n            size: \"sm\"\n          })\n        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_FloatingLabel__WEBPACK_IMPORTED_MODULE_7__[\"default\"], {\n          label: \"something\"\n        })]\n      })\n    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n      title: \"myhandle\",\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_8__.Handle, {\n        type: \"source\",\n        position: reactflow__WEBPACK_IMPORTED_MODULE_8__.Position.Bottom,\n        id: \"a\"\n      })\n    })]\n  });\n}\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/portnode.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ PortNode)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ \"./node_modules/@fortawesome/react-fontawesome/index.es.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\n\n\n\n\n\nfunction PortNode(_ref) {\n  var data = _ref.data;\n  var name = data.name,\n    isInput = data.isInput;\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {\n    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(\"div\", {\n      style: {\n        width: data.name.length * 6 + \"px\",\n        height: \"30px\",\n        backgroundColor: \"#93ddf4\",\n        borderRadius: \"3px\",\n        borderColor: \"black\",\n        borderWidth: \"1px\",\n        borderStyle: \"solid\",\n        fontSize: \"8px\",\n        textAlign: \"center\",\n        textSizeAdjust: \"auto\"\n      },\n      children: data.name\n    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_3__.Handle, {\n      type: isInput ? \"source\" : \"target\",\n      position: isInput ? reactflow__WEBPACK_IMPORTED_MODULE_3__.Position.Right : reactflow__WEBPACK_IMPORTED_MODULE_3__.Position.Left\n    })]\n  });\n}\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/portnode.jsx?");
 
 /***/ }),
 
@@ -2041,17 +1986,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ PortNode)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ \"./node_modules/@fortawesome/react-fontawesome/index.es.js\");\n/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/Tooltip */ \"./node_modules/@mui/material/Tooltip/Tooltip.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\n\n\n\n\n\nfunction getInputHandles(inputs) {\n  var names = Object.keys(inputs);\n  names.sort();\n  var handles = [];\n  var offset = 0;\n  names.forEach(function (name) {\n    handles.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n      title: name,\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_4__.Handle, {\n        id: name,\n        type: \"target\",\n        position: reactflow__WEBPACK_IMPORTED_MODULE_4__.Position.Left,\n        style: {\n          top: offset + 'px'\n        }\n      })\n    }, name));\n    offset += 10;\n  });\n  return handles;\n}\nfunction getOuputHandles(outputs) {\n  var names = Object.keys(outputs);\n  names.sort();\n  var handles = [];\n  names.forEach(function (name) {\n    handles.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n      title: name,\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_4__.Handle, {\n        id: name,\n        type: \"source\",\n        position: reactflow__WEBPACK_IMPORTED_MODULE_4__.Position.Right\n      })\n    }, name));\n  });\n  return handles;\n}\nfunction PortNode(_ref) {\n  var data = _ref.data;\n  console.log(data);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {\n    children: [getInputHandles(data.inputs), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(\"div\", {\n      style: {\n        width: \"60px\",\n        height: \"30px\",\n        backgroundColor: \"#bbb\"\n      },\n      children: data.name\n    }), getOuputHandles(data.outputs)]\n  });\n}\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/stepNode.jsx?");
-
-/***/ }),
-
-/***/ "./node_modules/classnames/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/classnames/index.js ***!
-  \******************************************/
-/***/ ((module, exports) => {
-
-eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n\tCopyright (c) 2018 Jed Watson.\n\tLicensed under the MIT License (MIT), see\n\thttp://jedwatson.github.io/classnames\n*/\n/* global define */\n\n(function () {\n\t'use strict';\n\n\tvar hasOwn = {}.hasOwnProperty;\n\tvar nativeCodeString = '[native code]';\n\n\tfunction classNames() {\n\t\tvar classes = [];\n\n\t\tfor (var i = 0; i < arguments.length; i++) {\n\t\t\tvar arg = arguments[i];\n\t\t\tif (!arg) continue;\n\n\t\t\tvar argType = typeof arg;\n\n\t\t\tif (argType === 'string' || argType === 'number') {\n\t\t\t\tclasses.push(arg);\n\t\t\t} else if (Array.isArray(arg)) {\n\t\t\t\tif (arg.length) {\n\t\t\t\t\tvar inner = classNames.apply(null, arg);\n\t\t\t\t\tif (inner) {\n\t\t\t\t\t\tclasses.push(inner);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t} else if (argType === 'object') {\n\t\t\t\tif (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {\n\t\t\t\t\tclasses.push(arg.toString());\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\n\t\t\t\tfor (var key in arg) {\n\t\t\t\t\tif (hasOwn.call(arg, key) && arg[key]) {\n\t\t\t\t\t\tclasses.push(key);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\treturn classes.join(' ');\n\t}\n\n\tif ( true && module.exports) {\n\t\tclassNames.default = classNames;\n\t\tmodule.exports = classNames;\n\t} else if (true) {\n\t\t// register as 'classnames', consistent with npm package name\n\t\t!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {\n\t\t\treturn classNames;\n\t\t}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\t} else {}\n}());\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/classnames/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ PortNode)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var reactflow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactflow */ \"./node_modules/@reactflow/core/dist/esm/index.js\");\n/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ \"./node_modules/@fortawesome/react-fontawesome/index.es.js\");\n/* harmony import */ var _mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material/Tooltip */ \"./node_modules/@mui/material/Tooltip/Tooltip.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\n\n\n\n\n\nvar nodeHeight = 30;\nvar zoomSelector = function zoomSelector(s) {\n  return s.transform[2];\n};\nfunction getInputHandles(inputs) {\n  var names = Object.keys(inputs);\n  names.sort();\n  var handles = [];\n  var step = nodeHeight / (names.length + 1);\n  var offset = step;\n  names.forEach(function (name) {\n    handles.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n      title: name,\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_4__.Handle, {\n        id: name,\n        type: \"target\",\n        position: reactflow__WEBPACK_IMPORTED_MODULE_4__.Position.Left,\n        style: {\n          top: offset + \"px\"\n        }\n      })\n    }, name));\n    offset += step;\n  });\n  return handles;\n}\nfunction getOuputHandles(outputs) {\n  var names = Object.keys(outputs);\n  names.sort();\n  var handles = [];\n  var step = nodeHeight / (names.length + 1);\n  var offset = step;\n  names.forEach(function (name) {\n    handles.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material_Tooltip__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n      title: name,\n      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactflow__WEBPACK_IMPORTED_MODULE_4__.Handle, {\n        id: name,\n        type: \"source\",\n        position: reactflow__WEBPACK_IMPORTED_MODULE_4__.Position.Right,\n        style: {\n          top: offset + \"px\"\n        }\n      })\n    }, name));\n    offset += step;\n  });\n  return handles;\n}\nfunction PortNode(_ref) {\n  var id = _ref.id,\n    data = _ref.data;\n  // console.log(data);\n  var zoom = (0,reactflow__WEBPACK_IMPORTED_MODULE_4__.useStore)(zoomSelector) / 2;\n  var inputHandles = getInputHandles(data.inputs);\n  var outputHandles = getOuputHandles(data.outputs);\n  var update = (0,reactflow__WEBPACK_IMPORTED_MODULE_4__.useUpdateNodeInternals)();\n  update(id);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {\n    children: [inputHandles, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(\"div\", {\n      style: {\n        width: data.name.length * 6 + \"px\",\n        height: \"30px\",\n        backgroundColor: \"#f3cea1\",\n        borderRadius: \"3px\",\n        borderColor: \"black\",\n        borderWidth: \"1px\",\n        borderStyle: \"solid\",\n        fontSize: \"8px\",\n        textAlign: \"center\",\n        paddingTop: \"10px\"\n      },\n      children: data.name\n    }), outputHandles]\n  });\n}\n\n//# sourceURL=webpack://webgme-cwl/./src/visualizers/widgets/CommonWorkflowEditor/src/stepNode.jsx?");
 
 /***/ }),
 
@@ -2063,6 +1998,522 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n\tCop
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clsx\": () => (/* binding */ clsx),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction r(e){var t,f,n=\"\";if(\"string\"==typeof e||\"number\"==typeof e)n+=e;else if(\"object\"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(f=r(e[t]))&&(n&&(n+=\" \"),n+=f);else for(t in e)e[t]&&(n&&(n+=\" \"),n+=t);return n}function clsx(){for(var e,t,f=0,n=\"\";f<arguments.length;)(e=arguments[f++])&&(t=r(e))&&(n&&(n+=\" \"),n+=t);return n}/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clsx);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/clsx/dist/clsx.m.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/index.js":
+/*!*************************************!*\
+  !*** ./node_modules/dagre/index.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/*\nCopyright (c) 2012-2014 Chris Pettitt\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n*/\n\nmodule.exports = {\n  graphlib: __webpack_require__(/*! ./lib/graphlib */ \"./node_modules/dagre/lib/graphlib.js\"),\n\n  layout: __webpack_require__(/*! ./lib/layout */ \"./node_modules/dagre/lib/layout.js\"),\n  debug: __webpack_require__(/*! ./lib/debug */ \"./node_modules/dagre/lib/debug.js\"),\n  util: {\n    time: (__webpack_require__(/*! ./lib/util */ \"./node_modules/dagre/lib/util.js\").time),\n    notime: (__webpack_require__(/*! ./lib/util */ \"./node_modules/dagre/lib/util.js\").notime)\n  },\n  version: __webpack_require__(/*! ./lib/version */ \"./node_modules/dagre/lib/version.js\")\n};\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/acyclic.js":
+/*!*******************************************!*\
+  !*** ./node_modules/dagre/lib/acyclic.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar greedyFAS = __webpack_require__(/*! ./greedy-fas */ \"./node_modules/dagre/lib/greedy-fas.js\");\n\nmodule.exports = {\n  run: run,\n  undo: undo\n};\n\nfunction run(g) {\n  var fas = (g.graph().acyclicer === \"greedy\"\n    ? greedyFAS(g, weightFn(g))\n    : dfsFAS(g));\n  _.forEach(fas, function(e) {\n    var label = g.edge(e);\n    g.removeEdge(e);\n    label.forwardName = e.name;\n    label.reversed = true;\n    g.setEdge(e.w, e.v, label, _.uniqueId(\"rev\"));\n  });\n\n  function weightFn(g) {\n    return function(e) {\n      return g.edge(e).weight;\n    };\n  }\n}\n\nfunction dfsFAS(g) {\n  var fas = [];\n  var stack = {};\n  var visited = {};\n\n  function dfs(v) {\n    if (_.has(visited, v)) {\n      return;\n    }\n    visited[v] = true;\n    stack[v] = true;\n    _.forEach(g.outEdges(v), function(e) {\n      if (_.has(stack, e.w)) {\n        fas.push(e);\n      } else {\n        dfs(e.w);\n      }\n    });\n    delete stack[v];\n  }\n\n  _.forEach(g.nodes(), dfs);\n  return fas;\n}\n\nfunction undo(g) {\n  _.forEach(g.edges(), function(e) {\n    var label = g.edge(e);\n    if (label.reversed) {\n      g.removeEdge(e);\n\n      var forwardName = label.forwardName;\n      delete label.reversed;\n      delete label.forwardName;\n      g.setEdge(e.w, e.v, label, forwardName);\n    }\n  });\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/acyclic.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/add-border-segments.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/dagre/lib/add-border-segments.js ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar util = __webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\");\n\nmodule.exports = addBorderSegments;\n\nfunction addBorderSegments(g) {\n  function dfs(v) {\n    var children = g.children(v);\n    var node = g.node(v);\n    if (children.length) {\n      _.forEach(children, dfs);\n    }\n\n    if (_.has(node, \"minRank\")) {\n      node.borderLeft = [];\n      node.borderRight = [];\n      for (var rank = node.minRank, maxRank = node.maxRank + 1;\n        rank < maxRank;\n        ++rank) {\n        addBorderNode(g, \"borderLeft\", \"_bl\", v, node, rank);\n        addBorderNode(g, \"borderRight\", \"_br\", v, node, rank);\n      }\n    }\n  }\n\n  _.forEach(g.children(), dfs);\n}\n\nfunction addBorderNode(g, prop, prefix, sg, sgNode, rank) {\n  var label = { width: 0, height: 0, rank: rank, borderType: prop };\n  var prev = sgNode[prop][rank - 1];\n  var curr = util.addDummyNode(g, \"border\", label, prefix);\n  sgNode[prop][rank] = curr;\n  g.setParent(curr, sg);\n  if (prev) {\n    g.setEdge(prev, curr, { weight: 1 });\n  }\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/add-border-segments.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/coordinate-system.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/dagre/lib/coordinate-system.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = {\n  adjust: adjust,\n  undo: undo\n};\n\nfunction adjust(g) {\n  var rankDir = g.graph().rankdir.toLowerCase();\n  if (rankDir === \"lr\" || rankDir === \"rl\") {\n    swapWidthHeight(g);\n  }\n}\n\nfunction undo(g) {\n  var rankDir = g.graph().rankdir.toLowerCase();\n  if (rankDir === \"bt\" || rankDir === \"rl\") {\n    reverseY(g);\n  }\n\n  if (rankDir === \"lr\" || rankDir === \"rl\") {\n    swapXY(g);\n    swapWidthHeight(g);\n  }\n}\n\nfunction swapWidthHeight(g) {\n  _.forEach(g.nodes(), function(v) { swapWidthHeightOne(g.node(v)); });\n  _.forEach(g.edges(), function(e) { swapWidthHeightOne(g.edge(e)); });\n}\n\nfunction swapWidthHeightOne(attrs) {\n  var w = attrs.width;\n  attrs.width = attrs.height;\n  attrs.height = w;\n}\n\nfunction reverseY(g) {\n  _.forEach(g.nodes(), function(v) { reverseYOne(g.node(v)); });\n\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    _.forEach(edge.points, reverseYOne);\n    if (_.has(edge, \"y\")) {\n      reverseYOne(edge);\n    }\n  });\n}\n\nfunction reverseYOne(attrs) {\n  attrs.y = -attrs.y;\n}\n\nfunction swapXY(g) {\n  _.forEach(g.nodes(), function(v) { swapXYOne(g.node(v)); });\n\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    _.forEach(edge.points, swapXYOne);\n    if (_.has(edge, \"x\")) {\n      swapXYOne(edge);\n    }\n  });\n}\n\nfunction swapXYOne(attrs) {\n  var x = attrs.x;\n  attrs.x = attrs.y;\n  attrs.y = x;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/coordinate-system.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/data/list.js":
+/*!*********************************************!*\
+  !*** ./node_modules/dagre/lib/data/list.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/*\n * Simple doubly linked list implementation derived from Cormen, et al.,\n * \"Introduction to Algorithms\".\n */\n\nmodule.exports = List;\n\nfunction List() {\n  var sentinel = {};\n  sentinel._next = sentinel._prev = sentinel;\n  this._sentinel = sentinel;\n}\n\nList.prototype.dequeue = function() {\n  var sentinel = this._sentinel;\n  var entry = sentinel._prev;\n  if (entry !== sentinel) {\n    unlink(entry);\n    return entry;\n  }\n};\n\nList.prototype.enqueue = function(entry) {\n  var sentinel = this._sentinel;\n  if (entry._prev && entry._next) {\n    unlink(entry);\n  }\n  entry._next = sentinel._next;\n  sentinel._next._prev = entry;\n  sentinel._next = entry;\n  entry._prev = sentinel;\n};\n\nList.prototype.toString = function() {\n  var strs = [];\n  var sentinel = this._sentinel;\n  var curr = sentinel._prev;\n  while (curr !== sentinel) {\n    strs.push(JSON.stringify(curr, filterOutLinks));\n    curr = curr._prev;\n  }\n  return \"[\" + strs.join(\", \") + \"]\";\n};\n\nfunction unlink(entry) {\n  entry._prev._next = entry._next;\n  entry._next._prev = entry._prev;\n  delete entry._next;\n  delete entry._prev;\n}\n\nfunction filterOutLinks(k, v) {\n  if (k !== \"_next\" && k !== \"_prev\") {\n    return v;\n  }\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/data/list.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/debug.js":
+/*!*****************************************!*\
+  !*** ./node_modules/dagre/lib/debug.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar util = __webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\");\nvar Graph = (__webpack_require__(/*! ./graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\n\nmodule.exports = {\n  debugOrdering: debugOrdering\n};\n\n/* istanbul ignore next */\nfunction debugOrdering(g) {\n  var layerMatrix = util.buildLayerMatrix(g);\n\n  var h = new Graph({ compound: true, multigraph: true }).setGraph({});\n\n  _.forEach(g.nodes(), function(v) {\n    h.setNode(v, { label: v });\n    h.setParent(v, \"layer\" + g.node(v).rank);\n  });\n\n  _.forEach(g.edges(), function(e) {\n    h.setEdge(e.v, e.w, {}, e.name);\n  });\n\n  _.forEach(layerMatrix, function(layer, i) {\n    var layerV = \"layer\" + i;\n    h.setNode(layerV, { rank: \"same\" });\n    _.reduce(layer, function(u, v) {\n      h.setEdge(u, v, { style: \"invis\" });\n      return v;\n    });\n  });\n\n  return h;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/debug.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/graphlib.js":
+/*!********************************************!*\
+  !*** ./node_modules/dagre/lib/graphlib.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* global window */\n\nvar graphlib;\n\nif (true) {\n  try {\n    graphlib = __webpack_require__(/*! graphlib */ \"./node_modules/graphlib/index.js\");\n  } catch (e) {\n    // continue regardless of error\n  }\n}\n\nif (!graphlib) {\n  graphlib = window.graphlib;\n}\n\nmodule.exports = graphlib;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/graphlib.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/greedy-fas.js":
+/*!**********************************************!*\
+  !*** ./node_modules/dagre/lib/greedy-fas.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar Graph = (__webpack_require__(/*! ./graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\nvar List = __webpack_require__(/*! ./data/list */ \"./node_modules/dagre/lib/data/list.js\");\n\n/*\n * A greedy heuristic for finding a feedback arc set for a graph. A feedback\n * arc set is a set of edges that can be removed to make a graph acyclic.\n * The algorithm comes from: P. Eades, X. Lin, and W. F. Smyth, \"A fast and\n * effective heuristic for the feedback arc set problem.\" This implementation\n * adjusts that from the paper to allow for weighted edges.\n */\nmodule.exports = greedyFAS;\n\nvar DEFAULT_WEIGHT_FN = _.constant(1);\n\nfunction greedyFAS(g, weightFn) {\n  if (g.nodeCount() <= 1) {\n    return [];\n  }\n  var state = buildState(g, weightFn || DEFAULT_WEIGHT_FN);\n  var results = doGreedyFAS(state.graph, state.buckets, state.zeroIdx);\n\n  // Expand multi-edges\n  return _.flatten(_.map(results, function(e) {\n    return g.outEdges(e.v, e.w);\n  }), true);\n}\n\nfunction doGreedyFAS(g, buckets, zeroIdx) {\n  var results = [];\n  var sources = buckets[buckets.length - 1];\n  var sinks = buckets[0];\n\n  var entry;\n  while (g.nodeCount()) {\n    while ((entry = sinks.dequeue()))   { removeNode(g, buckets, zeroIdx, entry); }\n    while ((entry = sources.dequeue())) { removeNode(g, buckets, zeroIdx, entry); }\n    if (g.nodeCount()) {\n      for (var i = buckets.length - 2; i > 0; --i) {\n        entry = buckets[i].dequeue();\n        if (entry) {\n          results = results.concat(removeNode(g, buckets, zeroIdx, entry, true));\n          break;\n        }\n      }\n    }\n  }\n\n  return results;\n}\n\nfunction removeNode(g, buckets, zeroIdx, entry, collectPredecessors) {\n  var results = collectPredecessors ? [] : undefined;\n\n  _.forEach(g.inEdges(entry.v), function(edge) {\n    var weight = g.edge(edge);\n    var uEntry = g.node(edge.v);\n\n    if (collectPredecessors) {\n      results.push({ v: edge.v, w: edge.w });\n    }\n\n    uEntry.out -= weight;\n    assignBucket(buckets, zeroIdx, uEntry);\n  });\n\n  _.forEach(g.outEdges(entry.v), function(edge) {\n    var weight = g.edge(edge);\n    var w = edge.w;\n    var wEntry = g.node(w);\n    wEntry[\"in\"] -= weight;\n    assignBucket(buckets, zeroIdx, wEntry);\n  });\n\n  g.removeNode(entry.v);\n\n  return results;\n}\n\nfunction buildState(g, weightFn) {\n  var fasGraph = new Graph();\n  var maxIn = 0;\n  var maxOut = 0;\n\n  _.forEach(g.nodes(), function(v) {\n    fasGraph.setNode(v, { v: v, \"in\": 0, out: 0 });\n  });\n\n  // Aggregate weights on nodes, but also sum the weights across multi-edges\n  // into a single edge for the fasGraph.\n  _.forEach(g.edges(), function(e) {\n    var prevWeight = fasGraph.edge(e.v, e.w) || 0;\n    var weight = weightFn(e);\n    var edgeWeight = prevWeight + weight;\n    fasGraph.setEdge(e.v, e.w, edgeWeight);\n    maxOut = Math.max(maxOut, fasGraph.node(e.v).out += weight);\n    maxIn  = Math.max(maxIn,  fasGraph.node(e.w)[\"in\"]  += weight);\n  });\n\n  var buckets = _.range(maxOut + maxIn + 3).map(function() { return new List(); });\n  var zeroIdx = maxIn + 1;\n\n  _.forEach(fasGraph.nodes(), function(v) {\n    assignBucket(buckets, zeroIdx, fasGraph.node(v));\n  });\n\n  return { graph: fasGraph, buckets: buckets, zeroIdx: zeroIdx };\n}\n\nfunction assignBucket(buckets, zeroIdx, entry) {\n  if (!entry.out) {\n    buckets[0].enqueue(entry);\n  } else if (!entry[\"in\"]) {\n    buckets[buckets.length - 1].enqueue(entry);\n  } else {\n    buckets[entry.out - entry[\"in\"] + zeroIdx].enqueue(entry);\n  }\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/greedy-fas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/layout.js":
+/*!******************************************!*\
+  !*** ./node_modules/dagre/lib/layout.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar acyclic = __webpack_require__(/*! ./acyclic */ \"./node_modules/dagre/lib/acyclic.js\");\nvar normalize = __webpack_require__(/*! ./normalize */ \"./node_modules/dagre/lib/normalize.js\");\nvar rank = __webpack_require__(/*! ./rank */ \"./node_modules/dagre/lib/rank/index.js\");\nvar normalizeRanks = (__webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\").normalizeRanks);\nvar parentDummyChains = __webpack_require__(/*! ./parent-dummy-chains */ \"./node_modules/dagre/lib/parent-dummy-chains.js\");\nvar removeEmptyRanks = (__webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\").removeEmptyRanks);\nvar nestingGraph = __webpack_require__(/*! ./nesting-graph */ \"./node_modules/dagre/lib/nesting-graph.js\");\nvar addBorderSegments = __webpack_require__(/*! ./add-border-segments */ \"./node_modules/dagre/lib/add-border-segments.js\");\nvar coordinateSystem = __webpack_require__(/*! ./coordinate-system */ \"./node_modules/dagre/lib/coordinate-system.js\");\nvar order = __webpack_require__(/*! ./order */ \"./node_modules/dagre/lib/order/index.js\");\nvar position = __webpack_require__(/*! ./position */ \"./node_modules/dagre/lib/position/index.js\");\nvar util = __webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\");\nvar Graph = (__webpack_require__(/*! ./graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\n\nmodule.exports = layout;\n\nfunction layout(g, opts) {\n  var time = opts && opts.debugTiming ? util.time : util.notime;\n  time(\"layout\", function() {\n    var layoutGraph = \n      time(\"  buildLayoutGraph\", function() { return buildLayoutGraph(g); });\n    time(\"  runLayout\",        function() { runLayout(layoutGraph, time); });\n    time(\"  updateInputGraph\", function() { updateInputGraph(g, layoutGraph); });\n  });\n}\n\nfunction runLayout(g, time) {\n  time(\"    makeSpaceForEdgeLabels\", function() { makeSpaceForEdgeLabels(g); });\n  time(\"    removeSelfEdges\",        function() { removeSelfEdges(g); });\n  time(\"    acyclic\",                function() { acyclic.run(g); });\n  time(\"    nestingGraph.run\",       function() { nestingGraph.run(g); });\n  time(\"    rank\",                   function() { rank(util.asNonCompoundGraph(g)); });\n  time(\"    injectEdgeLabelProxies\", function() { injectEdgeLabelProxies(g); });\n  time(\"    removeEmptyRanks\",       function() { removeEmptyRanks(g); });\n  time(\"    nestingGraph.cleanup\",   function() { nestingGraph.cleanup(g); });\n  time(\"    normalizeRanks\",         function() { normalizeRanks(g); });\n  time(\"    assignRankMinMax\",       function() { assignRankMinMax(g); });\n  time(\"    removeEdgeLabelProxies\", function() { removeEdgeLabelProxies(g); });\n  time(\"    normalize.run\",          function() { normalize.run(g); });\n  time(\"    parentDummyChains\",      function() { parentDummyChains(g); });\n  time(\"    addBorderSegments\",      function() { addBorderSegments(g); });\n  time(\"    order\",                  function() { order(g); });\n  time(\"    insertSelfEdges\",        function() { insertSelfEdges(g); });\n  time(\"    adjustCoordinateSystem\", function() { coordinateSystem.adjust(g); });\n  time(\"    position\",               function() { position(g); });\n  time(\"    positionSelfEdges\",      function() { positionSelfEdges(g); });\n  time(\"    removeBorderNodes\",      function() { removeBorderNodes(g); });\n  time(\"    normalize.undo\",         function() { normalize.undo(g); });\n  time(\"    fixupEdgeLabelCoords\",   function() { fixupEdgeLabelCoords(g); });\n  time(\"    undoCoordinateSystem\",   function() { coordinateSystem.undo(g); });\n  time(\"    translateGraph\",         function() { translateGraph(g); });\n  time(\"    assignNodeIntersects\",   function() { assignNodeIntersects(g); });\n  time(\"    reversePoints\",          function() { reversePointsForReversedEdges(g); });\n  time(\"    acyclic.undo\",           function() { acyclic.undo(g); });\n}\n\n/*\n * Copies final layout information from the layout graph back to the input\n * graph. This process only copies whitelisted attributes from the layout graph\n * to the input graph, so it serves as a good place to determine what\n * attributes can influence layout.\n */\nfunction updateInputGraph(inputGraph, layoutGraph) {\n  _.forEach(inputGraph.nodes(), function(v) {\n    var inputLabel = inputGraph.node(v);\n    var layoutLabel = layoutGraph.node(v);\n\n    if (inputLabel) {\n      inputLabel.x = layoutLabel.x;\n      inputLabel.y = layoutLabel.y;\n\n      if (layoutGraph.children(v).length) {\n        inputLabel.width = layoutLabel.width;\n        inputLabel.height = layoutLabel.height;\n      }\n    }\n  });\n\n  _.forEach(inputGraph.edges(), function(e) {\n    var inputLabel = inputGraph.edge(e);\n    var layoutLabel = layoutGraph.edge(e);\n\n    inputLabel.points = layoutLabel.points;\n    if (_.has(layoutLabel, \"x\")) {\n      inputLabel.x = layoutLabel.x;\n      inputLabel.y = layoutLabel.y;\n    }\n  });\n\n  inputGraph.graph().width = layoutGraph.graph().width;\n  inputGraph.graph().height = layoutGraph.graph().height;\n}\n\nvar graphNumAttrs = [\"nodesep\", \"edgesep\", \"ranksep\", \"marginx\", \"marginy\"];\nvar graphDefaults = { ranksep: 50, edgesep: 20, nodesep: 50, rankdir: \"tb\" };\nvar graphAttrs = [\"acyclicer\", \"ranker\", \"rankdir\", \"align\"];\nvar nodeNumAttrs = [\"width\", \"height\"];\nvar nodeDefaults = { width: 0, height: 0 };\nvar edgeNumAttrs = [\"minlen\", \"weight\", \"width\", \"height\", \"labeloffset\"];\nvar edgeDefaults = {\n  minlen: 1, weight: 1, width: 0, height: 0,\n  labeloffset: 10, labelpos: \"r\"\n};\nvar edgeAttrs = [\"labelpos\"];\n\n/*\n * Constructs a new graph from the input graph, which can be used for layout.\n * This process copies only whitelisted attributes from the input graph to the\n * layout graph. Thus this function serves as a good place to determine what\n * attributes can influence layout.\n */\nfunction buildLayoutGraph(inputGraph) {\n  var g = new Graph({ multigraph: true, compound: true });\n  var graph = canonicalize(inputGraph.graph());\n\n  g.setGraph(_.merge({},\n    graphDefaults,\n    selectNumberAttrs(graph, graphNumAttrs),\n    _.pick(graph, graphAttrs)));\n\n  _.forEach(inputGraph.nodes(), function(v) {\n    var node = canonicalize(inputGraph.node(v));\n    g.setNode(v, _.defaults(selectNumberAttrs(node, nodeNumAttrs), nodeDefaults));\n    g.setParent(v, inputGraph.parent(v));\n  });\n\n  _.forEach(inputGraph.edges(), function(e) {\n    var edge = canonicalize(inputGraph.edge(e));\n    g.setEdge(e, _.merge({},\n      edgeDefaults,\n      selectNumberAttrs(edge, edgeNumAttrs),\n      _.pick(edge, edgeAttrs)));\n  });\n\n  return g;\n}\n\n/*\n * This idea comes from the Gansner paper: to account for edge labels in our\n * layout we split each rank in half by doubling minlen and halving ranksep.\n * Then we can place labels at these mid-points between nodes.\n *\n * We also add some minimal padding to the width to push the label for the edge\n * away from the edge itself a bit.\n */\nfunction makeSpaceForEdgeLabels(g) {\n  var graph = g.graph();\n  graph.ranksep /= 2;\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    edge.minlen *= 2;\n    if (edge.labelpos.toLowerCase() !== \"c\") {\n      if (graph.rankdir === \"TB\" || graph.rankdir === \"BT\") {\n        edge.width += edge.labeloffset;\n      } else {\n        edge.height += edge.labeloffset;\n      }\n    }\n  });\n}\n\n/*\n * Creates temporary dummy nodes that capture the rank in which each edge's\n * label is going to, if it has one of non-zero width and height. We do this\n * so that we can safely remove empty ranks while preserving balance for the\n * label's position.\n */\nfunction injectEdgeLabelProxies(g) {\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    if (edge.width && edge.height) {\n      var v = g.node(e.v);\n      var w = g.node(e.w);\n      var label = { rank: (w.rank - v.rank) / 2 + v.rank, e: e };\n      util.addDummyNode(g, \"edge-proxy\", label, \"_ep\");\n    }\n  });\n}\n\nfunction assignRankMinMax(g) {\n  var maxRank = 0;\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v);\n    if (node.borderTop) {\n      node.minRank = g.node(node.borderTop).rank;\n      node.maxRank = g.node(node.borderBottom).rank;\n      maxRank = _.max(maxRank, node.maxRank);\n    }\n  });\n  g.graph().maxRank = maxRank;\n}\n\nfunction removeEdgeLabelProxies(g) {\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v);\n    if (node.dummy === \"edge-proxy\") {\n      g.edge(node.e).labelRank = node.rank;\n      g.removeNode(v);\n    }\n  });\n}\n\nfunction translateGraph(g) {\n  var minX = Number.POSITIVE_INFINITY;\n  var maxX = 0;\n  var minY = Number.POSITIVE_INFINITY;\n  var maxY = 0;\n  var graphLabel = g.graph();\n  var marginX = graphLabel.marginx || 0;\n  var marginY = graphLabel.marginy || 0;\n\n  function getExtremes(attrs) {\n    var x = attrs.x;\n    var y = attrs.y;\n    var w = attrs.width;\n    var h = attrs.height;\n    minX = Math.min(minX, x - w / 2);\n    maxX = Math.max(maxX, x + w / 2);\n    minY = Math.min(minY, y - h / 2);\n    maxY = Math.max(maxY, y + h / 2);\n  }\n\n  _.forEach(g.nodes(), function(v) { getExtremes(g.node(v)); });\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    if (_.has(edge, \"x\")) {\n      getExtremes(edge);\n    }\n  });\n\n  minX -= marginX;\n  minY -= marginY;\n\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v);\n    node.x -= minX;\n    node.y -= minY;\n  });\n\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    _.forEach(edge.points, function(p) {\n      p.x -= minX;\n      p.y -= minY;\n    });\n    if (_.has(edge, \"x\")) { edge.x -= minX; }\n    if (_.has(edge, \"y\")) { edge.y -= minY; }\n  });\n\n  graphLabel.width = maxX - minX + marginX;\n  graphLabel.height = maxY - minY + marginY;\n}\n\nfunction assignNodeIntersects(g) {\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    var nodeV = g.node(e.v);\n    var nodeW = g.node(e.w);\n    var p1, p2;\n    if (!edge.points) {\n      edge.points = [];\n      p1 = nodeW;\n      p2 = nodeV;\n    } else {\n      p1 = edge.points[0];\n      p2 = edge.points[edge.points.length - 1];\n    }\n    edge.points.unshift(util.intersectRect(nodeV, p1));\n    edge.points.push(util.intersectRect(nodeW, p2));\n  });\n}\n\nfunction fixupEdgeLabelCoords(g) {\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    if (_.has(edge, \"x\")) {\n      if (edge.labelpos === \"l\" || edge.labelpos === \"r\") {\n        edge.width -= edge.labeloffset;\n      }\n      switch (edge.labelpos) {\n      case \"l\": edge.x -= edge.width / 2 + edge.labeloffset; break;\n      case \"r\": edge.x += edge.width / 2 + edge.labeloffset; break;\n      }\n    }\n  });\n}\n\nfunction reversePointsForReversedEdges(g) {\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    if (edge.reversed) {\n      edge.points.reverse();\n    }\n  });\n}\n\nfunction removeBorderNodes(g) {\n  _.forEach(g.nodes(), function(v) {\n    if (g.children(v).length) {\n      var node = g.node(v);\n      var t = g.node(node.borderTop);\n      var b = g.node(node.borderBottom);\n      var l = g.node(_.last(node.borderLeft));\n      var r = g.node(_.last(node.borderRight));\n\n      node.width = Math.abs(r.x - l.x);\n      node.height = Math.abs(b.y - t.y);\n      node.x = l.x + node.width / 2;\n      node.y = t.y + node.height / 2;\n    }\n  });\n\n  _.forEach(g.nodes(), function(v) {\n    if (g.node(v).dummy === \"border\") {\n      g.removeNode(v);\n    }\n  });\n}\n\nfunction removeSelfEdges(g) {\n  _.forEach(g.edges(), function(e) {\n    if (e.v === e.w) {\n      var node = g.node(e.v);\n      if (!node.selfEdges) {\n        node.selfEdges = [];\n      }\n      node.selfEdges.push({ e: e, label: g.edge(e) });\n      g.removeEdge(e);\n    }\n  });\n}\n\nfunction insertSelfEdges(g) {\n  var layers = util.buildLayerMatrix(g);\n  _.forEach(layers, function(layer) {\n    var orderShift = 0;\n    _.forEach(layer, function(v, i) {\n      var node = g.node(v);\n      node.order = i + orderShift;\n      _.forEach(node.selfEdges, function(selfEdge) {\n        util.addDummyNode(g, \"selfedge\", {\n          width: selfEdge.label.width,\n          height: selfEdge.label.height,\n          rank: node.rank,\n          order: i + (++orderShift),\n          e: selfEdge.e,\n          label: selfEdge.label\n        }, \"_se\");\n      });\n      delete node.selfEdges;\n    });\n  });\n}\n\nfunction positionSelfEdges(g) {\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v);\n    if (node.dummy === \"selfedge\") {\n      var selfNode = g.node(node.e.v);\n      var x = selfNode.x + selfNode.width / 2;\n      var y = selfNode.y;\n      var dx = node.x - x;\n      var dy = selfNode.height / 2;\n      g.setEdge(node.e, node.label);\n      g.removeNode(v);\n      node.label.points = [\n        { x: x + 2 * dx / 3, y: y - dy },\n        { x: x + 5 * dx / 6, y: y - dy },\n        { x: x +     dx    , y: y },\n        { x: x + 5 * dx / 6, y: y + dy },\n        { x: x + 2 * dx / 3, y: y + dy }\n      ];\n      node.label.x = node.x;\n      node.label.y = node.y;\n    }\n  });\n}\n\nfunction selectNumberAttrs(obj, attrs) {\n  return _.mapValues(_.pick(obj, attrs), Number);\n}\n\nfunction canonicalize(attrs) {\n  var newAttrs = {};\n  _.forEach(attrs, function(v, k) {\n    newAttrs[k.toLowerCase()] = v;\n  });\n  return newAttrs;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/layout.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/lodash.js":
+/*!******************************************!*\
+  !*** ./node_modules/dagre/lib/lodash.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* global window */\n\nvar lodash;\n\nif (true) {\n  try {\n    lodash = {\n      cloneDeep: __webpack_require__(/*! lodash/cloneDeep */ \"./node_modules/lodash/cloneDeep.js\"),\n      constant: __webpack_require__(/*! lodash/constant */ \"./node_modules/lodash/constant.js\"),\n      defaults: __webpack_require__(/*! lodash/defaults */ \"./node_modules/lodash/defaults.js\"),\n      each: __webpack_require__(/*! lodash/each */ \"./node_modules/lodash/each.js\"),\n      filter: __webpack_require__(/*! lodash/filter */ \"./node_modules/lodash/filter.js\"),\n      find: __webpack_require__(/*! lodash/find */ \"./node_modules/lodash/find.js\"),\n      flatten: __webpack_require__(/*! lodash/flatten */ \"./node_modules/lodash/flatten.js\"),\n      forEach: __webpack_require__(/*! lodash/forEach */ \"./node_modules/lodash/forEach.js\"),\n      forIn: __webpack_require__(/*! lodash/forIn */ \"./node_modules/lodash/forIn.js\"),\n      has:  __webpack_require__(/*! lodash/has */ \"./node_modules/lodash/has.js\"),\n      isUndefined: __webpack_require__(/*! lodash/isUndefined */ \"./node_modules/lodash/isUndefined.js\"),\n      last: __webpack_require__(/*! lodash/last */ \"./node_modules/lodash/last.js\"),\n      map: __webpack_require__(/*! lodash/map */ \"./node_modules/lodash/map.js\"),\n      mapValues: __webpack_require__(/*! lodash/mapValues */ \"./node_modules/lodash/mapValues.js\"),\n      max: __webpack_require__(/*! lodash/max */ \"./node_modules/lodash/max.js\"),\n      merge: __webpack_require__(/*! lodash/merge */ \"./node_modules/lodash/merge.js\"),\n      min: __webpack_require__(/*! lodash/min */ \"./node_modules/lodash/min.js\"),\n      minBy: __webpack_require__(/*! lodash/minBy */ \"./node_modules/lodash/minBy.js\"),\n      now: __webpack_require__(/*! lodash/now */ \"./node_modules/lodash/now.js\"),\n      pick: __webpack_require__(/*! lodash/pick */ \"./node_modules/lodash/pick.js\"),\n      range: __webpack_require__(/*! lodash/range */ \"./node_modules/lodash/range.js\"),\n      reduce: __webpack_require__(/*! lodash/reduce */ \"./node_modules/lodash/reduce.js\"),\n      sortBy: __webpack_require__(/*! lodash/sortBy */ \"./node_modules/lodash/sortBy.js\"),\n      uniqueId: __webpack_require__(/*! lodash/uniqueId */ \"./node_modules/lodash/uniqueId.js\"),\n      values: __webpack_require__(/*! lodash/values */ \"./node_modules/lodash/values.js\"),\n      zipObject: __webpack_require__(/*! lodash/zipObject */ \"./node_modules/lodash/zipObject.js\"),\n    };\n  } catch (e) {\n    // continue regardless of error\n  }\n}\n\nif (!lodash) {\n  lodash = window._;\n}\n\nmodule.exports = lodash;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/lodash.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/nesting-graph.js":
+/*!*************************************************!*\
+  !*** ./node_modules/dagre/lib/nesting-graph.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar util = __webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\");\n\nmodule.exports = {\n  run: run,\n  cleanup: cleanup\n};\n\n/*\n * A nesting graph creates dummy nodes for the tops and bottoms of subgraphs,\n * adds appropriate edges to ensure that all cluster nodes are placed between\n * these boundries, and ensures that the graph is connected.\n *\n * In addition we ensure, through the use of the minlen property, that nodes\n * and subgraph border nodes to not end up on the same rank.\n *\n * Preconditions:\n *\n *    1. Input graph is a DAG\n *    2. Nodes in the input graph has a minlen attribute\n *\n * Postconditions:\n *\n *    1. Input graph is connected.\n *    2. Dummy nodes are added for the tops and bottoms of subgraphs.\n *    3. The minlen attribute for nodes is adjusted to ensure nodes do not\n *       get placed on the same rank as subgraph border nodes.\n *\n * The nesting graph idea comes from Sander, \"Layout of Compound Directed\n * Graphs.\"\n */\nfunction run(g) {\n  var root = util.addDummyNode(g, \"root\", {}, \"_root\");\n  var depths = treeDepths(g);\n  var height = _.max(_.values(depths)) - 1; // Note: depths is an Object not an array\n  var nodeSep = 2 * height + 1;\n\n  g.graph().nestingRoot = root;\n\n  // Multiply minlen by nodeSep to align nodes on non-border ranks.\n  _.forEach(g.edges(), function(e) { g.edge(e).minlen *= nodeSep; });\n\n  // Calculate a weight that is sufficient to keep subgraphs vertically compact\n  var weight = sumWeights(g) + 1;\n\n  // Create border nodes and link them up\n  _.forEach(g.children(), function(child) {\n    dfs(g, root, nodeSep, weight, height, depths, child);\n  });\n\n  // Save the multiplier for node layers for later removal of empty border\n  // layers.\n  g.graph().nodeRankFactor = nodeSep;\n}\n\nfunction dfs(g, root, nodeSep, weight, height, depths, v) {\n  var children = g.children(v);\n  if (!children.length) {\n    if (v !== root) {\n      g.setEdge(root, v, { weight: 0, minlen: nodeSep });\n    }\n    return;\n  }\n\n  var top = util.addBorderNode(g, \"_bt\");\n  var bottom = util.addBorderNode(g, \"_bb\");\n  var label = g.node(v);\n\n  g.setParent(top, v);\n  label.borderTop = top;\n  g.setParent(bottom, v);\n  label.borderBottom = bottom;\n\n  _.forEach(children, function(child) {\n    dfs(g, root, nodeSep, weight, height, depths, child);\n\n    var childNode = g.node(child);\n    var childTop = childNode.borderTop ? childNode.borderTop : child;\n    var childBottom = childNode.borderBottom ? childNode.borderBottom : child;\n    var thisWeight = childNode.borderTop ? weight : 2 * weight;\n    var minlen = childTop !== childBottom ? 1 : height - depths[v] + 1;\n\n    g.setEdge(top, childTop, {\n      weight: thisWeight,\n      minlen: minlen,\n      nestingEdge: true\n    });\n\n    g.setEdge(childBottom, bottom, {\n      weight: thisWeight,\n      minlen: minlen,\n      nestingEdge: true\n    });\n  });\n\n  if (!g.parent(v)) {\n    g.setEdge(root, top, { weight: 0, minlen: height + depths[v] });\n  }\n}\n\nfunction treeDepths(g) {\n  var depths = {};\n  function dfs(v, depth) {\n    var children = g.children(v);\n    if (children && children.length) {\n      _.forEach(children, function(child) {\n        dfs(child, depth + 1);\n      });\n    }\n    depths[v] = depth;\n  }\n  _.forEach(g.children(), function(v) { dfs(v, 1); });\n  return depths;\n}\n\nfunction sumWeights(g) {\n  return _.reduce(g.edges(), function(acc, e) {\n    return acc + g.edge(e).weight;\n  }, 0);\n}\n\nfunction cleanup(g) {\n  var graphLabel = g.graph();\n  g.removeNode(graphLabel.nestingRoot);\n  delete graphLabel.nestingRoot;\n  _.forEach(g.edges(), function(e) {\n    var edge = g.edge(e);\n    if (edge.nestingEdge) {\n      g.removeEdge(e);\n    }\n  });\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/nesting-graph.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/normalize.js":
+/*!*********************************************!*\
+  !*** ./node_modules/dagre/lib/normalize.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar util = __webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/util.js\");\n\nmodule.exports = {\n  run: run,\n  undo: undo\n};\n\n/*\n * Breaks any long edges in the graph into short segments that span 1 layer\n * each. This operation is undoable with the denormalize function.\n *\n * Pre-conditions:\n *\n *    1. The input graph is a DAG.\n *    2. Each node in the graph has a \"rank\" property.\n *\n * Post-condition:\n *\n *    1. All edges in the graph have a length of 1.\n *    2. Dummy nodes are added where edges have been split into segments.\n *    3. The graph is augmented with a \"dummyChains\" attribute which contains\n *       the first dummy in each chain of dummy nodes produced.\n */\nfunction run(g) {\n  g.graph().dummyChains = [];\n  _.forEach(g.edges(), function(edge) { normalizeEdge(g, edge); });\n}\n\nfunction normalizeEdge(g, e) {\n  var v = e.v;\n  var vRank = g.node(v).rank;\n  var w = e.w;\n  var wRank = g.node(w).rank;\n  var name = e.name;\n  var edgeLabel = g.edge(e);\n  var labelRank = edgeLabel.labelRank;\n\n  if (wRank === vRank + 1) return;\n\n  g.removeEdge(e);\n\n  var dummy, attrs, i;\n  for (i = 0, ++vRank; vRank < wRank; ++i, ++vRank) {\n    edgeLabel.points = [];\n    attrs = {\n      width: 0, height: 0,\n      edgeLabel: edgeLabel, edgeObj: e,\n      rank: vRank\n    };\n    dummy = util.addDummyNode(g, \"edge\", attrs, \"_d\");\n    if (vRank === labelRank) {\n      attrs.width = edgeLabel.width;\n      attrs.height = edgeLabel.height;\n      attrs.dummy = \"edge-label\";\n      attrs.labelpos = edgeLabel.labelpos;\n    }\n    g.setEdge(v, dummy, { weight: edgeLabel.weight }, name);\n    if (i === 0) {\n      g.graph().dummyChains.push(dummy);\n    }\n    v = dummy;\n  }\n\n  g.setEdge(v, w, { weight: edgeLabel.weight }, name);\n}\n\nfunction undo(g) {\n  _.forEach(g.graph().dummyChains, function(v) {\n    var node = g.node(v);\n    var origLabel = node.edgeLabel;\n    var w;\n    g.setEdge(node.edgeObj, origLabel);\n    while (node.dummy) {\n      w = g.successors(v)[0];\n      g.removeNode(v);\n      origLabel.points.push({ x: node.x, y: node.y });\n      if (node.dummy === \"edge-label\") {\n        origLabel.x = node.x;\n        origLabel.y = node.y;\n        origLabel.width = node.width;\n        origLabel.height = node.height;\n      }\n      v = w;\n      node = g.node(v);\n    }\n  });\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/normalize.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/add-subgraph-constraints.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/dagre/lib/order/add-subgraph-constraints.js ***!
+  \******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = addSubgraphConstraints;\n\nfunction addSubgraphConstraints(g, cg, vs) {\n  var prev = {},\n    rootPrev;\n\n  _.forEach(vs, function(v) {\n    var child = g.parent(v),\n      parent,\n      prevChild;\n    while (child) {\n      parent = g.parent(child);\n      if (parent) {\n        prevChild = prev[parent];\n        prev[parent] = child;\n      } else {\n        prevChild = rootPrev;\n        rootPrev = child;\n      }\n      if (prevChild && prevChild !== child) {\n        cg.setEdge(prevChild, child);\n        return;\n      }\n      child = parent;\n    }\n  });\n\n  /*\n  function dfs(v) {\n    var children = v ? g.children(v) : g.children();\n    if (children.length) {\n      var min = Number.POSITIVE_INFINITY,\n          subgraphs = [];\n      _.each(children, function(child) {\n        var childMin = dfs(child);\n        if (g.children(child).length) {\n          subgraphs.push({ v: child, order: childMin });\n        }\n        min = Math.min(min, childMin);\n      });\n      _.reduce(_.sortBy(subgraphs, \"order\"), function(prev, curr) {\n        cg.setEdge(prev.v, curr.v);\n        return curr;\n      });\n      return min;\n    }\n    return g.node(v).order;\n  }\n  dfs(undefined);\n  */\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/add-subgraph-constraints.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/barycenter.js":
+/*!****************************************************!*\
+  !*** ./node_modules/dagre/lib/order/barycenter.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = barycenter;\n\nfunction barycenter(g, movable) {\n  return _.map(movable, function(v) {\n    var inV = g.inEdges(v);\n    if (!inV.length) {\n      return { v: v };\n    } else {\n      var result = _.reduce(inV, function(acc, e) {\n        var edge = g.edge(e),\n          nodeU = g.node(e.v);\n        return {\n          sum: acc.sum + (edge.weight * nodeU.order),\n          weight: acc.weight + edge.weight\n        };\n      }, { sum: 0, weight: 0 });\n\n      return {\n        v: v,\n        barycenter: result.sum / result.weight,\n        weight: result.weight\n      };\n    }\n  });\n}\n\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/barycenter.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/build-layer-graph.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/dagre/lib/order/build-layer-graph.js ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar Graph = (__webpack_require__(/*! ../graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\n\nmodule.exports = buildLayerGraph;\n\n/*\n * Constructs a graph that can be used to sort a layer of nodes. The graph will\n * contain all base and subgraph nodes from the request layer in their original\n * hierarchy and any edges that are incident on these nodes and are of the type\n * requested by the \"relationship\" parameter.\n *\n * Nodes from the requested rank that do not have parents are assigned a root\n * node in the output graph, which is set in the root graph attribute. This\n * makes it easy to walk the hierarchy of movable nodes during ordering.\n *\n * Pre-conditions:\n *\n *    1. Input graph is a DAG\n *    2. Base nodes in the input graph have a rank attribute\n *    3. Subgraph nodes in the input graph has minRank and maxRank attributes\n *    4. Edges have an assigned weight\n *\n * Post-conditions:\n *\n *    1. Output graph has all nodes in the movable rank with preserved\n *       hierarchy.\n *    2. Root nodes in the movable layer are made children of the node\n *       indicated by the root attribute of the graph.\n *    3. Non-movable nodes incident on movable nodes, selected by the\n *       relationship parameter, are included in the graph (without hierarchy).\n *    4. Edges incident on movable nodes, selected by the relationship\n *       parameter, are added to the output graph.\n *    5. The weights for copied edges are aggregated as need, since the output\n *       graph is not a multi-graph.\n */\nfunction buildLayerGraph(g, rank, relationship) {\n  var root = createRootNode(g),\n    result = new Graph({ compound: true }).setGraph({ root: root })\n      .setDefaultNodeLabel(function(v) { return g.node(v); });\n\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v),\n      parent = g.parent(v);\n\n    if (node.rank === rank || node.minRank <= rank && rank <= node.maxRank) {\n      result.setNode(v);\n      result.setParent(v, parent || root);\n\n      // This assumes we have only short edges!\n      _.forEach(g[relationship](v), function(e) {\n        var u = e.v === v ? e.w : e.v,\n          edge = result.edge(u, v),\n          weight = !_.isUndefined(edge) ? edge.weight : 0;\n        result.setEdge(u, v, { weight: g.edge(e).weight + weight });\n      });\n\n      if (_.has(node, \"minRank\")) {\n        result.setNode(v, {\n          borderLeft: node.borderLeft[rank],\n          borderRight: node.borderRight[rank]\n        });\n      }\n    }\n  });\n\n  return result;\n}\n\nfunction createRootNode(g) {\n  var v;\n  while (g.hasNode((v = _.uniqueId(\"_root\"))));\n  return v;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/build-layer-graph.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/cross-count.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/dagre/lib/order/cross-count.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = crossCount;\n\n/*\n * A function that takes a layering (an array of layers, each with an array of\n * ordererd nodes) and a graph and returns a weighted crossing count.\n *\n * Pre-conditions:\n *\n *    1. Input graph must be simple (not a multigraph), directed, and include\n *       only simple edges.\n *    2. Edges in the input graph must have assigned weights.\n *\n * Post-conditions:\n *\n *    1. The graph and layering matrix are left unchanged.\n *\n * This algorithm is derived from Barth, et al., \"Bilayer Cross Counting.\"\n */\nfunction crossCount(g, layering) {\n  var cc = 0;\n  for (var i = 1; i < layering.length; ++i) {\n    cc += twoLayerCrossCount(g, layering[i-1], layering[i]);\n  }\n  return cc;\n}\n\nfunction twoLayerCrossCount(g, northLayer, southLayer) {\n  // Sort all of the edges between the north and south layers by their position\n  // in the north layer and then the south. Map these edges to the position of\n  // their head in the south layer.\n  var southPos = _.zipObject(southLayer,\n    _.map(southLayer, function (v, i) { return i; }));\n  var southEntries = _.flatten(_.map(northLayer, function(v) {\n    return _.sortBy(_.map(g.outEdges(v), function(e) {\n      return { pos: southPos[e.w], weight: g.edge(e).weight };\n    }), \"pos\");\n  }), true);\n\n  // Build the accumulator tree\n  var firstIndex = 1;\n  while (firstIndex < southLayer.length) firstIndex <<= 1;\n  var treeSize = 2 * firstIndex - 1;\n  firstIndex -= 1;\n  var tree = _.map(new Array(treeSize), function() { return 0; });\n\n  // Calculate the weighted crossings\n  var cc = 0;\n  _.forEach(southEntries.forEach(function(entry) {\n    var index = entry.pos + firstIndex;\n    tree[index] += entry.weight;\n    var weightSum = 0;\n    while (index > 0) {\n      if (index % 2) {\n        weightSum += tree[index + 1];\n      }\n      index = (index - 1) >> 1;\n      tree[index] += entry.weight;\n    }\n    cc += entry.weight * weightSum;\n  }));\n\n  return cc;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/cross-count.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/dagre/lib/order/index.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar initOrder = __webpack_require__(/*! ./init-order */ \"./node_modules/dagre/lib/order/init-order.js\");\nvar crossCount = __webpack_require__(/*! ./cross-count */ \"./node_modules/dagre/lib/order/cross-count.js\");\nvar sortSubgraph = __webpack_require__(/*! ./sort-subgraph */ \"./node_modules/dagre/lib/order/sort-subgraph.js\");\nvar buildLayerGraph = __webpack_require__(/*! ./build-layer-graph */ \"./node_modules/dagre/lib/order/build-layer-graph.js\");\nvar addSubgraphConstraints = __webpack_require__(/*! ./add-subgraph-constraints */ \"./node_modules/dagre/lib/order/add-subgraph-constraints.js\");\nvar Graph = (__webpack_require__(/*! ../graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\nvar util = __webpack_require__(/*! ../util */ \"./node_modules/dagre/lib/util.js\");\n\nmodule.exports = order;\n\n/*\n * Applies heuristics to minimize edge crossings in the graph and sets the best\n * order solution as an order attribute on each node.\n *\n * Pre-conditions:\n *\n *    1. Graph must be DAG\n *    2. Graph nodes must be objects with a \"rank\" attribute\n *    3. Graph edges must have the \"weight\" attribute\n *\n * Post-conditions:\n *\n *    1. Graph nodes will have an \"order\" attribute based on the results of the\n *       algorithm.\n */\nfunction order(g) {\n  var maxRank = util.maxRank(g),\n    downLayerGraphs = buildLayerGraphs(g, _.range(1, maxRank + 1), \"inEdges\"),\n    upLayerGraphs = buildLayerGraphs(g, _.range(maxRank - 1, -1, -1), \"outEdges\");\n\n  var layering = initOrder(g);\n  assignOrder(g, layering);\n\n  var bestCC = Number.POSITIVE_INFINITY,\n    best;\n\n  for (var i = 0, lastBest = 0; lastBest < 4; ++i, ++lastBest) {\n    sweepLayerGraphs(i % 2 ? downLayerGraphs : upLayerGraphs, i % 4 >= 2);\n\n    layering = util.buildLayerMatrix(g);\n    var cc = crossCount(g, layering);\n    if (cc < bestCC) {\n      lastBest = 0;\n      best = _.cloneDeep(layering);\n      bestCC = cc;\n    }\n  }\n\n  assignOrder(g, best);\n}\n\nfunction buildLayerGraphs(g, ranks, relationship) {\n  return _.map(ranks, function(rank) {\n    return buildLayerGraph(g, rank, relationship);\n  });\n}\n\nfunction sweepLayerGraphs(layerGraphs, biasRight) {\n  var cg = new Graph();\n  _.forEach(layerGraphs, function(lg) {\n    var root = lg.graph().root;\n    var sorted = sortSubgraph(lg, root, cg, biasRight);\n    _.forEach(sorted.vs, function(v, i) {\n      lg.node(v).order = i;\n    });\n    addSubgraphConstraints(lg, cg, sorted.vs);\n  });\n}\n\nfunction assignOrder(g, layering) {\n  _.forEach(layering, function(layer) {\n    _.forEach(layer, function(v, i) {\n      g.node(v).order = i;\n    });\n  });\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/init-order.js":
+/*!****************************************************!*\
+  !*** ./node_modules/dagre/lib/order/init-order.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = initOrder;\n\n/*\n * Assigns an initial order value for each node by performing a DFS search\n * starting from nodes in the first rank. Nodes are assigned an order in their\n * rank as they are first visited.\n *\n * This approach comes from Gansner, et al., \"A Technique for Drawing Directed\n * Graphs.\"\n *\n * Returns a layering matrix with an array per layer and each layer sorted by\n * the order of its nodes.\n */\nfunction initOrder(g) {\n  var visited = {};\n  var simpleNodes = _.filter(g.nodes(), function(v) {\n    return !g.children(v).length;\n  });\n  var maxRank = _.max(_.map(simpleNodes, function(v) { return g.node(v).rank; }));\n  var layers = _.map(_.range(maxRank + 1), function() { return []; });\n\n  function dfs(v) {\n    if (_.has(visited, v)) return;\n    visited[v] = true;\n    var node = g.node(v);\n    layers[node.rank].push(v);\n    _.forEach(g.successors(v), dfs);\n  }\n\n  var orderedVs = _.sortBy(simpleNodes, function(v) { return g.node(v).rank; });\n  _.forEach(orderedVs, dfs);\n\n  return layers;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/init-order.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/resolve-conflicts.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/dagre/lib/order/resolve-conflicts.js ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = resolveConflicts;\n\n/*\n * Given a list of entries of the form {v, barycenter, weight} and a\n * constraint graph this function will resolve any conflicts between the\n * constraint graph and the barycenters for the entries. If the barycenters for\n * an entry would violate a constraint in the constraint graph then we coalesce\n * the nodes in the conflict into a new node that respects the contraint and\n * aggregates barycenter and weight information.\n *\n * This implementation is based on the description in Forster, \"A Fast and\n * Simple Hueristic for Constrained Two-Level Crossing Reduction,\" thought it\n * differs in some specific details.\n *\n * Pre-conditions:\n *\n *    1. Each entry has the form {v, barycenter, weight}, or if the node has\n *       no barycenter, then {v}.\n *\n * Returns:\n *\n *    A new list of entries of the form {vs, i, barycenter, weight}. The list\n *    `vs` may either be a singleton or it may be an aggregation of nodes\n *    ordered such that they do not violate constraints from the constraint\n *    graph. The property `i` is the lowest original index of any of the\n *    elements in `vs`.\n */\nfunction resolveConflicts(entries, cg) {\n  var mappedEntries = {};\n  _.forEach(entries, function(entry, i) {\n    var tmp = mappedEntries[entry.v] = {\n      indegree: 0,\n      \"in\": [],\n      out: [],\n      vs: [entry.v],\n      i: i\n    };\n    if (!_.isUndefined(entry.barycenter)) {\n      tmp.barycenter = entry.barycenter;\n      tmp.weight = entry.weight;\n    }\n  });\n\n  _.forEach(cg.edges(), function(e) {\n    var entryV = mappedEntries[e.v];\n    var entryW = mappedEntries[e.w];\n    if (!_.isUndefined(entryV) && !_.isUndefined(entryW)) {\n      entryW.indegree++;\n      entryV.out.push(mappedEntries[e.w]);\n    }\n  });\n\n  var sourceSet = _.filter(mappedEntries, function(entry) {\n    return !entry.indegree;\n  });\n\n  return doResolveConflicts(sourceSet);\n}\n\nfunction doResolveConflicts(sourceSet) {\n  var entries = [];\n\n  function handleIn(vEntry) {\n    return function(uEntry) {\n      if (uEntry.merged) {\n        return;\n      }\n      if (_.isUndefined(uEntry.barycenter) ||\n          _.isUndefined(vEntry.barycenter) ||\n          uEntry.barycenter >= vEntry.barycenter) {\n        mergeEntries(vEntry, uEntry);\n      }\n    };\n  }\n\n  function handleOut(vEntry) {\n    return function(wEntry) {\n      wEntry[\"in\"].push(vEntry);\n      if (--wEntry.indegree === 0) {\n        sourceSet.push(wEntry);\n      }\n    };\n  }\n\n  while (sourceSet.length) {\n    var entry = sourceSet.pop();\n    entries.push(entry);\n    _.forEach(entry[\"in\"].reverse(), handleIn(entry));\n    _.forEach(entry.out, handleOut(entry));\n  }\n\n  return _.map(_.filter(entries, function(entry) { return !entry.merged; }),\n    function(entry) {\n      return _.pick(entry, [\"vs\", \"i\", \"barycenter\", \"weight\"]);\n    });\n\n}\n\nfunction mergeEntries(target, source) {\n  var sum = 0;\n  var weight = 0;\n\n  if (target.weight) {\n    sum += target.barycenter * target.weight;\n    weight += target.weight;\n  }\n\n  if (source.weight) {\n    sum += source.barycenter * source.weight;\n    weight += source.weight;\n  }\n\n  target.vs = source.vs.concat(target.vs);\n  target.barycenter = sum / weight;\n  target.weight = weight;\n  target.i = Math.min(source.i, target.i);\n  source.merged = true;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/resolve-conflicts.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/sort-subgraph.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/dagre/lib/order/sort-subgraph.js ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar barycenter = __webpack_require__(/*! ./barycenter */ \"./node_modules/dagre/lib/order/barycenter.js\");\nvar resolveConflicts = __webpack_require__(/*! ./resolve-conflicts */ \"./node_modules/dagre/lib/order/resolve-conflicts.js\");\nvar sort = __webpack_require__(/*! ./sort */ \"./node_modules/dagre/lib/order/sort.js\");\n\nmodule.exports = sortSubgraph;\n\nfunction sortSubgraph(g, v, cg, biasRight) {\n  var movable = g.children(v);\n  var node = g.node(v);\n  var bl = node ? node.borderLeft : undefined;\n  var br = node ? node.borderRight: undefined;\n  var subgraphs = {};\n\n  if (bl) {\n    movable = _.filter(movable, function(w) {\n      return w !== bl && w !== br;\n    });\n  }\n\n  var barycenters = barycenter(g, movable);\n  _.forEach(barycenters, function(entry) {\n    if (g.children(entry.v).length) {\n      var subgraphResult = sortSubgraph(g, entry.v, cg, biasRight);\n      subgraphs[entry.v] = subgraphResult;\n      if (_.has(subgraphResult, \"barycenter\")) {\n        mergeBarycenters(entry, subgraphResult);\n      }\n    }\n  });\n\n  var entries = resolveConflicts(barycenters, cg);\n  expandSubgraphs(entries, subgraphs);\n\n  var result = sort(entries, biasRight);\n\n  if (bl) {\n    result.vs = _.flatten([bl, result.vs, br], true);\n    if (g.predecessors(bl).length) {\n      var blPred = g.node(g.predecessors(bl)[0]),\n        brPred = g.node(g.predecessors(br)[0]);\n      if (!_.has(result, \"barycenter\")) {\n        result.barycenter = 0;\n        result.weight = 0;\n      }\n      result.barycenter = (result.barycenter * result.weight +\n                           blPred.order + brPred.order) / (result.weight + 2);\n      result.weight += 2;\n    }\n  }\n\n  return result;\n}\n\nfunction expandSubgraphs(entries, subgraphs) {\n  _.forEach(entries, function(entry) {\n    entry.vs = _.flatten(entry.vs.map(function(v) {\n      if (subgraphs[v]) {\n        return subgraphs[v].vs;\n      }\n      return v;\n    }), true);\n  });\n}\n\nfunction mergeBarycenters(target, other) {\n  if (!_.isUndefined(target.barycenter)) {\n    target.barycenter = (target.barycenter * target.weight +\n                         other.barycenter * other.weight) /\n                        (target.weight + other.weight);\n    target.weight += other.weight;\n  } else {\n    target.barycenter = other.barycenter;\n    target.weight = other.weight;\n  }\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/sort-subgraph.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/order/sort.js":
+/*!**********************************************!*\
+  !*** ./node_modules/dagre/lib/order/sort.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar util = __webpack_require__(/*! ../util */ \"./node_modules/dagre/lib/util.js\");\n\nmodule.exports = sort;\n\nfunction sort(entries, biasRight) {\n  var parts = util.partition(entries, function(entry) {\n    return _.has(entry, \"barycenter\");\n  });\n  var sortable = parts.lhs,\n    unsortable = _.sortBy(parts.rhs, function(entry) { return -entry.i; }),\n    vs = [],\n    sum = 0,\n    weight = 0,\n    vsIndex = 0;\n\n  sortable.sort(compareWithBias(!!biasRight));\n\n  vsIndex = consumeUnsortable(vs, unsortable, vsIndex);\n\n  _.forEach(sortable, function (entry) {\n    vsIndex += entry.vs.length;\n    vs.push(entry.vs);\n    sum += entry.barycenter * entry.weight;\n    weight += entry.weight;\n    vsIndex = consumeUnsortable(vs, unsortable, vsIndex);\n  });\n\n  var result = { vs: _.flatten(vs, true) };\n  if (weight) {\n    result.barycenter = sum / weight;\n    result.weight = weight;\n  }\n  return result;\n}\n\nfunction consumeUnsortable(vs, unsortable, index) {\n  var last;\n  while (unsortable.length && (last = _.last(unsortable)).i <= index) {\n    unsortable.pop();\n    vs.push(last.vs);\n    index++;\n  }\n  return index;\n}\n\nfunction compareWithBias(bias) {\n  return function(entryV, entryW) {\n    if (entryV.barycenter < entryW.barycenter) {\n      return -1;\n    } else if (entryV.barycenter > entryW.barycenter) {\n      return 1;\n    }\n\n    return !bias ? entryV.i - entryW.i : entryW.i - entryV.i;\n  };\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/order/sort.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/parent-dummy-chains.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/dagre/lib/parent-dummy-chains.js ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = parentDummyChains;\n\nfunction parentDummyChains(g) {\n  var postorderNums = postorder(g);\n\n  _.forEach(g.graph().dummyChains, function(v) {\n    var node = g.node(v);\n    var edgeObj = node.edgeObj;\n    var pathData = findPath(g, postorderNums, edgeObj.v, edgeObj.w);\n    var path = pathData.path;\n    var lca = pathData.lca;\n    var pathIdx = 0;\n    var pathV = path[pathIdx];\n    var ascending = true;\n\n    while (v !== edgeObj.w) {\n      node = g.node(v);\n\n      if (ascending) {\n        while ((pathV = path[pathIdx]) !== lca &&\n               g.node(pathV).maxRank < node.rank) {\n          pathIdx++;\n        }\n\n        if (pathV === lca) {\n          ascending = false;\n        }\n      }\n\n      if (!ascending) {\n        while (pathIdx < path.length - 1 &&\n               g.node(pathV = path[pathIdx + 1]).minRank <= node.rank) {\n          pathIdx++;\n        }\n        pathV = path[pathIdx];\n      }\n\n      g.setParent(v, pathV);\n      v = g.successors(v)[0];\n    }\n  });\n}\n\n// Find a path from v to w through the lowest common ancestor (LCA). Return the\n// full path and the LCA.\nfunction findPath(g, postorderNums, v, w) {\n  var vPath = [];\n  var wPath = [];\n  var low = Math.min(postorderNums[v].low, postorderNums[w].low);\n  var lim = Math.max(postorderNums[v].lim, postorderNums[w].lim);\n  var parent;\n  var lca;\n\n  // Traverse up from v to find the LCA\n  parent = v;\n  do {\n    parent = g.parent(parent);\n    vPath.push(parent);\n  } while (parent &&\n           (postorderNums[parent].low > low || lim > postorderNums[parent].lim));\n  lca = parent;\n\n  // Traverse from w to LCA\n  parent = w;\n  while ((parent = g.parent(parent)) !== lca) {\n    wPath.push(parent);\n  }\n\n  return { path: vPath.concat(wPath.reverse()), lca: lca };\n}\n\nfunction postorder(g) {\n  var result = {};\n  var lim = 0;\n\n  function dfs(v) {\n    var low = lim;\n    _.forEach(g.children(v), dfs);\n    result[v] = { low: low, lim: lim++ };\n  }\n  _.forEach(g.children(), dfs);\n\n  return result;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/parent-dummy-chains.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/position/bk.js":
+/*!***********************************************!*\
+  !*** ./node_modules/dagre/lib/position/bk.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar Graph = (__webpack_require__(/*! ../graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\nvar util = __webpack_require__(/*! ../util */ \"./node_modules/dagre/lib/util.js\");\n\n/*\n * This module provides coordinate assignment based on Brandes and Köpf, \"Fast\n * and Simple Horizontal Coordinate Assignment.\"\n */\n\nmodule.exports = {\n  positionX: positionX,\n  findType1Conflicts: findType1Conflicts,\n  findType2Conflicts: findType2Conflicts,\n  addConflict: addConflict,\n  hasConflict: hasConflict,\n  verticalAlignment: verticalAlignment,\n  horizontalCompaction: horizontalCompaction,\n  alignCoordinates: alignCoordinates,\n  findSmallestWidthAlignment: findSmallestWidthAlignment,\n  balance: balance\n};\n\n/*\n * Marks all edges in the graph with a type-1 conflict with the \"type1Conflict\"\n * property. A type-1 conflict is one where a non-inner segment crosses an\n * inner segment. An inner segment is an edge with both incident nodes marked\n * with the \"dummy\" property.\n *\n * This algorithm scans layer by layer, starting with the second, for type-1\n * conflicts between the current layer and the previous layer. For each layer\n * it scans the nodes from left to right until it reaches one that is incident\n * on an inner segment. It then scans predecessors to determine if they have\n * edges that cross that inner segment. At the end a final scan is done for all\n * nodes on the current rank to see if they cross the last visited inner\n * segment.\n *\n * This algorithm (safely) assumes that a dummy node will only be incident on a\n * single node in the layers being scanned.\n */\nfunction findType1Conflicts(g, layering) {\n  var conflicts = {};\n\n  function visitLayer(prevLayer, layer) {\n    var\n      // last visited node in the previous layer that is incident on an inner\n      // segment.\n      k0 = 0,\n      // Tracks the last node in this layer scanned for crossings with a type-1\n      // segment.\n      scanPos = 0,\n      prevLayerLength = prevLayer.length,\n      lastNode = _.last(layer);\n\n    _.forEach(layer, function(v, i) {\n      var w = findOtherInnerSegmentNode(g, v),\n        k1 = w ? g.node(w).order : prevLayerLength;\n\n      if (w || v === lastNode) {\n        _.forEach(layer.slice(scanPos, i +1), function(scanNode) {\n          _.forEach(g.predecessors(scanNode), function(u) {\n            var uLabel = g.node(u),\n              uPos = uLabel.order;\n            if ((uPos < k0 || k1 < uPos) &&\n                !(uLabel.dummy && g.node(scanNode).dummy)) {\n              addConflict(conflicts, u, scanNode);\n            }\n          });\n        });\n        scanPos = i + 1;\n        k0 = k1;\n      }\n    });\n\n    return layer;\n  }\n\n  _.reduce(layering, visitLayer);\n  return conflicts;\n}\n\nfunction findType2Conflicts(g, layering) {\n  var conflicts = {};\n\n  function scan(south, southPos, southEnd, prevNorthBorder, nextNorthBorder) {\n    var v;\n    _.forEach(_.range(southPos, southEnd), function(i) {\n      v = south[i];\n      if (g.node(v).dummy) {\n        _.forEach(g.predecessors(v), function(u) {\n          var uNode = g.node(u);\n          if (uNode.dummy &&\n              (uNode.order < prevNorthBorder || uNode.order > nextNorthBorder)) {\n            addConflict(conflicts, u, v);\n          }\n        });\n      }\n    });\n  }\n\n\n  function visitLayer(north, south) {\n    var prevNorthPos = -1,\n      nextNorthPos,\n      southPos = 0;\n\n    _.forEach(south, function(v, southLookahead) {\n      if (g.node(v).dummy === \"border\") {\n        var predecessors = g.predecessors(v);\n        if (predecessors.length) {\n          nextNorthPos = g.node(predecessors[0]).order;\n          scan(south, southPos, southLookahead, prevNorthPos, nextNorthPos);\n          southPos = southLookahead;\n          prevNorthPos = nextNorthPos;\n        }\n      }\n      scan(south, southPos, south.length, nextNorthPos, north.length);\n    });\n\n    return south;\n  }\n\n  _.reduce(layering, visitLayer);\n  return conflicts;\n}\n\nfunction findOtherInnerSegmentNode(g, v) {\n  if (g.node(v).dummy) {\n    return _.find(g.predecessors(v), function(u) {\n      return g.node(u).dummy;\n    });\n  }\n}\n\nfunction addConflict(conflicts, v, w) {\n  if (v > w) {\n    var tmp = v;\n    v = w;\n    w = tmp;\n  }\n\n  var conflictsV = conflicts[v];\n  if (!conflictsV) {\n    conflicts[v] = conflictsV = {};\n  }\n  conflictsV[w] = true;\n}\n\nfunction hasConflict(conflicts, v, w) {\n  if (v > w) {\n    var tmp = v;\n    v = w;\n    w = tmp;\n  }\n  return _.has(conflicts[v], w);\n}\n\n/*\n * Try to align nodes into vertical \"blocks\" where possible. This algorithm\n * attempts to align a node with one of its median neighbors. If the edge\n * connecting a neighbor is a type-1 conflict then we ignore that possibility.\n * If a previous node has already formed a block with a node after the node\n * we're trying to form a block with, we also ignore that possibility - our\n * blocks would be split in that scenario.\n */\nfunction verticalAlignment(g, layering, conflicts, neighborFn) {\n  var root = {},\n    align = {},\n    pos = {};\n\n  // We cache the position here based on the layering because the graph and\n  // layering may be out of sync. The layering matrix is manipulated to\n  // generate different extreme alignments.\n  _.forEach(layering, function(layer) {\n    _.forEach(layer, function(v, order) {\n      root[v] = v;\n      align[v] = v;\n      pos[v] = order;\n    });\n  });\n\n  _.forEach(layering, function(layer) {\n    var prevIdx = -1;\n    _.forEach(layer, function(v) {\n      var ws = neighborFn(v);\n      if (ws.length) {\n        ws = _.sortBy(ws, function(w) { return pos[w]; });\n        var mp = (ws.length - 1) / 2;\n        for (var i = Math.floor(mp), il = Math.ceil(mp); i <= il; ++i) {\n          var w = ws[i];\n          if (align[v] === v &&\n              prevIdx < pos[w] &&\n              !hasConflict(conflicts, v, w)) {\n            align[w] = v;\n            align[v] = root[v] = root[w];\n            prevIdx = pos[w];\n          }\n        }\n      }\n    });\n  });\n\n  return { root: root, align: align };\n}\n\nfunction horizontalCompaction(g, layering, root, align, reverseSep) {\n  // This portion of the algorithm differs from BK due to a number of problems.\n  // Instead of their algorithm we construct a new block graph and do two\n  // sweeps. The first sweep places blocks with the smallest possible\n  // coordinates. The second sweep removes unused space by moving blocks to the\n  // greatest coordinates without violating separation.\n  var xs = {},\n    blockG = buildBlockGraph(g, layering, root, reverseSep),\n    borderType = reverseSep ? \"borderLeft\" : \"borderRight\";\n\n  function iterate(setXsFunc, nextNodesFunc) {\n    var stack = blockG.nodes();\n    var elem = stack.pop();\n    var visited = {};\n    while (elem) {\n      if (visited[elem]) {\n        setXsFunc(elem);\n      } else {\n        visited[elem] = true;\n        stack.push(elem);\n        stack = stack.concat(nextNodesFunc(elem));\n      }\n\n      elem = stack.pop();\n    }\n  }\n\n  // First pass, assign smallest coordinates\n  function pass1(elem) {\n    xs[elem] = blockG.inEdges(elem).reduce(function(acc, e) {\n      return Math.max(acc, xs[e.v] + blockG.edge(e));\n    }, 0);\n  }\n\n  // Second pass, assign greatest coordinates\n  function pass2(elem) {\n    var min = blockG.outEdges(elem).reduce(function(acc, e) {\n      return Math.min(acc, xs[e.w] - blockG.edge(e));\n    }, Number.POSITIVE_INFINITY);\n\n    var node = g.node(elem);\n    if (min !== Number.POSITIVE_INFINITY && node.borderType !== borderType) {\n      xs[elem] = Math.max(xs[elem], min);\n    }\n  }\n\n  iterate(pass1, blockG.predecessors.bind(blockG));\n  iterate(pass2, blockG.successors.bind(blockG));\n\n  // Assign x coordinates to all nodes\n  _.forEach(align, function(v) {\n    xs[v] = xs[root[v]];\n  });\n\n  return xs;\n}\n\n\nfunction buildBlockGraph(g, layering, root, reverseSep) {\n  var blockGraph = new Graph(),\n    graphLabel = g.graph(),\n    sepFn = sep(graphLabel.nodesep, graphLabel.edgesep, reverseSep);\n\n  _.forEach(layering, function(layer) {\n    var u;\n    _.forEach(layer, function(v) {\n      var vRoot = root[v];\n      blockGraph.setNode(vRoot);\n      if (u) {\n        var uRoot = root[u],\n          prevMax = blockGraph.edge(uRoot, vRoot);\n        blockGraph.setEdge(uRoot, vRoot, Math.max(sepFn(g, v, u), prevMax || 0));\n      }\n      u = v;\n    });\n  });\n\n  return blockGraph;\n}\n\n/*\n * Returns the alignment that has the smallest width of the given alignments.\n */\nfunction findSmallestWidthAlignment(g, xss) {\n  return _.minBy(_.values(xss), function (xs) {\n    var max = Number.NEGATIVE_INFINITY;\n    var min = Number.POSITIVE_INFINITY;\n\n    _.forIn(xs, function (x, v) {\n      var halfWidth = width(g, v) / 2;\n\n      max = Math.max(x + halfWidth, max);\n      min = Math.min(x - halfWidth, min);\n    });\n\n    return max - min;\n  });\n}\n\n/*\n * Align the coordinates of each of the layout alignments such that\n * left-biased alignments have their minimum coordinate at the same point as\n * the minimum coordinate of the smallest width alignment and right-biased\n * alignments have their maximum coordinate at the same point as the maximum\n * coordinate of the smallest width alignment.\n */\nfunction alignCoordinates(xss, alignTo) {\n  var alignToVals = _.values(alignTo),\n    alignToMin = _.min(alignToVals),\n    alignToMax = _.max(alignToVals);\n\n  _.forEach([\"u\", \"d\"], function(vert) {\n    _.forEach([\"l\", \"r\"], function(horiz) {\n      var alignment = vert + horiz,\n        xs = xss[alignment],\n        delta;\n      if (xs === alignTo) return;\n\n      var xsVals = _.values(xs);\n      delta = horiz === \"l\" ? alignToMin - _.min(xsVals) : alignToMax - _.max(xsVals);\n\n      if (delta) {\n        xss[alignment] = _.mapValues(xs, function(x) { return x + delta; });\n      }\n    });\n  });\n}\n\nfunction balance(xss, align) {\n  return _.mapValues(xss.ul, function(ignore, v) {\n    if (align) {\n      return xss[align.toLowerCase()][v];\n    } else {\n      var xs = _.sortBy(_.map(xss, v));\n      return (xs[1] + xs[2]) / 2;\n    }\n  });\n}\n\nfunction positionX(g) {\n  var layering = util.buildLayerMatrix(g);\n  var conflicts = _.merge(\n    findType1Conflicts(g, layering),\n    findType2Conflicts(g, layering));\n\n  var xss = {};\n  var adjustedLayering;\n  _.forEach([\"u\", \"d\"], function(vert) {\n    adjustedLayering = vert === \"u\" ? layering : _.values(layering).reverse();\n    _.forEach([\"l\", \"r\"], function(horiz) {\n      if (horiz === \"r\") {\n        adjustedLayering = _.map(adjustedLayering, function(inner) {\n          return _.values(inner).reverse();\n        });\n      }\n\n      var neighborFn = (vert === \"u\" ? g.predecessors : g.successors).bind(g);\n      var align = verticalAlignment(g, adjustedLayering, conflicts, neighborFn);\n      var xs = horizontalCompaction(g, adjustedLayering,\n        align.root, align.align, horiz === \"r\");\n      if (horiz === \"r\") {\n        xs = _.mapValues(xs, function(x) { return -x; });\n      }\n      xss[vert + horiz] = xs;\n    });\n  });\n\n  var smallestWidth = findSmallestWidthAlignment(g, xss);\n  alignCoordinates(xss, smallestWidth);\n  return balance(xss, g.graph().align);\n}\n\nfunction sep(nodeSep, edgeSep, reverseSep) {\n  return function(g, v, w) {\n    var vLabel = g.node(v);\n    var wLabel = g.node(w);\n    var sum = 0;\n    var delta;\n\n    sum += vLabel.width / 2;\n    if (_.has(vLabel, \"labelpos\")) {\n      switch (vLabel.labelpos.toLowerCase()) {\n      case \"l\": delta = -vLabel.width / 2; break;\n      case \"r\": delta = vLabel.width / 2; break;\n      }\n    }\n    if (delta) {\n      sum += reverseSep ? delta : -delta;\n    }\n    delta = 0;\n\n    sum += (vLabel.dummy ? edgeSep : nodeSep) / 2;\n    sum += (wLabel.dummy ? edgeSep : nodeSep) / 2;\n\n    sum += wLabel.width / 2;\n    if (_.has(wLabel, \"labelpos\")) {\n      switch (wLabel.labelpos.toLowerCase()) {\n      case \"l\": delta = wLabel.width / 2; break;\n      case \"r\": delta = -wLabel.width / 2; break;\n      }\n    }\n    if (delta) {\n      sum += reverseSep ? delta : -delta;\n    }\n    delta = 0;\n\n    return sum;\n  };\n}\n\nfunction width(g, v) {\n  return g.node(v).width;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/position/bk.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/position/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/dagre/lib/position/index.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar util = __webpack_require__(/*! ../util */ \"./node_modules/dagre/lib/util.js\");\nvar positionX = (__webpack_require__(/*! ./bk */ \"./node_modules/dagre/lib/position/bk.js\").positionX);\n\nmodule.exports = position;\n\nfunction position(g) {\n  g = util.asNonCompoundGraph(g);\n\n  positionY(g);\n  _.forEach(positionX(g), function(x, v) {\n    g.node(v).x = x;\n  });\n}\n\nfunction positionY(g) {\n  var layering = util.buildLayerMatrix(g);\n  var rankSep = g.graph().ranksep;\n  var prevY = 0;\n  _.forEach(layering, function(layer) {\n    var maxHeight = _.max(_.map(layer, function(v) { return g.node(v).height; }));\n    _.forEach(layer, function(v) {\n      g.node(v).y = prevY + maxHeight / 2;\n    });\n    prevY += maxHeight + rankSep;\n  });\n}\n\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/position/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/rank/feasible-tree.js":
+/*!******************************************************!*\
+  !*** ./node_modules/dagre/lib/rank/feasible-tree.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar Graph = (__webpack_require__(/*! ../graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\nvar slack = (__webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/rank/util.js\").slack);\n\nmodule.exports = feasibleTree;\n\n/*\n * Constructs a spanning tree with tight edges and adjusted the input node's\n * ranks to achieve this. A tight edge is one that is has a length that matches\n * its \"minlen\" attribute.\n *\n * The basic structure for this function is derived from Gansner, et al., \"A\n * Technique for Drawing Directed Graphs.\"\n *\n * Pre-conditions:\n *\n *    1. Graph must be a DAG.\n *    2. Graph must be connected.\n *    3. Graph must have at least one node.\n *    5. Graph nodes must have been previously assigned a \"rank\" property that\n *       respects the \"minlen\" property of incident edges.\n *    6. Graph edges must have a \"minlen\" property.\n *\n * Post-conditions:\n *\n *    - Graph nodes will have their rank adjusted to ensure that all edges are\n *      tight.\n *\n * Returns a tree (undirected graph) that is constructed using only \"tight\"\n * edges.\n */\nfunction feasibleTree(g) {\n  var t = new Graph({ directed: false });\n\n  // Choose arbitrary node from which to start our tree\n  var start = g.nodes()[0];\n  var size = g.nodeCount();\n  t.setNode(start, {});\n\n  var edge, delta;\n  while (tightTree(t, g) < size) {\n    edge = findMinSlackEdge(t, g);\n    delta = t.hasNode(edge.v) ? slack(g, edge) : -slack(g, edge);\n    shiftRanks(t, g, delta);\n  }\n\n  return t;\n}\n\n/*\n * Finds a maximal tree of tight edges and returns the number of nodes in the\n * tree.\n */\nfunction tightTree(t, g) {\n  function dfs(v) {\n    _.forEach(g.nodeEdges(v), function(e) {\n      var edgeV = e.v,\n        w = (v === edgeV) ? e.w : edgeV;\n      if (!t.hasNode(w) && !slack(g, e)) {\n        t.setNode(w, {});\n        t.setEdge(v, w, {});\n        dfs(w);\n      }\n    });\n  }\n\n  _.forEach(t.nodes(), dfs);\n  return t.nodeCount();\n}\n\n/*\n * Finds the edge with the smallest slack that is incident on tree and returns\n * it.\n */\nfunction findMinSlackEdge(t, g) {\n  return _.minBy(g.edges(), function(e) {\n    if (t.hasNode(e.v) !== t.hasNode(e.w)) {\n      return slack(g, e);\n    }\n  });\n}\n\nfunction shiftRanks(t, g, delta) {\n  _.forEach(t.nodes(), function(v) {\n    g.node(v).rank += delta;\n  });\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/rank/feasible-tree.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/rank/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/dagre/lib/rank/index.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar rankUtil = __webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/rank/util.js\");\nvar longestPath = rankUtil.longestPath;\nvar feasibleTree = __webpack_require__(/*! ./feasible-tree */ \"./node_modules/dagre/lib/rank/feasible-tree.js\");\nvar networkSimplex = __webpack_require__(/*! ./network-simplex */ \"./node_modules/dagre/lib/rank/network-simplex.js\");\n\nmodule.exports = rank;\n\n/*\n * Assigns a rank to each node in the input graph that respects the \"minlen\"\n * constraint specified on edges between nodes.\n *\n * This basic structure is derived from Gansner, et al., \"A Technique for\n * Drawing Directed Graphs.\"\n *\n * Pre-conditions:\n *\n *    1. Graph must be a connected DAG\n *    2. Graph nodes must be objects\n *    3. Graph edges must have \"weight\" and \"minlen\" attributes\n *\n * Post-conditions:\n *\n *    1. Graph nodes will have a \"rank\" attribute based on the results of the\n *       algorithm. Ranks can start at any index (including negative), we'll\n *       fix them up later.\n */\nfunction rank(g) {\n  switch(g.graph().ranker) {\n  case \"network-simplex\": networkSimplexRanker(g); break;\n  case \"tight-tree\": tightTreeRanker(g); break;\n  case \"longest-path\": longestPathRanker(g); break;\n  default: networkSimplexRanker(g);\n  }\n}\n\n// A fast and simple ranker, but results are far from optimal.\nvar longestPathRanker = longestPath;\n\nfunction tightTreeRanker(g) {\n  longestPath(g);\n  feasibleTree(g);\n}\n\nfunction networkSimplexRanker(g) {\n  networkSimplex(g);\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/rank/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/rank/network-simplex.js":
+/*!********************************************************!*\
+  !*** ./node_modules/dagre/lib/rank/network-simplex.js ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar feasibleTree = __webpack_require__(/*! ./feasible-tree */ \"./node_modules/dagre/lib/rank/feasible-tree.js\");\nvar slack = (__webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/rank/util.js\").slack);\nvar initRank = (__webpack_require__(/*! ./util */ \"./node_modules/dagre/lib/rank/util.js\").longestPath);\nvar preorder = (__webpack_require__(/*! ../graphlib */ \"./node_modules/dagre/lib/graphlib.js\").alg.preorder);\nvar postorder = (__webpack_require__(/*! ../graphlib */ \"./node_modules/dagre/lib/graphlib.js\").alg.postorder);\nvar simplify = (__webpack_require__(/*! ../util */ \"./node_modules/dagre/lib/util.js\").simplify);\n\nmodule.exports = networkSimplex;\n\n// Expose some internals for testing purposes\nnetworkSimplex.initLowLimValues = initLowLimValues;\nnetworkSimplex.initCutValues = initCutValues;\nnetworkSimplex.calcCutValue = calcCutValue;\nnetworkSimplex.leaveEdge = leaveEdge;\nnetworkSimplex.enterEdge = enterEdge;\nnetworkSimplex.exchangeEdges = exchangeEdges;\n\n/*\n * The network simplex algorithm assigns ranks to each node in the input graph\n * and iteratively improves the ranking to reduce the length of edges.\n *\n * Preconditions:\n *\n *    1. The input graph must be a DAG.\n *    2. All nodes in the graph must have an object value.\n *    3. All edges in the graph must have \"minlen\" and \"weight\" attributes.\n *\n * Postconditions:\n *\n *    1. All nodes in the graph will have an assigned \"rank\" attribute that has\n *       been optimized by the network simplex algorithm. Ranks start at 0.\n *\n *\n * A rough sketch of the algorithm is as follows:\n *\n *    1. Assign initial ranks to each node. We use the longest path algorithm,\n *       which assigns ranks to the lowest position possible. In general this\n *       leads to very wide bottom ranks and unnecessarily long edges.\n *    2. Construct a feasible tight tree. A tight tree is one such that all\n *       edges in the tree have no slack (difference between length of edge\n *       and minlen for the edge). This by itself greatly improves the assigned\n *       rankings by shorting edges.\n *    3. Iteratively find edges that have negative cut values. Generally a\n *       negative cut value indicates that the edge could be removed and a new\n *       tree edge could be added to produce a more compact graph.\n *\n * Much of the algorithms here are derived from Gansner, et al., \"A Technique\n * for Drawing Directed Graphs.\" The structure of the file roughly follows the\n * structure of the overall algorithm.\n */\nfunction networkSimplex(g) {\n  g = simplify(g);\n  initRank(g);\n  var t = feasibleTree(g);\n  initLowLimValues(t);\n  initCutValues(t, g);\n\n  var e, f;\n  while ((e = leaveEdge(t))) {\n    f = enterEdge(t, g, e);\n    exchangeEdges(t, g, e, f);\n  }\n}\n\n/*\n * Initializes cut values for all edges in the tree.\n */\nfunction initCutValues(t, g) {\n  var vs = postorder(t, t.nodes());\n  vs = vs.slice(0, vs.length - 1);\n  _.forEach(vs, function(v) {\n    assignCutValue(t, g, v);\n  });\n}\n\nfunction assignCutValue(t, g, child) {\n  var childLab = t.node(child);\n  var parent = childLab.parent;\n  t.edge(child, parent).cutvalue = calcCutValue(t, g, child);\n}\n\n/*\n * Given the tight tree, its graph, and a child in the graph calculate and\n * return the cut value for the edge between the child and its parent.\n */\nfunction calcCutValue(t, g, child) {\n  var childLab = t.node(child);\n  var parent = childLab.parent;\n  // True if the child is on the tail end of the edge in the directed graph\n  var childIsTail = true;\n  // The graph's view of the tree edge we're inspecting\n  var graphEdge = g.edge(child, parent);\n  // The accumulated cut value for the edge between this node and its parent\n  var cutValue = 0;\n\n  if (!graphEdge) {\n    childIsTail = false;\n    graphEdge = g.edge(parent, child);\n  }\n\n  cutValue = graphEdge.weight;\n\n  _.forEach(g.nodeEdges(child), function(e) {\n    var isOutEdge = e.v === child,\n      other = isOutEdge ? e.w : e.v;\n\n    if (other !== parent) {\n      var pointsToHead = isOutEdge === childIsTail,\n        otherWeight = g.edge(e).weight;\n\n      cutValue += pointsToHead ? otherWeight : -otherWeight;\n      if (isTreeEdge(t, child, other)) {\n        var otherCutValue = t.edge(child, other).cutvalue;\n        cutValue += pointsToHead ? -otherCutValue : otherCutValue;\n      }\n    }\n  });\n\n  return cutValue;\n}\n\nfunction initLowLimValues(tree, root) {\n  if (arguments.length < 2) {\n    root = tree.nodes()[0];\n  }\n  dfsAssignLowLim(tree, {}, 1, root);\n}\n\nfunction dfsAssignLowLim(tree, visited, nextLim, v, parent) {\n  var low = nextLim;\n  var label = tree.node(v);\n\n  visited[v] = true;\n  _.forEach(tree.neighbors(v), function(w) {\n    if (!_.has(visited, w)) {\n      nextLim = dfsAssignLowLim(tree, visited, nextLim, w, v);\n    }\n  });\n\n  label.low = low;\n  label.lim = nextLim++;\n  if (parent) {\n    label.parent = parent;\n  } else {\n    // TODO should be able to remove this when we incrementally update low lim\n    delete label.parent;\n  }\n\n  return nextLim;\n}\n\nfunction leaveEdge(tree) {\n  return _.find(tree.edges(), function(e) {\n    return tree.edge(e).cutvalue < 0;\n  });\n}\n\nfunction enterEdge(t, g, edge) {\n  var v = edge.v;\n  var w = edge.w;\n\n  // For the rest of this function we assume that v is the tail and w is the\n  // head, so if we don't have this edge in the graph we should flip it to\n  // match the correct orientation.\n  if (!g.hasEdge(v, w)) {\n    v = edge.w;\n    w = edge.v;\n  }\n\n  var vLabel = t.node(v);\n  var wLabel = t.node(w);\n  var tailLabel = vLabel;\n  var flip = false;\n\n  // If the root is in the tail of the edge then we need to flip the logic that\n  // checks for the head and tail nodes in the candidates function below.\n  if (vLabel.lim > wLabel.lim) {\n    tailLabel = wLabel;\n    flip = true;\n  }\n\n  var candidates = _.filter(g.edges(), function(edge) {\n    return flip === isDescendant(t, t.node(edge.v), tailLabel) &&\n           flip !== isDescendant(t, t.node(edge.w), tailLabel);\n  });\n\n  return _.minBy(candidates, function(edge) { return slack(g, edge); });\n}\n\nfunction exchangeEdges(t, g, e, f) {\n  var v = e.v;\n  var w = e.w;\n  t.removeEdge(v, w);\n  t.setEdge(f.v, f.w, {});\n  initLowLimValues(t);\n  initCutValues(t, g);\n  updateRanks(t, g);\n}\n\nfunction updateRanks(t, g) {\n  var root = _.find(t.nodes(), function(v) { return !g.node(v).parent; });\n  var vs = preorder(t, root);\n  vs = vs.slice(1);\n  _.forEach(vs, function(v) {\n    var parent = t.node(v).parent,\n      edge = g.edge(v, parent),\n      flipped = false;\n\n    if (!edge) {\n      edge = g.edge(parent, v);\n      flipped = true;\n    }\n\n    g.node(v).rank = g.node(parent).rank + (flipped ? edge.minlen : -edge.minlen);\n  });\n}\n\n/*\n * Returns true if the edge is in the tree.\n */\nfunction isTreeEdge(tree, u, v) {\n  return tree.hasEdge(u, v);\n}\n\n/*\n * Returns true if the specified node is descendant of the root node per the\n * assigned low and lim attributes in the tree.\n */\nfunction isDescendant(tree, vLabel, rootLabel) {\n  return rootLabel.low <= vLabel.lim && vLabel.lim <= rootLabel.lim;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/rank/network-simplex.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/rank/util.js":
+/*!*********************************************!*\
+  !*** ./node_modules/dagre/lib/rank/util.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/dagre/lib/lodash.js\");\n\nmodule.exports = {\n  longestPath: longestPath,\n  slack: slack\n};\n\n/*\n * Initializes ranks for the input graph using the longest path algorithm. This\n * algorithm scales well and is fast in practice, it yields rather poor\n * solutions. Nodes are pushed to the lowest layer possible, leaving the bottom\n * ranks wide and leaving edges longer than necessary. However, due to its\n * speed, this algorithm is good for getting an initial ranking that can be fed\n * into other algorithms.\n *\n * This algorithm does not normalize layers because it will be used by other\n * algorithms in most cases. If using this algorithm directly, be sure to\n * run normalize at the end.\n *\n * Pre-conditions:\n *\n *    1. Input graph is a DAG.\n *    2. Input graph node labels can be assigned properties.\n *\n * Post-conditions:\n *\n *    1. Each node will be assign an (unnormalized) \"rank\" property.\n */\nfunction longestPath(g) {\n  var visited = {};\n\n  function dfs(v) {\n    var label = g.node(v);\n    if (_.has(visited, v)) {\n      return label.rank;\n    }\n    visited[v] = true;\n\n    var rank = _.min(_.map(g.outEdges(v), function(e) {\n      return dfs(e.w) - g.edge(e).minlen;\n    }));\n\n    if (rank === Number.POSITIVE_INFINITY || // return value of _.map([]) for Lodash 3\n        rank === undefined || // return value of _.map([]) for Lodash 4\n        rank === null) { // return value of _.map([null])\n      rank = 0;\n    }\n\n    return (label.rank = rank);\n  }\n\n  _.forEach(g.sources(), dfs);\n}\n\n/*\n * Returns the amount of slack for the given edge. The slack is defined as the\n * difference between the length of the edge and its minimum length.\n */\nfunction slack(g, e) {\n  return g.node(e.w).rank - g.node(e.v).rank - g.edge(e).minlen;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/rank/util.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/util.js":
+/*!****************************************!*\
+  !*** ./node_modules/dagre/lib/util.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("/* eslint \"no-console\": off */\n\n\n\nvar _ = __webpack_require__(/*! ./lodash */ \"./node_modules/dagre/lib/lodash.js\");\nvar Graph = (__webpack_require__(/*! ./graphlib */ \"./node_modules/dagre/lib/graphlib.js\").Graph);\n\nmodule.exports = {\n  addDummyNode: addDummyNode,\n  simplify: simplify,\n  asNonCompoundGraph: asNonCompoundGraph,\n  successorWeights: successorWeights,\n  predecessorWeights: predecessorWeights,\n  intersectRect: intersectRect,\n  buildLayerMatrix: buildLayerMatrix,\n  normalizeRanks: normalizeRanks,\n  removeEmptyRanks: removeEmptyRanks,\n  addBorderNode: addBorderNode,\n  maxRank: maxRank,\n  partition: partition,\n  time: time,\n  notime: notime\n};\n\n/*\n * Adds a dummy node to the graph and return v.\n */\nfunction addDummyNode(g, type, attrs, name) {\n  var v;\n  do {\n    v = _.uniqueId(name);\n  } while (g.hasNode(v));\n\n  attrs.dummy = type;\n  g.setNode(v, attrs);\n  return v;\n}\n\n/*\n * Returns a new graph with only simple edges. Handles aggregation of data\n * associated with multi-edges.\n */\nfunction simplify(g) {\n  var simplified = new Graph().setGraph(g.graph());\n  _.forEach(g.nodes(), function(v) { simplified.setNode(v, g.node(v)); });\n  _.forEach(g.edges(), function(e) {\n    var simpleLabel = simplified.edge(e.v, e.w) || { weight: 0, minlen: 1 };\n    var label = g.edge(e);\n    simplified.setEdge(e.v, e.w, {\n      weight: simpleLabel.weight + label.weight,\n      minlen: Math.max(simpleLabel.minlen, label.minlen)\n    });\n  });\n  return simplified;\n}\n\nfunction asNonCompoundGraph(g) {\n  var simplified = new Graph({ multigraph: g.isMultigraph() }).setGraph(g.graph());\n  _.forEach(g.nodes(), function(v) {\n    if (!g.children(v).length) {\n      simplified.setNode(v, g.node(v));\n    }\n  });\n  _.forEach(g.edges(), function(e) {\n    simplified.setEdge(e, g.edge(e));\n  });\n  return simplified;\n}\n\nfunction successorWeights(g) {\n  var weightMap = _.map(g.nodes(), function(v) {\n    var sucs = {};\n    _.forEach(g.outEdges(v), function(e) {\n      sucs[e.w] = (sucs[e.w] || 0) + g.edge(e).weight;\n    });\n    return sucs;\n  });\n  return _.zipObject(g.nodes(), weightMap);\n}\n\nfunction predecessorWeights(g) {\n  var weightMap = _.map(g.nodes(), function(v) {\n    var preds = {};\n    _.forEach(g.inEdges(v), function(e) {\n      preds[e.v] = (preds[e.v] || 0) + g.edge(e).weight;\n    });\n    return preds;\n  });\n  return _.zipObject(g.nodes(), weightMap);\n}\n\n/*\n * Finds where a line starting at point ({x, y}) would intersect a rectangle\n * ({x, y, width, height}) if it were pointing at the rectangle's center.\n */\nfunction intersectRect(rect, point) {\n  var x = rect.x;\n  var y = rect.y;\n\n  // Rectangle intersection algorithm from:\n  // http://math.stackexchange.com/questions/108113/find-edge-between-two-boxes\n  var dx = point.x - x;\n  var dy = point.y - y;\n  var w = rect.width / 2;\n  var h = rect.height / 2;\n\n  if (!dx && !dy) {\n    throw new Error(\"Not possible to find intersection inside of the rectangle\");\n  }\n\n  var sx, sy;\n  if (Math.abs(dy) * w > Math.abs(dx) * h) {\n    // Intersection is top or bottom of rect.\n    if (dy < 0) {\n      h = -h;\n    }\n    sx = h * dx / dy;\n    sy = h;\n  } else {\n    // Intersection is left or right of rect.\n    if (dx < 0) {\n      w = -w;\n    }\n    sx = w;\n    sy = w * dy / dx;\n  }\n\n  return { x: x + sx, y: y + sy };\n}\n\n/*\n * Given a DAG with each node assigned \"rank\" and \"order\" properties, this\n * function will produce a matrix with the ids of each node.\n */\nfunction buildLayerMatrix(g) {\n  var layering = _.map(_.range(maxRank(g) + 1), function() { return []; });\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v);\n    var rank = node.rank;\n    if (!_.isUndefined(rank)) {\n      layering[rank][node.order] = v;\n    }\n  });\n  return layering;\n}\n\n/*\n * Adjusts the ranks for all nodes in the graph such that all nodes v have\n * rank(v) >= 0 and at least one node w has rank(w) = 0.\n */\nfunction normalizeRanks(g) {\n  var min = _.min(_.map(g.nodes(), function(v) { return g.node(v).rank; }));\n  _.forEach(g.nodes(), function(v) {\n    var node = g.node(v);\n    if (_.has(node, \"rank\")) {\n      node.rank -= min;\n    }\n  });\n}\n\nfunction removeEmptyRanks(g) {\n  // Ranks may not start at 0, so we need to offset them\n  var offset = _.min(_.map(g.nodes(), function(v) { return g.node(v).rank; }));\n\n  var layers = [];\n  _.forEach(g.nodes(), function(v) {\n    var rank = g.node(v).rank - offset;\n    if (!layers[rank]) {\n      layers[rank] = [];\n    }\n    layers[rank].push(v);\n  });\n\n  var delta = 0;\n  var nodeRankFactor = g.graph().nodeRankFactor;\n  _.forEach(layers, function(vs, i) {\n    if (_.isUndefined(vs) && i % nodeRankFactor !== 0) {\n      --delta;\n    } else if (delta) {\n      _.forEach(vs, function(v) { g.node(v).rank += delta; });\n    }\n  });\n}\n\nfunction addBorderNode(g, prefix, rank, order) {\n  var node = {\n    width: 0,\n    height: 0\n  };\n  if (arguments.length >= 4) {\n    node.rank = rank;\n    node.order = order;\n  }\n  return addDummyNode(g, \"border\", node, prefix);\n}\n\nfunction maxRank(g) {\n  return _.max(_.map(g.nodes(), function(v) {\n    var rank = g.node(v).rank;\n    if (!_.isUndefined(rank)) {\n      return rank;\n    }\n  }));\n}\n\n/*\n * Partition a collection into two groups: `lhs` and `rhs`. If the supplied\n * function returns true for an entry it goes into `lhs`. Otherwise it goes\n * into `rhs.\n */\nfunction partition(collection, fn) {\n  var result = { lhs: [], rhs: [] };\n  _.forEach(collection, function(value) {\n    if (fn(value)) {\n      result.lhs.push(value);\n    } else {\n      result.rhs.push(value);\n    }\n  });\n  return result;\n}\n\n/*\n * Returns a new function that wraps `fn` with a timer. The wrapper logs the\n * time it takes to execute the function.\n */\nfunction time(name, fn) {\n  var start = _.now();\n  try {\n    return fn();\n  } finally {\n    console.log(name + \" time: \" + (_.now() - start) + \"ms\");\n  }\n}\n\nfunction notime(name, fn) {\n  return fn();\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/util.js?");
+
+/***/ }),
+
+/***/ "./node_modules/dagre/lib/version.js":
+/*!*******************************************!*\
+  !*** ./node_modules/dagre/lib/version.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("module.exports = \"0.8.5\";\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/dagre/lib/version.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/graphlib/index.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/**\n * Copyright (c) 2014, Chris Pettitt\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice, this\n * list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of the copyright holder nor the names of its contributors\n * may be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\n\nvar lib = __webpack_require__(/*! ./lib */ \"./node_modules/graphlib/lib/index.js\");\n\nmodule.exports = {\n  Graph: lib.Graph,\n  json: __webpack_require__(/*! ./lib/json */ \"./node_modules/graphlib/lib/json.js\"),\n  alg: __webpack_require__(/*! ./lib/alg */ \"./node_modules/graphlib/lib/alg/index.js\"),\n  version: lib.version\n};\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/components.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/components.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = components;\n\nfunction components(g) {\n  var visited = {};\n  var cmpts = [];\n  var cmpt;\n\n  function dfs(v) {\n    if (_.has(visited, v)) return;\n    visited[v] = true;\n    cmpt.push(v);\n    _.each(g.successors(v), dfs);\n    _.each(g.predecessors(v), dfs);\n  }\n\n  _.each(g.nodes(), function(v) {\n    cmpt = [];\n    dfs(v);\n    if (cmpt.length) {\n      cmpts.push(cmpt);\n    }\n  });\n\n  return cmpts;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/components.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/dfs.js":
+/*!**********************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/dfs.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = dfs;\n\n/*\n * A helper that preforms a pre- or post-order traversal on the input graph\n * and returns the nodes in the order they were visited. If the graph is\n * undirected then this algorithm will navigate using neighbors. If the graph\n * is directed then this algorithm will navigate using successors.\n *\n * Order must be one of \"pre\" or \"post\".\n */\nfunction dfs(g, vs, order) {\n  if (!_.isArray(vs)) {\n    vs = [vs];\n  }\n\n  var navigation = (g.isDirected() ? g.successors : g.neighbors).bind(g);\n\n  var acc = [];\n  var visited = {};\n  _.each(vs, function(v) {\n    if (!g.hasNode(v)) {\n      throw new Error(\"Graph does not have node: \" + v);\n    }\n\n    doDfs(g, v, order === \"post\", visited, navigation, acc);\n  });\n  return acc;\n}\n\nfunction doDfs(g, v, postorder, visited, navigation, acc) {\n  if (!_.has(visited, v)) {\n    visited[v] = true;\n\n    if (!postorder) { acc.push(v); }\n    _.each(navigation(v), function(w) {\n      doDfs(g, w, postorder, visited, navigation, acc);\n    });\n    if (postorder) { acc.push(v); }\n  }\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/dfs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/dijkstra-all.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/dijkstra-all.js ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var dijkstra = __webpack_require__(/*! ./dijkstra */ \"./node_modules/graphlib/lib/alg/dijkstra.js\");\nvar _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = dijkstraAll;\n\nfunction dijkstraAll(g, weightFunc, edgeFunc) {\n  return _.transform(g.nodes(), function(acc, v) {\n    acc[v] = dijkstra(g, v, weightFunc, edgeFunc);\n  }, {});\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/dijkstra-all.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/dijkstra.js":
+/*!***************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/dijkstra.js ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\nvar PriorityQueue = __webpack_require__(/*! ../data/priority-queue */ \"./node_modules/graphlib/lib/data/priority-queue.js\");\n\nmodule.exports = dijkstra;\n\nvar DEFAULT_WEIGHT_FUNC = _.constant(1);\n\nfunction dijkstra(g, source, weightFn, edgeFn) {\n  return runDijkstra(g, String(source),\n    weightFn || DEFAULT_WEIGHT_FUNC,\n    edgeFn || function(v) { return g.outEdges(v); });\n}\n\nfunction runDijkstra(g, source, weightFn, edgeFn) {\n  var results = {};\n  var pq = new PriorityQueue();\n  var v, vEntry;\n\n  var updateNeighbors = function(edge) {\n    var w = edge.v !== v ? edge.v : edge.w;\n    var wEntry = results[w];\n    var weight = weightFn(edge);\n    var distance = vEntry.distance + weight;\n\n    if (weight < 0) {\n      throw new Error(\"dijkstra does not allow negative edge weights. \" +\n                      \"Bad edge: \" + edge + \" Weight: \" + weight);\n    }\n\n    if (distance < wEntry.distance) {\n      wEntry.distance = distance;\n      wEntry.predecessor = v;\n      pq.decrease(w, distance);\n    }\n  };\n\n  g.nodes().forEach(function(v) {\n    var distance = v === source ? 0 : Number.POSITIVE_INFINITY;\n    results[v] = { distance: distance };\n    pq.add(v, distance);\n  });\n\n  while (pq.size() > 0) {\n    v = pq.removeMin();\n    vEntry = results[v];\n    if (vEntry.distance === Number.POSITIVE_INFINITY) {\n      break;\n    }\n\n    edgeFn(v).forEach(updateNeighbors);\n  }\n\n  return results;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/dijkstra.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/find-cycles.js":
+/*!******************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/find-cycles.js ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\nvar tarjan = __webpack_require__(/*! ./tarjan */ \"./node_modules/graphlib/lib/alg/tarjan.js\");\n\nmodule.exports = findCycles;\n\nfunction findCycles(g) {\n  return _.filter(tarjan(g), function(cmpt) {\n    return cmpt.length > 1 || (cmpt.length === 1 && g.hasEdge(cmpt[0], cmpt[0]));\n  });\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/find-cycles.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/floyd-warshall.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/floyd-warshall.js ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = floydWarshall;\n\nvar DEFAULT_WEIGHT_FUNC = _.constant(1);\n\nfunction floydWarshall(g, weightFn, edgeFn) {\n  return runFloydWarshall(g,\n    weightFn || DEFAULT_WEIGHT_FUNC,\n    edgeFn || function(v) { return g.outEdges(v); });\n}\n\nfunction runFloydWarshall(g, weightFn, edgeFn) {\n  var results = {};\n  var nodes = g.nodes();\n\n  nodes.forEach(function(v) {\n    results[v] = {};\n    results[v][v] = { distance: 0 };\n    nodes.forEach(function(w) {\n      if (v !== w) {\n        results[v][w] = { distance: Number.POSITIVE_INFINITY };\n      }\n    });\n    edgeFn(v).forEach(function(edge) {\n      var w = edge.v === v ? edge.w : edge.v;\n      var d = weightFn(edge);\n      results[v][w] = { distance: d, predecessor: v };\n    });\n  });\n\n  nodes.forEach(function(k) {\n    var rowK = results[k];\n    nodes.forEach(function(i) {\n      var rowI = results[i];\n      nodes.forEach(function(j) {\n        var ik = rowI[k];\n        var kj = rowK[j];\n        var ij = rowI[j];\n        var altDistance = ik.distance + kj.distance;\n        if (altDistance < ij.distance) {\n          ij.distance = altDistance;\n          ij.predecessor = kj.predecessor;\n        }\n      });\n    });\n  });\n\n  return results;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/floyd-warshall.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/index.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = {\n  components: __webpack_require__(/*! ./components */ \"./node_modules/graphlib/lib/alg/components.js\"),\n  dijkstra: __webpack_require__(/*! ./dijkstra */ \"./node_modules/graphlib/lib/alg/dijkstra.js\"),\n  dijkstraAll: __webpack_require__(/*! ./dijkstra-all */ \"./node_modules/graphlib/lib/alg/dijkstra-all.js\"),\n  findCycles: __webpack_require__(/*! ./find-cycles */ \"./node_modules/graphlib/lib/alg/find-cycles.js\"),\n  floydWarshall: __webpack_require__(/*! ./floyd-warshall */ \"./node_modules/graphlib/lib/alg/floyd-warshall.js\"),\n  isAcyclic: __webpack_require__(/*! ./is-acyclic */ \"./node_modules/graphlib/lib/alg/is-acyclic.js\"),\n  postorder: __webpack_require__(/*! ./postorder */ \"./node_modules/graphlib/lib/alg/postorder.js\"),\n  preorder: __webpack_require__(/*! ./preorder */ \"./node_modules/graphlib/lib/alg/preorder.js\"),\n  prim: __webpack_require__(/*! ./prim */ \"./node_modules/graphlib/lib/alg/prim.js\"),\n  tarjan: __webpack_require__(/*! ./tarjan */ \"./node_modules/graphlib/lib/alg/tarjan.js\"),\n  topsort: __webpack_require__(/*! ./topsort */ \"./node_modules/graphlib/lib/alg/topsort.js\")\n};\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/is-acyclic.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/is-acyclic.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var topsort = __webpack_require__(/*! ./topsort */ \"./node_modules/graphlib/lib/alg/topsort.js\");\n\nmodule.exports = isAcyclic;\n\nfunction isAcyclic(g) {\n  try {\n    topsort(g);\n  } catch (e) {\n    if (e instanceof topsort.CycleException) {\n      return false;\n    }\n    throw e;\n  }\n  return true;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/is-acyclic.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/postorder.js":
+/*!****************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/postorder.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var dfs = __webpack_require__(/*! ./dfs */ \"./node_modules/graphlib/lib/alg/dfs.js\");\n\nmodule.exports = postorder;\n\nfunction postorder(g, vs) {\n  return dfs(g, vs, \"post\");\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/postorder.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/preorder.js":
+/*!***************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/preorder.js ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var dfs = __webpack_require__(/*! ./dfs */ \"./node_modules/graphlib/lib/alg/dfs.js\");\n\nmodule.exports = preorder;\n\nfunction preorder(g, vs) {\n  return dfs(g, vs, \"pre\");\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/preorder.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/prim.js":
+/*!***********************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/prim.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\nvar Graph = __webpack_require__(/*! ../graph */ \"./node_modules/graphlib/lib/graph.js\");\nvar PriorityQueue = __webpack_require__(/*! ../data/priority-queue */ \"./node_modules/graphlib/lib/data/priority-queue.js\");\n\nmodule.exports = prim;\n\nfunction prim(g, weightFunc) {\n  var result = new Graph();\n  var parents = {};\n  var pq = new PriorityQueue();\n  var v;\n\n  function updateNeighbors(edge) {\n    var w = edge.v === v ? edge.w : edge.v;\n    var pri = pq.priority(w);\n    if (pri !== undefined) {\n      var edgeWeight = weightFunc(edge);\n      if (edgeWeight < pri) {\n        parents[w] = v;\n        pq.decrease(w, edgeWeight);\n      }\n    }\n  }\n\n  if (g.nodeCount() === 0) {\n    return result;\n  }\n\n  _.each(g.nodes(), function(v) {\n    pq.add(v, Number.POSITIVE_INFINITY);\n    result.setNode(v);\n  });\n\n  // Start from an arbitrary node\n  pq.decrease(g.nodes()[0], 0);\n\n  var init = false;\n  while (pq.size() > 0) {\n    v = pq.removeMin();\n    if (_.has(parents, v)) {\n      result.setEdge(v, parents[v]);\n    } else if (init) {\n      throw new Error(\"Input graph is not connected: \" + g);\n    } else {\n      init = true;\n    }\n\n    g.nodeEdges(v).forEach(updateNeighbors);\n  }\n\n  return result;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/prim.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/tarjan.js":
+/*!*************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/tarjan.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = tarjan;\n\nfunction tarjan(g) {\n  var index = 0;\n  var stack = [];\n  var visited = {}; // node id -> { onStack, lowlink, index }\n  var results = [];\n\n  function dfs(v) {\n    var entry = visited[v] = {\n      onStack: true,\n      lowlink: index,\n      index: index++\n    };\n    stack.push(v);\n\n    g.successors(v).forEach(function(w) {\n      if (!_.has(visited, w)) {\n        dfs(w);\n        entry.lowlink = Math.min(entry.lowlink, visited[w].lowlink);\n      } else if (visited[w].onStack) {\n        entry.lowlink = Math.min(entry.lowlink, visited[w].index);\n      }\n    });\n\n    if (entry.lowlink === entry.index) {\n      var cmpt = [];\n      var w;\n      do {\n        w = stack.pop();\n        visited[w].onStack = false;\n        cmpt.push(w);\n      } while (v !== w);\n      results.push(cmpt);\n    }\n  }\n\n  g.nodes().forEach(function(v) {\n    if (!_.has(visited, v)) {\n      dfs(v);\n    }\n  });\n\n  return results;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/tarjan.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/alg/topsort.js":
+/*!**************************************************!*\
+  !*** ./node_modules/graphlib/lib/alg/topsort.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = topsort;\ntopsort.CycleException = CycleException;\n\nfunction topsort(g) {\n  var visited = {};\n  var stack = {};\n  var results = [];\n\n  function visit(node) {\n    if (_.has(stack, node)) {\n      throw new CycleException();\n    }\n\n    if (!_.has(visited, node)) {\n      stack[node] = true;\n      visited[node] = true;\n      _.each(g.predecessors(node), visit);\n      delete stack[node];\n      results.push(node);\n    }\n  }\n\n  _.each(g.sinks(), visit);\n\n  if (_.size(visited) !== g.nodeCount()) {\n    throw new CycleException();\n  }\n\n  return results;\n}\n\nfunction CycleException() {}\nCycleException.prototype = new Error(); // must be an instance of Error to pass testing\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/alg/topsort.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/data/priority-queue.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/graphlib/lib/data/priority-queue.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ../lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = PriorityQueue;\n\n/**\n * A min-priority queue data structure. This algorithm is derived from Cormen,\n * et al., \"Introduction to Algorithms\". The basic idea of a min-priority\n * queue is that you can efficiently (in O(1) time) get the smallest key in\n * the queue. Adding and removing elements takes O(log n) time. A key can\n * have its priority decreased in O(log n) time.\n */\nfunction PriorityQueue() {\n  this._arr = [];\n  this._keyIndices = {};\n}\n\n/**\n * Returns the number of elements in the queue. Takes `O(1)` time.\n */\nPriorityQueue.prototype.size = function() {\n  return this._arr.length;\n};\n\n/**\n * Returns the keys that are in the queue. Takes `O(n)` time.\n */\nPriorityQueue.prototype.keys = function() {\n  return this._arr.map(function(x) { return x.key; });\n};\n\n/**\n * Returns `true` if **key** is in the queue and `false` if not.\n */\nPriorityQueue.prototype.has = function(key) {\n  return _.has(this._keyIndices, key);\n};\n\n/**\n * Returns the priority for **key**. If **key** is not present in the queue\n * then this function returns `undefined`. Takes `O(1)` time.\n *\n * @param {Object} key\n */\nPriorityQueue.prototype.priority = function(key) {\n  var index = this._keyIndices[key];\n  if (index !== undefined) {\n    return this._arr[index].priority;\n  }\n};\n\n/**\n * Returns the key for the minimum element in this queue. If the queue is\n * empty this function throws an Error. Takes `O(1)` time.\n */\nPriorityQueue.prototype.min = function() {\n  if (this.size() === 0) {\n    throw new Error(\"Queue underflow\");\n  }\n  return this._arr[0].key;\n};\n\n/**\n * Inserts a new key into the priority queue. If the key already exists in\n * the queue this function returns `false`; otherwise it will return `true`.\n * Takes `O(n)` time.\n *\n * @param {Object} key the key to add\n * @param {Number} priority the initial priority for the key\n */\nPriorityQueue.prototype.add = function(key, priority) {\n  var keyIndices = this._keyIndices;\n  key = String(key);\n  if (!_.has(keyIndices, key)) {\n    var arr = this._arr;\n    var index = arr.length;\n    keyIndices[key] = index;\n    arr.push({key: key, priority: priority});\n    this._decrease(index);\n    return true;\n  }\n  return false;\n};\n\n/**\n * Removes and returns the smallest key in the queue. Takes `O(log n)` time.\n */\nPriorityQueue.prototype.removeMin = function() {\n  this._swap(0, this._arr.length - 1);\n  var min = this._arr.pop();\n  delete this._keyIndices[min.key];\n  this._heapify(0);\n  return min.key;\n};\n\n/**\n * Decreases the priority for **key** to **priority**. If the new priority is\n * greater than the previous priority, this function will throw an Error.\n *\n * @param {Object} key the key for which to raise priority\n * @param {Number} priority the new priority for the key\n */\nPriorityQueue.prototype.decrease = function(key, priority) {\n  var index = this._keyIndices[key];\n  if (priority > this._arr[index].priority) {\n    throw new Error(\"New priority is greater than current priority. \" +\n        \"Key: \" + key + \" Old: \" + this._arr[index].priority + \" New: \" + priority);\n  }\n  this._arr[index].priority = priority;\n  this._decrease(index);\n};\n\nPriorityQueue.prototype._heapify = function(i) {\n  var arr = this._arr;\n  var l = 2 * i;\n  var r = l + 1;\n  var largest = i;\n  if (l < arr.length) {\n    largest = arr[l].priority < arr[largest].priority ? l : largest;\n    if (r < arr.length) {\n      largest = arr[r].priority < arr[largest].priority ? r : largest;\n    }\n    if (largest !== i) {\n      this._swap(i, largest);\n      this._heapify(largest);\n    }\n  }\n};\n\nPriorityQueue.prototype._decrease = function(index) {\n  var arr = this._arr;\n  var priority = arr[index].priority;\n  var parent;\n  while (index !== 0) {\n    parent = index >> 1;\n    if (arr[parent].priority < priority) {\n      break;\n    }\n    this._swap(index, parent);\n    index = parent;\n  }\n};\n\nPriorityQueue.prototype._swap = function(i, j) {\n  var arr = this._arr;\n  var keyIndices = this._keyIndices;\n  var origArrI = arr[i];\n  var origArrJ = arr[j];\n  arr[i] = origArrJ;\n  arr[j] = origArrI;\n  keyIndices[origArrJ.key] = i;\n  keyIndices[origArrI.key] = j;\n};\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/data/priority-queue.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/graph.js":
+/*!********************************************!*\
+  !*** ./node_modules/graphlib/lib/graph.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("\n\nvar _ = __webpack_require__(/*! ./lodash */ \"./node_modules/graphlib/lib/lodash.js\");\n\nmodule.exports = Graph;\n\nvar DEFAULT_EDGE_NAME = \"\\x00\";\nvar GRAPH_NODE = \"\\x00\";\nvar EDGE_KEY_DELIM = \"\\x01\";\n\n// Implementation notes:\n//\n//  * Node id query functions should return string ids for the nodes\n//  * Edge id query functions should return an \"edgeObj\", edge object, that is\n//    composed of enough information to uniquely identify an edge: {v, w, name}.\n//  * Internally we use an \"edgeId\", a stringified form of the edgeObj, to\n//    reference edges. This is because we need a performant way to look these\n//    edges up and, object properties, which have string keys, are the closest\n//    we're going to get to a performant hashtable in JavaScript.\n\nfunction Graph(opts) {\n  this._isDirected = _.has(opts, \"directed\") ? opts.directed : true;\n  this._isMultigraph = _.has(opts, \"multigraph\") ? opts.multigraph : false;\n  this._isCompound = _.has(opts, \"compound\") ? opts.compound : false;\n\n  // Label for the graph itself\n  this._label = undefined;\n\n  // Defaults to be set when creating a new node\n  this._defaultNodeLabelFn = _.constant(undefined);\n\n  // Defaults to be set when creating a new edge\n  this._defaultEdgeLabelFn = _.constant(undefined);\n\n  // v -> label\n  this._nodes = {};\n\n  if (this._isCompound) {\n    // v -> parent\n    this._parent = {};\n\n    // v -> children\n    this._children = {};\n    this._children[GRAPH_NODE] = {};\n  }\n\n  // v -> edgeObj\n  this._in = {};\n\n  // u -> v -> Number\n  this._preds = {};\n\n  // v -> edgeObj\n  this._out = {};\n\n  // v -> w -> Number\n  this._sucs = {};\n\n  // e -> edgeObj\n  this._edgeObjs = {};\n\n  // e -> label\n  this._edgeLabels = {};\n}\n\n/* Number of nodes in the graph. Should only be changed by the implementation. */\nGraph.prototype._nodeCount = 0;\n\n/* Number of edges in the graph. Should only be changed by the implementation. */\nGraph.prototype._edgeCount = 0;\n\n\n/* === Graph functions ========= */\n\nGraph.prototype.isDirected = function() {\n  return this._isDirected;\n};\n\nGraph.prototype.isMultigraph = function() {\n  return this._isMultigraph;\n};\n\nGraph.prototype.isCompound = function() {\n  return this._isCompound;\n};\n\nGraph.prototype.setGraph = function(label) {\n  this._label = label;\n  return this;\n};\n\nGraph.prototype.graph = function() {\n  return this._label;\n};\n\n\n/* === Node functions ========== */\n\nGraph.prototype.setDefaultNodeLabel = function(newDefault) {\n  if (!_.isFunction(newDefault)) {\n    newDefault = _.constant(newDefault);\n  }\n  this._defaultNodeLabelFn = newDefault;\n  return this;\n};\n\nGraph.prototype.nodeCount = function() {\n  return this._nodeCount;\n};\n\nGraph.prototype.nodes = function() {\n  return _.keys(this._nodes);\n};\n\nGraph.prototype.sources = function() {\n  var self = this;\n  return _.filter(this.nodes(), function(v) {\n    return _.isEmpty(self._in[v]);\n  });\n};\n\nGraph.prototype.sinks = function() {\n  var self = this;\n  return _.filter(this.nodes(), function(v) {\n    return _.isEmpty(self._out[v]);\n  });\n};\n\nGraph.prototype.setNodes = function(vs, value) {\n  var args = arguments;\n  var self = this;\n  _.each(vs, function(v) {\n    if (args.length > 1) {\n      self.setNode(v, value);\n    } else {\n      self.setNode(v);\n    }\n  });\n  return this;\n};\n\nGraph.prototype.setNode = function(v, value) {\n  if (_.has(this._nodes, v)) {\n    if (arguments.length > 1) {\n      this._nodes[v] = value;\n    }\n    return this;\n  }\n\n  this._nodes[v] = arguments.length > 1 ? value : this._defaultNodeLabelFn(v);\n  if (this._isCompound) {\n    this._parent[v] = GRAPH_NODE;\n    this._children[v] = {};\n    this._children[GRAPH_NODE][v] = true;\n  }\n  this._in[v] = {};\n  this._preds[v] = {};\n  this._out[v] = {};\n  this._sucs[v] = {};\n  ++this._nodeCount;\n  return this;\n};\n\nGraph.prototype.node = function(v) {\n  return this._nodes[v];\n};\n\nGraph.prototype.hasNode = function(v) {\n  return _.has(this._nodes, v);\n};\n\nGraph.prototype.removeNode =  function(v) {\n  var self = this;\n  if (_.has(this._nodes, v)) {\n    var removeEdge = function(e) { self.removeEdge(self._edgeObjs[e]); };\n    delete this._nodes[v];\n    if (this._isCompound) {\n      this._removeFromParentsChildList(v);\n      delete this._parent[v];\n      _.each(this.children(v), function(child) {\n        self.setParent(child);\n      });\n      delete this._children[v];\n    }\n    _.each(_.keys(this._in[v]), removeEdge);\n    delete this._in[v];\n    delete this._preds[v];\n    _.each(_.keys(this._out[v]), removeEdge);\n    delete this._out[v];\n    delete this._sucs[v];\n    --this._nodeCount;\n  }\n  return this;\n};\n\nGraph.prototype.setParent = function(v, parent) {\n  if (!this._isCompound) {\n    throw new Error(\"Cannot set parent in a non-compound graph\");\n  }\n\n  if (_.isUndefined(parent)) {\n    parent = GRAPH_NODE;\n  } else {\n    // Coerce parent to string\n    parent += \"\";\n    for (var ancestor = parent;\n      !_.isUndefined(ancestor);\n      ancestor = this.parent(ancestor)) {\n      if (ancestor === v) {\n        throw new Error(\"Setting \" + parent+ \" as parent of \" + v +\n                        \" would create a cycle\");\n      }\n    }\n\n    this.setNode(parent);\n  }\n\n  this.setNode(v);\n  this._removeFromParentsChildList(v);\n  this._parent[v] = parent;\n  this._children[parent][v] = true;\n  return this;\n};\n\nGraph.prototype._removeFromParentsChildList = function(v) {\n  delete this._children[this._parent[v]][v];\n};\n\nGraph.prototype.parent = function(v) {\n  if (this._isCompound) {\n    var parent = this._parent[v];\n    if (parent !== GRAPH_NODE) {\n      return parent;\n    }\n  }\n};\n\nGraph.prototype.children = function(v) {\n  if (_.isUndefined(v)) {\n    v = GRAPH_NODE;\n  }\n\n  if (this._isCompound) {\n    var children = this._children[v];\n    if (children) {\n      return _.keys(children);\n    }\n  } else if (v === GRAPH_NODE) {\n    return this.nodes();\n  } else if (this.hasNode(v)) {\n    return [];\n  }\n};\n\nGraph.prototype.predecessors = function(v) {\n  var predsV = this._preds[v];\n  if (predsV) {\n    return _.keys(predsV);\n  }\n};\n\nGraph.prototype.successors = function(v) {\n  var sucsV = this._sucs[v];\n  if (sucsV) {\n    return _.keys(sucsV);\n  }\n};\n\nGraph.prototype.neighbors = function(v) {\n  var preds = this.predecessors(v);\n  if (preds) {\n    return _.union(preds, this.successors(v));\n  }\n};\n\nGraph.prototype.isLeaf = function (v) {\n  var neighbors;\n  if (this.isDirected()) {\n    neighbors = this.successors(v);\n  } else {\n    neighbors = this.neighbors(v);\n  }\n  return neighbors.length === 0;\n};\n\nGraph.prototype.filterNodes = function(filter) {\n  var copy = new this.constructor({\n    directed: this._isDirected,\n    multigraph: this._isMultigraph,\n    compound: this._isCompound\n  });\n\n  copy.setGraph(this.graph());\n\n  var self = this;\n  _.each(this._nodes, function(value, v) {\n    if (filter(v)) {\n      copy.setNode(v, value);\n    }\n  });\n\n  _.each(this._edgeObjs, function(e) {\n    if (copy.hasNode(e.v) && copy.hasNode(e.w)) {\n      copy.setEdge(e, self.edge(e));\n    }\n  });\n\n  var parents = {};\n  function findParent(v) {\n    var parent = self.parent(v);\n    if (parent === undefined || copy.hasNode(parent)) {\n      parents[v] = parent;\n      return parent;\n    } else if (parent in parents) {\n      return parents[parent];\n    } else {\n      return findParent(parent);\n    }\n  }\n\n  if (this._isCompound) {\n    _.each(copy.nodes(), function(v) {\n      copy.setParent(v, findParent(v));\n    });\n  }\n\n  return copy;\n};\n\n/* === Edge functions ========== */\n\nGraph.prototype.setDefaultEdgeLabel = function(newDefault) {\n  if (!_.isFunction(newDefault)) {\n    newDefault = _.constant(newDefault);\n  }\n  this._defaultEdgeLabelFn = newDefault;\n  return this;\n};\n\nGraph.prototype.edgeCount = function() {\n  return this._edgeCount;\n};\n\nGraph.prototype.edges = function() {\n  return _.values(this._edgeObjs);\n};\n\nGraph.prototype.setPath = function(vs, value) {\n  var self = this;\n  var args = arguments;\n  _.reduce(vs, function(v, w) {\n    if (args.length > 1) {\n      self.setEdge(v, w, value);\n    } else {\n      self.setEdge(v, w);\n    }\n    return w;\n  });\n  return this;\n};\n\n/*\n * setEdge(v, w, [value, [name]])\n * setEdge({ v, w, [name] }, [value])\n */\nGraph.prototype.setEdge = function() {\n  var v, w, name, value;\n  var valueSpecified = false;\n  var arg0 = arguments[0];\n\n  if (typeof arg0 === \"object\" && arg0 !== null && \"v\" in arg0) {\n    v = arg0.v;\n    w = arg0.w;\n    name = arg0.name;\n    if (arguments.length === 2) {\n      value = arguments[1];\n      valueSpecified = true;\n    }\n  } else {\n    v = arg0;\n    w = arguments[1];\n    name = arguments[3];\n    if (arguments.length > 2) {\n      value = arguments[2];\n      valueSpecified = true;\n    }\n  }\n\n  v = \"\" + v;\n  w = \"\" + w;\n  if (!_.isUndefined(name)) {\n    name = \"\" + name;\n  }\n\n  var e = edgeArgsToId(this._isDirected, v, w, name);\n  if (_.has(this._edgeLabels, e)) {\n    if (valueSpecified) {\n      this._edgeLabels[e] = value;\n    }\n    return this;\n  }\n\n  if (!_.isUndefined(name) && !this._isMultigraph) {\n    throw new Error(\"Cannot set a named edge when isMultigraph = false\");\n  }\n\n  // It didn't exist, so we need to create it.\n  // First ensure the nodes exist.\n  this.setNode(v);\n  this.setNode(w);\n\n  this._edgeLabels[e] = valueSpecified ? value : this._defaultEdgeLabelFn(v, w, name);\n\n  var edgeObj = edgeArgsToObj(this._isDirected, v, w, name);\n  // Ensure we add undirected edges in a consistent way.\n  v = edgeObj.v;\n  w = edgeObj.w;\n\n  Object.freeze(edgeObj);\n  this._edgeObjs[e] = edgeObj;\n  incrementOrInitEntry(this._preds[w], v);\n  incrementOrInitEntry(this._sucs[v], w);\n  this._in[w][e] = edgeObj;\n  this._out[v][e] = edgeObj;\n  this._edgeCount++;\n  return this;\n};\n\nGraph.prototype.edge = function(v, w, name) {\n  var e = (arguments.length === 1\n    ? edgeObjToId(this._isDirected, arguments[0])\n    : edgeArgsToId(this._isDirected, v, w, name));\n  return this._edgeLabels[e];\n};\n\nGraph.prototype.hasEdge = function(v, w, name) {\n  var e = (arguments.length === 1\n    ? edgeObjToId(this._isDirected, arguments[0])\n    : edgeArgsToId(this._isDirected, v, w, name));\n  return _.has(this._edgeLabels, e);\n};\n\nGraph.prototype.removeEdge = function(v, w, name) {\n  var e = (arguments.length === 1\n    ? edgeObjToId(this._isDirected, arguments[0])\n    : edgeArgsToId(this._isDirected, v, w, name));\n  var edge = this._edgeObjs[e];\n  if (edge) {\n    v = edge.v;\n    w = edge.w;\n    delete this._edgeLabels[e];\n    delete this._edgeObjs[e];\n    decrementOrRemoveEntry(this._preds[w], v);\n    decrementOrRemoveEntry(this._sucs[v], w);\n    delete this._in[w][e];\n    delete this._out[v][e];\n    this._edgeCount--;\n  }\n  return this;\n};\n\nGraph.prototype.inEdges = function(v, u) {\n  var inV = this._in[v];\n  if (inV) {\n    var edges = _.values(inV);\n    if (!u) {\n      return edges;\n    }\n    return _.filter(edges, function(edge) { return edge.v === u; });\n  }\n};\n\nGraph.prototype.outEdges = function(v, w) {\n  var outV = this._out[v];\n  if (outV) {\n    var edges = _.values(outV);\n    if (!w) {\n      return edges;\n    }\n    return _.filter(edges, function(edge) { return edge.w === w; });\n  }\n};\n\nGraph.prototype.nodeEdges = function(v, w) {\n  var inEdges = this.inEdges(v, w);\n  if (inEdges) {\n    return inEdges.concat(this.outEdges(v, w));\n  }\n};\n\nfunction incrementOrInitEntry(map, k) {\n  if (map[k]) {\n    map[k]++;\n  } else {\n    map[k] = 1;\n  }\n}\n\nfunction decrementOrRemoveEntry(map, k) {\n  if (!--map[k]) { delete map[k]; }\n}\n\nfunction edgeArgsToId(isDirected, v_, w_, name) {\n  var v = \"\" + v_;\n  var w = \"\" + w_;\n  if (!isDirected && v > w) {\n    var tmp = v;\n    v = w;\n    w = tmp;\n  }\n  return v + EDGE_KEY_DELIM + w + EDGE_KEY_DELIM +\n             (_.isUndefined(name) ? DEFAULT_EDGE_NAME : name);\n}\n\nfunction edgeArgsToObj(isDirected, v_, w_, name) {\n  var v = \"\" + v_;\n  var w = \"\" + w_;\n  if (!isDirected && v > w) {\n    var tmp = v;\n    v = w;\n    w = tmp;\n  }\n  var edgeObj =  { v: v, w: w };\n  if (name) {\n    edgeObj.name = name;\n  }\n  return edgeObj;\n}\n\nfunction edgeObjToId(isDirected, edgeObj) {\n  return edgeArgsToId(isDirected, edgeObj.v, edgeObj.w, edgeObj.name);\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/graph.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/graphlib/lib/index.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("// Includes only the \"core\" of graphlib\nmodule.exports = {\n  Graph: __webpack_require__(/*! ./graph */ \"./node_modules/graphlib/lib/graph.js\"),\n  version: __webpack_require__(/*! ./version */ \"./node_modules/graphlib/lib/version.js\")\n};\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/json.js":
+/*!*******************************************!*\
+  !*** ./node_modules/graphlib/lib/json.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var _ = __webpack_require__(/*! ./lodash */ \"./node_modules/graphlib/lib/lodash.js\");\nvar Graph = __webpack_require__(/*! ./graph */ \"./node_modules/graphlib/lib/graph.js\");\n\nmodule.exports = {\n  write: write,\n  read: read\n};\n\nfunction write(g) {\n  var json = {\n    options: {\n      directed: g.isDirected(),\n      multigraph: g.isMultigraph(),\n      compound: g.isCompound()\n    },\n    nodes: writeNodes(g),\n    edges: writeEdges(g)\n  };\n  if (!_.isUndefined(g.graph())) {\n    json.value = _.clone(g.graph());\n  }\n  return json;\n}\n\nfunction writeNodes(g) {\n  return _.map(g.nodes(), function(v) {\n    var nodeValue = g.node(v);\n    var parent = g.parent(v);\n    var node = { v: v };\n    if (!_.isUndefined(nodeValue)) {\n      node.value = nodeValue;\n    }\n    if (!_.isUndefined(parent)) {\n      node.parent = parent;\n    }\n    return node;\n  });\n}\n\nfunction writeEdges(g) {\n  return _.map(g.edges(), function(e) {\n    var edgeValue = g.edge(e);\n    var edge = { v: e.v, w: e.w };\n    if (!_.isUndefined(e.name)) {\n      edge.name = e.name;\n    }\n    if (!_.isUndefined(edgeValue)) {\n      edge.value = edgeValue;\n    }\n    return edge;\n  });\n}\n\nfunction read(json) {\n  var g = new Graph(json.options).setGraph(json.value);\n  _.each(json.nodes, function(entry) {\n    g.setNode(entry.v, entry.value);\n    if (entry.parent) {\n      g.setParent(entry.v, entry.parent);\n    }\n  });\n  _.each(json.edges, function(entry) {\n    g.setEdge({ v: entry.v, w: entry.w, name: entry.name }, entry.value);\n  });\n  return g;\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/json.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/lodash.js":
+/*!*********************************************!*\
+  !*** ./node_modules/graphlib/lib/lodash.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* global window */\n\nvar lodash;\n\nif (true) {\n  try {\n    lodash = {\n      clone: __webpack_require__(/*! lodash/clone */ \"./node_modules/lodash/clone.js\"),\n      constant: __webpack_require__(/*! lodash/constant */ \"./node_modules/lodash/constant.js\"),\n      each: __webpack_require__(/*! lodash/each */ \"./node_modules/lodash/each.js\"),\n      filter: __webpack_require__(/*! lodash/filter */ \"./node_modules/lodash/filter.js\"),\n      has:  __webpack_require__(/*! lodash/has */ \"./node_modules/lodash/has.js\"),\n      isArray: __webpack_require__(/*! lodash/isArray */ \"./node_modules/lodash/isArray.js\"),\n      isEmpty: __webpack_require__(/*! lodash/isEmpty */ \"./node_modules/lodash/isEmpty.js\"),\n      isFunction: __webpack_require__(/*! lodash/isFunction */ \"./node_modules/lodash/isFunction.js\"),\n      isUndefined: __webpack_require__(/*! lodash/isUndefined */ \"./node_modules/lodash/isUndefined.js\"),\n      keys: __webpack_require__(/*! lodash/keys */ \"./node_modules/lodash/keys.js\"),\n      map: __webpack_require__(/*! lodash/map */ \"./node_modules/lodash/map.js\"),\n      reduce: __webpack_require__(/*! lodash/reduce */ \"./node_modules/lodash/reduce.js\"),\n      size: __webpack_require__(/*! lodash/size */ \"./node_modules/lodash/size.js\"),\n      transform: __webpack_require__(/*! lodash/transform */ \"./node_modules/lodash/transform.js\"),\n      union: __webpack_require__(/*! lodash/union */ \"./node_modules/lodash/union.js\"),\n      values: __webpack_require__(/*! lodash/values */ \"./node_modules/lodash/values.js\")\n    };\n  } catch (e) {\n    // continue regardless of error\n  }\n}\n\nif (!lodash) {\n  lodash = window._;\n}\n\nmodule.exports = lodash;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/lodash.js?");
+
+/***/ }),
+
+/***/ "./node_modules/graphlib/lib/version.js":
+/*!**********************************************!*\
+  !*** ./node_modules/graphlib/lib/version.js ***!
+  \**********************************************/
+/***/ ((module) => {
+
+eval("module.exports = '2.1.8';\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/graphlib/lib/version.js?");
 
 /***/ }),
 
@@ -2096,6 +2547,2406 @@ eval("/** @license React v16.13.1\n * react-is.development.js\n *\n * Copyright 
 
 "use strict";
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ \"./node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.development.js\");\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/hoist-non-react-statics/node_modules/react-is/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_DataView.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_DataView.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\"),\n    root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/* Built-in method references that are verified to be native. */\nvar DataView = getNative(root, 'DataView');\n\nmodule.exports = DataView;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_DataView.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Hash.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/_Hash.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var hashClear = __webpack_require__(/*! ./_hashClear */ \"./node_modules/lodash/_hashClear.js\"),\n    hashDelete = __webpack_require__(/*! ./_hashDelete */ \"./node_modules/lodash/_hashDelete.js\"),\n    hashGet = __webpack_require__(/*! ./_hashGet */ \"./node_modules/lodash/_hashGet.js\"),\n    hashHas = __webpack_require__(/*! ./_hashHas */ \"./node_modules/lodash/_hashHas.js\"),\n    hashSet = __webpack_require__(/*! ./_hashSet */ \"./node_modules/lodash/_hashSet.js\");\n\n/**\n * Creates a hash object.\n *\n * @private\n * @constructor\n * @param {Array} [entries] The key-value pairs to cache.\n */\nfunction Hash(entries) {\n  var index = -1,\n      length = entries == null ? 0 : entries.length;\n\n  this.clear();\n  while (++index < length) {\n    var entry = entries[index];\n    this.set(entry[0], entry[1]);\n  }\n}\n\n// Add methods to `Hash`.\nHash.prototype.clear = hashClear;\nHash.prototype['delete'] = hashDelete;\nHash.prototype.get = hashGet;\nHash.prototype.has = hashHas;\nHash.prototype.set = hashSet;\n\nmodule.exports = Hash;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Hash.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_ListCache.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_ListCache.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var listCacheClear = __webpack_require__(/*! ./_listCacheClear */ \"./node_modules/lodash/_listCacheClear.js\"),\n    listCacheDelete = __webpack_require__(/*! ./_listCacheDelete */ \"./node_modules/lodash/_listCacheDelete.js\"),\n    listCacheGet = __webpack_require__(/*! ./_listCacheGet */ \"./node_modules/lodash/_listCacheGet.js\"),\n    listCacheHas = __webpack_require__(/*! ./_listCacheHas */ \"./node_modules/lodash/_listCacheHas.js\"),\n    listCacheSet = __webpack_require__(/*! ./_listCacheSet */ \"./node_modules/lodash/_listCacheSet.js\");\n\n/**\n * Creates an list cache object.\n *\n * @private\n * @constructor\n * @param {Array} [entries] The key-value pairs to cache.\n */\nfunction ListCache(entries) {\n  var index = -1,\n      length = entries == null ? 0 : entries.length;\n\n  this.clear();\n  while (++index < length) {\n    var entry = entries[index];\n    this.set(entry[0], entry[1]);\n  }\n}\n\n// Add methods to `ListCache`.\nListCache.prototype.clear = listCacheClear;\nListCache.prototype['delete'] = listCacheDelete;\nListCache.prototype.get = listCacheGet;\nListCache.prototype.has = listCacheHas;\nListCache.prototype.set = listCacheSet;\n\nmodule.exports = ListCache;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_ListCache.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Map.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/_Map.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\"),\n    root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/* Built-in method references that are verified to be native. */\nvar Map = getNative(root, 'Map');\n\nmodule.exports = Map;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Map.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_MapCache.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_MapCache.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var mapCacheClear = __webpack_require__(/*! ./_mapCacheClear */ \"./node_modules/lodash/_mapCacheClear.js\"),\n    mapCacheDelete = __webpack_require__(/*! ./_mapCacheDelete */ \"./node_modules/lodash/_mapCacheDelete.js\"),\n    mapCacheGet = __webpack_require__(/*! ./_mapCacheGet */ \"./node_modules/lodash/_mapCacheGet.js\"),\n    mapCacheHas = __webpack_require__(/*! ./_mapCacheHas */ \"./node_modules/lodash/_mapCacheHas.js\"),\n    mapCacheSet = __webpack_require__(/*! ./_mapCacheSet */ \"./node_modules/lodash/_mapCacheSet.js\");\n\n/**\n * Creates a map cache object to store key-value pairs.\n *\n * @private\n * @constructor\n * @param {Array} [entries] The key-value pairs to cache.\n */\nfunction MapCache(entries) {\n  var index = -1,\n      length = entries == null ? 0 : entries.length;\n\n  this.clear();\n  while (++index < length) {\n    var entry = entries[index];\n    this.set(entry[0], entry[1]);\n  }\n}\n\n// Add methods to `MapCache`.\nMapCache.prototype.clear = mapCacheClear;\nMapCache.prototype['delete'] = mapCacheDelete;\nMapCache.prototype.get = mapCacheGet;\nMapCache.prototype.has = mapCacheHas;\nMapCache.prototype.set = mapCacheSet;\n\nmodule.exports = MapCache;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_MapCache.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Promise.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_Promise.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\"),\n    root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/* Built-in method references that are verified to be native. */\nvar Promise = getNative(root, 'Promise');\n\nmodule.exports = Promise;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Promise.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Set.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/_Set.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\"),\n    root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/* Built-in method references that are verified to be native. */\nvar Set = getNative(root, 'Set');\n\nmodule.exports = Set;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Set.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_SetCache.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_SetCache.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var MapCache = __webpack_require__(/*! ./_MapCache */ \"./node_modules/lodash/_MapCache.js\"),\n    setCacheAdd = __webpack_require__(/*! ./_setCacheAdd */ \"./node_modules/lodash/_setCacheAdd.js\"),\n    setCacheHas = __webpack_require__(/*! ./_setCacheHas */ \"./node_modules/lodash/_setCacheHas.js\");\n\n/**\n *\n * Creates an array cache object to store unique values.\n *\n * @private\n * @constructor\n * @param {Array} [values] The values to cache.\n */\nfunction SetCache(values) {\n  var index = -1,\n      length = values == null ? 0 : values.length;\n\n  this.__data__ = new MapCache;\n  while (++index < length) {\n    this.add(values[index]);\n  }\n}\n\n// Add methods to `SetCache`.\nSetCache.prototype.add = SetCache.prototype.push = setCacheAdd;\nSetCache.prototype.has = setCacheHas;\n\nmodule.exports = SetCache;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_SetCache.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Stack.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/_Stack.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var ListCache = __webpack_require__(/*! ./_ListCache */ \"./node_modules/lodash/_ListCache.js\"),\n    stackClear = __webpack_require__(/*! ./_stackClear */ \"./node_modules/lodash/_stackClear.js\"),\n    stackDelete = __webpack_require__(/*! ./_stackDelete */ \"./node_modules/lodash/_stackDelete.js\"),\n    stackGet = __webpack_require__(/*! ./_stackGet */ \"./node_modules/lodash/_stackGet.js\"),\n    stackHas = __webpack_require__(/*! ./_stackHas */ \"./node_modules/lodash/_stackHas.js\"),\n    stackSet = __webpack_require__(/*! ./_stackSet */ \"./node_modules/lodash/_stackSet.js\");\n\n/**\n * Creates a stack cache object to store key-value pairs.\n *\n * @private\n * @constructor\n * @param {Array} [entries] The key-value pairs to cache.\n */\nfunction Stack(entries) {\n  var data = this.__data__ = new ListCache(entries);\n  this.size = data.size;\n}\n\n// Add methods to `Stack`.\nStack.prototype.clear = stackClear;\nStack.prototype['delete'] = stackDelete;\nStack.prototype.get = stackGet;\nStack.prototype.has = stackHas;\nStack.prototype.set = stackSet;\n\nmodule.exports = Stack;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Stack.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Symbol.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/_Symbol.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/** Built-in value references. */\nvar Symbol = root.Symbol;\n\nmodule.exports = Symbol;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Symbol.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_Uint8Array.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_Uint8Array.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/** Built-in value references. */\nvar Uint8Array = root.Uint8Array;\n\nmodule.exports = Uint8Array;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_Uint8Array.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_WeakMap.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_WeakMap.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\"),\n    root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/* Built-in method references that are verified to be native. */\nvar WeakMap = getNative(root, 'WeakMap');\n\nmodule.exports = WeakMap;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_WeakMap.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_apply.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/_apply.js ***!
+  \***************************************/
+/***/ ((module) => {
+
+eval("/**\n * A faster alternative to `Function#apply`, this function invokes `func`\n * with the `this` binding of `thisArg` and the arguments of `args`.\n *\n * @private\n * @param {Function} func The function to invoke.\n * @param {*} thisArg The `this` binding of `func`.\n * @param {Array} args The arguments to invoke `func` with.\n * @returns {*} Returns the result of `func`.\n */\nfunction apply(func, thisArg, args) {\n  switch (args.length) {\n    case 0: return func.call(thisArg);\n    case 1: return func.call(thisArg, args[0]);\n    case 2: return func.call(thisArg, args[0], args[1]);\n    case 3: return func.call(thisArg, args[0], args[1], args[2]);\n  }\n  return func.apply(thisArg, args);\n}\n\nmodule.exports = apply;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_apply.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayEach.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_arrayEach.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `_.forEach` for arrays without support for\n * iteratee shorthands.\n *\n * @private\n * @param {Array} [array] The array to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array} Returns `array`.\n */\nfunction arrayEach(array, iteratee) {\n  var index = -1,\n      length = array == null ? 0 : array.length;\n\n  while (++index < length) {\n    if (iteratee(array[index], index, array) === false) {\n      break;\n    }\n  }\n  return array;\n}\n\nmodule.exports = arrayEach;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayEach.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayFilter.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_arrayFilter.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `_.filter` for arrays without support for\n * iteratee shorthands.\n *\n * @private\n * @param {Array} [array] The array to iterate over.\n * @param {Function} predicate The function invoked per iteration.\n * @returns {Array} Returns the new filtered array.\n */\nfunction arrayFilter(array, predicate) {\n  var index = -1,\n      length = array == null ? 0 : array.length,\n      resIndex = 0,\n      result = [];\n\n  while (++index < length) {\n    var value = array[index];\n    if (predicate(value, index, array)) {\n      result[resIndex++] = value;\n    }\n  }\n  return result;\n}\n\nmodule.exports = arrayFilter;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayFilter.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayIncludes.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_arrayIncludes.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIndexOf = __webpack_require__(/*! ./_baseIndexOf */ \"./node_modules/lodash/_baseIndexOf.js\");\n\n/**\n * A specialized version of `_.includes` for arrays without support for\n * specifying an index to search from.\n *\n * @private\n * @param {Array} [array] The array to inspect.\n * @param {*} target The value to search for.\n * @returns {boolean} Returns `true` if `target` is found, else `false`.\n */\nfunction arrayIncludes(array, value) {\n  var length = array == null ? 0 : array.length;\n  return !!length && baseIndexOf(array, value, 0) > -1;\n}\n\nmodule.exports = arrayIncludes;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayIncludes.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayIncludesWith.js":
+/*!***************************************************!*\
+  !*** ./node_modules/lodash/_arrayIncludesWith.js ***!
+  \***************************************************/
+/***/ ((module) => {
+
+eval("/**\n * This function is like `arrayIncludes` except that it accepts a comparator.\n *\n * @private\n * @param {Array} [array] The array to inspect.\n * @param {*} target The value to search for.\n * @param {Function} comparator The comparator invoked per element.\n * @returns {boolean} Returns `true` if `target` is found, else `false`.\n */\nfunction arrayIncludesWith(array, value, comparator) {\n  var index = -1,\n      length = array == null ? 0 : array.length;\n\n  while (++index < length) {\n    if (comparator(value, array[index])) {\n      return true;\n    }\n  }\n  return false;\n}\n\nmodule.exports = arrayIncludesWith;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayIncludesWith.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayLikeKeys.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_arrayLikeKeys.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseTimes = __webpack_require__(/*! ./_baseTimes */ \"./node_modules/lodash/_baseTimes.js\"),\n    isArguments = __webpack_require__(/*! ./isArguments */ \"./node_modules/lodash/isArguments.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isBuffer = __webpack_require__(/*! ./isBuffer */ \"./node_modules/lodash/isBuffer.js\"),\n    isIndex = __webpack_require__(/*! ./_isIndex */ \"./node_modules/lodash/_isIndex.js\"),\n    isTypedArray = __webpack_require__(/*! ./isTypedArray */ \"./node_modules/lodash/isTypedArray.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Creates an array of the enumerable property names of the array-like `value`.\n *\n * @private\n * @param {*} value The value to query.\n * @param {boolean} inherited Specify returning inherited property names.\n * @returns {Array} Returns the array of property names.\n */\nfunction arrayLikeKeys(value, inherited) {\n  var isArr = isArray(value),\n      isArg = !isArr && isArguments(value),\n      isBuff = !isArr && !isArg && isBuffer(value),\n      isType = !isArr && !isArg && !isBuff && isTypedArray(value),\n      skipIndexes = isArr || isArg || isBuff || isType,\n      result = skipIndexes ? baseTimes(value.length, String) : [],\n      length = result.length;\n\n  for (var key in value) {\n    if ((inherited || hasOwnProperty.call(value, key)) &&\n        !(skipIndexes && (\n           // Safari 9 has enumerable `arguments.length` in strict mode.\n           key == 'length' ||\n           // Node.js 0.10 has enumerable non-index properties on buffers.\n           (isBuff && (key == 'offset' || key == 'parent')) ||\n           // PhantomJS 2 has enumerable non-index properties on typed arrays.\n           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||\n           // Skip index properties.\n           isIndex(key, length)\n        ))) {\n      result.push(key);\n    }\n  }\n  return result;\n}\n\nmodule.exports = arrayLikeKeys;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayLikeKeys.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayMap.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_arrayMap.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `_.map` for arrays without support for iteratee\n * shorthands.\n *\n * @private\n * @param {Array} [array] The array to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array} Returns the new mapped array.\n */\nfunction arrayMap(array, iteratee) {\n  var index = -1,\n      length = array == null ? 0 : array.length,\n      result = Array(length);\n\n  while (++index < length) {\n    result[index] = iteratee(array[index], index, array);\n  }\n  return result;\n}\n\nmodule.exports = arrayMap;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayMap.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayPush.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_arrayPush.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Appends the elements of `values` to `array`.\n *\n * @private\n * @param {Array} array The array to modify.\n * @param {Array} values The values to append.\n * @returns {Array} Returns `array`.\n */\nfunction arrayPush(array, values) {\n  var index = -1,\n      length = values.length,\n      offset = array.length;\n\n  while (++index < length) {\n    array[offset + index] = values[index];\n  }\n  return array;\n}\n\nmodule.exports = arrayPush;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayPush.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arrayReduce.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_arrayReduce.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `_.reduce` for arrays without support for\n * iteratee shorthands.\n *\n * @private\n * @param {Array} [array] The array to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @param {*} [accumulator] The initial value.\n * @param {boolean} [initAccum] Specify using the first element of `array` as\n *  the initial value.\n * @returns {*} Returns the accumulated value.\n */\nfunction arrayReduce(array, iteratee, accumulator, initAccum) {\n  var index = -1,\n      length = array == null ? 0 : array.length;\n\n  if (initAccum && length) {\n    accumulator = array[++index];\n  }\n  while (++index < length) {\n    accumulator = iteratee(accumulator, array[index], index, array);\n  }\n  return accumulator;\n}\n\nmodule.exports = arrayReduce;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arrayReduce.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_arraySome.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_arraySome.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `_.some` for arrays without support for iteratee\n * shorthands.\n *\n * @private\n * @param {Array} [array] The array to iterate over.\n * @param {Function} predicate The function invoked per iteration.\n * @returns {boolean} Returns `true` if any element passes the predicate check,\n *  else `false`.\n */\nfunction arraySome(array, predicate) {\n  var index = -1,\n      length = array == null ? 0 : array.length;\n\n  while (++index < length) {\n    if (predicate(array[index], index, array)) {\n      return true;\n    }\n  }\n  return false;\n}\n\nmodule.exports = arraySome;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_arraySome.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_asciiSize.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_asciiSize.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseProperty = __webpack_require__(/*! ./_baseProperty */ \"./node_modules/lodash/_baseProperty.js\");\n\n/**\n * Gets the size of an ASCII `string`.\n *\n * @private\n * @param {string} string The string inspect.\n * @returns {number} Returns the string size.\n */\nvar asciiSize = baseProperty('length');\n\nmodule.exports = asciiSize;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_asciiSize.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_assignMergeValue.js":
+/*!**************************************************!*\
+  !*** ./node_modules/lodash/_assignMergeValue.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ \"./node_modules/lodash/_baseAssignValue.js\"),\n    eq = __webpack_require__(/*! ./eq */ \"./node_modules/lodash/eq.js\");\n\n/**\n * This function is like `assignValue` except that it doesn't assign\n * `undefined` values.\n *\n * @private\n * @param {Object} object The object to modify.\n * @param {string} key The key of the property to assign.\n * @param {*} value The value to assign.\n */\nfunction assignMergeValue(object, key, value) {\n  if ((value !== undefined && !eq(object[key], value)) ||\n      (value === undefined && !(key in object))) {\n    baseAssignValue(object, key, value);\n  }\n}\n\nmodule.exports = assignMergeValue;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_assignMergeValue.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_assignValue.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_assignValue.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ \"./node_modules/lodash/_baseAssignValue.js\"),\n    eq = __webpack_require__(/*! ./eq */ \"./node_modules/lodash/eq.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Assigns `value` to `key` of `object` if the existing value is not equivalent\n * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)\n * for equality comparisons.\n *\n * @private\n * @param {Object} object The object to modify.\n * @param {string} key The key of the property to assign.\n * @param {*} value The value to assign.\n */\nfunction assignValue(object, key, value) {\n  var objValue = object[key];\n  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||\n      (value === undefined && !(key in object))) {\n    baseAssignValue(object, key, value);\n  }\n}\n\nmodule.exports = assignValue;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_assignValue.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_assocIndexOf.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_assocIndexOf.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var eq = __webpack_require__(/*! ./eq */ \"./node_modules/lodash/eq.js\");\n\n/**\n * Gets the index at which the `key` is found in `array` of key-value pairs.\n *\n * @private\n * @param {Array} array The array to inspect.\n * @param {*} key The key to search for.\n * @returns {number} Returns the index of the matched value, else `-1`.\n */\nfunction assocIndexOf(array, key) {\n  var length = array.length;\n  while (length--) {\n    if (eq(array[length][0], key)) {\n      return length;\n    }\n  }\n  return -1;\n}\n\nmodule.exports = assocIndexOf;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_assocIndexOf.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseAssign.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseAssign.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var copyObject = __webpack_require__(/*! ./_copyObject */ \"./node_modules/lodash/_copyObject.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\");\n\n/**\n * The base implementation of `_.assign` without support for multiple sources\n * or `customizer` functions.\n *\n * @private\n * @param {Object} object The destination object.\n * @param {Object} source The source object.\n * @returns {Object} Returns `object`.\n */\nfunction baseAssign(object, source) {\n  return object && copyObject(source, keys(source), object);\n}\n\nmodule.exports = baseAssign;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseAssign.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseAssignIn.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_baseAssignIn.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var copyObject = __webpack_require__(/*! ./_copyObject */ \"./node_modules/lodash/_copyObject.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\");\n\n/**\n * The base implementation of `_.assignIn` without support for multiple sources\n * or `customizer` functions.\n *\n * @private\n * @param {Object} object The destination object.\n * @param {Object} source The source object.\n * @returns {Object} Returns `object`.\n */\nfunction baseAssignIn(object, source) {\n  return object && copyObject(source, keysIn(source), object);\n}\n\nmodule.exports = baseAssignIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseAssignIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseAssignValue.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_baseAssignValue.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var defineProperty = __webpack_require__(/*! ./_defineProperty */ \"./node_modules/lodash/_defineProperty.js\");\n\n/**\n * The base implementation of `assignValue` and `assignMergeValue` without\n * value checks.\n *\n * @private\n * @param {Object} object The object to modify.\n * @param {string} key The key of the property to assign.\n * @param {*} value The value to assign.\n */\nfunction baseAssignValue(object, key, value) {\n  if (key == '__proto__' && defineProperty) {\n    defineProperty(object, key, {\n      'configurable': true,\n      'enumerable': true,\n      'value': value,\n      'writable': true\n    });\n  } else {\n    object[key] = value;\n  }\n}\n\nmodule.exports = baseAssignValue;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseAssignValue.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseClone.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseClone.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Stack = __webpack_require__(/*! ./_Stack */ \"./node_modules/lodash/_Stack.js\"),\n    arrayEach = __webpack_require__(/*! ./_arrayEach */ \"./node_modules/lodash/_arrayEach.js\"),\n    assignValue = __webpack_require__(/*! ./_assignValue */ \"./node_modules/lodash/_assignValue.js\"),\n    baseAssign = __webpack_require__(/*! ./_baseAssign */ \"./node_modules/lodash/_baseAssign.js\"),\n    baseAssignIn = __webpack_require__(/*! ./_baseAssignIn */ \"./node_modules/lodash/_baseAssignIn.js\"),\n    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ \"./node_modules/lodash/_cloneBuffer.js\"),\n    copyArray = __webpack_require__(/*! ./_copyArray */ \"./node_modules/lodash/_copyArray.js\"),\n    copySymbols = __webpack_require__(/*! ./_copySymbols */ \"./node_modules/lodash/_copySymbols.js\"),\n    copySymbolsIn = __webpack_require__(/*! ./_copySymbolsIn */ \"./node_modules/lodash/_copySymbolsIn.js\"),\n    getAllKeys = __webpack_require__(/*! ./_getAllKeys */ \"./node_modules/lodash/_getAllKeys.js\"),\n    getAllKeysIn = __webpack_require__(/*! ./_getAllKeysIn */ \"./node_modules/lodash/_getAllKeysIn.js\"),\n    getTag = __webpack_require__(/*! ./_getTag */ \"./node_modules/lodash/_getTag.js\"),\n    initCloneArray = __webpack_require__(/*! ./_initCloneArray */ \"./node_modules/lodash/_initCloneArray.js\"),\n    initCloneByTag = __webpack_require__(/*! ./_initCloneByTag */ \"./node_modules/lodash/_initCloneByTag.js\"),\n    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ \"./node_modules/lodash/_initCloneObject.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isBuffer = __webpack_require__(/*! ./isBuffer */ \"./node_modules/lodash/isBuffer.js\"),\n    isMap = __webpack_require__(/*! ./isMap */ \"./node_modules/lodash/isMap.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    isSet = __webpack_require__(/*! ./isSet */ \"./node_modules/lodash/isSet.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\");\n\n/** Used to compose bitmasks for cloning. */\nvar CLONE_DEEP_FLAG = 1,\n    CLONE_FLAT_FLAG = 2,\n    CLONE_SYMBOLS_FLAG = 4;\n\n/** `Object#toString` result references. */\nvar argsTag = '[object Arguments]',\n    arrayTag = '[object Array]',\n    boolTag = '[object Boolean]',\n    dateTag = '[object Date]',\n    errorTag = '[object Error]',\n    funcTag = '[object Function]',\n    genTag = '[object GeneratorFunction]',\n    mapTag = '[object Map]',\n    numberTag = '[object Number]',\n    objectTag = '[object Object]',\n    regexpTag = '[object RegExp]',\n    setTag = '[object Set]',\n    stringTag = '[object String]',\n    symbolTag = '[object Symbol]',\n    weakMapTag = '[object WeakMap]';\n\nvar arrayBufferTag = '[object ArrayBuffer]',\n    dataViewTag = '[object DataView]',\n    float32Tag = '[object Float32Array]',\n    float64Tag = '[object Float64Array]',\n    int8Tag = '[object Int8Array]',\n    int16Tag = '[object Int16Array]',\n    int32Tag = '[object Int32Array]',\n    uint8Tag = '[object Uint8Array]',\n    uint8ClampedTag = '[object Uint8ClampedArray]',\n    uint16Tag = '[object Uint16Array]',\n    uint32Tag = '[object Uint32Array]';\n\n/** Used to identify `toStringTag` values supported by `_.clone`. */\nvar cloneableTags = {};\ncloneableTags[argsTag] = cloneableTags[arrayTag] =\ncloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] =\ncloneableTags[boolTag] = cloneableTags[dateTag] =\ncloneableTags[float32Tag] = cloneableTags[float64Tag] =\ncloneableTags[int8Tag] = cloneableTags[int16Tag] =\ncloneableTags[int32Tag] = cloneableTags[mapTag] =\ncloneableTags[numberTag] = cloneableTags[objectTag] =\ncloneableTags[regexpTag] = cloneableTags[setTag] =\ncloneableTags[stringTag] = cloneableTags[symbolTag] =\ncloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] =\ncloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;\ncloneableTags[errorTag] = cloneableTags[funcTag] =\ncloneableTags[weakMapTag] = false;\n\n/**\n * The base implementation of `_.clone` and `_.cloneDeep` which tracks\n * traversed objects.\n *\n * @private\n * @param {*} value The value to clone.\n * @param {boolean} bitmask The bitmask flags.\n *  1 - Deep clone\n *  2 - Flatten inherited properties\n *  4 - Clone symbols\n * @param {Function} [customizer] The function to customize cloning.\n * @param {string} [key] The key of `value`.\n * @param {Object} [object] The parent object of `value`.\n * @param {Object} [stack] Tracks traversed objects and their clone counterparts.\n * @returns {*} Returns the cloned value.\n */\nfunction baseClone(value, bitmask, customizer, key, object, stack) {\n  var result,\n      isDeep = bitmask & CLONE_DEEP_FLAG,\n      isFlat = bitmask & CLONE_FLAT_FLAG,\n      isFull = bitmask & CLONE_SYMBOLS_FLAG;\n\n  if (customizer) {\n    result = object ? customizer(value, key, object, stack) : customizer(value);\n  }\n  if (result !== undefined) {\n    return result;\n  }\n  if (!isObject(value)) {\n    return value;\n  }\n  var isArr = isArray(value);\n  if (isArr) {\n    result = initCloneArray(value);\n    if (!isDeep) {\n      return copyArray(value, result);\n    }\n  } else {\n    var tag = getTag(value),\n        isFunc = tag == funcTag || tag == genTag;\n\n    if (isBuffer(value)) {\n      return cloneBuffer(value, isDeep);\n    }\n    if (tag == objectTag || tag == argsTag || (isFunc && !object)) {\n      result = (isFlat || isFunc) ? {} : initCloneObject(value);\n      if (!isDeep) {\n        return isFlat\n          ? copySymbolsIn(value, baseAssignIn(result, value))\n          : copySymbols(value, baseAssign(result, value));\n      }\n    } else {\n      if (!cloneableTags[tag]) {\n        return object ? value : {};\n      }\n      result = initCloneByTag(value, tag, isDeep);\n    }\n  }\n  // Check for circular references and return its corresponding clone.\n  stack || (stack = new Stack);\n  var stacked = stack.get(value);\n  if (stacked) {\n    return stacked;\n  }\n  stack.set(value, result);\n\n  if (isSet(value)) {\n    value.forEach(function(subValue) {\n      result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));\n    });\n  } else if (isMap(value)) {\n    value.forEach(function(subValue, key) {\n      result.set(key, baseClone(subValue, bitmask, customizer, key, value, stack));\n    });\n  }\n\n  var keysFunc = isFull\n    ? (isFlat ? getAllKeysIn : getAllKeys)\n    : (isFlat ? keysIn : keys);\n\n  var props = isArr ? undefined : keysFunc(value);\n  arrayEach(props || value, function(subValue, key) {\n    if (props) {\n      key = subValue;\n      subValue = value[key];\n    }\n    // Recursively populate clone (susceptible to call stack limits).\n    assignValue(result, key, baseClone(subValue, bitmask, customizer, key, value, stack));\n  });\n  return result;\n}\n\nmodule.exports = baseClone;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseClone.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseCreate.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseCreate.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\");\n\n/** Built-in value references. */\nvar objectCreate = Object.create;\n\n/**\n * The base implementation of `_.create` without support for assigning\n * properties to the created object.\n *\n * @private\n * @param {Object} proto The object to inherit from.\n * @returns {Object} Returns the new object.\n */\nvar baseCreate = (function() {\n  function object() {}\n  return function(proto) {\n    if (!isObject(proto)) {\n      return {};\n    }\n    if (objectCreate) {\n      return objectCreate(proto);\n    }\n    object.prototype = proto;\n    var result = new object;\n    object.prototype = undefined;\n    return result;\n  };\n}());\n\nmodule.exports = baseCreate;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseCreate.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseEach.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseEach.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseForOwn = __webpack_require__(/*! ./_baseForOwn */ \"./node_modules/lodash/_baseForOwn.js\"),\n    createBaseEach = __webpack_require__(/*! ./_createBaseEach */ \"./node_modules/lodash/_createBaseEach.js\");\n\n/**\n * The base implementation of `_.forEach` without support for iteratee shorthands.\n *\n * @private\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array|Object} Returns `collection`.\n */\nvar baseEach = createBaseEach(baseForOwn);\n\nmodule.exports = baseEach;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseEach.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseExtremum.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_baseExtremum.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isSymbol = __webpack_require__(/*! ./isSymbol */ \"./node_modules/lodash/isSymbol.js\");\n\n/**\n * The base implementation of methods like `_.max` and `_.min` which accepts a\n * `comparator` to determine the extremum value.\n *\n * @private\n * @param {Array} array The array to iterate over.\n * @param {Function} iteratee The iteratee invoked per iteration.\n * @param {Function} comparator The comparator used to compare values.\n * @returns {*} Returns the extremum value.\n */\nfunction baseExtremum(array, iteratee, comparator) {\n  var index = -1,\n      length = array.length;\n\n  while (++index < length) {\n    var value = array[index],\n        current = iteratee(value);\n\n    if (current != null && (computed === undefined\n          ? (current === current && !isSymbol(current))\n          : comparator(current, computed)\n        )) {\n      var computed = current,\n          result = value;\n    }\n  }\n  return result;\n}\n\nmodule.exports = baseExtremum;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseExtremum.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseFilter.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseFilter.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseEach = __webpack_require__(/*! ./_baseEach */ \"./node_modules/lodash/_baseEach.js\");\n\n/**\n * The base implementation of `_.filter` without support for iteratee shorthands.\n *\n * @private\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} predicate The function invoked per iteration.\n * @returns {Array} Returns the new filtered array.\n */\nfunction baseFilter(collection, predicate) {\n  var result = [];\n  baseEach(collection, function(value, index, collection) {\n    if (predicate(value, index, collection)) {\n      result.push(value);\n    }\n  });\n  return result;\n}\n\nmodule.exports = baseFilter;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseFilter.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseFindIndex.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_baseFindIndex.js ***!
+  \***********************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.findIndex` and `_.findLastIndex` without\n * support for iteratee shorthands.\n *\n * @private\n * @param {Array} array The array to inspect.\n * @param {Function} predicate The function invoked per iteration.\n * @param {number} fromIndex The index to search from.\n * @param {boolean} [fromRight] Specify iterating from right to left.\n * @returns {number} Returns the index of the matched value, else `-1`.\n */\nfunction baseFindIndex(array, predicate, fromIndex, fromRight) {\n  var length = array.length,\n      index = fromIndex + (fromRight ? 1 : -1);\n\n  while ((fromRight ? index-- : ++index < length)) {\n    if (predicate(array[index], index, array)) {\n      return index;\n    }\n  }\n  return -1;\n}\n\nmodule.exports = baseFindIndex;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseFindIndex.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseFlatten.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseFlatten.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayPush = __webpack_require__(/*! ./_arrayPush */ \"./node_modules/lodash/_arrayPush.js\"),\n    isFlattenable = __webpack_require__(/*! ./_isFlattenable */ \"./node_modules/lodash/_isFlattenable.js\");\n\n/**\n * The base implementation of `_.flatten` with support for restricting flattening.\n *\n * @private\n * @param {Array} array The array to flatten.\n * @param {number} depth The maximum recursion depth.\n * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.\n * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.\n * @param {Array} [result=[]] The initial result value.\n * @returns {Array} Returns the new flattened array.\n */\nfunction baseFlatten(array, depth, predicate, isStrict, result) {\n  var index = -1,\n      length = array.length;\n\n  predicate || (predicate = isFlattenable);\n  result || (result = []);\n\n  while (++index < length) {\n    var value = array[index];\n    if (depth > 0 && predicate(value)) {\n      if (depth > 1) {\n        // Recursively flatten arrays (susceptible to call stack limits).\n        baseFlatten(value, depth - 1, predicate, isStrict, result);\n      } else {\n        arrayPush(result, value);\n      }\n    } else if (!isStrict) {\n      result[result.length] = value;\n    }\n  }\n  return result;\n}\n\nmodule.exports = baseFlatten;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseFlatten.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseFor.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_baseFor.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var createBaseFor = __webpack_require__(/*! ./_createBaseFor */ \"./node_modules/lodash/_createBaseFor.js\");\n\n/**\n * The base implementation of `baseForOwn` which iterates over `object`\n * properties returned by `keysFunc` and invokes `iteratee` for each property.\n * Iteratee functions may exit iteration early by explicitly returning `false`.\n *\n * @private\n * @param {Object} object The object to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @param {Function} keysFunc The function to get the keys of `object`.\n * @returns {Object} Returns `object`.\n */\nvar baseFor = createBaseFor();\n\nmodule.exports = baseFor;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseFor.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseForOwn.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseForOwn.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFor = __webpack_require__(/*! ./_baseFor */ \"./node_modules/lodash/_baseFor.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\");\n\n/**\n * The base implementation of `_.forOwn` without support for iteratee shorthands.\n *\n * @private\n * @param {Object} object The object to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Object} Returns `object`.\n */\nfunction baseForOwn(object, iteratee) {\n  return object && baseFor(object, iteratee, keys);\n}\n\nmodule.exports = baseForOwn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseForOwn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseGet.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_baseGet.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var castPath = __webpack_require__(/*! ./_castPath */ \"./node_modules/lodash/_castPath.js\"),\n    toKey = __webpack_require__(/*! ./_toKey */ \"./node_modules/lodash/_toKey.js\");\n\n/**\n * The base implementation of `_.get` without support for default values.\n *\n * @private\n * @param {Object} object The object to query.\n * @param {Array|string} path The path of the property to get.\n * @returns {*} Returns the resolved value.\n */\nfunction baseGet(object, path) {\n  path = castPath(path, object);\n\n  var index = 0,\n      length = path.length;\n\n  while (object != null && index < length) {\n    object = object[toKey(path[index++])];\n  }\n  return (index && index == length) ? object : undefined;\n}\n\nmodule.exports = baseGet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseGet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseGetAllKeys.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_baseGetAllKeys.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayPush = __webpack_require__(/*! ./_arrayPush */ \"./node_modules/lodash/_arrayPush.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/**\n * The base implementation of `getAllKeys` and `getAllKeysIn` which uses\n * `keysFunc` and `symbolsFunc` to get the enumerable property names and\n * symbols of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @param {Function} keysFunc The function to get the keys of `object`.\n * @param {Function} symbolsFunc The function to get the symbols of `object`.\n * @returns {Array} Returns the array of property names and symbols.\n */\nfunction baseGetAllKeys(object, keysFunc, symbolsFunc) {\n  var result = keysFunc(object);\n  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));\n}\n\nmodule.exports = baseGetAllKeys;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseGetAllKeys.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseGetTag.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseGetTag.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Symbol = __webpack_require__(/*! ./_Symbol */ \"./node_modules/lodash/_Symbol.js\"),\n    getRawTag = __webpack_require__(/*! ./_getRawTag */ \"./node_modules/lodash/_getRawTag.js\"),\n    objectToString = __webpack_require__(/*! ./_objectToString */ \"./node_modules/lodash/_objectToString.js\");\n\n/** `Object#toString` result references. */\nvar nullTag = '[object Null]',\n    undefinedTag = '[object Undefined]';\n\n/** Built-in value references. */\nvar symToStringTag = Symbol ? Symbol.toStringTag : undefined;\n\n/**\n * The base implementation of `getTag` without fallbacks for buggy environments.\n *\n * @private\n * @param {*} value The value to query.\n * @returns {string} Returns the `toStringTag`.\n */\nfunction baseGetTag(value) {\n  if (value == null) {\n    return value === undefined ? undefinedTag : nullTag;\n  }\n  return (symToStringTag && symToStringTag in Object(value))\n    ? getRawTag(value)\n    : objectToString(value);\n}\n\nmodule.exports = baseGetTag;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseGetTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseGt.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/_baseGt.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.gt` which doesn't coerce arguments.\n *\n * @private\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @returns {boolean} Returns `true` if `value` is greater than `other`,\n *  else `false`.\n */\nfunction baseGt(value, other) {\n  return value > other;\n}\n\nmodule.exports = baseGt;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseGt.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseHas.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_baseHas.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * The base implementation of `_.has` without support for deep paths.\n *\n * @private\n * @param {Object} [object] The object to query.\n * @param {Array|string} key The key to check.\n * @returns {boolean} Returns `true` if `key` exists, else `false`.\n */\nfunction baseHas(object, key) {\n  return object != null && hasOwnProperty.call(object, key);\n}\n\nmodule.exports = baseHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseHasIn.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseHasIn.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.hasIn` without support for deep paths.\n *\n * @private\n * @param {Object} [object] The object to query.\n * @param {Array|string} key The key to check.\n * @returns {boolean} Returns `true` if `key` exists, else `false`.\n */\nfunction baseHasIn(object, key) {\n  return object != null && key in Object(object);\n}\n\nmodule.exports = baseHasIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseHasIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIndexOf.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseIndexOf.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFindIndex = __webpack_require__(/*! ./_baseFindIndex */ \"./node_modules/lodash/_baseFindIndex.js\"),\n    baseIsNaN = __webpack_require__(/*! ./_baseIsNaN */ \"./node_modules/lodash/_baseIsNaN.js\"),\n    strictIndexOf = __webpack_require__(/*! ./_strictIndexOf */ \"./node_modules/lodash/_strictIndexOf.js\");\n\n/**\n * The base implementation of `_.indexOf` without `fromIndex` bounds checks.\n *\n * @private\n * @param {Array} array The array to inspect.\n * @param {*} value The value to search for.\n * @param {number} fromIndex The index to search from.\n * @returns {number} Returns the index of the matched value, else `-1`.\n */\nfunction baseIndexOf(array, value, fromIndex) {\n  return value === value\n    ? strictIndexOf(array, value, fromIndex)\n    : baseFindIndex(array, baseIsNaN, fromIndex);\n}\n\nmodule.exports = baseIndexOf;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIndexOf.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsArguments.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_baseIsArguments.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar argsTag = '[object Arguments]';\n\n/**\n * The base implementation of `_.isArguments`.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is an `arguments` object,\n */\nfunction baseIsArguments(value) {\n  return isObjectLike(value) && baseGetTag(value) == argsTag;\n}\n\nmodule.exports = baseIsArguments;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsArguments.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsEqual.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseIsEqual.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsEqualDeep = __webpack_require__(/*! ./_baseIsEqualDeep */ \"./node_modules/lodash/_baseIsEqualDeep.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/**\n * The base implementation of `_.isEqual` which supports partial comparisons\n * and tracks traversed objects.\n *\n * @private\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @param {boolean} bitmask The bitmask flags.\n *  1 - Unordered comparison\n *  2 - Partial comparison\n * @param {Function} [customizer] The function to customize comparisons.\n * @param {Object} [stack] Tracks traversed `value` and `other` objects.\n * @returns {boolean} Returns `true` if the values are equivalent, else `false`.\n */\nfunction baseIsEqual(value, other, bitmask, customizer, stack) {\n  if (value === other) {\n    return true;\n  }\n  if (value == null || other == null || (!isObjectLike(value) && !isObjectLike(other))) {\n    return value !== value && other !== other;\n  }\n  return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);\n}\n\nmodule.exports = baseIsEqual;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsEqual.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsEqualDeep.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_baseIsEqualDeep.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Stack = __webpack_require__(/*! ./_Stack */ \"./node_modules/lodash/_Stack.js\"),\n    equalArrays = __webpack_require__(/*! ./_equalArrays */ \"./node_modules/lodash/_equalArrays.js\"),\n    equalByTag = __webpack_require__(/*! ./_equalByTag */ \"./node_modules/lodash/_equalByTag.js\"),\n    equalObjects = __webpack_require__(/*! ./_equalObjects */ \"./node_modules/lodash/_equalObjects.js\"),\n    getTag = __webpack_require__(/*! ./_getTag */ \"./node_modules/lodash/_getTag.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isBuffer = __webpack_require__(/*! ./isBuffer */ \"./node_modules/lodash/isBuffer.js\"),\n    isTypedArray = __webpack_require__(/*! ./isTypedArray */ \"./node_modules/lodash/isTypedArray.js\");\n\n/** Used to compose bitmasks for value comparisons. */\nvar COMPARE_PARTIAL_FLAG = 1;\n\n/** `Object#toString` result references. */\nvar argsTag = '[object Arguments]',\n    arrayTag = '[object Array]',\n    objectTag = '[object Object]';\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * A specialized version of `baseIsEqual` for arrays and objects which performs\n * deep comparisons and tracks traversed objects enabling objects with circular\n * references to be compared.\n *\n * @private\n * @param {Object} object The object to compare.\n * @param {Object} other The other object to compare.\n * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.\n * @param {Function} customizer The function to customize comparisons.\n * @param {Function} equalFunc The function to determine equivalents of values.\n * @param {Object} [stack] Tracks traversed `object` and `other` objects.\n * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.\n */\nfunction baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {\n  var objIsArr = isArray(object),\n      othIsArr = isArray(other),\n      objTag = objIsArr ? arrayTag : getTag(object),\n      othTag = othIsArr ? arrayTag : getTag(other);\n\n  objTag = objTag == argsTag ? objectTag : objTag;\n  othTag = othTag == argsTag ? objectTag : othTag;\n\n  var objIsObj = objTag == objectTag,\n      othIsObj = othTag == objectTag,\n      isSameTag = objTag == othTag;\n\n  if (isSameTag && isBuffer(object)) {\n    if (!isBuffer(other)) {\n      return false;\n    }\n    objIsArr = true;\n    objIsObj = false;\n  }\n  if (isSameTag && !objIsObj) {\n    stack || (stack = new Stack);\n    return (objIsArr || isTypedArray(object))\n      ? equalArrays(object, other, bitmask, customizer, equalFunc, stack)\n      : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);\n  }\n  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {\n    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),\n        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');\n\n    if (objIsWrapped || othIsWrapped) {\n      var objUnwrapped = objIsWrapped ? object.value() : object,\n          othUnwrapped = othIsWrapped ? other.value() : other;\n\n      stack || (stack = new Stack);\n      return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);\n    }\n  }\n  if (!isSameTag) {\n    return false;\n  }\n  stack || (stack = new Stack);\n  return equalObjects(object, other, bitmask, customizer, equalFunc, stack);\n}\n\nmodule.exports = baseIsEqualDeep;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsEqualDeep.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsMap.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseIsMap.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getTag = __webpack_require__(/*! ./_getTag */ \"./node_modules/lodash/_getTag.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar mapTag = '[object Map]';\n\n/**\n * The base implementation of `_.isMap` without Node.js optimizations.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a map, else `false`.\n */\nfunction baseIsMap(value) {\n  return isObjectLike(value) && getTag(value) == mapTag;\n}\n\nmodule.exports = baseIsMap;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsMap.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsMatch.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseIsMatch.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Stack = __webpack_require__(/*! ./_Stack */ \"./node_modules/lodash/_Stack.js\"),\n    baseIsEqual = __webpack_require__(/*! ./_baseIsEqual */ \"./node_modules/lodash/_baseIsEqual.js\");\n\n/** Used to compose bitmasks for value comparisons. */\nvar COMPARE_PARTIAL_FLAG = 1,\n    COMPARE_UNORDERED_FLAG = 2;\n\n/**\n * The base implementation of `_.isMatch` without support for iteratee shorthands.\n *\n * @private\n * @param {Object} object The object to inspect.\n * @param {Object} source The object of property values to match.\n * @param {Array} matchData The property names, values, and compare flags to match.\n * @param {Function} [customizer] The function to customize comparisons.\n * @returns {boolean} Returns `true` if `object` is a match, else `false`.\n */\nfunction baseIsMatch(object, source, matchData, customizer) {\n  var index = matchData.length,\n      length = index,\n      noCustomizer = !customizer;\n\n  if (object == null) {\n    return !length;\n  }\n  object = Object(object);\n  while (index--) {\n    var data = matchData[index];\n    if ((noCustomizer && data[2])\n          ? data[1] !== object[data[0]]\n          : !(data[0] in object)\n        ) {\n      return false;\n    }\n  }\n  while (++index < length) {\n    data = matchData[index];\n    var key = data[0],\n        objValue = object[key],\n        srcValue = data[1];\n\n    if (noCustomizer && data[2]) {\n      if (objValue === undefined && !(key in object)) {\n        return false;\n      }\n    } else {\n      var stack = new Stack;\n      if (customizer) {\n        var result = customizer(objValue, srcValue, key, object, source, stack);\n      }\n      if (!(result === undefined\n            ? baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG, customizer, stack)\n            : result\n          )) {\n        return false;\n      }\n    }\n  }\n  return true;\n}\n\nmodule.exports = baseIsMatch;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsMatch.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsNaN.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseIsNaN.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.isNaN` without support for number objects.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.\n */\nfunction baseIsNaN(value) {\n  return value !== value;\n}\n\nmodule.exports = baseIsNaN;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsNaN.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsNative.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_baseIsNative.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isFunction = __webpack_require__(/*! ./isFunction */ \"./node_modules/lodash/isFunction.js\"),\n    isMasked = __webpack_require__(/*! ./_isMasked */ \"./node_modules/lodash/_isMasked.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    toSource = __webpack_require__(/*! ./_toSource */ \"./node_modules/lodash/_toSource.js\");\n\n/**\n * Used to match `RegExp`\n * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).\n */\nvar reRegExpChar = /[\\\\^$.*+?()[\\]{}|]/g;\n\n/** Used to detect host constructors (Safari). */\nvar reIsHostCtor = /^\\[object .+?Constructor\\]$/;\n\n/** Used for built-in method references. */\nvar funcProto = Function.prototype,\n    objectProto = Object.prototype;\n\n/** Used to resolve the decompiled source of functions. */\nvar funcToString = funcProto.toString;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/** Used to detect if a method is native. */\nvar reIsNative = RegExp('^' +\n  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\\\$&')\n  .replace(/hasOwnProperty|(function).*?(?=\\\\\\()| for .+?(?=\\\\\\])/g, '$1.*?') + '$'\n);\n\n/**\n * The base implementation of `_.isNative` without bad shim checks.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a native function,\n *  else `false`.\n */\nfunction baseIsNative(value) {\n  if (!isObject(value) || isMasked(value)) {\n    return false;\n  }\n  var pattern = isFunction(value) ? reIsNative : reIsHostCtor;\n  return pattern.test(toSource(value));\n}\n\nmodule.exports = baseIsNative;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsNative.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsSet.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseIsSet.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getTag = __webpack_require__(/*! ./_getTag */ \"./node_modules/lodash/_getTag.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar setTag = '[object Set]';\n\n/**\n * The base implementation of `_.isSet` without Node.js optimizations.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a set, else `false`.\n */\nfunction baseIsSet(value) {\n  return isObjectLike(value) && getTag(value) == setTag;\n}\n\nmodule.exports = baseIsSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIsTypedArray.js":
+/*!**************************************************!*\
+  !*** ./node_modules/lodash/_baseIsTypedArray.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    isLength = __webpack_require__(/*! ./isLength */ \"./node_modules/lodash/isLength.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar argsTag = '[object Arguments]',\n    arrayTag = '[object Array]',\n    boolTag = '[object Boolean]',\n    dateTag = '[object Date]',\n    errorTag = '[object Error]',\n    funcTag = '[object Function]',\n    mapTag = '[object Map]',\n    numberTag = '[object Number]',\n    objectTag = '[object Object]',\n    regexpTag = '[object RegExp]',\n    setTag = '[object Set]',\n    stringTag = '[object String]',\n    weakMapTag = '[object WeakMap]';\n\nvar arrayBufferTag = '[object ArrayBuffer]',\n    dataViewTag = '[object DataView]',\n    float32Tag = '[object Float32Array]',\n    float64Tag = '[object Float64Array]',\n    int8Tag = '[object Int8Array]',\n    int16Tag = '[object Int16Array]',\n    int32Tag = '[object Int32Array]',\n    uint8Tag = '[object Uint8Array]',\n    uint8ClampedTag = '[object Uint8ClampedArray]',\n    uint16Tag = '[object Uint16Array]',\n    uint32Tag = '[object Uint32Array]';\n\n/** Used to identify `toStringTag` values of typed arrays. */\nvar typedArrayTags = {};\ntypedArrayTags[float32Tag] = typedArrayTags[float64Tag] =\ntypedArrayTags[int8Tag] = typedArrayTags[int16Tag] =\ntypedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =\ntypedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =\ntypedArrayTags[uint32Tag] = true;\ntypedArrayTags[argsTag] = typedArrayTags[arrayTag] =\ntypedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =\ntypedArrayTags[dataViewTag] = typedArrayTags[dateTag] =\ntypedArrayTags[errorTag] = typedArrayTags[funcTag] =\ntypedArrayTags[mapTag] = typedArrayTags[numberTag] =\ntypedArrayTags[objectTag] = typedArrayTags[regexpTag] =\ntypedArrayTags[setTag] = typedArrayTags[stringTag] =\ntypedArrayTags[weakMapTag] = false;\n\n/**\n * The base implementation of `_.isTypedArray` without Node.js optimizations.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.\n */\nfunction baseIsTypedArray(value) {\n  return isObjectLike(value) &&\n    isLength(value.length) && !!typedArrayTags[baseGetTag(value)];\n}\n\nmodule.exports = baseIsTypedArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIsTypedArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseIteratee.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_baseIteratee.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseMatches = __webpack_require__(/*! ./_baseMatches */ \"./node_modules/lodash/_baseMatches.js\"),\n    baseMatchesProperty = __webpack_require__(/*! ./_baseMatchesProperty */ \"./node_modules/lodash/_baseMatchesProperty.js\"),\n    identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    property = __webpack_require__(/*! ./property */ \"./node_modules/lodash/property.js\");\n\n/**\n * The base implementation of `_.iteratee`.\n *\n * @private\n * @param {*} [value=_.identity] The value to convert to an iteratee.\n * @returns {Function} Returns the iteratee.\n */\nfunction baseIteratee(value) {\n  // Don't store the `typeof` result in a variable to avoid a JIT bug in Safari 9.\n  // See https://bugs.webkit.org/show_bug.cgi?id=156034 for more details.\n  if (typeof value == 'function') {\n    return value;\n  }\n  if (value == null) {\n    return identity;\n  }\n  if (typeof value == 'object') {\n    return isArray(value)\n      ? baseMatchesProperty(value[0], value[1])\n      : baseMatches(value);\n  }\n  return property(value);\n}\n\nmodule.exports = baseIteratee;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseIteratee.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseKeys.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseKeys.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isPrototype = __webpack_require__(/*! ./_isPrototype */ \"./node_modules/lodash/_isPrototype.js\"),\n    nativeKeys = __webpack_require__(/*! ./_nativeKeys */ \"./node_modules/lodash/_nativeKeys.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names.\n */\nfunction baseKeys(object) {\n  if (!isPrototype(object)) {\n    return nativeKeys(object);\n  }\n  var result = [];\n  for (var key in Object(object)) {\n    if (hasOwnProperty.call(object, key) && key != 'constructor') {\n      result.push(key);\n    }\n  }\n  return result;\n}\n\nmodule.exports = baseKeys;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseKeys.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseKeysIn.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseKeysIn.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    isPrototype = __webpack_require__(/*! ./_isPrototype */ \"./node_modules/lodash/_isPrototype.js\"),\n    nativeKeysIn = __webpack_require__(/*! ./_nativeKeysIn */ \"./node_modules/lodash/_nativeKeysIn.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names.\n */\nfunction baseKeysIn(object) {\n  if (!isObject(object)) {\n    return nativeKeysIn(object);\n  }\n  var isProto = isPrototype(object),\n      result = [];\n\n  for (var key in object) {\n    if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) {\n      result.push(key);\n    }\n  }\n  return result;\n}\n\nmodule.exports = baseKeysIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseKeysIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseLt.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/_baseLt.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.lt` which doesn't coerce arguments.\n *\n * @private\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @returns {boolean} Returns `true` if `value` is less than `other`,\n *  else `false`.\n */\nfunction baseLt(value, other) {\n  return value < other;\n}\n\nmodule.exports = baseLt;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseLt.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseMap.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_baseMap.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseEach = __webpack_require__(/*! ./_baseEach */ \"./node_modules/lodash/_baseEach.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\");\n\n/**\n * The base implementation of `_.map` without support for iteratee shorthands.\n *\n * @private\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array} Returns the new mapped array.\n */\nfunction baseMap(collection, iteratee) {\n  var index = -1,\n      result = isArrayLike(collection) ? Array(collection.length) : [];\n\n  baseEach(collection, function(value, key, collection) {\n    result[++index] = iteratee(value, key, collection);\n  });\n  return result;\n}\n\nmodule.exports = baseMap;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseMap.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseMatches.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseMatches.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsMatch = __webpack_require__(/*! ./_baseIsMatch */ \"./node_modules/lodash/_baseIsMatch.js\"),\n    getMatchData = __webpack_require__(/*! ./_getMatchData */ \"./node_modules/lodash/_getMatchData.js\"),\n    matchesStrictComparable = __webpack_require__(/*! ./_matchesStrictComparable */ \"./node_modules/lodash/_matchesStrictComparable.js\");\n\n/**\n * The base implementation of `_.matches` which doesn't clone `source`.\n *\n * @private\n * @param {Object} source The object of property values to match.\n * @returns {Function} Returns the new spec function.\n */\nfunction baseMatches(source) {\n  var matchData = getMatchData(source);\n  if (matchData.length == 1 && matchData[0][2]) {\n    return matchesStrictComparable(matchData[0][0], matchData[0][1]);\n  }\n  return function(object) {\n    return object === source || baseIsMatch(object, source, matchData);\n  };\n}\n\nmodule.exports = baseMatches;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseMatches.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseMatchesProperty.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/lodash/_baseMatchesProperty.js ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsEqual = __webpack_require__(/*! ./_baseIsEqual */ \"./node_modules/lodash/_baseIsEqual.js\"),\n    get = __webpack_require__(/*! ./get */ \"./node_modules/lodash/get.js\"),\n    hasIn = __webpack_require__(/*! ./hasIn */ \"./node_modules/lodash/hasIn.js\"),\n    isKey = __webpack_require__(/*! ./_isKey */ \"./node_modules/lodash/_isKey.js\"),\n    isStrictComparable = __webpack_require__(/*! ./_isStrictComparable */ \"./node_modules/lodash/_isStrictComparable.js\"),\n    matchesStrictComparable = __webpack_require__(/*! ./_matchesStrictComparable */ \"./node_modules/lodash/_matchesStrictComparable.js\"),\n    toKey = __webpack_require__(/*! ./_toKey */ \"./node_modules/lodash/_toKey.js\");\n\n/** Used to compose bitmasks for value comparisons. */\nvar COMPARE_PARTIAL_FLAG = 1,\n    COMPARE_UNORDERED_FLAG = 2;\n\n/**\n * The base implementation of `_.matchesProperty` which doesn't clone `srcValue`.\n *\n * @private\n * @param {string} path The path of the property to get.\n * @param {*} srcValue The value to match.\n * @returns {Function} Returns the new spec function.\n */\nfunction baseMatchesProperty(path, srcValue) {\n  if (isKey(path) && isStrictComparable(srcValue)) {\n    return matchesStrictComparable(toKey(path), srcValue);\n  }\n  return function(object) {\n    var objValue = get(object, path);\n    return (objValue === undefined && objValue === srcValue)\n      ? hasIn(object, path)\n      : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);\n  };\n}\n\nmodule.exports = baseMatchesProperty;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseMatchesProperty.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseMerge.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseMerge.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Stack = __webpack_require__(/*! ./_Stack */ \"./node_modules/lodash/_Stack.js\"),\n    assignMergeValue = __webpack_require__(/*! ./_assignMergeValue */ \"./node_modules/lodash/_assignMergeValue.js\"),\n    baseFor = __webpack_require__(/*! ./_baseFor */ \"./node_modules/lodash/_baseFor.js\"),\n    baseMergeDeep = __webpack_require__(/*! ./_baseMergeDeep */ \"./node_modules/lodash/_baseMergeDeep.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\"),\n    safeGet = __webpack_require__(/*! ./_safeGet */ \"./node_modules/lodash/_safeGet.js\");\n\n/**\n * The base implementation of `_.merge` without support for multiple sources.\n *\n * @private\n * @param {Object} object The destination object.\n * @param {Object} source The source object.\n * @param {number} srcIndex The index of `source`.\n * @param {Function} [customizer] The function to customize merged values.\n * @param {Object} [stack] Tracks traversed source values and their merged\n *  counterparts.\n */\nfunction baseMerge(object, source, srcIndex, customizer, stack) {\n  if (object === source) {\n    return;\n  }\n  baseFor(source, function(srcValue, key) {\n    stack || (stack = new Stack);\n    if (isObject(srcValue)) {\n      baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);\n    }\n    else {\n      var newValue = customizer\n        ? customizer(safeGet(object, key), srcValue, (key + ''), object, source, stack)\n        : undefined;\n\n      if (newValue === undefined) {\n        newValue = srcValue;\n      }\n      assignMergeValue(object, key, newValue);\n    }\n  }, keysIn);\n}\n\nmodule.exports = baseMerge;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseMerge.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseMergeDeep.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_baseMergeDeep.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assignMergeValue = __webpack_require__(/*! ./_assignMergeValue */ \"./node_modules/lodash/_assignMergeValue.js\"),\n    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ \"./node_modules/lodash/_cloneBuffer.js\"),\n    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ \"./node_modules/lodash/_cloneTypedArray.js\"),\n    copyArray = __webpack_require__(/*! ./_copyArray */ \"./node_modules/lodash/_copyArray.js\"),\n    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ \"./node_modules/lodash/_initCloneObject.js\"),\n    isArguments = __webpack_require__(/*! ./isArguments */ \"./node_modules/lodash/isArguments.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isArrayLikeObject = __webpack_require__(/*! ./isArrayLikeObject */ \"./node_modules/lodash/isArrayLikeObject.js\"),\n    isBuffer = __webpack_require__(/*! ./isBuffer */ \"./node_modules/lodash/isBuffer.js\"),\n    isFunction = __webpack_require__(/*! ./isFunction */ \"./node_modules/lodash/isFunction.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    isPlainObject = __webpack_require__(/*! ./isPlainObject */ \"./node_modules/lodash/isPlainObject.js\"),\n    isTypedArray = __webpack_require__(/*! ./isTypedArray */ \"./node_modules/lodash/isTypedArray.js\"),\n    safeGet = __webpack_require__(/*! ./_safeGet */ \"./node_modules/lodash/_safeGet.js\"),\n    toPlainObject = __webpack_require__(/*! ./toPlainObject */ \"./node_modules/lodash/toPlainObject.js\");\n\n/**\n * A specialized version of `baseMerge` for arrays and objects which performs\n * deep merges and tracks traversed objects enabling objects with circular\n * references to be merged.\n *\n * @private\n * @param {Object} object The destination object.\n * @param {Object} source The source object.\n * @param {string} key The key of the value to merge.\n * @param {number} srcIndex The index of `source`.\n * @param {Function} mergeFunc The function to merge values.\n * @param {Function} [customizer] The function to customize assigned values.\n * @param {Object} [stack] Tracks traversed source values and their merged\n *  counterparts.\n */\nfunction baseMergeDeep(object, source, key, srcIndex, mergeFunc, customizer, stack) {\n  var objValue = safeGet(object, key),\n      srcValue = safeGet(source, key),\n      stacked = stack.get(srcValue);\n\n  if (stacked) {\n    assignMergeValue(object, key, stacked);\n    return;\n  }\n  var newValue = customizer\n    ? customizer(objValue, srcValue, (key + ''), object, source, stack)\n    : undefined;\n\n  var isCommon = newValue === undefined;\n\n  if (isCommon) {\n    var isArr = isArray(srcValue),\n        isBuff = !isArr && isBuffer(srcValue),\n        isTyped = !isArr && !isBuff && isTypedArray(srcValue);\n\n    newValue = srcValue;\n    if (isArr || isBuff || isTyped) {\n      if (isArray(objValue)) {\n        newValue = objValue;\n      }\n      else if (isArrayLikeObject(objValue)) {\n        newValue = copyArray(objValue);\n      }\n      else if (isBuff) {\n        isCommon = false;\n        newValue = cloneBuffer(srcValue, true);\n      }\n      else if (isTyped) {\n        isCommon = false;\n        newValue = cloneTypedArray(srcValue, true);\n      }\n      else {\n        newValue = [];\n      }\n    }\n    else if (isPlainObject(srcValue) || isArguments(srcValue)) {\n      newValue = objValue;\n      if (isArguments(objValue)) {\n        newValue = toPlainObject(objValue);\n      }\n      else if (!isObject(objValue) || isFunction(objValue)) {\n        newValue = initCloneObject(srcValue);\n      }\n    }\n    else {\n      isCommon = false;\n    }\n  }\n  if (isCommon) {\n    // Recursively merge objects and arrays (susceptible to call stack limits).\n    stack.set(srcValue, newValue);\n    mergeFunc(newValue, srcValue, srcIndex, customizer, stack);\n    stack['delete'](srcValue);\n  }\n  assignMergeValue(object, key, newValue);\n}\n\nmodule.exports = baseMergeDeep;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseMergeDeep.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseOrderBy.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_baseOrderBy.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayMap = __webpack_require__(/*! ./_arrayMap */ \"./node_modules/lodash/_arrayMap.js\"),\n    baseGet = __webpack_require__(/*! ./_baseGet */ \"./node_modules/lodash/_baseGet.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    baseMap = __webpack_require__(/*! ./_baseMap */ \"./node_modules/lodash/_baseMap.js\"),\n    baseSortBy = __webpack_require__(/*! ./_baseSortBy */ \"./node_modules/lodash/_baseSortBy.js\"),\n    baseUnary = __webpack_require__(/*! ./_baseUnary */ \"./node_modules/lodash/_baseUnary.js\"),\n    compareMultiple = __webpack_require__(/*! ./_compareMultiple */ \"./node_modules/lodash/_compareMultiple.js\"),\n    identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/**\n * The base implementation of `_.orderBy` without param guards.\n *\n * @private\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function[]|Object[]|string[]} iteratees The iteratees to sort by.\n * @param {string[]} orders The sort orders of `iteratees`.\n * @returns {Array} Returns the new sorted array.\n */\nfunction baseOrderBy(collection, iteratees, orders) {\n  if (iteratees.length) {\n    iteratees = arrayMap(iteratees, function(iteratee) {\n      if (isArray(iteratee)) {\n        return function(value) {\n          return baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee);\n        }\n      }\n      return iteratee;\n    });\n  } else {\n    iteratees = [identity];\n  }\n\n  var index = -1;\n  iteratees = arrayMap(iteratees, baseUnary(baseIteratee));\n\n  var result = baseMap(collection, function(value, key, collection) {\n    var criteria = arrayMap(iteratees, function(iteratee) {\n      return iteratee(value);\n    });\n    return { 'criteria': criteria, 'index': ++index, 'value': value };\n  });\n\n  return baseSortBy(result, function(object, other) {\n    return compareMultiple(object, other, orders);\n  });\n}\n\nmodule.exports = baseOrderBy;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseOrderBy.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_basePick.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_basePick.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var basePickBy = __webpack_require__(/*! ./_basePickBy */ \"./node_modules/lodash/_basePickBy.js\"),\n    hasIn = __webpack_require__(/*! ./hasIn */ \"./node_modules/lodash/hasIn.js\");\n\n/**\n * The base implementation of `_.pick` without support for individual\n * property identifiers.\n *\n * @private\n * @param {Object} object The source object.\n * @param {string[]} paths The property paths to pick.\n * @returns {Object} Returns the new object.\n */\nfunction basePick(object, paths) {\n  return basePickBy(object, paths, function(value, path) {\n    return hasIn(object, path);\n  });\n}\n\nmodule.exports = basePick;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_basePick.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_basePickBy.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_basePickBy.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGet = __webpack_require__(/*! ./_baseGet */ \"./node_modules/lodash/_baseGet.js\"),\n    baseSet = __webpack_require__(/*! ./_baseSet */ \"./node_modules/lodash/_baseSet.js\"),\n    castPath = __webpack_require__(/*! ./_castPath */ \"./node_modules/lodash/_castPath.js\");\n\n/**\n * The base implementation of  `_.pickBy` without support for iteratee shorthands.\n *\n * @private\n * @param {Object} object The source object.\n * @param {string[]} paths The property paths to pick.\n * @param {Function} predicate The function invoked per property.\n * @returns {Object} Returns the new object.\n */\nfunction basePickBy(object, paths, predicate) {\n  var index = -1,\n      length = paths.length,\n      result = {};\n\n  while (++index < length) {\n    var path = paths[index],\n        value = baseGet(object, path);\n\n    if (predicate(value, path)) {\n      baseSet(result, castPath(path, object), value);\n    }\n  }\n  return result;\n}\n\nmodule.exports = basePickBy;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_basePickBy.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseProperty.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_baseProperty.js ***!
+  \**********************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.property` without support for deep paths.\n *\n * @private\n * @param {string} key The key of the property to get.\n * @returns {Function} Returns the new accessor function.\n */\nfunction baseProperty(key) {\n  return function(object) {\n    return object == null ? undefined : object[key];\n  };\n}\n\nmodule.exports = baseProperty;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseProperty.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_basePropertyDeep.js":
+/*!**************************************************!*\
+  !*** ./node_modules/lodash/_basePropertyDeep.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGet = __webpack_require__(/*! ./_baseGet */ \"./node_modules/lodash/_baseGet.js\");\n\n/**\n * A specialized version of `baseProperty` which supports deep paths.\n *\n * @private\n * @param {Array|string} path The path of the property to get.\n * @returns {Function} Returns the new accessor function.\n */\nfunction basePropertyDeep(path) {\n  return function(object) {\n    return baseGet(object, path);\n  };\n}\n\nmodule.exports = basePropertyDeep;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_basePropertyDeep.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseRange.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseRange.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeCeil = Math.ceil,\n    nativeMax = Math.max;\n\n/**\n * The base implementation of `_.range` and `_.rangeRight` which doesn't\n * coerce arguments.\n *\n * @private\n * @param {number} start The start of the range.\n * @param {number} end The end of the range.\n * @param {number} step The value to increment or decrement by.\n * @param {boolean} [fromRight] Specify iterating from right to left.\n * @returns {Array} Returns the range of numbers.\n */\nfunction baseRange(start, end, step, fromRight) {\n  var index = -1,\n      length = nativeMax(nativeCeil((end - start) / (step || 1)), 0),\n      result = Array(length);\n\n  while (length--) {\n    result[fromRight ? length : ++index] = start;\n    start += step;\n  }\n  return result;\n}\n\nmodule.exports = baseRange;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseRange.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseReduce.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseReduce.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.reduce` and `_.reduceRight`, without support\n * for iteratee shorthands, which iterates over `collection` using `eachFunc`.\n *\n * @private\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @param {*} accumulator The initial value.\n * @param {boolean} initAccum Specify using the first or last element of\n *  `collection` as the initial value.\n * @param {Function} eachFunc The function to iterate over `collection`.\n * @returns {*} Returns the accumulated value.\n */\nfunction baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {\n  eachFunc(collection, function(value, index, collection) {\n    accumulator = initAccum\n      ? (initAccum = false, value)\n      : iteratee(accumulator, value, index, collection);\n  });\n  return accumulator;\n}\n\nmodule.exports = baseReduce;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseReduce.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseRest.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseRest.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\"),\n    overRest = __webpack_require__(/*! ./_overRest */ \"./node_modules/lodash/_overRest.js\"),\n    setToString = __webpack_require__(/*! ./_setToString */ \"./node_modules/lodash/_setToString.js\");\n\n/**\n * The base implementation of `_.rest` which doesn't validate or coerce arguments.\n *\n * @private\n * @param {Function} func The function to apply a rest parameter to.\n * @param {number} [start=func.length-1] The start position of the rest parameter.\n * @returns {Function} Returns the new function.\n */\nfunction baseRest(func, start) {\n  return setToString(overRest(func, start, identity), func + '');\n}\n\nmodule.exports = baseRest;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseRest.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseSet.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_baseSet.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assignValue = __webpack_require__(/*! ./_assignValue */ \"./node_modules/lodash/_assignValue.js\"),\n    castPath = __webpack_require__(/*! ./_castPath */ \"./node_modules/lodash/_castPath.js\"),\n    isIndex = __webpack_require__(/*! ./_isIndex */ \"./node_modules/lodash/_isIndex.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    toKey = __webpack_require__(/*! ./_toKey */ \"./node_modules/lodash/_toKey.js\");\n\n/**\n * The base implementation of `_.set`.\n *\n * @private\n * @param {Object} object The object to modify.\n * @param {Array|string} path The path of the property to set.\n * @param {*} value The value to set.\n * @param {Function} [customizer] The function to customize path creation.\n * @returns {Object} Returns `object`.\n */\nfunction baseSet(object, path, value, customizer) {\n  if (!isObject(object)) {\n    return object;\n  }\n  path = castPath(path, object);\n\n  var index = -1,\n      length = path.length,\n      lastIndex = length - 1,\n      nested = object;\n\n  while (nested != null && ++index < length) {\n    var key = toKey(path[index]),\n        newValue = value;\n\n    if (key === '__proto__' || key === 'constructor' || key === 'prototype') {\n      return object;\n    }\n\n    if (index != lastIndex) {\n      var objValue = nested[key];\n      newValue = customizer ? customizer(objValue, key, nested) : undefined;\n      if (newValue === undefined) {\n        newValue = isObject(objValue)\n          ? objValue\n          : (isIndex(path[index + 1]) ? [] : {});\n      }\n    }\n    assignValue(nested, key, newValue);\n    nested = nested[key];\n  }\n  return object;\n}\n\nmodule.exports = baseSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseSetToString.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_baseSetToString.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var constant = __webpack_require__(/*! ./constant */ \"./node_modules/lodash/constant.js\"),\n    defineProperty = __webpack_require__(/*! ./_defineProperty */ \"./node_modules/lodash/_defineProperty.js\"),\n    identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\");\n\n/**\n * The base implementation of `setToString` without support for hot loop shorting.\n *\n * @private\n * @param {Function} func The function to modify.\n * @param {Function} string The `toString` result.\n * @returns {Function} Returns `func`.\n */\nvar baseSetToString = !defineProperty ? identity : function(func, string) {\n  return defineProperty(func, 'toString', {\n    'configurable': true,\n    'enumerable': false,\n    'value': constant(string),\n    'writable': true\n  });\n};\n\nmodule.exports = baseSetToString;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseSetToString.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseSortBy.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseSortBy.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.sortBy` which uses `comparer` to define the\n * sort order of `array` and replaces criteria objects with their corresponding\n * values.\n *\n * @private\n * @param {Array} array The array to sort.\n * @param {Function} comparer The function to define sort order.\n * @returns {Array} Returns `array`.\n */\nfunction baseSortBy(array, comparer) {\n  var length = array.length;\n\n  array.sort(comparer);\n  while (length--) {\n    array[length] = array[length].value;\n  }\n  return array;\n}\n\nmodule.exports = baseSortBy;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseSortBy.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseTimes.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseTimes.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.times` without support for iteratee shorthands\n * or max array length checks.\n *\n * @private\n * @param {number} n The number of times to invoke `iteratee`.\n * @param {Function} iteratee The function invoked per iteration.\n * @returns {Array} Returns the array of results.\n */\nfunction baseTimes(n, iteratee) {\n  var index = -1,\n      result = Array(n);\n\n  while (++index < n) {\n    result[index] = iteratee(index);\n  }\n  return result;\n}\n\nmodule.exports = baseTimes;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseTimes.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseToString.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_baseToString.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Symbol = __webpack_require__(/*! ./_Symbol */ \"./node_modules/lodash/_Symbol.js\"),\n    arrayMap = __webpack_require__(/*! ./_arrayMap */ \"./node_modules/lodash/_arrayMap.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isSymbol = __webpack_require__(/*! ./isSymbol */ \"./node_modules/lodash/isSymbol.js\");\n\n/** Used as references for various `Number` constants. */\nvar INFINITY = 1 / 0;\n\n/** Used to convert symbols to primitives and strings. */\nvar symbolProto = Symbol ? Symbol.prototype : undefined,\n    symbolToString = symbolProto ? symbolProto.toString : undefined;\n\n/**\n * The base implementation of `_.toString` which doesn't convert nullish\n * values to empty strings.\n *\n * @private\n * @param {*} value The value to process.\n * @returns {string} Returns the string.\n */\nfunction baseToString(value) {\n  // Exit early for strings to avoid a performance hit in some environments.\n  if (typeof value == 'string') {\n    return value;\n  }\n  if (isArray(value)) {\n    // Recursively convert values (susceptible to call stack limits).\n    return arrayMap(value, baseToString) + '';\n  }\n  if (isSymbol(value)) {\n    return symbolToString ? symbolToString.call(value) : '';\n  }\n  var result = (value + '');\n  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;\n}\n\nmodule.exports = baseToString;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseToString.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseTrim.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseTrim.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var trimmedEndIndex = __webpack_require__(/*! ./_trimmedEndIndex */ \"./node_modules/lodash/_trimmedEndIndex.js\");\n\n/** Used to match leading whitespace. */\nvar reTrimStart = /^\\s+/;\n\n/**\n * The base implementation of `_.trim`.\n *\n * @private\n * @param {string} string The string to trim.\n * @returns {string} Returns the trimmed string.\n */\nfunction baseTrim(string) {\n  return string\n    ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')\n    : string;\n}\n\nmodule.exports = baseTrim;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseTrim.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseUnary.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_baseUnary.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * The base implementation of `_.unary` without support for storing metadata.\n *\n * @private\n * @param {Function} func The function to cap arguments for.\n * @returns {Function} Returns the new capped function.\n */\nfunction baseUnary(func) {\n  return function(value) {\n    return func(value);\n  };\n}\n\nmodule.exports = baseUnary;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseUnary.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseUniq.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseUniq.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var SetCache = __webpack_require__(/*! ./_SetCache */ \"./node_modules/lodash/_SetCache.js\"),\n    arrayIncludes = __webpack_require__(/*! ./_arrayIncludes */ \"./node_modules/lodash/_arrayIncludes.js\"),\n    arrayIncludesWith = __webpack_require__(/*! ./_arrayIncludesWith */ \"./node_modules/lodash/_arrayIncludesWith.js\"),\n    cacheHas = __webpack_require__(/*! ./_cacheHas */ \"./node_modules/lodash/_cacheHas.js\"),\n    createSet = __webpack_require__(/*! ./_createSet */ \"./node_modules/lodash/_createSet.js\"),\n    setToArray = __webpack_require__(/*! ./_setToArray */ \"./node_modules/lodash/_setToArray.js\");\n\n/** Used as the size to enable large array optimizations. */\nvar LARGE_ARRAY_SIZE = 200;\n\n/**\n * The base implementation of `_.uniqBy` without support for iteratee shorthands.\n *\n * @private\n * @param {Array} array The array to inspect.\n * @param {Function} [iteratee] The iteratee invoked per element.\n * @param {Function} [comparator] The comparator invoked per element.\n * @returns {Array} Returns the new duplicate free array.\n */\nfunction baseUniq(array, iteratee, comparator) {\n  var index = -1,\n      includes = arrayIncludes,\n      length = array.length,\n      isCommon = true,\n      result = [],\n      seen = result;\n\n  if (comparator) {\n    isCommon = false;\n    includes = arrayIncludesWith;\n  }\n  else if (length >= LARGE_ARRAY_SIZE) {\n    var set = iteratee ? null : createSet(array);\n    if (set) {\n      return setToArray(set);\n    }\n    isCommon = false;\n    includes = cacheHas;\n    seen = new SetCache;\n  }\n  else {\n    seen = iteratee ? [] : result;\n  }\n  outer:\n  while (++index < length) {\n    var value = array[index],\n        computed = iteratee ? iteratee(value) : value;\n\n    value = (comparator || value !== 0) ? value : 0;\n    if (isCommon && computed === computed) {\n      var seenIndex = seen.length;\n      while (seenIndex--) {\n        if (seen[seenIndex] === computed) {\n          continue outer;\n        }\n      }\n      if (iteratee) {\n        seen.push(computed);\n      }\n      result.push(value);\n    }\n    else if (!includes(seen, computed, comparator)) {\n      if (seen !== result) {\n        seen.push(computed);\n      }\n      result.push(value);\n    }\n  }\n  return result;\n}\n\nmodule.exports = baseUniq;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseUniq.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseValues.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseValues.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayMap = __webpack_require__(/*! ./_arrayMap */ \"./node_modules/lodash/_arrayMap.js\");\n\n/**\n * The base implementation of `_.values` and `_.valuesIn` which creates an\n * array of `object` property values corresponding to the property names\n * of `props`.\n *\n * @private\n * @param {Object} object The object to query.\n * @param {Array} props The property names to get values for.\n * @returns {Object} Returns the array of property values.\n */\nfunction baseValues(object, props) {\n  return arrayMap(props, function(key) {\n    return object[key];\n  });\n}\n\nmodule.exports = baseValues;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseValues.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseZipObject.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_baseZipObject.js ***!
+  \***********************************************/
+/***/ ((module) => {
+
+eval("/**\n * This base implementation of `_.zipObject` which assigns values using `assignFunc`.\n *\n * @private\n * @param {Array} props The property identifiers.\n * @param {Array} values The property values.\n * @param {Function} assignFunc The function to assign values.\n * @returns {Object} Returns the new object.\n */\nfunction baseZipObject(props, values, assignFunc) {\n  var index = -1,\n      length = props.length,\n      valsLength = values.length,\n      result = {};\n\n  while (++index < length) {\n    var value = index < valsLength ? values[index] : undefined;\n    assignFunc(result, props[index], value);\n  }\n  return result;\n}\n\nmodule.exports = baseZipObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_baseZipObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cacheHas.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_cacheHas.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if a `cache` value for `key` exists.\n *\n * @private\n * @param {Object} cache The cache to query.\n * @param {string} key The key of the entry to check.\n * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n */\nfunction cacheHas(cache, key) {\n  return cache.has(key);\n}\n\nmodule.exports = cacheHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cacheHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_castFunction.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_castFunction.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\");\n\n/**\n * Casts `value` to `identity` if it's not a function.\n *\n * @private\n * @param {*} value The value to inspect.\n * @returns {Function} Returns cast function.\n */\nfunction castFunction(value) {\n  return typeof value == 'function' ? value : identity;\n}\n\nmodule.exports = castFunction;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_castFunction.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_castPath.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_castPath.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isKey = __webpack_require__(/*! ./_isKey */ \"./node_modules/lodash/_isKey.js\"),\n    stringToPath = __webpack_require__(/*! ./_stringToPath */ \"./node_modules/lodash/_stringToPath.js\"),\n    toString = __webpack_require__(/*! ./toString */ \"./node_modules/lodash/toString.js\");\n\n/**\n * Casts `value` to a path array if it's not one.\n *\n * @private\n * @param {*} value The value to inspect.\n * @param {Object} [object] The object to query keys on.\n * @returns {Array} Returns the cast property path array.\n */\nfunction castPath(value, object) {\n  if (isArray(value)) {\n    return value;\n  }\n  return isKey(value, object) ? [value] : stringToPath(toString(value));\n}\n\nmodule.exports = castPath;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_castPath.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cloneArrayBuffer.js":
+/*!**************************************************!*\
+  !*** ./node_modules/lodash/_cloneArrayBuffer.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Uint8Array = __webpack_require__(/*! ./_Uint8Array */ \"./node_modules/lodash/_Uint8Array.js\");\n\n/**\n * Creates a clone of `arrayBuffer`.\n *\n * @private\n * @param {ArrayBuffer} arrayBuffer The array buffer to clone.\n * @returns {ArrayBuffer} Returns the cloned array buffer.\n */\nfunction cloneArrayBuffer(arrayBuffer) {\n  var result = new arrayBuffer.constructor(arrayBuffer.byteLength);\n  new Uint8Array(result).set(new Uint8Array(arrayBuffer));\n  return result;\n}\n\nmodule.exports = cloneArrayBuffer;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cloneArrayBuffer.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cloneBuffer.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_cloneBuffer.js ***!
+  \*********************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/** Detect free variable `exports`. */\nvar freeExports =  true && exports && !exports.nodeType && exports;\n\n/** Detect free variable `module`. */\nvar freeModule = freeExports && \"object\" == 'object' && module && !module.nodeType && module;\n\n/** Detect the popular CommonJS extension `module.exports`. */\nvar moduleExports = freeModule && freeModule.exports === freeExports;\n\n/** Built-in value references. */\nvar Buffer = moduleExports ? root.Buffer : undefined,\n    allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;\n\n/**\n * Creates a clone of  `buffer`.\n *\n * @private\n * @param {Buffer} buffer The buffer to clone.\n * @param {boolean} [isDeep] Specify a deep clone.\n * @returns {Buffer} Returns the cloned buffer.\n */\nfunction cloneBuffer(buffer, isDeep) {\n  if (isDeep) {\n    return buffer.slice();\n  }\n  var length = buffer.length,\n      result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);\n\n  buffer.copy(result);\n  return result;\n}\n\nmodule.exports = cloneBuffer;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cloneBuffer.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cloneDataView.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_cloneDataView.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ \"./node_modules/lodash/_cloneArrayBuffer.js\");\n\n/**\n * Creates a clone of `dataView`.\n *\n * @private\n * @param {Object} dataView The data view to clone.\n * @param {boolean} [isDeep] Specify a deep clone.\n * @returns {Object} Returns the cloned data view.\n */\nfunction cloneDataView(dataView, isDeep) {\n  var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;\n  return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);\n}\n\nmodule.exports = cloneDataView;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cloneDataView.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cloneRegExp.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_cloneRegExp.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/** Used to match `RegExp` flags from their coerced string values. */\nvar reFlags = /\\w*$/;\n\n/**\n * Creates a clone of `regexp`.\n *\n * @private\n * @param {Object} regexp The regexp to clone.\n * @returns {Object} Returns the cloned regexp.\n */\nfunction cloneRegExp(regexp) {\n  var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));\n  result.lastIndex = regexp.lastIndex;\n  return result;\n}\n\nmodule.exports = cloneRegExp;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cloneRegExp.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cloneSymbol.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_cloneSymbol.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Symbol = __webpack_require__(/*! ./_Symbol */ \"./node_modules/lodash/_Symbol.js\");\n\n/** Used to convert symbols to primitives and strings. */\nvar symbolProto = Symbol ? Symbol.prototype : undefined,\n    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;\n\n/**\n * Creates a clone of the `symbol` object.\n *\n * @private\n * @param {Object} symbol The symbol object to clone.\n * @returns {Object} Returns the cloned symbol object.\n */\nfunction cloneSymbol(symbol) {\n  return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {};\n}\n\nmodule.exports = cloneSymbol;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cloneSymbol.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_cloneTypedArray.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_cloneTypedArray.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ \"./node_modules/lodash/_cloneArrayBuffer.js\");\n\n/**\n * Creates a clone of `typedArray`.\n *\n * @private\n * @param {Object} typedArray The typed array to clone.\n * @param {boolean} [isDeep] Specify a deep clone.\n * @returns {Object} Returns the cloned typed array.\n */\nfunction cloneTypedArray(typedArray, isDeep) {\n  var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;\n  return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);\n}\n\nmodule.exports = cloneTypedArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_cloneTypedArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_compareAscending.js":
+/*!**************************************************!*\
+  !*** ./node_modules/lodash/_compareAscending.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isSymbol = __webpack_require__(/*! ./isSymbol */ \"./node_modules/lodash/isSymbol.js\");\n\n/**\n * Compares values to sort them in ascending order.\n *\n * @private\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @returns {number} Returns the sort order indicator for `value`.\n */\nfunction compareAscending(value, other) {\n  if (value !== other) {\n    var valIsDefined = value !== undefined,\n        valIsNull = value === null,\n        valIsReflexive = value === value,\n        valIsSymbol = isSymbol(value);\n\n    var othIsDefined = other !== undefined,\n        othIsNull = other === null,\n        othIsReflexive = other === other,\n        othIsSymbol = isSymbol(other);\n\n    if ((!othIsNull && !othIsSymbol && !valIsSymbol && value > other) ||\n        (valIsSymbol && othIsDefined && othIsReflexive && !othIsNull && !othIsSymbol) ||\n        (valIsNull && othIsDefined && othIsReflexive) ||\n        (!valIsDefined && othIsReflexive) ||\n        !valIsReflexive) {\n      return 1;\n    }\n    if ((!valIsNull && !valIsSymbol && !othIsSymbol && value < other) ||\n        (othIsSymbol && valIsDefined && valIsReflexive && !valIsNull && !valIsSymbol) ||\n        (othIsNull && valIsDefined && valIsReflexive) ||\n        (!othIsDefined && valIsReflexive) ||\n        !othIsReflexive) {\n      return -1;\n    }\n  }\n  return 0;\n}\n\nmodule.exports = compareAscending;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_compareAscending.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_compareMultiple.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_compareMultiple.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var compareAscending = __webpack_require__(/*! ./_compareAscending */ \"./node_modules/lodash/_compareAscending.js\");\n\n/**\n * Used by `_.orderBy` to compare multiple properties of a value to another\n * and stable sort them.\n *\n * If `orders` is unspecified, all values are sorted in ascending order. Otherwise,\n * specify an order of \"desc\" for descending or \"asc\" for ascending sort order\n * of corresponding values.\n *\n * @private\n * @param {Object} object The object to compare.\n * @param {Object} other The other object to compare.\n * @param {boolean[]|string[]} orders The order to sort by for each property.\n * @returns {number} Returns the sort order indicator for `object`.\n */\nfunction compareMultiple(object, other, orders) {\n  var index = -1,\n      objCriteria = object.criteria,\n      othCriteria = other.criteria,\n      length = objCriteria.length,\n      ordersLength = orders.length;\n\n  while (++index < length) {\n    var result = compareAscending(objCriteria[index], othCriteria[index]);\n    if (result) {\n      if (index >= ordersLength) {\n        return result;\n      }\n      var order = orders[index];\n      return result * (order == 'desc' ? -1 : 1);\n    }\n  }\n  // Fixes an `Array#sort` bug in the JS engine embedded in Adobe applications\n  // that causes it, under certain circumstances, to provide the same value for\n  // `object` and `other`. See https://github.com/jashkenas/underscore/pull/1247\n  // for more details.\n  //\n  // This also ensures a stable sort in V8 and other engines.\n  // See https://bugs.chromium.org/p/v8/issues/detail?id=90 for more details.\n  return object.index - other.index;\n}\n\nmodule.exports = compareMultiple;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_compareMultiple.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_copyArray.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_copyArray.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Copies the values of `source` to `array`.\n *\n * @private\n * @param {Array} source The array to copy values from.\n * @param {Array} [array=[]] The array to copy values to.\n * @returns {Array} Returns `array`.\n */\nfunction copyArray(source, array) {\n  var index = -1,\n      length = source.length;\n\n  array || (array = Array(length));\n  while (++index < length) {\n    array[index] = source[index];\n  }\n  return array;\n}\n\nmodule.exports = copyArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_copyArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_copyObject.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_copyObject.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assignValue = __webpack_require__(/*! ./_assignValue */ \"./node_modules/lodash/_assignValue.js\"),\n    baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ \"./node_modules/lodash/_baseAssignValue.js\");\n\n/**\n * Copies properties of `source` to `object`.\n *\n * @private\n * @param {Object} source The object to copy properties from.\n * @param {Array} props The property identifiers to copy.\n * @param {Object} [object={}] The object to copy properties to.\n * @param {Function} [customizer] The function to customize copied values.\n * @returns {Object} Returns `object`.\n */\nfunction copyObject(source, props, object, customizer) {\n  var isNew = !object;\n  object || (object = {});\n\n  var index = -1,\n      length = props.length;\n\n  while (++index < length) {\n    var key = props[index];\n\n    var newValue = customizer\n      ? customizer(object[key], source[key], key, object, source)\n      : undefined;\n\n    if (newValue === undefined) {\n      newValue = source[key];\n    }\n    if (isNew) {\n      baseAssignValue(object, key, newValue);\n    } else {\n      assignValue(object, key, newValue);\n    }\n  }\n  return object;\n}\n\nmodule.exports = copyObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_copyObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_copySymbols.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_copySymbols.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var copyObject = __webpack_require__(/*! ./_copyObject */ \"./node_modules/lodash/_copyObject.js\"),\n    getSymbols = __webpack_require__(/*! ./_getSymbols */ \"./node_modules/lodash/_getSymbols.js\");\n\n/**\n * Copies own symbols of `source` to `object`.\n *\n * @private\n * @param {Object} source The object to copy symbols from.\n * @param {Object} [object={}] The object to copy symbols to.\n * @returns {Object} Returns `object`.\n */\nfunction copySymbols(source, object) {\n  return copyObject(source, getSymbols(source), object);\n}\n\nmodule.exports = copySymbols;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_copySymbols.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_copySymbolsIn.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_copySymbolsIn.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var copyObject = __webpack_require__(/*! ./_copyObject */ \"./node_modules/lodash/_copyObject.js\"),\n    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ \"./node_modules/lodash/_getSymbolsIn.js\");\n\n/**\n * Copies own and inherited symbols of `source` to `object`.\n *\n * @private\n * @param {Object} source The object to copy symbols from.\n * @param {Object} [object={}] The object to copy symbols to.\n * @returns {Object} Returns `object`.\n */\nfunction copySymbolsIn(source, object) {\n  return copyObject(source, getSymbolsIn(source), object);\n}\n\nmodule.exports = copySymbolsIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_copySymbolsIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_coreJsData.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_coreJsData.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/** Used to detect overreaching core-js shims. */\nvar coreJsData = root['__core-js_shared__'];\n\nmodule.exports = coreJsData;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_coreJsData.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createAssigner.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_createAssigner.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseRest = __webpack_require__(/*! ./_baseRest */ \"./node_modules/lodash/_baseRest.js\"),\n    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ \"./node_modules/lodash/_isIterateeCall.js\");\n\n/**\n * Creates a function like `_.assign`.\n *\n * @private\n * @param {Function} assigner The function to assign values.\n * @returns {Function} Returns the new assigner function.\n */\nfunction createAssigner(assigner) {\n  return baseRest(function(object, sources) {\n    var index = -1,\n        length = sources.length,\n        customizer = length > 1 ? sources[length - 1] : undefined,\n        guard = length > 2 ? sources[2] : undefined;\n\n    customizer = (assigner.length > 3 && typeof customizer == 'function')\n      ? (length--, customizer)\n      : undefined;\n\n    if (guard && isIterateeCall(sources[0], sources[1], guard)) {\n      customizer = length < 3 ? undefined : customizer;\n      length = 1;\n    }\n    object = Object(object);\n    while (++index < length) {\n      var source = sources[index];\n      if (source) {\n        assigner(object, source, index, customizer);\n      }\n    }\n    return object;\n  });\n}\n\nmodule.exports = createAssigner;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_createAssigner.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createBaseEach.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_createBaseEach.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\");\n\n/**\n * Creates a `baseEach` or `baseEachRight` function.\n *\n * @private\n * @param {Function} eachFunc The function to iterate over a collection.\n * @param {boolean} [fromRight] Specify iterating from right to left.\n * @returns {Function} Returns the new base function.\n */\nfunction createBaseEach(eachFunc, fromRight) {\n  return function(collection, iteratee) {\n    if (collection == null) {\n      return collection;\n    }\n    if (!isArrayLike(collection)) {\n      return eachFunc(collection, iteratee);\n    }\n    var length = collection.length,\n        index = fromRight ? length : -1,\n        iterable = Object(collection);\n\n    while ((fromRight ? index-- : ++index < length)) {\n      if (iteratee(iterable[index], index, iterable) === false) {\n        break;\n      }\n    }\n    return collection;\n  };\n}\n\nmodule.exports = createBaseEach;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_createBaseEach.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createBaseFor.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_createBaseFor.js ***!
+  \***********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Creates a base function for methods like `_.forIn` and `_.forOwn`.\n *\n * @private\n * @param {boolean} [fromRight] Specify iterating from right to left.\n * @returns {Function} Returns the new base function.\n */\nfunction createBaseFor(fromRight) {\n  return function(object, iteratee, keysFunc) {\n    var index = -1,\n        iterable = Object(object),\n        props = keysFunc(object),\n        length = props.length;\n\n    while (length--) {\n      var key = props[fromRight ? length : ++index];\n      if (iteratee(iterable[key], key, iterable) === false) {\n        break;\n      }\n    }\n    return object;\n  };\n}\n\nmodule.exports = createBaseFor;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_createBaseFor.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createFind.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_createFind.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\");\n\n/**\n * Creates a `_.find` or `_.findLast` function.\n *\n * @private\n * @param {Function} findIndexFunc The function to find the collection index.\n * @returns {Function} Returns the new find function.\n */\nfunction createFind(findIndexFunc) {\n  return function(collection, predicate, fromIndex) {\n    var iterable = Object(collection);\n    if (!isArrayLike(collection)) {\n      var iteratee = baseIteratee(predicate, 3);\n      collection = keys(collection);\n      predicate = function(key) { return iteratee(iterable[key], key, iterable); };\n    }\n    var index = findIndexFunc(collection, predicate, fromIndex);\n    return index > -1 ? iterable[iteratee ? collection[index] : index] : undefined;\n  };\n}\n\nmodule.exports = createFind;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_createFind.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createRange.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_createRange.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseRange = __webpack_require__(/*! ./_baseRange */ \"./node_modules/lodash/_baseRange.js\"),\n    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ \"./node_modules/lodash/_isIterateeCall.js\"),\n    toFinite = __webpack_require__(/*! ./toFinite */ \"./node_modules/lodash/toFinite.js\");\n\n/**\n * Creates a `_.range` or `_.rangeRight` function.\n *\n * @private\n * @param {boolean} [fromRight] Specify iterating from right to left.\n * @returns {Function} Returns the new range function.\n */\nfunction createRange(fromRight) {\n  return function(start, end, step) {\n    if (step && typeof step != 'number' && isIterateeCall(start, end, step)) {\n      end = step = undefined;\n    }\n    // Ensure the sign of `-0` is preserved.\n    start = toFinite(start);\n    if (end === undefined) {\n      end = start;\n      start = 0;\n    } else {\n      end = toFinite(end);\n    }\n    step = step === undefined ? (start < end ? 1 : -1) : toFinite(step);\n    return baseRange(start, end, step, fromRight);\n  };\n}\n\nmodule.exports = createRange;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_createRange.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createSet.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_createSet.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Set = __webpack_require__(/*! ./_Set */ \"./node_modules/lodash/_Set.js\"),\n    noop = __webpack_require__(/*! ./noop */ \"./node_modules/lodash/noop.js\"),\n    setToArray = __webpack_require__(/*! ./_setToArray */ \"./node_modules/lodash/_setToArray.js\");\n\n/** Used as references for various `Number` constants. */\nvar INFINITY = 1 / 0;\n\n/**\n * Creates a set object of `values`.\n *\n * @private\n * @param {Array} values The values to add to the set.\n * @returns {Object} Returns the new set.\n */\nvar createSet = !(Set && (1 / setToArray(new Set([,-0]))[1]) == INFINITY) ? noop : function(values) {\n  return new Set(values);\n};\n\nmodule.exports = createSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_createSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_defineProperty.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_defineProperty.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\");\n\nvar defineProperty = (function() {\n  try {\n    var func = getNative(Object, 'defineProperty');\n    func({}, '', {});\n    return func;\n  } catch (e) {}\n}());\n\nmodule.exports = defineProperty;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_defineProperty.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_equalArrays.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_equalArrays.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var SetCache = __webpack_require__(/*! ./_SetCache */ \"./node_modules/lodash/_SetCache.js\"),\n    arraySome = __webpack_require__(/*! ./_arraySome */ \"./node_modules/lodash/_arraySome.js\"),\n    cacheHas = __webpack_require__(/*! ./_cacheHas */ \"./node_modules/lodash/_cacheHas.js\");\n\n/** Used to compose bitmasks for value comparisons. */\nvar COMPARE_PARTIAL_FLAG = 1,\n    COMPARE_UNORDERED_FLAG = 2;\n\n/**\n * A specialized version of `baseIsEqualDeep` for arrays with support for\n * partial deep comparisons.\n *\n * @private\n * @param {Array} array The array to compare.\n * @param {Array} other The other array to compare.\n * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.\n * @param {Function} customizer The function to customize comparisons.\n * @param {Function} equalFunc The function to determine equivalents of values.\n * @param {Object} stack Tracks traversed `array` and `other` objects.\n * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.\n */\nfunction equalArrays(array, other, bitmask, customizer, equalFunc, stack) {\n  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,\n      arrLength = array.length,\n      othLength = other.length;\n\n  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {\n    return false;\n  }\n  // Check that cyclic values are equal.\n  var arrStacked = stack.get(array);\n  var othStacked = stack.get(other);\n  if (arrStacked && othStacked) {\n    return arrStacked == other && othStacked == array;\n  }\n  var index = -1,\n      result = true,\n      seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;\n\n  stack.set(array, other);\n  stack.set(other, array);\n\n  // Ignore non-index properties.\n  while (++index < arrLength) {\n    var arrValue = array[index],\n        othValue = other[index];\n\n    if (customizer) {\n      var compared = isPartial\n        ? customizer(othValue, arrValue, index, other, array, stack)\n        : customizer(arrValue, othValue, index, array, other, stack);\n    }\n    if (compared !== undefined) {\n      if (compared) {\n        continue;\n      }\n      result = false;\n      break;\n    }\n    // Recursively compare arrays (susceptible to call stack limits).\n    if (seen) {\n      if (!arraySome(other, function(othValue, othIndex) {\n            if (!cacheHas(seen, othIndex) &&\n                (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {\n              return seen.push(othIndex);\n            }\n          })) {\n        result = false;\n        break;\n      }\n    } else if (!(\n          arrValue === othValue ||\n            equalFunc(arrValue, othValue, bitmask, customizer, stack)\n        )) {\n      result = false;\n      break;\n    }\n  }\n  stack['delete'](array);\n  stack['delete'](other);\n  return result;\n}\n\nmodule.exports = equalArrays;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_equalArrays.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_equalByTag.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_equalByTag.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Symbol = __webpack_require__(/*! ./_Symbol */ \"./node_modules/lodash/_Symbol.js\"),\n    Uint8Array = __webpack_require__(/*! ./_Uint8Array */ \"./node_modules/lodash/_Uint8Array.js\"),\n    eq = __webpack_require__(/*! ./eq */ \"./node_modules/lodash/eq.js\"),\n    equalArrays = __webpack_require__(/*! ./_equalArrays */ \"./node_modules/lodash/_equalArrays.js\"),\n    mapToArray = __webpack_require__(/*! ./_mapToArray */ \"./node_modules/lodash/_mapToArray.js\"),\n    setToArray = __webpack_require__(/*! ./_setToArray */ \"./node_modules/lodash/_setToArray.js\");\n\n/** Used to compose bitmasks for value comparisons. */\nvar COMPARE_PARTIAL_FLAG = 1,\n    COMPARE_UNORDERED_FLAG = 2;\n\n/** `Object#toString` result references. */\nvar boolTag = '[object Boolean]',\n    dateTag = '[object Date]',\n    errorTag = '[object Error]',\n    mapTag = '[object Map]',\n    numberTag = '[object Number]',\n    regexpTag = '[object RegExp]',\n    setTag = '[object Set]',\n    stringTag = '[object String]',\n    symbolTag = '[object Symbol]';\n\nvar arrayBufferTag = '[object ArrayBuffer]',\n    dataViewTag = '[object DataView]';\n\n/** Used to convert symbols to primitives and strings. */\nvar symbolProto = Symbol ? Symbol.prototype : undefined,\n    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;\n\n/**\n * A specialized version of `baseIsEqualDeep` for comparing objects of\n * the same `toStringTag`.\n *\n * **Note:** This function only supports comparing values with tags of\n * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.\n *\n * @private\n * @param {Object} object The object to compare.\n * @param {Object} other The other object to compare.\n * @param {string} tag The `toStringTag` of the objects to compare.\n * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.\n * @param {Function} customizer The function to customize comparisons.\n * @param {Function} equalFunc The function to determine equivalents of values.\n * @param {Object} stack Tracks traversed `object` and `other` objects.\n * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.\n */\nfunction equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {\n  switch (tag) {\n    case dataViewTag:\n      if ((object.byteLength != other.byteLength) ||\n          (object.byteOffset != other.byteOffset)) {\n        return false;\n      }\n      object = object.buffer;\n      other = other.buffer;\n\n    case arrayBufferTag:\n      if ((object.byteLength != other.byteLength) ||\n          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {\n        return false;\n      }\n      return true;\n\n    case boolTag:\n    case dateTag:\n    case numberTag:\n      // Coerce booleans to `1` or `0` and dates to milliseconds.\n      // Invalid dates are coerced to `NaN`.\n      return eq(+object, +other);\n\n    case errorTag:\n      return object.name == other.name && object.message == other.message;\n\n    case regexpTag:\n    case stringTag:\n      // Coerce regexes to strings and treat strings, primitives and objects,\n      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring\n      // for more details.\n      return object == (other + '');\n\n    case mapTag:\n      var convert = mapToArray;\n\n    case setTag:\n      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;\n      convert || (convert = setToArray);\n\n      if (object.size != other.size && !isPartial) {\n        return false;\n      }\n      // Assume cyclic values are equal.\n      var stacked = stack.get(object);\n      if (stacked) {\n        return stacked == other;\n      }\n      bitmask |= COMPARE_UNORDERED_FLAG;\n\n      // Recursively compare objects (susceptible to call stack limits).\n      stack.set(object, other);\n      var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);\n      stack['delete'](object);\n      return result;\n\n    case symbolTag:\n      if (symbolValueOf) {\n        return symbolValueOf.call(object) == symbolValueOf.call(other);\n      }\n  }\n  return false;\n}\n\nmodule.exports = equalByTag;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_equalByTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_equalObjects.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_equalObjects.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getAllKeys = __webpack_require__(/*! ./_getAllKeys */ \"./node_modules/lodash/_getAllKeys.js\");\n\n/** Used to compose bitmasks for value comparisons. */\nvar COMPARE_PARTIAL_FLAG = 1;\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * A specialized version of `baseIsEqualDeep` for objects with support for\n * partial deep comparisons.\n *\n * @private\n * @param {Object} object The object to compare.\n * @param {Object} other The other object to compare.\n * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.\n * @param {Function} customizer The function to customize comparisons.\n * @param {Function} equalFunc The function to determine equivalents of values.\n * @param {Object} stack Tracks traversed `object` and `other` objects.\n * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.\n */\nfunction equalObjects(object, other, bitmask, customizer, equalFunc, stack) {\n  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,\n      objProps = getAllKeys(object),\n      objLength = objProps.length,\n      othProps = getAllKeys(other),\n      othLength = othProps.length;\n\n  if (objLength != othLength && !isPartial) {\n    return false;\n  }\n  var index = objLength;\n  while (index--) {\n    var key = objProps[index];\n    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {\n      return false;\n    }\n  }\n  // Check that cyclic values are equal.\n  var objStacked = stack.get(object);\n  var othStacked = stack.get(other);\n  if (objStacked && othStacked) {\n    return objStacked == other && othStacked == object;\n  }\n  var result = true;\n  stack.set(object, other);\n  stack.set(other, object);\n\n  var skipCtor = isPartial;\n  while (++index < objLength) {\n    key = objProps[index];\n    var objValue = object[key],\n        othValue = other[key];\n\n    if (customizer) {\n      var compared = isPartial\n        ? customizer(othValue, objValue, key, other, object, stack)\n        : customizer(objValue, othValue, key, object, other, stack);\n    }\n    // Recursively compare objects (susceptible to call stack limits).\n    if (!(compared === undefined\n          ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))\n          : compared\n        )) {\n      result = false;\n      break;\n    }\n    skipCtor || (skipCtor = key == 'constructor');\n  }\n  if (result && !skipCtor) {\n    var objCtor = object.constructor,\n        othCtor = other.constructor;\n\n    // Non `Object` object instances with different constructors are not equal.\n    if (objCtor != othCtor &&\n        ('constructor' in object && 'constructor' in other) &&\n        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&\n          typeof othCtor == 'function' && othCtor instanceof othCtor)) {\n      result = false;\n    }\n  }\n  stack['delete'](object);\n  stack['delete'](other);\n  return result;\n}\n\nmodule.exports = equalObjects;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_equalObjects.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_flatRest.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_flatRest.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var flatten = __webpack_require__(/*! ./flatten */ \"./node_modules/lodash/flatten.js\"),\n    overRest = __webpack_require__(/*! ./_overRest */ \"./node_modules/lodash/_overRest.js\"),\n    setToString = __webpack_require__(/*! ./_setToString */ \"./node_modules/lodash/_setToString.js\");\n\n/**\n * A specialized version of `baseRest` which flattens the rest array.\n *\n * @private\n * @param {Function} func The function to apply a rest parameter to.\n * @returns {Function} Returns the new function.\n */\nfunction flatRest(func) {\n  return setToString(overRest(func, undefined, flatten), func + '');\n}\n\nmodule.exports = flatRest;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_flatRest.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_freeGlobal.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_freeGlobal.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/** Detect free variable `global` from Node.js. */\nvar freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;\n\nmodule.exports = freeGlobal;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_freeGlobal.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getAllKeys.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_getAllKeys.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ \"./node_modules/lodash/_baseGetAllKeys.js\"),\n    getSymbols = __webpack_require__(/*! ./_getSymbols */ \"./node_modules/lodash/_getSymbols.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\");\n\n/**\n * Creates an array of own enumerable property names and symbols of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names and symbols.\n */\nfunction getAllKeys(object) {\n  return baseGetAllKeys(object, keys, getSymbols);\n}\n\nmodule.exports = getAllKeys;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getAllKeys.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getAllKeysIn.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_getAllKeysIn.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ \"./node_modules/lodash/_baseGetAllKeys.js\"),\n    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ \"./node_modules/lodash/_getSymbolsIn.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\");\n\n/**\n * Creates an array of own and inherited enumerable property names and\n * symbols of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names and symbols.\n */\nfunction getAllKeysIn(object) {\n  return baseGetAllKeys(object, keysIn, getSymbolsIn);\n}\n\nmodule.exports = getAllKeysIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getAllKeysIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getMapData.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_getMapData.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isKeyable = __webpack_require__(/*! ./_isKeyable */ \"./node_modules/lodash/_isKeyable.js\");\n\n/**\n * Gets the data for `map`.\n *\n * @private\n * @param {Object} map The map to query.\n * @param {string} key The reference key.\n * @returns {*} Returns the map data.\n */\nfunction getMapData(map, key) {\n  var data = map.__data__;\n  return isKeyable(key)\n    ? data[typeof key == 'string' ? 'string' : 'hash']\n    : data.map;\n}\n\nmodule.exports = getMapData;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getMapData.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getMatchData.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_getMatchData.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isStrictComparable = __webpack_require__(/*! ./_isStrictComparable */ \"./node_modules/lodash/_isStrictComparable.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\");\n\n/**\n * Gets the property names, values, and compare flags of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the match data of `object`.\n */\nfunction getMatchData(object) {\n  var result = keys(object),\n      length = result.length;\n\n  while (length--) {\n    var key = result[length],\n        value = object[key];\n\n    result[length] = [key, value, isStrictComparable(value)];\n  }\n  return result;\n}\n\nmodule.exports = getMatchData;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getMatchData.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getNative.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_getNative.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsNative = __webpack_require__(/*! ./_baseIsNative */ \"./node_modules/lodash/_baseIsNative.js\"),\n    getValue = __webpack_require__(/*! ./_getValue */ \"./node_modules/lodash/_getValue.js\");\n\n/**\n * Gets the native function at `key` of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @param {string} key The key of the method to get.\n * @returns {*} Returns the function if it's native, else `undefined`.\n */\nfunction getNative(object, key) {\n  var value = getValue(object, key);\n  return baseIsNative(value) ? value : undefined;\n}\n\nmodule.exports = getNative;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getNative.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getPrototype.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_getPrototype.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var overArg = __webpack_require__(/*! ./_overArg */ \"./node_modules/lodash/_overArg.js\");\n\n/** Built-in value references. */\nvar getPrototype = overArg(Object.getPrototypeOf, Object);\n\nmodule.exports = getPrototype;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getPrototype.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getRawTag.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_getRawTag.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Symbol = __webpack_require__(/*! ./_Symbol */ \"./node_modules/lodash/_Symbol.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Used to resolve the\n * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)\n * of values.\n */\nvar nativeObjectToString = objectProto.toString;\n\n/** Built-in value references. */\nvar symToStringTag = Symbol ? Symbol.toStringTag : undefined;\n\n/**\n * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.\n *\n * @private\n * @param {*} value The value to query.\n * @returns {string} Returns the raw `toStringTag`.\n */\nfunction getRawTag(value) {\n  var isOwn = hasOwnProperty.call(value, symToStringTag),\n      tag = value[symToStringTag];\n\n  try {\n    value[symToStringTag] = undefined;\n    var unmasked = true;\n  } catch (e) {}\n\n  var result = nativeObjectToString.call(value);\n  if (unmasked) {\n    if (isOwn) {\n      value[symToStringTag] = tag;\n    } else {\n      delete value[symToStringTag];\n    }\n  }\n  return result;\n}\n\nmodule.exports = getRawTag;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getRawTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getSymbols.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_getSymbols.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ \"./node_modules/lodash/_arrayFilter.js\"),\n    stubArray = __webpack_require__(/*! ./stubArray */ \"./node_modules/lodash/stubArray.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Built-in value references. */\nvar propertyIsEnumerable = objectProto.propertyIsEnumerable;\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeGetSymbols = Object.getOwnPropertySymbols;\n\n/**\n * Creates an array of the own enumerable symbols of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of symbols.\n */\nvar getSymbols = !nativeGetSymbols ? stubArray : function(object) {\n  if (object == null) {\n    return [];\n  }\n  object = Object(object);\n  return arrayFilter(nativeGetSymbols(object), function(symbol) {\n    return propertyIsEnumerable.call(object, symbol);\n  });\n};\n\nmodule.exports = getSymbols;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getSymbols.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getSymbolsIn.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_getSymbolsIn.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayPush = __webpack_require__(/*! ./_arrayPush */ \"./node_modules/lodash/_arrayPush.js\"),\n    getPrototype = __webpack_require__(/*! ./_getPrototype */ \"./node_modules/lodash/_getPrototype.js\"),\n    getSymbols = __webpack_require__(/*! ./_getSymbols */ \"./node_modules/lodash/_getSymbols.js\"),\n    stubArray = __webpack_require__(/*! ./stubArray */ \"./node_modules/lodash/stubArray.js\");\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeGetSymbols = Object.getOwnPropertySymbols;\n\n/**\n * Creates an array of the own and inherited enumerable symbols of `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of symbols.\n */\nvar getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {\n  var result = [];\n  while (object) {\n    arrayPush(result, getSymbols(object));\n    object = getPrototype(object);\n  }\n  return result;\n};\n\nmodule.exports = getSymbolsIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getSymbolsIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getTag.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/_getTag.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var DataView = __webpack_require__(/*! ./_DataView */ \"./node_modules/lodash/_DataView.js\"),\n    Map = __webpack_require__(/*! ./_Map */ \"./node_modules/lodash/_Map.js\"),\n    Promise = __webpack_require__(/*! ./_Promise */ \"./node_modules/lodash/_Promise.js\"),\n    Set = __webpack_require__(/*! ./_Set */ \"./node_modules/lodash/_Set.js\"),\n    WeakMap = __webpack_require__(/*! ./_WeakMap */ \"./node_modules/lodash/_WeakMap.js\"),\n    baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    toSource = __webpack_require__(/*! ./_toSource */ \"./node_modules/lodash/_toSource.js\");\n\n/** `Object#toString` result references. */\nvar mapTag = '[object Map]',\n    objectTag = '[object Object]',\n    promiseTag = '[object Promise]',\n    setTag = '[object Set]',\n    weakMapTag = '[object WeakMap]';\n\nvar dataViewTag = '[object DataView]';\n\n/** Used to detect maps, sets, and weakmaps. */\nvar dataViewCtorString = toSource(DataView),\n    mapCtorString = toSource(Map),\n    promiseCtorString = toSource(Promise),\n    setCtorString = toSource(Set),\n    weakMapCtorString = toSource(WeakMap);\n\n/**\n * Gets the `toStringTag` of `value`.\n *\n * @private\n * @param {*} value The value to query.\n * @returns {string} Returns the `toStringTag`.\n */\nvar getTag = baseGetTag;\n\n// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.\nif ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||\n    (Map && getTag(new Map) != mapTag) ||\n    (Promise && getTag(Promise.resolve()) != promiseTag) ||\n    (Set && getTag(new Set) != setTag) ||\n    (WeakMap && getTag(new WeakMap) != weakMapTag)) {\n  getTag = function(value) {\n    var result = baseGetTag(value),\n        Ctor = result == objectTag ? value.constructor : undefined,\n        ctorString = Ctor ? toSource(Ctor) : '';\n\n    if (ctorString) {\n      switch (ctorString) {\n        case dataViewCtorString: return dataViewTag;\n        case mapCtorString: return mapTag;\n        case promiseCtorString: return promiseTag;\n        case setCtorString: return setTag;\n        case weakMapCtorString: return weakMapTag;\n      }\n    }\n    return result;\n  };\n}\n\nmodule.exports = getTag;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_getValue.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_getValue.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Gets the value at `key` of `object`.\n *\n * @private\n * @param {Object} [object] The object to query.\n * @param {string} key The key of the property to get.\n * @returns {*} Returns the property value.\n */\nfunction getValue(object, key) {\n  return object == null ? undefined : object[key];\n}\n\nmodule.exports = getValue;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_getValue.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hasPath.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_hasPath.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var castPath = __webpack_require__(/*! ./_castPath */ \"./node_modules/lodash/_castPath.js\"),\n    isArguments = __webpack_require__(/*! ./isArguments */ \"./node_modules/lodash/isArguments.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isIndex = __webpack_require__(/*! ./_isIndex */ \"./node_modules/lodash/_isIndex.js\"),\n    isLength = __webpack_require__(/*! ./isLength */ \"./node_modules/lodash/isLength.js\"),\n    toKey = __webpack_require__(/*! ./_toKey */ \"./node_modules/lodash/_toKey.js\");\n\n/**\n * Checks if `path` exists on `object`.\n *\n * @private\n * @param {Object} object The object to query.\n * @param {Array|string} path The path to check.\n * @param {Function} hasFunc The function to check properties.\n * @returns {boolean} Returns `true` if `path` exists, else `false`.\n */\nfunction hasPath(object, path, hasFunc) {\n  path = castPath(path, object);\n\n  var index = -1,\n      length = path.length,\n      result = false;\n\n  while (++index < length) {\n    var key = toKey(path[index]);\n    if (!(result = object != null && hasFunc(object, key))) {\n      break;\n    }\n    object = object[key];\n  }\n  if (result || ++index != length) {\n    return result;\n  }\n  length = object == null ? 0 : object.length;\n  return !!length && isLength(length) && isIndex(key, length) &&\n    (isArray(object) || isArguments(object));\n}\n\nmodule.exports = hasPath;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hasPath.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hasUnicode.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_hasUnicode.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/** Used to compose unicode character classes. */\nvar rsAstralRange = '\\\\ud800-\\\\udfff',\n    rsComboMarksRange = '\\\\u0300-\\\\u036f',\n    reComboHalfMarksRange = '\\\\ufe20-\\\\ufe2f',\n    rsComboSymbolsRange = '\\\\u20d0-\\\\u20ff',\n    rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange,\n    rsVarRange = '\\\\ufe0e\\\\ufe0f';\n\n/** Used to compose unicode capture groups. */\nvar rsZWJ = '\\\\u200d';\n\n/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */\nvar reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');\n\n/**\n * Checks if `string` contains Unicode symbols.\n *\n * @private\n * @param {string} string The string to inspect.\n * @returns {boolean} Returns `true` if a symbol is found, else `false`.\n */\nfunction hasUnicode(string) {\n  return reHasUnicode.test(string);\n}\n\nmodule.exports = hasUnicode;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hasUnicode.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hashClear.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_hashClear.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ \"./node_modules/lodash/_nativeCreate.js\");\n\n/**\n * Removes all key-value entries from the hash.\n *\n * @private\n * @name clear\n * @memberOf Hash\n */\nfunction hashClear() {\n  this.__data__ = nativeCreate ? nativeCreate(null) : {};\n  this.size = 0;\n}\n\nmodule.exports = hashClear;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hashClear.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hashDelete.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_hashDelete.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Removes `key` and its value from the hash.\n *\n * @private\n * @name delete\n * @memberOf Hash\n * @param {Object} hash The hash to modify.\n * @param {string} key The key of the value to remove.\n * @returns {boolean} Returns `true` if the entry was removed, else `false`.\n */\nfunction hashDelete(key) {\n  var result = this.has(key) && delete this.__data__[key];\n  this.size -= result ? 1 : 0;\n  return result;\n}\n\nmodule.exports = hashDelete;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hashDelete.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hashGet.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_hashGet.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ \"./node_modules/lodash/_nativeCreate.js\");\n\n/** Used to stand-in for `undefined` hash values. */\nvar HASH_UNDEFINED = '__lodash_hash_undefined__';\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Gets the hash value for `key`.\n *\n * @private\n * @name get\n * @memberOf Hash\n * @param {string} key The key of the value to get.\n * @returns {*} Returns the entry value.\n */\nfunction hashGet(key) {\n  var data = this.__data__;\n  if (nativeCreate) {\n    var result = data[key];\n    return result === HASH_UNDEFINED ? undefined : result;\n  }\n  return hasOwnProperty.call(data, key) ? data[key] : undefined;\n}\n\nmodule.exports = hashGet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hashGet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hashHas.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_hashHas.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ \"./node_modules/lodash/_nativeCreate.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Checks if a hash value for `key` exists.\n *\n * @private\n * @name has\n * @memberOf Hash\n * @param {string} key The key of the entry to check.\n * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n */\nfunction hashHas(key) {\n  var data = this.__data__;\n  return nativeCreate ? (data[key] !== undefined) : hasOwnProperty.call(data, key);\n}\n\nmodule.exports = hashHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hashHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_hashSet.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_hashSet.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ \"./node_modules/lodash/_nativeCreate.js\");\n\n/** Used to stand-in for `undefined` hash values. */\nvar HASH_UNDEFINED = '__lodash_hash_undefined__';\n\n/**\n * Sets the hash `key` to `value`.\n *\n * @private\n * @name set\n * @memberOf Hash\n * @param {string} key The key of the value to set.\n * @param {*} value The value to set.\n * @returns {Object} Returns the hash instance.\n */\nfunction hashSet(key, value) {\n  var data = this.__data__;\n  this.size += this.has(key) ? 0 : 1;\n  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;\n  return this;\n}\n\nmodule.exports = hashSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_hashSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_initCloneArray.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_initCloneArray.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+eval("/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Initializes an array clone.\n *\n * @private\n * @param {Array} array The array to clone.\n * @returns {Array} Returns the initialized clone.\n */\nfunction initCloneArray(array) {\n  var length = array.length,\n      result = new array.constructor(length);\n\n  // Add properties assigned by `RegExp#exec`.\n  if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {\n    result.index = array.index;\n    result.input = array.input;\n  }\n  return result;\n}\n\nmodule.exports = initCloneArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_initCloneArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_initCloneByTag.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_initCloneByTag.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ \"./node_modules/lodash/_cloneArrayBuffer.js\"),\n    cloneDataView = __webpack_require__(/*! ./_cloneDataView */ \"./node_modules/lodash/_cloneDataView.js\"),\n    cloneRegExp = __webpack_require__(/*! ./_cloneRegExp */ \"./node_modules/lodash/_cloneRegExp.js\"),\n    cloneSymbol = __webpack_require__(/*! ./_cloneSymbol */ \"./node_modules/lodash/_cloneSymbol.js\"),\n    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ \"./node_modules/lodash/_cloneTypedArray.js\");\n\n/** `Object#toString` result references. */\nvar boolTag = '[object Boolean]',\n    dateTag = '[object Date]',\n    mapTag = '[object Map]',\n    numberTag = '[object Number]',\n    regexpTag = '[object RegExp]',\n    setTag = '[object Set]',\n    stringTag = '[object String]',\n    symbolTag = '[object Symbol]';\n\nvar arrayBufferTag = '[object ArrayBuffer]',\n    dataViewTag = '[object DataView]',\n    float32Tag = '[object Float32Array]',\n    float64Tag = '[object Float64Array]',\n    int8Tag = '[object Int8Array]',\n    int16Tag = '[object Int16Array]',\n    int32Tag = '[object Int32Array]',\n    uint8Tag = '[object Uint8Array]',\n    uint8ClampedTag = '[object Uint8ClampedArray]',\n    uint16Tag = '[object Uint16Array]',\n    uint32Tag = '[object Uint32Array]';\n\n/**\n * Initializes an object clone based on its `toStringTag`.\n *\n * **Note:** This function only supports cloning values with tags of\n * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.\n *\n * @private\n * @param {Object} object The object to clone.\n * @param {string} tag The `toStringTag` of the object to clone.\n * @param {boolean} [isDeep] Specify a deep clone.\n * @returns {Object} Returns the initialized clone.\n */\nfunction initCloneByTag(object, tag, isDeep) {\n  var Ctor = object.constructor;\n  switch (tag) {\n    case arrayBufferTag:\n      return cloneArrayBuffer(object);\n\n    case boolTag:\n    case dateTag:\n      return new Ctor(+object);\n\n    case dataViewTag:\n      return cloneDataView(object, isDeep);\n\n    case float32Tag: case float64Tag:\n    case int8Tag: case int16Tag: case int32Tag:\n    case uint8Tag: case uint8ClampedTag: case uint16Tag: case uint32Tag:\n      return cloneTypedArray(object, isDeep);\n\n    case mapTag:\n      return new Ctor;\n\n    case numberTag:\n    case stringTag:\n      return new Ctor(object);\n\n    case regexpTag:\n      return cloneRegExp(object);\n\n    case setTag:\n      return new Ctor;\n\n    case symbolTag:\n      return cloneSymbol(object);\n  }\n}\n\nmodule.exports = initCloneByTag;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_initCloneByTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_initCloneObject.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_initCloneObject.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseCreate = __webpack_require__(/*! ./_baseCreate */ \"./node_modules/lodash/_baseCreate.js\"),\n    getPrototype = __webpack_require__(/*! ./_getPrototype */ \"./node_modules/lodash/_getPrototype.js\"),\n    isPrototype = __webpack_require__(/*! ./_isPrototype */ \"./node_modules/lodash/_isPrototype.js\");\n\n/**\n * Initializes an object clone.\n *\n * @private\n * @param {Object} object The object to clone.\n * @returns {Object} Returns the initialized clone.\n */\nfunction initCloneObject(object) {\n  return (typeof object.constructor == 'function' && !isPrototype(object))\n    ? baseCreate(getPrototype(object))\n    : {};\n}\n\nmodule.exports = initCloneObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_initCloneObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isFlattenable.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_isFlattenable.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Symbol = __webpack_require__(/*! ./_Symbol */ \"./node_modules/lodash/_Symbol.js\"),\n    isArguments = __webpack_require__(/*! ./isArguments */ \"./node_modules/lodash/isArguments.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/** Built-in value references. */\nvar spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;\n\n/**\n * Checks if `value` is a flattenable `arguments` object or array.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.\n */\nfunction isFlattenable(value) {\n  return isArray(value) || isArguments(value) ||\n    !!(spreadableSymbol && value && value[spreadableSymbol]);\n}\n\nmodule.exports = isFlattenable;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isFlattenable.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isIndex.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_isIndex.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/** Used as references for various `Number` constants. */\nvar MAX_SAFE_INTEGER = 9007199254740991;\n\n/** Used to detect unsigned integer values. */\nvar reIsUint = /^(?:0|[1-9]\\d*)$/;\n\n/**\n * Checks if `value` is a valid array-like index.\n *\n * @private\n * @param {*} value The value to check.\n * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.\n * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.\n */\nfunction isIndex(value, length) {\n  var type = typeof value;\n  length = length == null ? MAX_SAFE_INTEGER : length;\n\n  return !!length &&\n    (type == 'number' ||\n      (type != 'symbol' && reIsUint.test(value))) &&\n        (value > -1 && value % 1 == 0 && value < length);\n}\n\nmodule.exports = isIndex;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isIndex.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isIterateeCall.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_isIterateeCall.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var eq = __webpack_require__(/*! ./eq */ \"./node_modules/lodash/eq.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\"),\n    isIndex = __webpack_require__(/*! ./_isIndex */ \"./node_modules/lodash/_isIndex.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\");\n\n/**\n * Checks if the given arguments are from an iteratee call.\n *\n * @private\n * @param {*} value The potential iteratee value argument.\n * @param {*} index The potential iteratee index or key argument.\n * @param {*} object The potential iteratee object argument.\n * @returns {boolean} Returns `true` if the arguments are from an iteratee call,\n *  else `false`.\n */\nfunction isIterateeCall(value, index, object) {\n  if (!isObject(object)) {\n    return false;\n  }\n  var type = typeof index;\n  if (type == 'number'\n        ? (isArrayLike(object) && isIndex(index, object.length))\n        : (type == 'string' && index in object)\n      ) {\n    return eq(object[index], value);\n  }\n  return false;\n}\n\nmodule.exports = isIterateeCall;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isIterateeCall.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isKey.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/_isKey.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isSymbol = __webpack_require__(/*! ./isSymbol */ \"./node_modules/lodash/isSymbol.js\");\n\n/** Used to match property names within property paths. */\nvar reIsDeepProp = /\\.|\\[(?:[^[\\]]*|([\"'])(?:(?!\\1)[^\\\\]|\\\\.)*?\\1)\\]/,\n    reIsPlainProp = /^\\w*$/;\n\n/**\n * Checks if `value` is a property name and not a property path.\n *\n * @private\n * @param {*} value The value to check.\n * @param {Object} [object] The object to query keys on.\n * @returns {boolean} Returns `true` if `value` is a property name, else `false`.\n */\nfunction isKey(value, object) {\n  if (isArray(value)) {\n    return false;\n  }\n  var type = typeof value;\n  if (type == 'number' || type == 'symbol' || type == 'boolean' ||\n      value == null || isSymbol(value)) {\n    return true;\n  }\n  return reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||\n    (object != null && value in Object(object));\n}\n\nmodule.exports = isKey;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isKey.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isKeyable.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/_isKeyable.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if `value` is suitable for use as unique object key.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is suitable, else `false`.\n */\nfunction isKeyable(value) {\n  var type = typeof value;\n  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')\n    ? (value !== '__proto__')\n    : (value === null);\n}\n\nmodule.exports = isKeyable;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isKeyable.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isMasked.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_isMasked.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var coreJsData = __webpack_require__(/*! ./_coreJsData */ \"./node_modules/lodash/_coreJsData.js\");\n\n/** Used to detect methods masquerading as native. */\nvar maskSrcKey = (function() {\n  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');\n  return uid ? ('Symbol(src)_1.' + uid) : '';\n}());\n\n/**\n * Checks if `func` has its source masked.\n *\n * @private\n * @param {Function} func The function to check.\n * @returns {boolean} Returns `true` if `func` is masked, else `false`.\n */\nfunction isMasked(func) {\n  return !!maskSrcKey && (maskSrcKey in func);\n}\n\nmodule.exports = isMasked;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isMasked.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isPrototype.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_isPrototype.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/**\n * Checks if `value` is likely a prototype object.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.\n */\nfunction isPrototype(value) {\n  var Ctor = value && value.constructor,\n      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;\n\n  return value === proto;\n}\n\nmodule.exports = isPrototype;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isPrototype.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_isStrictComparable.js":
+/*!****************************************************!*\
+  !*** ./node_modules/lodash/_isStrictComparable.js ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\");\n\n/**\n * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.\n *\n * @private\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` if suitable for strict\n *  equality comparisons, else `false`.\n */\nfunction isStrictComparable(value) {\n  return value === value && !isObject(value);\n}\n\nmodule.exports = isStrictComparable;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_isStrictComparable.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_listCacheClear.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_listCacheClear.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+eval("/**\n * Removes all key-value entries from the list cache.\n *\n * @private\n * @name clear\n * @memberOf ListCache\n */\nfunction listCacheClear() {\n  this.__data__ = [];\n  this.size = 0;\n}\n\nmodule.exports = listCacheClear;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_listCacheClear.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_listCacheDelete.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_listCacheDelete.js ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ \"./node_modules/lodash/_assocIndexOf.js\");\n\n/** Used for built-in method references. */\nvar arrayProto = Array.prototype;\n\n/** Built-in value references. */\nvar splice = arrayProto.splice;\n\n/**\n * Removes `key` and its value from the list cache.\n *\n * @private\n * @name delete\n * @memberOf ListCache\n * @param {string} key The key of the value to remove.\n * @returns {boolean} Returns `true` if the entry was removed, else `false`.\n */\nfunction listCacheDelete(key) {\n  var data = this.__data__,\n      index = assocIndexOf(data, key);\n\n  if (index < 0) {\n    return false;\n  }\n  var lastIndex = data.length - 1;\n  if (index == lastIndex) {\n    data.pop();\n  } else {\n    splice.call(data, index, 1);\n  }\n  --this.size;\n  return true;\n}\n\nmodule.exports = listCacheDelete;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_listCacheDelete.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_listCacheGet.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_listCacheGet.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ \"./node_modules/lodash/_assocIndexOf.js\");\n\n/**\n * Gets the list cache value for `key`.\n *\n * @private\n * @name get\n * @memberOf ListCache\n * @param {string} key The key of the value to get.\n * @returns {*} Returns the entry value.\n */\nfunction listCacheGet(key) {\n  var data = this.__data__,\n      index = assocIndexOf(data, key);\n\n  return index < 0 ? undefined : data[index][1];\n}\n\nmodule.exports = listCacheGet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_listCacheGet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_listCacheHas.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_listCacheHas.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ \"./node_modules/lodash/_assocIndexOf.js\");\n\n/**\n * Checks if a list cache value for `key` exists.\n *\n * @private\n * @name has\n * @memberOf ListCache\n * @param {string} key The key of the entry to check.\n * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n */\nfunction listCacheHas(key) {\n  return assocIndexOf(this.__data__, key) > -1;\n}\n\nmodule.exports = listCacheHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_listCacheHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_listCacheSet.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_listCacheSet.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ \"./node_modules/lodash/_assocIndexOf.js\");\n\n/**\n * Sets the list cache `key` to `value`.\n *\n * @private\n * @name set\n * @memberOf ListCache\n * @param {string} key The key of the value to set.\n * @param {*} value The value to set.\n * @returns {Object} Returns the list cache instance.\n */\nfunction listCacheSet(key, value) {\n  var data = this.__data__,\n      index = assocIndexOf(data, key);\n\n  if (index < 0) {\n    ++this.size;\n    data.push([key, value]);\n  } else {\n    data[index][1] = value;\n  }\n  return this;\n}\n\nmodule.exports = listCacheSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_listCacheSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_mapCacheClear.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_mapCacheClear.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Hash = __webpack_require__(/*! ./_Hash */ \"./node_modules/lodash/_Hash.js\"),\n    ListCache = __webpack_require__(/*! ./_ListCache */ \"./node_modules/lodash/_ListCache.js\"),\n    Map = __webpack_require__(/*! ./_Map */ \"./node_modules/lodash/_Map.js\");\n\n/**\n * Removes all key-value entries from the map.\n *\n * @private\n * @name clear\n * @memberOf MapCache\n */\nfunction mapCacheClear() {\n  this.size = 0;\n  this.__data__ = {\n    'hash': new Hash,\n    'map': new (Map || ListCache),\n    'string': new Hash\n  };\n}\n\nmodule.exports = mapCacheClear;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_mapCacheClear.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_mapCacheDelete.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_mapCacheDelete.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getMapData = __webpack_require__(/*! ./_getMapData */ \"./node_modules/lodash/_getMapData.js\");\n\n/**\n * Removes `key` and its value from the map.\n *\n * @private\n * @name delete\n * @memberOf MapCache\n * @param {string} key The key of the value to remove.\n * @returns {boolean} Returns `true` if the entry was removed, else `false`.\n */\nfunction mapCacheDelete(key) {\n  var result = getMapData(this, key)['delete'](key);\n  this.size -= result ? 1 : 0;\n  return result;\n}\n\nmodule.exports = mapCacheDelete;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_mapCacheDelete.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_mapCacheGet.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_mapCacheGet.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getMapData = __webpack_require__(/*! ./_getMapData */ \"./node_modules/lodash/_getMapData.js\");\n\n/**\n * Gets the map value for `key`.\n *\n * @private\n * @name get\n * @memberOf MapCache\n * @param {string} key The key of the value to get.\n * @returns {*} Returns the entry value.\n */\nfunction mapCacheGet(key) {\n  return getMapData(this, key).get(key);\n}\n\nmodule.exports = mapCacheGet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_mapCacheGet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_mapCacheHas.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_mapCacheHas.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getMapData = __webpack_require__(/*! ./_getMapData */ \"./node_modules/lodash/_getMapData.js\");\n\n/**\n * Checks if a map value for `key` exists.\n *\n * @private\n * @name has\n * @memberOf MapCache\n * @param {string} key The key of the entry to check.\n * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n */\nfunction mapCacheHas(key) {\n  return getMapData(this, key).has(key);\n}\n\nmodule.exports = mapCacheHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_mapCacheHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_mapCacheSet.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_mapCacheSet.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getMapData = __webpack_require__(/*! ./_getMapData */ \"./node_modules/lodash/_getMapData.js\");\n\n/**\n * Sets the map `key` to `value`.\n *\n * @private\n * @name set\n * @memberOf MapCache\n * @param {string} key The key of the value to set.\n * @param {*} value The value to set.\n * @returns {Object} Returns the map cache instance.\n */\nfunction mapCacheSet(key, value) {\n  var data = getMapData(this, key),\n      size = data.size;\n\n  data.set(key, value);\n  this.size += data.size == size ? 0 : 1;\n  return this;\n}\n\nmodule.exports = mapCacheSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_mapCacheSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_mapToArray.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_mapToArray.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Converts `map` to its key-value pairs.\n *\n * @private\n * @param {Object} map The map to convert.\n * @returns {Array} Returns the key-value pairs.\n */\nfunction mapToArray(map) {\n  var index = -1,\n      result = Array(map.size);\n\n  map.forEach(function(value, key) {\n    result[++index] = [key, value];\n  });\n  return result;\n}\n\nmodule.exports = mapToArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_mapToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_matchesStrictComparable.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/lodash/_matchesStrictComparable.js ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `matchesProperty` for source values suitable\n * for strict equality comparisons, i.e. `===`.\n *\n * @private\n * @param {string} key The key of the property to get.\n * @param {*} srcValue The value to match.\n * @returns {Function} Returns the new spec function.\n */\nfunction matchesStrictComparable(key, srcValue) {\n  return function(object) {\n    if (object == null) {\n      return false;\n    }\n    return object[key] === srcValue &&\n      (srcValue !== undefined || (key in Object(object)));\n  };\n}\n\nmodule.exports = matchesStrictComparable;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_matchesStrictComparable.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_memoizeCapped.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_memoizeCapped.js ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var memoize = __webpack_require__(/*! ./memoize */ \"./node_modules/lodash/memoize.js\");\n\n/** Used as the maximum memoize cache size. */\nvar MAX_MEMOIZE_SIZE = 500;\n\n/**\n * A specialized version of `_.memoize` which clears the memoized function's\n * cache when it exceeds `MAX_MEMOIZE_SIZE`.\n *\n * @private\n * @param {Function} func The function to have its output memoized.\n * @returns {Function} Returns the new memoized function.\n */\nfunction memoizeCapped(func) {\n  var result = memoize(func, function(key) {\n    if (cache.size === MAX_MEMOIZE_SIZE) {\n      cache.clear();\n    }\n    return key;\n  });\n\n  var cache = result.cache;\n  return result;\n}\n\nmodule.exports = memoizeCapped;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_memoizeCapped.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_nativeCreate.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_nativeCreate.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var getNative = __webpack_require__(/*! ./_getNative */ \"./node_modules/lodash/_getNative.js\");\n\n/* Built-in method references that are verified to be native. */\nvar nativeCreate = getNative(Object, 'create');\n\nmodule.exports = nativeCreate;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_nativeCreate.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_nativeKeys.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_nativeKeys.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var overArg = __webpack_require__(/*! ./_overArg */ \"./node_modules/lodash/_overArg.js\");\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeKeys = overArg(Object.keys, Object);\n\nmodule.exports = nativeKeys;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_nativeKeys.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_nativeKeysIn.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_nativeKeysIn.js ***!
+  \**********************************************/
+/***/ ((module) => {
+
+eval("/**\n * This function is like\n * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)\n * except that it includes inherited enumerable properties.\n *\n * @private\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names.\n */\nfunction nativeKeysIn(object) {\n  var result = [];\n  if (object != null) {\n    for (var key in Object(object)) {\n      result.push(key);\n    }\n  }\n  return result;\n}\n\nmodule.exports = nativeKeysIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_nativeKeysIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_nodeUtil.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_nodeUtil.js ***!
+  \******************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar freeGlobal = __webpack_require__(/*! ./_freeGlobal */ \"./node_modules/lodash/_freeGlobal.js\");\n\n/** Detect free variable `exports`. */\nvar freeExports =  true && exports && !exports.nodeType && exports;\n\n/** Detect free variable `module`. */\nvar freeModule = freeExports && \"object\" == 'object' && module && !module.nodeType && module;\n\n/** Detect the popular CommonJS extension `module.exports`. */\nvar moduleExports = freeModule && freeModule.exports === freeExports;\n\n/** Detect free variable `process` from Node.js. */\nvar freeProcess = moduleExports && freeGlobal.process;\n\n/** Used to access faster Node.js helpers. */\nvar nodeUtil = (function() {\n  try {\n    // Use `util.types` for Node.js 10+.\n    var types = freeModule && freeModule.require && freeModule.require('util').types;\n\n    if (types) {\n      return types;\n    }\n\n    // Legacy `process.binding('util')` for Node.js < 10.\n    return freeProcess && freeProcess.binding && freeProcess.binding('util');\n  } catch (e) {}\n}());\n\nmodule.exports = nodeUtil;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_nodeUtil.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_objectToString.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_objectToString.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+eval("/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/**\n * Used to resolve the\n * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)\n * of values.\n */\nvar nativeObjectToString = objectProto.toString;\n\n/**\n * Converts `value` to a string using `Object.prototype.toString`.\n *\n * @private\n * @param {*} value The value to convert.\n * @returns {string} Returns the converted string.\n */\nfunction objectToString(value) {\n  return nativeObjectToString.call(value);\n}\n\nmodule.exports = objectToString;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_objectToString.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_overArg.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_overArg.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/**\n * Creates a unary function that invokes `func` with its argument transformed.\n *\n * @private\n * @param {Function} func The function to wrap.\n * @param {Function} transform The argument transform.\n * @returns {Function} Returns the new function.\n */\nfunction overArg(func, transform) {\n  return function(arg) {\n    return func(transform(arg));\n  };\n}\n\nmodule.exports = overArg;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_overArg.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_overRest.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_overRest.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var apply = __webpack_require__(/*! ./_apply */ \"./node_modules/lodash/_apply.js\");\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeMax = Math.max;\n\n/**\n * A specialized version of `baseRest` which transforms the rest array.\n *\n * @private\n * @param {Function} func The function to apply a rest parameter to.\n * @param {number} [start=func.length-1] The start position of the rest parameter.\n * @param {Function} transform The rest array transform.\n * @returns {Function} Returns the new function.\n */\nfunction overRest(func, start, transform) {\n  start = nativeMax(start === undefined ? (func.length - 1) : start, 0);\n  return function() {\n    var args = arguments,\n        index = -1,\n        length = nativeMax(args.length - start, 0),\n        array = Array(length);\n\n    while (++index < length) {\n      array[index] = args[start + index];\n    }\n    index = -1;\n    var otherArgs = Array(start + 1);\n    while (++index < start) {\n      otherArgs[index] = args[index];\n    }\n    otherArgs[start] = transform(array);\n    return apply(func, this, otherArgs);\n  };\n}\n\nmodule.exports = overRest;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_overRest.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_root.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/_root.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ \"./node_modules/lodash/_freeGlobal.js\");\n\n/** Detect free variable `self`. */\nvar freeSelf = typeof self == 'object' && self && self.Object === Object && self;\n\n/** Used as a reference to the global object. */\nvar root = freeGlobal || freeSelf || Function('return this')();\n\nmodule.exports = root;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_root.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_safeGet.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/_safeGet.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/**\n * Gets the value at `key`, unless `key` is \"__proto__\" or \"constructor\".\n *\n * @private\n * @param {Object} object The object to query.\n * @param {string} key The key of the property to get.\n * @returns {*} Returns the property value.\n */\nfunction safeGet(object, key) {\n  if (key === 'constructor' && typeof object[key] === 'function') {\n    return;\n  }\n\n  if (key == '__proto__') {\n    return;\n  }\n\n  return object[key];\n}\n\nmodule.exports = safeGet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_safeGet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_setCacheAdd.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_setCacheAdd.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/** Used to stand-in for `undefined` hash values. */\nvar HASH_UNDEFINED = '__lodash_hash_undefined__';\n\n/**\n * Adds `value` to the array cache.\n *\n * @private\n * @name add\n * @memberOf SetCache\n * @alias push\n * @param {*} value The value to cache.\n * @returns {Object} Returns the cache instance.\n */\nfunction setCacheAdd(value) {\n  this.__data__.set(value, HASH_UNDEFINED);\n  return this;\n}\n\nmodule.exports = setCacheAdd;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_setCacheAdd.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_setCacheHas.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_setCacheHas.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if `value` is in the array cache.\n *\n * @private\n * @name has\n * @memberOf SetCache\n * @param {*} value The value to search for.\n * @returns {number} Returns `true` if `value` is found, else `false`.\n */\nfunction setCacheHas(value) {\n  return this.__data__.has(value);\n}\n\nmodule.exports = setCacheHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_setCacheHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_setToArray.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_setToArray.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Converts `set` to an array of its values.\n *\n * @private\n * @param {Object} set The set to convert.\n * @returns {Array} Returns the values.\n */\nfunction setToArray(set) {\n  var index = -1,\n      result = Array(set.size);\n\n  set.forEach(function(value) {\n    result[++index] = value;\n  });\n  return result;\n}\n\nmodule.exports = setToArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_setToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_setToString.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_setToString.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseSetToString = __webpack_require__(/*! ./_baseSetToString */ \"./node_modules/lodash/_baseSetToString.js\"),\n    shortOut = __webpack_require__(/*! ./_shortOut */ \"./node_modules/lodash/_shortOut.js\");\n\n/**\n * Sets the `toString` method of `func` to return `string`.\n *\n * @private\n * @param {Function} func The function to modify.\n * @param {Function} string The `toString` result.\n * @returns {Function} Returns `func`.\n */\nvar setToString = shortOut(baseSetToString);\n\nmodule.exports = setToString;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_setToString.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_shortOut.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_shortOut.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/** Used to detect hot functions by number of calls within a span of milliseconds. */\nvar HOT_COUNT = 800,\n    HOT_SPAN = 16;\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeNow = Date.now;\n\n/**\n * Creates a function that'll short out and invoke `identity` instead\n * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`\n * milliseconds.\n *\n * @private\n * @param {Function} func The function to restrict.\n * @returns {Function} Returns the new shortable function.\n */\nfunction shortOut(func) {\n  var count = 0,\n      lastCalled = 0;\n\n  return function() {\n    var stamp = nativeNow(),\n        remaining = HOT_SPAN - (stamp - lastCalled);\n\n    lastCalled = stamp;\n    if (remaining > 0) {\n      if (++count >= HOT_COUNT) {\n        return arguments[0];\n      }\n    } else {\n      count = 0;\n    }\n    return func.apply(undefined, arguments);\n  };\n}\n\nmodule.exports = shortOut;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_shortOut.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stackClear.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_stackClear.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var ListCache = __webpack_require__(/*! ./_ListCache */ \"./node_modules/lodash/_ListCache.js\");\n\n/**\n * Removes all key-value entries from the stack.\n *\n * @private\n * @name clear\n * @memberOf Stack\n */\nfunction stackClear() {\n  this.__data__ = new ListCache;\n  this.size = 0;\n}\n\nmodule.exports = stackClear;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stackClear.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stackDelete.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_stackDelete.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Removes `key` and its value from the stack.\n *\n * @private\n * @name delete\n * @memberOf Stack\n * @param {string} key The key of the value to remove.\n * @returns {boolean} Returns `true` if the entry was removed, else `false`.\n */\nfunction stackDelete(key) {\n  var data = this.__data__,\n      result = data['delete'](key);\n\n  this.size = data.size;\n  return result;\n}\n\nmodule.exports = stackDelete;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stackDelete.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stackGet.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_stackGet.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Gets the stack value for `key`.\n *\n * @private\n * @name get\n * @memberOf Stack\n * @param {string} key The key of the value to get.\n * @returns {*} Returns the entry value.\n */\nfunction stackGet(key) {\n  return this.__data__.get(key);\n}\n\nmodule.exports = stackGet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stackGet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stackHas.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_stackHas.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if a stack value for `key` exists.\n *\n * @private\n * @name has\n * @memberOf Stack\n * @param {string} key The key of the entry to check.\n * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n */\nfunction stackHas(key) {\n  return this.__data__.has(key);\n}\n\nmodule.exports = stackHas;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stackHas.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stackSet.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_stackSet.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var ListCache = __webpack_require__(/*! ./_ListCache */ \"./node_modules/lodash/_ListCache.js\"),\n    Map = __webpack_require__(/*! ./_Map */ \"./node_modules/lodash/_Map.js\"),\n    MapCache = __webpack_require__(/*! ./_MapCache */ \"./node_modules/lodash/_MapCache.js\");\n\n/** Used as the size to enable large array optimizations. */\nvar LARGE_ARRAY_SIZE = 200;\n\n/**\n * Sets the stack `key` to `value`.\n *\n * @private\n * @name set\n * @memberOf Stack\n * @param {string} key The key of the value to set.\n * @param {*} value The value to set.\n * @returns {Object} Returns the stack cache instance.\n */\nfunction stackSet(key, value) {\n  var data = this.__data__;\n  if (data instanceof ListCache) {\n    var pairs = data.__data__;\n    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {\n      pairs.push([key, value]);\n      this.size = ++data.size;\n      return this;\n    }\n    data = this.__data__ = new MapCache(pairs);\n  }\n  data.set(key, value);\n  this.size = data.size;\n  return this;\n}\n\nmodule.exports = stackSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stackSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_strictIndexOf.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/_strictIndexOf.js ***!
+  \***********************************************/
+/***/ ((module) => {
+
+eval("/**\n * A specialized version of `_.indexOf` which performs strict equality\n * comparisons of values, i.e. `===`.\n *\n * @private\n * @param {Array} array The array to inspect.\n * @param {*} value The value to search for.\n * @param {number} fromIndex The index to search from.\n * @returns {number} Returns the index of the matched value, else `-1`.\n */\nfunction strictIndexOf(array, value, fromIndex) {\n  var index = fromIndex - 1,\n      length = array.length;\n\n  while (++index < length) {\n    if (array[index] === value) {\n      return index;\n    }\n  }\n  return -1;\n}\n\nmodule.exports = strictIndexOf;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_strictIndexOf.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stringSize.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_stringSize.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var asciiSize = __webpack_require__(/*! ./_asciiSize */ \"./node_modules/lodash/_asciiSize.js\"),\n    hasUnicode = __webpack_require__(/*! ./_hasUnicode */ \"./node_modules/lodash/_hasUnicode.js\"),\n    unicodeSize = __webpack_require__(/*! ./_unicodeSize */ \"./node_modules/lodash/_unicodeSize.js\");\n\n/**\n * Gets the number of symbols in `string`.\n *\n * @private\n * @param {string} string The string to inspect.\n * @returns {number} Returns the string size.\n */\nfunction stringSize(string) {\n  return hasUnicode(string)\n    ? unicodeSize(string)\n    : asciiSize(string);\n}\n\nmodule.exports = stringSize;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stringSize.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_stringToPath.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/_stringToPath.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var memoizeCapped = __webpack_require__(/*! ./_memoizeCapped */ \"./node_modules/lodash/_memoizeCapped.js\");\n\n/** Used to match property names within property paths. */\nvar rePropName = /[^.[\\]]+|\\[(?:(-?\\d+(?:\\.\\d+)?)|([\"'])((?:(?!\\2)[^\\\\]|\\\\.)*?)\\2)\\]|(?=(?:\\.|\\[\\])(?:\\.|\\[\\]|$))/g;\n\n/** Used to match backslashes in property paths. */\nvar reEscapeChar = /\\\\(\\\\)?/g;\n\n/**\n * Converts `string` to a property path array.\n *\n * @private\n * @param {string} string The string to convert.\n * @returns {Array} Returns the property path array.\n */\nvar stringToPath = memoizeCapped(function(string) {\n  var result = [];\n  if (string.charCodeAt(0) === 46 /* . */) {\n    result.push('');\n  }\n  string.replace(rePropName, function(match, number, quote, subString) {\n    result.push(quote ? subString.replace(reEscapeChar, '$1') : (number || match));\n  });\n  return result;\n});\n\nmodule.exports = stringToPath;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_stringToPath.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_toKey.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/_toKey.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isSymbol = __webpack_require__(/*! ./isSymbol */ \"./node_modules/lodash/isSymbol.js\");\n\n/** Used as references for various `Number` constants. */\nvar INFINITY = 1 / 0;\n\n/**\n * Converts `value` to a string key if it's not a string or symbol.\n *\n * @private\n * @param {*} value The value to inspect.\n * @returns {string|symbol} Returns the key.\n */\nfunction toKey(value) {\n  if (typeof value == 'string' || isSymbol(value)) {\n    return value;\n  }\n  var result = (value + '');\n  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;\n}\n\nmodule.exports = toKey;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_toKey.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_toSource.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_toSource.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/** Used for built-in method references. */\nvar funcProto = Function.prototype;\n\n/** Used to resolve the decompiled source of functions. */\nvar funcToString = funcProto.toString;\n\n/**\n * Converts `func` to its source code.\n *\n * @private\n * @param {Function} func The function to convert.\n * @returns {string} Returns the source code.\n */\nfunction toSource(func) {\n  if (func != null) {\n    try {\n      return funcToString.call(func);\n    } catch (e) {}\n    try {\n      return (func + '');\n    } catch (e) {}\n  }\n  return '';\n}\n\nmodule.exports = toSource;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_toSource.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_trimmedEndIndex.js":
+/*!*************************************************!*\
+  !*** ./node_modules/lodash/_trimmedEndIndex.js ***!
+  \*************************************************/
+/***/ ((module) => {
+
+eval("/** Used to match a single whitespace character. */\nvar reWhitespace = /\\s/;\n\n/**\n * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace\n * character of `string`.\n *\n * @private\n * @param {string} string The string to inspect.\n * @returns {number} Returns the index of the last non-whitespace character.\n */\nfunction trimmedEndIndex(string) {\n  var index = string.length;\n\n  while (index-- && reWhitespace.test(string.charAt(index))) {}\n  return index;\n}\n\nmodule.exports = trimmedEndIndex;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_trimmedEndIndex.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_unicodeSize.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/_unicodeSize.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/** Used to compose unicode character classes. */\nvar rsAstralRange = '\\\\ud800-\\\\udfff',\n    rsComboMarksRange = '\\\\u0300-\\\\u036f',\n    reComboHalfMarksRange = '\\\\ufe20-\\\\ufe2f',\n    rsComboSymbolsRange = '\\\\u20d0-\\\\u20ff',\n    rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange,\n    rsVarRange = '\\\\ufe0e\\\\ufe0f';\n\n/** Used to compose unicode capture groups. */\nvar rsAstral = '[' + rsAstralRange + ']',\n    rsCombo = '[' + rsComboRange + ']',\n    rsFitz = '\\\\ud83c[\\\\udffb-\\\\udfff]',\n    rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')',\n    rsNonAstral = '[^' + rsAstralRange + ']',\n    rsRegional = '(?:\\\\ud83c[\\\\udde6-\\\\uddff]){2}',\n    rsSurrPair = '[\\\\ud800-\\\\udbff][\\\\udc00-\\\\udfff]',\n    rsZWJ = '\\\\u200d';\n\n/** Used to compose unicode regexes. */\nvar reOptMod = rsModifier + '?',\n    rsOptVar = '[' + rsVarRange + ']?',\n    rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*',\n    rsSeq = rsOptVar + reOptMod + rsOptJoin,\n    rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';\n\n/** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */\nvar reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');\n\n/**\n * Gets the size of a Unicode `string`.\n *\n * @private\n * @param {string} string The string inspect.\n * @returns {number} Returns the string size.\n */\nfunction unicodeSize(string) {\n  var result = reUnicode.lastIndex = 0;\n  while (reUnicode.test(string)) {\n    ++result;\n  }\n  return result;\n}\n\nmodule.exports = unicodeSize;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/_unicodeSize.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/clone.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/clone.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseClone = __webpack_require__(/*! ./_baseClone */ \"./node_modules/lodash/_baseClone.js\");\n\n/** Used to compose bitmasks for cloning. */\nvar CLONE_SYMBOLS_FLAG = 4;\n\n/**\n * Creates a shallow clone of `value`.\n *\n * **Note:** This method is loosely based on the\n * [structured clone algorithm](https://mdn.io/Structured_clone_algorithm)\n * and supports cloning arrays, array buffers, booleans, date objects, maps,\n * numbers, `Object` objects, regexes, sets, strings, symbols, and typed\n * arrays. The own enumerable properties of `arguments` objects are cloned\n * as plain objects. An empty object is returned for uncloneable values such\n * as error objects, functions, DOM nodes, and WeakMaps.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to clone.\n * @returns {*} Returns the cloned value.\n * @see _.cloneDeep\n * @example\n *\n * var objects = [{ 'a': 1 }, { 'b': 2 }];\n *\n * var shallow = _.clone(objects);\n * console.log(shallow[0] === objects[0]);\n * // => true\n */\nfunction clone(value) {\n  return baseClone(value, CLONE_SYMBOLS_FLAG);\n}\n\nmodule.exports = clone;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/clone.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/cloneDeep.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/cloneDeep.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseClone = __webpack_require__(/*! ./_baseClone */ \"./node_modules/lodash/_baseClone.js\");\n\n/** Used to compose bitmasks for cloning. */\nvar CLONE_DEEP_FLAG = 1,\n    CLONE_SYMBOLS_FLAG = 4;\n\n/**\n * This method is like `_.clone` except that it recursively clones `value`.\n *\n * @static\n * @memberOf _\n * @since 1.0.0\n * @category Lang\n * @param {*} value The value to recursively clone.\n * @returns {*} Returns the deep cloned value.\n * @see _.clone\n * @example\n *\n * var objects = [{ 'a': 1 }, { 'b': 2 }];\n *\n * var deep = _.cloneDeep(objects);\n * console.log(deep[0] === objects[0]);\n * // => false\n */\nfunction cloneDeep(value) {\n  return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG);\n}\n\nmodule.exports = cloneDeep;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/cloneDeep.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/constant.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/constant.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/**\n * Creates a function that returns `value`.\n *\n * @static\n * @memberOf _\n * @since 2.4.0\n * @category Util\n * @param {*} value The value to return from the new function.\n * @returns {Function} Returns the new constant function.\n * @example\n *\n * var objects = _.times(2, _.constant({ 'a': 1 }));\n *\n * console.log(objects);\n * // => [{ 'a': 1 }, { 'a': 1 }]\n *\n * console.log(objects[0] === objects[1]);\n * // => true\n */\nfunction constant(value) {\n  return function() {\n    return value;\n  };\n}\n\nmodule.exports = constant;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/constant.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/defaults.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/defaults.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseRest = __webpack_require__(/*! ./_baseRest */ \"./node_modules/lodash/_baseRest.js\"),\n    eq = __webpack_require__(/*! ./eq */ \"./node_modules/lodash/eq.js\"),\n    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ \"./node_modules/lodash/_isIterateeCall.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Assigns own and inherited enumerable string keyed properties of source\n * objects to the destination object for all destination properties that\n * resolve to `undefined`. Source objects are applied from left to right.\n * Once a property is set, additional values of the same property are ignored.\n *\n * **Note:** This method mutates `object`.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Object\n * @param {Object} object The destination object.\n * @param {...Object} [sources] The source objects.\n * @returns {Object} Returns `object`.\n * @see _.defaultsDeep\n * @example\n *\n * _.defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 });\n * // => { 'a': 1, 'b': 2 }\n */\nvar defaults = baseRest(function(object, sources) {\n  object = Object(object);\n\n  var index = -1;\n  var length = sources.length;\n  var guard = length > 2 ? sources[2] : undefined;\n\n  if (guard && isIterateeCall(sources[0], sources[1], guard)) {\n    length = 1;\n  }\n\n  while (++index < length) {\n    var source = sources[index];\n    var props = keysIn(source);\n    var propsIndex = -1;\n    var propsLength = props.length;\n\n    while (++propsIndex < propsLength) {\n      var key = props[propsIndex];\n      var value = object[key];\n\n      if (value === undefined ||\n          (eq(value, objectProto[key]) && !hasOwnProperty.call(object, key))) {\n        object[key] = source[key];\n      }\n    }\n  }\n\n  return object;\n});\n\nmodule.exports = defaults;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/defaults.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/each.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/each.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__(/*! ./forEach */ \"./node_modules/lodash/forEach.js\");\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/each.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/eq.js":
+/*!***********************************!*\
+  !*** ./node_modules/lodash/eq.js ***!
+  \***********************************/
+/***/ ((module) => {
+
+eval("/**\n * Performs a\n * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)\n * comparison between two values to determine if they are equivalent.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to compare.\n * @param {*} other The other value to compare.\n * @returns {boolean} Returns `true` if the values are equivalent, else `false`.\n * @example\n *\n * var object = { 'a': 1 };\n * var other = { 'a': 1 };\n *\n * _.eq(object, object);\n * // => true\n *\n * _.eq(object, other);\n * // => false\n *\n * _.eq('a', 'a');\n * // => true\n *\n * _.eq('a', Object('a'));\n * // => false\n *\n * _.eq(NaN, NaN);\n * // => true\n */\nfunction eq(value, other) {\n  return value === other || (value !== value && other !== other);\n}\n\nmodule.exports = eq;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/eq.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/filter.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/filter.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ \"./node_modules/lodash/_arrayFilter.js\"),\n    baseFilter = __webpack_require__(/*! ./_baseFilter */ \"./node_modules/lodash/_baseFilter.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/**\n * Iterates over elements of `collection`, returning an array of all elements\n * `predicate` returns truthy for. The predicate is invoked with three\n * arguments: (value, index|key, collection).\n *\n * **Note:** Unlike `_.remove`, this method returns a new array.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} [predicate=_.identity] The function invoked per iteration.\n * @returns {Array} Returns the new filtered array.\n * @see _.reject\n * @example\n *\n * var users = [\n *   { 'user': 'barney', 'age': 36, 'active': true },\n *   { 'user': 'fred',   'age': 40, 'active': false }\n * ];\n *\n * _.filter(users, function(o) { return !o.active; });\n * // => objects for ['fred']\n *\n * // The `_.matches` iteratee shorthand.\n * _.filter(users, { 'age': 36, 'active': true });\n * // => objects for ['barney']\n *\n * // The `_.matchesProperty` iteratee shorthand.\n * _.filter(users, ['active', false]);\n * // => objects for ['fred']\n *\n * // The `_.property` iteratee shorthand.\n * _.filter(users, 'active');\n * // => objects for ['barney']\n *\n * // Combining several predicates using `_.overEvery` or `_.overSome`.\n * _.filter(users, _.overSome([{ 'age': 36 }, ['age', 40]]));\n * // => objects for ['fred', 'barney']\n */\nfunction filter(collection, predicate) {\n  var func = isArray(collection) ? arrayFilter : baseFilter;\n  return func(collection, baseIteratee(predicate, 3));\n}\n\nmodule.exports = filter;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/filter.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/find.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/find.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var createFind = __webpack_require__(/*! ./_createFind */ \"./node_modules/lodash/_createFind.js\"),\n    findIndex = __webpack_require__(/*! ./findIndex */ \"./node_modules/lodash/findIndex.js\");\n\n/**\n * Iterates over elements of `collection`, returning the first element\n * `predicate` returns truthy for. The predicate is invoked with three\n * arguments: (value, index|key, collection).\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to inspect.\n * @param {Function} [predicate=_.identity] The function invoked per iteration.\n * @param {number} [fromIndex=0] The index to search from.\n * @returns {*} Returns the matched element, else `undefined`.\n * @example\n *\n * var users = [\n *   { 'user': 'barney',  'age': 36, 'active': true },\n *   { 'user': 'fred',    'age': 40, 'active': false },\n *   { 'user': 'pebbles', 'age': 1,  'active': true }\n * ];\n *\n * _.find(users, function(o) { return o.age < 40; });\n * // => object for 'barney'\n *\n * // The `_.matches` iteratee shorthand.\n * _.find(users, { 'age': 1, 'active': true });\n * // => object for 'pebbles'\n *\n * // The `_.matchesProperty` iteratee shorthand.\n * _.find(users, ['active', false]);\n * // => object for 'fred'\n *\n * // The `_.property` iteratee shorthand.\n * _.find(users, 'active');\n * // => object for 'barney'\n */\nvar find = createFind(findIndex);\n\nmodule.exports = find;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/find.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/findIndex.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/findIndex.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFindIndex = __webpack_require__(/*! ./_baseFindIndex */ \"./node_modules/lodash/_baseFindIndex.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    toInteger = __webpack_require__(/*! ./toInteger */ \"./node_modules/lodash/toInteger.js\");\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeMax = Math.max;\n\n/**\n * This method is like `_.find` except that it returns the index of the first\n * element `predicate` returns truthy for instead of the element itself.\n *\n * @static\n * @memberOf _\n * @since 1.1.0\n * @category Array\n * @param {Array} array The array to inspect.\n * @param {Function} [predicate=_.identity] The function invoked per iteration.\n * @param {number} [fromIndex=0] The index to search from.\n * @returns {number} Returns the index of the found element, else `-1`.\n * @example\n *\n * var users = [\n *   { 'user': 'barney',  'active': false },\n *   { 'user': 'fred',    'active': false },\n *   { 'user': 'pebbles', 'active': true }\n * ];\n *\n * _.findIndex(users, function(o) { return o.user == 'barney'; });\n * // => 0\n *\n * // The `_.matches` iteratee shorthand.\n * _.findIndex(users, { 'user': 'fred', 'active': false });\n * // => 1\n *\n * // The `_.matchesProperty` iteratee shorthand.\n * _.findIndex(users, ['active', false]);\n * // => 0\n *\n * // The `_.property` iteratee shorthand.\n * _.findIndex(users, 'active');\n * // => 2\n */\nfunction findIndex(array, predicate, fromIndex) {\n  var length = array == null ? 0 : array.length;\n  if (!length) {\n    return -1;\n  }\n  var index = fromIndex == null ? 0 : toInteger(fromIndex);\n  if (index < 0) {\n    index = nativeMax(length + index, 0);\n  }\n  return baseFindIndex(array, baseIteratee(predicate, 3), index);\n}\n\nmodule.exports = findIndex;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/findIndex.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/flatten.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/flatten.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFlatten = __webpack_require__(/*! ./_baseFlatten */ \"./node_modules/lodash/_baseFlatten.js\");\n\n/**\n * Flattens `array` a single level deep.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Array\n * @param {Array} array The array to flatten.\n * @returns {Array} Returns the new flattened array.\n * @example\n *\n * _.flatten([1, [2, [3, [4]], 5]]);\n * // => [1, 2, [3, [4]], 5]\n */\nfunction flatten(array) {\n  var length = array == null ? 0 : array.length;\n  return length ? baseFlatten(array, 1) : [];\n}\n\nmodule.exports = flatten;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/flatten.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/forEach.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/forEach.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayEach = __webpack_require__(/*! ./_arrayEach */ \"./node_modules/lodash/_arrayEach.js\"),\n    baseEach = __webpack_require__(/*! ./_baseEach */ \"./node_modules/lodash/_baseEach.js\"),\n    castFunction = __webpack_require__(/*! ./_castFunction */ \"./node_modules/lodash/_castFunction.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/**\n * Iterates over elements of `collection` and invokes `iteratee` for each element.\n * The iteratee is invoked with three arguments: (value, index|key, collection).\n * Iteratee functions may exit iteration early by explicitly returning `false`.\n *\n * **Note:** As with other \"Collections\" methods, objects with a \"length\"\n * property are iterated like arrays. To avoid this behavior use `_.forIn`\n * or `_.forOwn` for object iteration.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @alias each\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} [iteratee=_.identity] The function invoked per iteration.\n * @returns {Array|Object} Returns `collection`.\n * @see _.forEachRight\n * @example\n *\n * _.forEach([1, 2], function(value) {\n *   console.log(value);\n * });\n * // => Logs `1` then `2`.\n *\n * _.forEach({ 'a': 1, 'b': 2 }, function(value, key) {\n *   console.log(key);\n * });\n * // => Logs 'a' then 'b' (iteration order is not guaranteed).\n */\nfunction forEach(collection, iteratee) {\n  var func = isArray(collection) ? arrayEach : baseEach;\n  return func(collection, castFunction(iteratee));\n}\n\nmodule.exports = forEach;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/forEach.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/forIn.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/forIn.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFor = __webpack_require__(/*! ./_baseFor */ \"./node_modules/lodash/_baseFor.js\"),\n    castFunction = __webpack_require__(/*! ./_castFunction */ \"./node_modules/lodash/_castFunction.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\");\n\n/**\n * Iterates over own and inherited enumerable string keyed properties of an\n * object and invokes `iteratee` for each property. The iteratee is invoked\n * with three arguments: (value, key, object). Iteratee functions may exit\n * iteration early by explicitly returning `false`.\n *\n * @static\n * @memberOf _\n * @since 0.3.0\n * @category Object\n * @param {Object} object The object to iterate over.\n * @param {Function} [iteratee=_.identity] The function invoked per iteration.\n * @returns {Object} Returns `object`.\n * @see _.forInRight\n * @example\n *\n * function Foo() {\n *   this.a = 1;\n *   this.b = 2;\n * }\n *\n * Foo.prototype.c = 3;\n *\n * _.forIn(new Foo, function(value, key) {\n *   console.log(key);\n * });\n * // => Logs 'a', 'b', then 'c' (iteration order is not guaranteed).\n */\nfunction forIn(object, iteratee) {\n  return object == null\n    ? object\n    : baseFor(object, castFunction(iteratee), keysIn);\n}\n\nmodule.exports = forIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/forIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/get.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/get.js ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGet = __webpack_require__(/*! ./_baseGet */ \"./node_modules/lodash/_baseGet.js\");\n\n/**\n * Gets the value at `path` of `object`. If the resolved value is\n * `undefined`, the `defaultValue` is returned in its place.\n *\n * @static\n * @memberOf _\n * @since 3.7.0\n * @category Object\n * @param {Object} object The object to query.\n * @param {Array|string} path The path of the property to get.\n * @param {*} [defaultValue] The value returned for `undefined` resolved values.\n * @returns {*} Returns the resolved value.\n * @example\n *\n * var object = { 'a': [{ 'b': { 'c': 3 } }] };\n *\n * _.get(object, 'a[0].b.c');\n * // => 3\n *\n * _.get(object, ['a', '0', 'b', 'c']);\n * // => 3\n *\n * _.get(object, 'a.b.c', 'default');\n * // => 'default'\n */\nfunction get(object, path, defaultValue) {\n  var result = object == null ? undefined : baseGet(object, path);\n  return result === undefined ? defaultValue : result;\n}\n\nmodule.exports = get;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/get.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/has.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/has.js ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseHas = __webpack_require__(/*! ./_baseHas */ \"./node_modules/lodash/_baseHas.js\"),\n    hasPath = __webpack_require__(/*! ./_hasPath */ \"./node_modules/lodash/_hasPath.js\");\n\n/**\n * Checks if `path` is a direct property of `object`.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Object\n * @param {Object} object The object to query.\n * @param {Array|string} path The path to check.\n * @returns {boolean} Returns `true` if `path` exists, else `false`.\n * @example\n *\n * var object = { 'a': { 'b': 2 } };\n * var other = _.create({ 'a': _.create({ 'b': 2 }) });\n *\n * _.has(object, 'a');\n * // => true\n *\n * _.has(object, 'a.b');\n * // => true\n *\n * _.has(object, ['a', 'b']);\n * // => true\n *\n * _.has(other, 'a');\n * // => false\n */\nfunction has(object, path) {\n  return object != null && hasPath(object, path, baseHas);\n}\n\nmodule.exports = has;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/has.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/hasIn.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/hasIn.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseHasIn = __webpack_require__(/*! ./_baseHasIn */ \"./node_modules/lodash/_baseHasIn.js\"),\n    hasPath = __webpack_require__(/*! ./_hasPath */ \"./node_modules/lodash/_hasPath.js\");\n\n/**\n * Checks if `path` is a direct or inherited property of `object`.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Object\n * @param {Object} object The object to query.\n * @param {Array|string} path The path to check.\n * @returns {boolean} Returns `true` if `path` exists, else `false`.\n * @example\n *\n * var object = _.create({ 'a': _.create({ 'b': 2 }) });\n *\n * _.hasIn(object, 'a');\n * // => true\n *\n * _.hasIn(object, 'a.b');\n * // => true\n *\n * _.hasIn(object, ['a', 'b']);\n * // => true\n *\n * _.hasIn(object, 'b');\n * // => false\n */\nfunction hasIn(object, path) {\n  return object != null && hasPath(object, path, baseHasIn);\n}\n\nmodule.exports = hasIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/hasIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/identity.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/identity.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/**\n * This method returns the first argument it receives.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Util\n * @param {*} value Any value.\n * @returns {*} Returns `value`.\n * @example\n *\n * var object = { 'a': 1 };\n *\n * console.log(_.identity(object) === object);\n * // => true\n */\nfunction identity(value) {\n  return value;\n}\n\nmodule.exports = identity;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/identity.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isArguments.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/isArguments.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsArguments = __webpack_require__(/*! ./_baseIsArguments */ \"./node_modules/lodash/_baseIsArguments.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/** Built-in value references. */\nvar propertyIsEnumerable = objectProto.propertyIsEnumerable;\n\n/**\n * Checks if `value` is likely an `arguments` object.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is an `arguments` object,\n *  else `false`.\n * @example\n *\n * _.isArguments(function() { return arguments; }());\n * // => true\n *\n * _.isArguments([1, 2, 3]);\n * // => false\n */\nvar isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {\n  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&\n    !propertyIsEnumerable.call(value, 'callee');\n};\n\nmodule.exports = isArguments;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isArguments.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isArray.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/isArray.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if `value` is classified as an `Array` object.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is an array, else `false`.\n * @example\n *\n * _.isArray([1, 2, 3]);\n * // => true\n *\n * _.isArray(document.body.children);\n * // => false\n *\n * _.isArray('abc');\n * // => false\n *\n * _.isArray(_.noop);\n * // => false\n */\nvar isArray = Array.isArray;\n\nmodule.exports = isArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isArrayLike.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/isArrayLike.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isFunction = __webpack_require__(/*! ./isFunction */ \"./node_modules/lodash/isFunction.js\"),\n    isLength = __webpack_require__(/*! ./isLength */ \"./node_modules/lodash/isLength.js\");\n\n/**\n * Checks if `value` is array-like. A value is considered array-like if it's\n * not a function and has a `value.length` that's an integer greater than or\n * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is array-like, else `false`.\n * @example\n *\n * _.isArrayLike([1, 2, 3]);\n * // => true\n *\n * _.isArrayLike(document.body.children);\n * // => true\n *\n * _.isArrayLike('abc');\n * // => true\n *\n * _.isArrayLike(_.noop);\n * // => false\n */\nfunction isArrayLike(value) {\n  return value != null && isLength(value.length) && !isFunction(value);\n}\n\nmodule.exports = isArrayLike;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isArrayLike.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isArrayLikeObject.js":
+/*!**************************************************!*\
+  !*** ./node_modules/lodash/isArrayLikeObject.js ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/**\n * This method is like `_.isArrayLike` except that it also checks if `value`\n * is an object.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is an array-like object,\n *  else `false`.\n * @example\n *\n * _.isArrayLikeObject([1, 2, 3]);\n * // => true\n *\n * _.isArrayLikeObject(document.body.children);\n * // => true\n *\n * _.isArrayLikeObject('abc');\n * // => false\n *\n * _.isArrayLikeObject(_.noop);\n * // => false\n */\nfunction isArrayLikeObject(value) {\n  return isObjectLike(value) && isArrayLike(value);\n}\n\nmodule.exports = isArrayLikeObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isArrayLikeObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isBuffer.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isBuffer.js ***!
+  \*****************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\"),\n    stubFalse = __webpack_require__(/*! ./stubFalse */ \"./node_modules/lodash/stubFalse.js\");\n\n/** Detect free variable `exports`. */\nvar freeExports =  true && exports && !exports.nodeType && exports;\n\n/** Detect free variable `module`. */\nvar freeModule = freeExports && \"object\" == 'object' && module && !module.nodeType && module;\n\n/** Detect the popular CommonJS extension `module.exports`. */\nvar moduleExports = freeModule && freeModule.exports === freeExports;\n\n/** Built-in value references. */\nvar Buffer = moduleExports ? root.Buffer : undefined;\n\n/* Built-in method references for those with the same name as other `lodash` methods. */\nvar nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;\n\n/**\n * Checks if `value` is a buffer.\n *\n * @static\n * @memberOf _\n * @since 4.3.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.\n * @example\n *\n * _.isBuffer(new Buffer(2));\n * // => true\n *\n * _.isBuffer(new Uint8Array(2));\n * // => false\n */\nvar isBuffer = nativeIsBuffer || stubFalse;\n\nmodule.exports = isBuffer;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isBuffer.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isEmpty.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/isEmpty.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseKeys = __webpack_require__(/*! ./_baseKeys */ \"./node_modules/lodash/_baseKeys.js\"),\n    getTag = __webpack_require__(/*! ./_getTag */ \"./node_modules/lodash/_getTag.js\"),\n    isArguments = __webpack_require__(/*! ./isArguments */ \"./node_modules/lodash/isArguments.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\"),\n    isBuffer = __webpack_require__(/*! ./isBuffer */ \"./node_modules/lodash/isBuffer.js\"),\n    isPrototype = __webpack_require__(/*! ./_isPrototype */ \"./node_modules/lodash/_isPrototype.js\"),\n    isTypedArray = __webpack_require__(/*! ./isTypedArray */ \"./node_modules/lodash/isTypedArray.js\");\n\n/** `Object#toString` result references. */\nvar mapTag = '[object Map]',\n    setTag = '[object Set]';\n\n/** Used for built-in method references. */\nvar objectProto = Object.prototype;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/**\n * Checks if `value` is an empty object, collection, map, or set.\n *\n * Objects are considered empty if they have no own enumerable string keyed\n * properties.\n *\n * Array-like values such as `arguments` objects, arrays, buffers, strings, or\n * jQuery-like collections are considered empty if they have a `length` of `0`.\n * Similarly, maps and sets are considered empty if they have a `size` of `0`.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is empty, else `false`.\n * @example\n *\n * _.isEmpty(null);\n * // => true\n *\n * _.isEmpty(true);\n * // => true\n *\n * _.isEmpty(1);\n * // => true\n *\n * _.isEmpty([1, 2, 3]);\n * // => false\n *\n * _.isEmpty({ 'a': 1 });\n * // => false\n */\nfunction isEmpty(value) {\n  if (value == null) {\n    return true;\n  }\n  if (isArrayLike(value) &&\n      (isArray(value) || typeof value == 'string' || typeof value.splice == 'function' ||\n        isBuffer(value) || isTypedArray(value) || isArguments(value))) {\n    return !value.length;\n  }\n  var tag = getTag(value);\n  if (tag == mapTag || tag == setTag) {\n    return !value.size;\n  }\n  if (isPrototype(value)) {\n    return !baseKeys(value).length;\n  }\n  for (var key in value) {\n    if (hasOwnProperty.call(value, key)) {\n      return false;\n    }\n  }\n  return true;\n}\n\nmodule.exports = isEmpty;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isEmpty.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isFunction.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash/isFunction.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\");\n\n/** `Object#toString` result references. */\nvar asyncTag = '[object AsyncFunction]',\n    funcTag = '[object Function]',\n    genTag = '[object GeneratorFunction]',\n    proxyTag = '[object Proxy]';\n\n/**\n * Checks if `value` is classified as a `Function` object.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a function, else `false`.\n * @example\n *\n * _.isFunction(_);\n * // => true\n *\n * _.isFunction(/abc/);\n * // => false\n */\nfunction isFunction(value) {\n  if (!isObject(value)) {\n    return false;\n  }\n  // The use of `Object#toString` avoids issues with the `typeof` operator\n  // in Safari 9 which returns 'object' for typed arrays and other constructors.\n  var tag = baseGetTag(value);\n  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;\n}\n\nmodule.exports = isFunction;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isFunction.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isLength.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isLength.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/** Used as references for various `Number` constants. */\nvar MAX_SAFE_INTEGER = 9007199254740991;\n\n/**\n * Checks if `value` is a valid array-like length.\n *\n * **Note:** This method is loosely based on\n * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.\n * @example\n *\n * _.isLength(3);\n * // => true\n *\n * _.isLength(Number.MIN_VALUE);\n * // => false\n *\n * _.isLength(Infinity);\n * // => false\n *\n * _.isLength('3');\n * // => false\n */\nfunction isLength(value) {\n  return typeof value == 'number' &&\n    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;\n}\n\nmodule.exports = isLength;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isLength.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isMap.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/isMap.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsMap = __webpack_require__(/*! ./_baseIsMap */ \"./node_modules/lodash/_baseIsMap.js\"),\n    baseUnary = __webpack_require__(/*! ./_baseUnary */ \"./node_modules/lodash/_baseUnary.js\"),\n    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ \"./node_modules/lodash/_nodeUtil.js\");\n\n/* Node.js helper references. */\nvar nodeIsMap = nodeUtil && nodeUtil.isMap;\n\n/**\n * Checks if `value` is classified as a `Map` object.\n *\n * @static\n * @memberOf _\n * @since 4.3.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a map, else `false`.\n * @example\n *\n * _.isMap(new Map);\n * // => true\n *\n * _.isMap(new WeakMap);\n * // => false\n */\nvar isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;\n\nmodule.exports = isMap;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isMap.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isObject.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isObject.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if `value` is the\n * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)\n * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is an object, else `false`.\n * @example\n *\n * _.isObject({});\n * // => true\n *\n * _.isObject([1, 2, 3]);\n * // => true\n *\n * _.isObject(_.noop);\n * // => true\n *\n * _.isObject(null);\n * // => false\n */\nfunction isObject(value) {\n  var type = typeof value;\n  return value != null && (type == 'object' || type == 'function');\n}\n\nmodule.exports = isObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isObjectLike.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/isObjectLike.js ***!
+  \*********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if `value` is object-like. A value is object-like if it's not `null`\n * and has a `typeof` result of \"object\".\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is object-like, else `false`.\n * @example\n *\n * _.isObjectLike({});\n * // => true\n *\n * _.isObjectLike([1, 2, 3]);\n * // => true\n *\n * _.isObjectLike(_.noop);\n * // => false\n *\n * _.isObjectLike(null);\n * // => false\n */\nfunction isObjectLike(value) {\n  return value != null && typeof value == 'object';\n}\n\nmodule.exports = isObjectLike;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isObjectLike.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isPlainObject.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/isPlainObject.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    getPrototype = __webpack_require__(/*! ./_getPrototype */ \"./node_modules/lodash/_getPrototype.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar objectTag = '[object Object]';\n\n/** Used for built-in method references. */\nvar funcProto = Function.prototype,\n    objectProto = Object.prototype;\n\n/** Used to resolve the decompiled source of functions. */\nvar funcToString = funcProto.toString;\n\n/** Used to check objects for own properties. */\nvar hasOwnProperty = objectProto.hasOwnProperty;\n\n/** Used to infer the `Object` constructor. */\nvar objectCtorString = funcToString.call(Object);\n\n/**\n * Checks if `value` is a plain object, that is, an object created by the\n * `Object` constructor or one with a `[[Prototype]]` of `null`.\n *\n * @static\n * @memberOf _\n * @since 0.8.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.\n * @example\n *\n * function Foo() {\n *   this.a = 1;\n * }\n *\n * _.isPlainObject(new Foo);\n * // => false\n *\n * _.isPlainObject([1, 2, 3]);\n * // => false\n *\n * _.isPlainObject({ 'x': 0, 'y': 0 });\n * // => true\n *\n * _.isPlainObject(Object.create(null));\n * // => true\n */\nfunction isPlainObject(value) {\n  if (!isObjectLike(value) || baseGetTag(value) != objectTag) {\n    return false;\n  }\n  var proto = getPrototype(value);\n  if (proto === null) {\n    return true;\n  }\n  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;\n  return typeof Ctor == 'function' && Ctor instanceof Ctor &&\n    funcToString.call(Ctor) == objectCtorString;\n}\n\nmodule.exports = isPlainObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isPlainObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isSet.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/isSet.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsSet = __webpack_require__(/*! ./_baseIsSet */ \"./node_modules/lodash/_baseIsSet.js\"),\n    baseUnary = __webpack_require__(/*! ./_baseUnary */ \"./node_modules/lodash/_baseUnary.js\"),\n    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ \"./node_modules/lodash/_nodeUtil.js\");\n\n/* Node.js helper references. */\nvar nodeIsSet = nodeUtil && nodeUtil.isSet;\n\n/**\n * Checks if `value` is classified as a `Set` object.\n *\n * @static\n * @memberOf _\n * @since 4.3.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a set, else `false`.\n * @example\n *\n * _.isSet(new Set);\n * // => true\n *\n * _.isSet(new WeakSet);\n * // => false\n */\nvar isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;\n\nmodule.exports = isSet;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isSet.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isString.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isString.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar stringTag = '[object String]';\n\n/**\n * Checks if `value` is classified as a `String` primitive or object.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a string, else `false`.\n * @example\n *\n * _.isString('abc');\n * // => true\n *\n * _.isString(1);\n * // => false\n */\nfunction isString(value) {\n  return typeof value == 'string' ||\n    (!isArray(value) && isObjectLike(value) && baseGetTag(value) == stringTag);\n}\n\nmodule.exports = isString;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isString.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isSymbol.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/isSymbol.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ \"./node_modules/lodash/_baseGetTag.js\"),\n    isObjectLike = __webpack_require__(/*! ./isObjectLike */ \"./node_modules/lodash/isObjectLike.js\");\n\n/** `Object#toString` result references. */\nvar symbolTag = '[object Symbol]';\n\n/**\n * Checks if `value` is classified as a `Symbol` primitive or object.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.\n * @example\n *\n * _.isSymbol(Symbol.iterator);\n * // => true\n *\n * _.isSymbol('abc');\n * // => false\n */\nfunction isSymbol(value) {\n  return typeof value == 'symbol' ||\n    (isObjectLike(value) && baseGetTag(value) == symbolTag);\n}\n\nmodule.exports = isSymbol;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isSymbol.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isTypedArray.js":
+/*!*********************************************!*\
+  !*** ./node_modules/lodash/isTypedArray.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseIsTypedArray = __webpack_require__(/*! ./_baseIsTypedArray */ \"./node_modules/lodash/_baseIsTypedArray.js\"),\n    baseUnary = __webpack_require__(/*! ./_baseUnary */ \"./node_modules/lodash/_baseUnary.js\"),\n    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ \"./node_modules/lodash/_nodeUtil.js\");\n\n/* Node.js helper references. */\nvar nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;\n\n/**\n * Checks if `value` is classified as a typed array.\n *\n * @static\n * @memberOf _\n * @since 3.0.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.\n * @example\n *\n * _.isTypedArray(new Uint8Array);\n * // => true\n *\n * _.isTypedArray([]);\n * // => false\n */\nvar isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;\n\nmodule.exports = isTypedArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isTypedArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/isUndefined.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/isUndefined.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("/**\n * Checks if `value` is `undefined`.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.\n * @example\n *\n * _.isUndefined(void 0);\n * // => true\n *\n * _.isUndefined(null);\n * // => false\n */\nfunction isUndefined(value) {\n  return value === undefined;\n}\n\nmodule.exports = isUndefined;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/isUndefined.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/keys.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/keys.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ \"./node_modules/lodash/_arrayLikeKeys.js\"),\n    baseKeys = __webpack_require__(/*! ./_baseKeys */ \"./node_modules/lodash/_baseKeys.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\");\n\n/**\n * Creates an array of the own enumerable property names of `object`.\n *\n * **Note:** Non-object values are coerced to objects. See the\n * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)\n * for more details.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Object\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names.\n * @example\n *\n * function Foo() {\n *   this.a = 1;\n *   this.b = 2;\n * }\n *\n * Foo.prototype.c = 3;\n *\n * _.keys(new Foo);\n * // => ['a', 'b'] (iteration order is not guaranteed)\n *\n * _.keys('hi');\n * // => ['0', '1']\n */\nfunction keys(object) {\n  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);\n}\n\nmodule.exports = keys;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/keys.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/keysIn.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/keysIn.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ \"./node_modules/lodash/_arrayLikeKeys.js\"),\n    baseKeysIn = __webpack_require__(/*! ./_baseKeysIn */ \"./node_modules/lodash/_baseKeysIn.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\");\n\n/**\n * Creates an array of the own and inherited enumerable property names of `object`.\n *\n * **Note:** Non-object values are coerced to objects.\n *\n * @static\n * @memberOf _\n * @since 3.0.0\n * @category Object\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property names.\n * @example\n *\n * function Foo() {\n *   this.a = 1;\n *   this.b = 2;\n * }\n *\n * Foo.prototype.c = 3;\n *\n * _.keysIn(new Foo);\n * // => ['a', 'b', 'c'] (iteration order is not guaranteed)\n */\nfunction keysIn(object) {\n  return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);\n}\n\nmodule.exports = keysIn;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/keysIn.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/last.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/last.js ***!
+  \*************************************/
+/***/ ((module) => {
+
+eval("/**\n * Gets the last element of `array`.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Array\n * @param {Array} array The array to query.\n * @returns {*} Returns the last element of `array`.\n * @example\n *\n * _.last([1, 2, 3]);\n * // => 3\n */\nfunction last(array) {\n  var length = array == null ? 0 : array.length;\n  return length ? array[length - 1] : undefined;\n}\n\nmodule.exports = last;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/last.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/map.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/map.js ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayMap = __webpack_require__(/*! ./_arrayMap */ \"./node_modules/lodash/_arrayMap.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    baseMap = __webpack_require__(/*! ./_baseMap */ \"./node_modules/lodash/_baseMap.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/**\n * Creates an array of values by running each element in `collection` thru\n * `iteratee`. The iteratee is invoked with three arguments:\n * (value, index|key, collection).\n *\n * Many lodash methods are guarded to work as iteratees for methods like\n * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.\n *\n * The guarded methods are:\n * `ary`, `chunk`, `curry`, `curryRight`, `drop`, `dropRight`, `every`,\n * `fill`, `invert`, `parseInt`, `random`, `range`, `rangeRight`, `repeat`,\n * `sampleSize`, `slice`, `some`, `sortBy`, `split`, `take`, `takeRight`,\n * `template`, `trim`, `trimEnd`, `trimStart`, and `words`\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} [iteratee=_.identity] The function invoked per iteration.\n * @returns {Array} Returns the new mapped array.\n * @example\n *\n * function square(n) {\n *   return n * n;\n * }\n *\n * _.map([4, 8], square);\n * // => [16, 64]\n *\n * _.map({ 'a': 4, 'b': 8 }, square);\n * // => [16, 64] (iteration order is not guaranteed)\n *\n * var users = [\n *   { 'user': 'barney' },\n *   { 'user': 'fred' }\n * ];\n *\n * // The `_.property` iteratee shorthand.\n * _.map(users, 'user');\n * // => ['barney', 'fred']\n */\nfunction map(collection, iteratee) {\n  var func = isArray(collection) ? arrayMap : baseMap;\n  return func(collection, baseIteratee(iteratee, 3));\n}\n\nmodule.exports = map;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/map.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/mapValues.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/mapValues.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ \"./node_modules/lodash/_baseAssignValue.js\"),\n    baseForOwn = __webpack_require__(/*! ./_baseForOwn */ \"./node_modules/lodash/_baseForOwn.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\");\n\n/**\n * Creates an object with the same keys as `object` and values generated\n * by running each own enumerable string keyed property of `object` thru\n * `iteratee`. The iteratee is invoked with three arguments:\n * (value, key, object).\n *\n * @static\n * @memberOf _\n * @since 2.4.0\n * @category Object\n * @param {Object} object The object to iterate over.\n * @param {Function} [iteratee=_.identity] The function invoked per iteration.\n * @returns {Object} Returns the new mapped object.\n * @see _.mapKeys\n * @example\n *\n * var users = {\n *   'fred':    { 'user': 'fred',    'age': 40 },\n *   'pebbles': { 'user': 'pebbles', 'age': 1 }\n * };\n *\n * _.mapValues(users, function(o) { return o.age; });\n * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)\n *\n * // The `_.property` iteratee shorthand.\n * _.mapValues(users, 'age');\n * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)\n */\nfunction mapValues(object, iteratee) {\n  var result = {};\n  iteratee = baseIteratee(iteratee, 3);\n\n  baseForOwn(object, function(value, key, object) {\n    baseAssignValue(result, key, iteratee(value, key, object));\n  });\n  return result;\n}\n\nmodule.exports = mapValues;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/mapValues.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/max.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/max.js ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseExtremum = __webpack_require__(/*! ./_baseExtremum */ \"./node_modules/lodash/_baseExtremum.js\"),\n    baseGt = __webpack_require__(/*! ./_baseGt */ \"./node_modules/lodash/_baseGt.js\"),\n    identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\");\n\n/**\n * Computes the maximum value of `array`. If `array` is empty or falsey,\n * `undefined` is returned.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Math\n * @param {Array} array The array to iterate over.\n * @returns {*} Returns the maximum value.\n * @example\n *\n * _.max([4, 2, 8, 6]);\n * // => 8\n *\n * _.max([]);\n * // => undefined\n */\nfunction max(array) {\n  return (array && array.length)\n    ? baseExtremum(array, identity, baseGt)\n    : undefined;\n}\n\nmodule.exports = max;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/max.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/memoize.js":
+/*!****************************************!*\
+  !*** ./node_modules/lodash/memoize.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var MapCache = __webpack_require__(/*! ./_MapCache */ \"./node_modules/lodash/_MapCache.js\");\n\n/** Error message constants. */\nvar FUNC_ERROR_TEXT = 'Expected a function';\n\n/**\n * Creates a function that memoizes the result of `func`. If `resolver` is\n * provided, it determines the cache key for storing the result based on the\n * arguments provided to the memoized function. By default, the first argument\n * provided to the memoized function is used as the map cache key. The `func`\n * is invoked with the `this` binding of the memoized function.\n *\n * **Note:** The cache is exposed as the `cache` property on the memoized\n * function. Its creation may be customized by replacing the `_.memoize.Cache`\n * constructor with one whose instances implement the\n * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)\n * method interface of `clear`, `delete`, `get`, `has`, and `set`.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Function\n * @param {Function} func The function to have its output memoized.\n * @param {Function} [resolver] The function to resolve the cache key.\n * @returns {Function} Returns the new memoized function.\n * @example\n *\n * var object = { 'a': 1, 'b': 2 };\n * var other = { 'c': 3, 'd': 4 };\n *\n * var values = _.memoize(_.values);\n * values(object);\n * // => [1, 2]\n *\n * values(other);\n * // => [3, 4]\n *\n * object.a = 2;\n * values(object);\n * // => [1, 2]\n *\n * // Modify the result cache.\n * values.cache.set(object, ['a', 'b']);\n * values(object);\n * // => ['a', 'b']\n *\n * // Replace `_.memoize.Cache`.\n * _.memoize.Cache = WeakMap;\n */\nfunction memoize(func, resolver) {\n  if (typeof func != 'function' || (resolver != null && typeof resolver != 'function')) {\n    throw new TypeError(FUNC_ERROR_TEXT);\n  }\n  var memoized = function() {\n    var args = arguments,\n        key = resolver ? resolver.apply(this, args) : args[0],\n        cache = memoized.cache;\n\n    if (cache.has(key)) {\n      return cache.get(key);\n    }\n    var result = func.apply(this, args);\n    memoized.cache = cache.set(key, result) || cache;\n    return result;\n  };\n  memoized.cache = new (memoize.Cache || MapCache);\n  return memoized;\n}\n\n// Expose `MapCache`.\nmemoize.Cache = MapCache;\n\nmodule.exports = memoize;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/memoize.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/merge.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/merge.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseMerge = __webpack_require__(/*! ./_baseMerge */ \"./node_modules/lodash/_baseMerge.js\"),\n    createAssigner = __webpack_require__(/*! ./_createAssigner */ \"./node_modules/lodash/_createAssigner.js\");\n\n/**\n * This method is like `_.assign` except that it recursively merges own and\n * inherited enumerable string keyed properties of source objects into the\n * destination object. Source properties that resolve to `undefined` are\n * skipped if a destination value exists. Array and plain object properties\n * are merged recursively. Other objects and value types are overridden by\n * assignment. Source objects are applied from left to right. Subsequent\n * sources overwrite property assignments of previous sources.\n *\n * **Note:** This method mutates `object`.\n *\n * @static\n * @memberOf _\n * @since 0.5.0\n * @category Object\n * @param {Object} object The destination object.\n * @param {...Object} [sources] The source objects.\n * @returns {Object} Returns `object`.\n * @example\n *\n * var object = {\n *   'a': [{ 'b': 2 }, { 'd': 4 }]\n * };\n *\n * var other = {\n *   'a': [{ 'c': 3 }, { 'e': 5 }]\n * };\n *\n * _.merge(object, other);\n * // => { 'a': [{ 'b': 2, 'c': 3 }, { 'd': 4, 'e': 5 }] }\n */\nvar merge = createAssigner(function(object, source, srcIndex) {\n  baseMerge(object, source, srcIndex);\n});\n\nmodule.exports = merge;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/merge.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/min.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/min.js ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseExtremum = __webpack_require__(/*! ./_baseExtremum */ \"./node_modules/lodash/_baseExtremum.js\"),\n    baseLt = __webpack_require__(/*! ./_baseLt */ \"./node_modules/lodash/_baseLt.js\"),\n    identity = __webpack_require__(/*! ./identity */ \"./node_modules/lodash/identity.js\");\n\n/**\n * Computes the minimum value of `array`. If `array` is empty or falsey,\n * `undefined` is returned.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Math\n * @param {Array} array The array to iterate over.\n * @returns {*} Returns the minimum value.\n * @example\n *\n * _.min([4, 2, 8, 6]);\n * // => 2\n *\n * _.min([]);\n * // => undefined\n */\nfunction min(array) {\n  return (array && array.length)\n    ? baseExtremum(array, identity, baseLt)\n    : undefined;\n}\n\nmodule.exports = min;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/min.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/minBy.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/minBy.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseExtremum = __webpack_require__(/*! ./_baseExtremum */ \"./node_modules/lodash/_baseExtremum.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    baseLt = __webpack_require__(/*! ./_baseLt */ \"./node_modules/lodash/_baseLt.js\");\n\n/**\n * This method is like `_.min` except that it accepts `iteratee` which is\n * invoked for each element in `array` to generate the criterion by which\n * the value is ranked. The iteratee is invoked with one argument: (value).\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Math\n * @param {Array} array The array to iterate over.\n * @param {Function} [iteratee=_.identity] The iteratee invoked per element.\n * @returns {*} Returns the minimum value.\n * @example\n *\n * var objects = [{ 'n': 1 }, { 'n': 2 }];\n *\n * _.minBy(objects, function(o) { return o.n; });\n * // => { 'n': 1 }\n *\n * // The `_.property` iteratee shorthand.\n * _.minBy(objects, 'n');\n * // => { 'n': 1 }\n */\nfunction minBy(array, iteratee) {\n  return (array && array.length)\n    ? baseExtremum(array, baseIteratee(iteratee, 2), baseLt)\n    : undefined;\n}\n\nmodule.exports = minBy;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/minBy.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/noop.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/noop.js ***!
+  \*************************************/
+/***/ ((module) => {
+
+eval("/**\n * This method returns `undefined`.\n *\n * @static\n * @memberOf _\n * @since 2.3.0\n * @category Util\n * @example\n *\n * _.times(2, _.noop);\n * // => [undefined, undefined]\n */\nfunction noop() {\n  // No operation performed.\n}\n\nmodule.exports = noop;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/noop.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/now.js":
+/*!************************************!*\
+  !*** ./node_modules/lodash/now.js ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var root = __webpack_require__(/*! ./_root */ \"./node_modules/lodash/_root.js\");\n\n/**\n * Gets the timestamp of the number of milliseconds that have elapsed since\n * the Unix epoch (1 January 1970 00:00:00 UTC).\n *\n * @static\n * @memberOf _\n * @since 2.4.0\n * @category Date\n * @returns {number} Returns the timestamp.\n * @example\n *\n * _.defer(function(stamp) {\n *   console.log(_.now() - stamp);\n * }, _.now());\n * // => Logs the number of milliseconds it took for the deferred invocation.\n */\nvar now = function() {\n  return root.Date.now();\n};\n\nmodule.exports = now;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/now.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/pick.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/pick.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var basePick = __webpack_require__(/*! ./_basePick */ \"./node_modules/lodash/_basePick.js\"),\n    flatRest = __webpack_require__(/*! ./_flatRest */ \"./node_modules/lodash/_flatRest.js\");\n\n/**\n * Creates an object composed of the picked `object` properties.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Object\n * @param {Object} object The source object.\n * @param {...(string|string[])} [paths] The property paths to pick.\n * @returns {Object} Returns the new object.\n * @example\n *\n * var object = { 'a': 1, 'b': '2', 'c': 3 };\n *\n * _.pick(object, ['a', 'c']);\n * // => { 'a': 1, 'c': 3 }\n */\nvar pick = flatRest(function(object, paths) {\n  return object == null ? {} : basePick(object, paths);\n});\n\nmodule.exports = pick;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/pick.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/property.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/property.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseProperty = __webpack_require__(/*! ./_baseProperty */ \"./node_modules/lodash/_baseProperty.js\"),\n    basePropertyDeep = __webpack_require__(/*! ./_basePropertyDeep */ \"./node_modules/lodash/_basePropertyDeep.js\"),\n    isKey = __webpack_require__(/*! ./_isKey */ \"./node_modules/lodash/_isKey.js\"),\n    toKey = __webpack_require__(/*! ./_toKey */ \"./node_modules/lodash/_toKey.js\");\n\n/**\n * Creates a function that returns the value at `path` of a given object.\n *\n * @static\n * @memberOf _\n * @since 2.4.0\n * @category Util\n * @param {Array|string} path The path of the property to get.\n * @returns {Function} Returns the new accessor function.\n * @example\n *\n * var objects = [\n *   { 'a': { 'b': 2 } },\n *   { 'a': { 'b': 1 } }\n * ];\n *\n * _.map(objects, _.property('a.b'));\n * // => [2, 1]\n *\n * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');\n * // => [1, 2]\n */\nfunction property(path) {\n  return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);\n}\n\nmodule.exports = property;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/property.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/range.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/range.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var createRange = __webpack_require__(/*! ./_createRange */ \"./node_modules/lodash/_createRange.js\");\n\n/**\n * Creates an array of numbers (positive and/or negative) progressing from\n * `start` up to, but not including, `end`. A step of `-1` is used if a negative\n * `start` is specified without an `end` or `step`. If `end` is not specified,\n * it's set to `start` with `start` then set to `0`.\n *\n * **Note:** JavaScript follows the IEEE-754 standard for resolving\n * floating-point values which can produce unexpected results.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Util\n * @param {number} [start=0] The start of the range.\n * @param {number} end The end of the range.\n * @param {number} [step=1] The value to increment or decrement by.\n * @returns {Array} Returns the range of numbers.\n * @see _.inRange, _.rangeRight\n * @example\n *\n * _.range(4);\n * // => [0, 1, 2, 3]\n *\n * _.range(-4);\n * // => [0, -1, -2, -3]\n *\n * _.range(1, 5);\n * // => [1, 2, 3, 4]\n *\n * _.range(0, 20, 5);\n * // => [0, 5, 10, 15]\n *\n * _.range(0, -4, -1);\n * // => [0, -1, -2, -3]\n *\n * _.range(1, 4, 0);\n * // => [1, 1, 1]\n *\n * _.range(0);\n * // => []\n */\nvar range = createRange();\n\nmodule.exports = range;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/range.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/reduce.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/reduce.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayReduce = __webpack_require__(/*! ./_arrayReduce */ \"./node_modules/lodash/_arrayReduce.js\"),\n    baseEach = __webpack_require__(/*! ./_baseEach */ \"./node_modules/lodash/_baseEach.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    baseReduce = __webpack_require__(/*! ./_baseReduce */ \"./node_modules/lodash/_baseReduce.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\");\n\n/**\n * Reduces `collection` to a value which is the accumulated result of running\n * each element in `collection` thru `iteratee`, where each successive\n * invocation is supplied the return value of the previous. If `accumulator`\n * is not given, the first element of `collection` is used as the initial\n * value. The iteratee is invoked with four arguments:\n * (accumulator, value, index|key, collection).\n *\n * Many lodash methods are guarded to work as iteratees for methods like\n * `_.reduce`, `_.reduceRight`, and `_.transform`.\n *\n * The guarded methods are:\n * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,\n * and `sortBy`\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} [iteratee=_.identity] The function invoked per iteration.\n * @param {*} [accumulator] The initial value.\n * @returns {*} Returns the accumulated value.\n * @see _.reduceRight\n * @example\n *\n * _.reduce([1, 2], function(sum, n) {\n *   return sum + n;\n * }, 0);\n * // => 3\n *\n * _.reduce({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {\n *   (result[value] || (result[value] = [])).push(key);\n *   return result;\n * }, {});\n * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)\n */\nfunction reduce(collection, iteratee, accumulator) {\n  var func = isArray(collection) ? arrayReduce : baseReduce,\n      initAccum = arguments.length < 3;\n\n  return func(collection, baseIteratee(iteratee, 4), accumulator, initAccum, baseEach);\n}\n\nmodule.exports = reduce;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/reduce.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/size.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/size.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseKeys = __webpack_require__(/*! ./_baseKeys */ \"./node_modules/lodash/_baseKeys.js\"),\n    getTag = __webpack_require__(/*! ./_getTag */ \"./node_modules/lodash/_getTag.js\"),\n    isArrayLike = __webpack_require__(/*! ./isArrayLike */ \"./node_modules/lodash/isArrayLike.js\"),\n    isString = __webpack_require__(/*! ./isString */ \"./node_modules/lodash/isString.js\"),\n    stringSize = __webpack_require__(/*! ./_stringSize */ \"./node_modules/lodash/_stringSize.js\");\n\n/** `Object#toString` result references. */\nvar mapTag = '[object Map]',\n    setTag = '[object Set]';\n\n/**\n * Gets the size of `collection` by returning its length for array-like\n * values or the number of own enumerable string keyed properties for objects.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object|string} collection The collection to inspect.\n * @returns {number} Returns the collection size.\n * @example\n *\n * _.size([1, 2, 3]);\n * // => 3\n *\n * _.size({ 'a': 1, 'b': 2 });\n * // => 2\n *\n * _.size('pebbles');\n * // => 7\n */\nfunction size(collection) {\n  if (collection == null) {\n    return 0;\n  }\n  if (isArrayLike(collection)) {\n    return isString(collection) ? stringSize(collection) : collection.length;\n  }\n  var tag = getTag(collection);\n  if (tag == mapTag || tag == setTag) {\n    return collection.size;\n  }\n  return baseKeys(collection).length;\n}\n\nmodule.exports = size;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/size.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/sortBy.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/sortBy.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFlatten = __webpack_require__(/*! ./_baseFlatten */ \"./node_modules/lodash/_baseFlatten.js\"),\n    baseOrderBy = __webpack_require__(/*! ./_baseOrderBy */ \"./node_modules/lodash/_baseOrderBy.js\"),\n    baseRest = __webpack_require__(/*! ./_baseRest */ \"./node_modules/lodash/_baseRest.js\"),\n    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ \"./node_modules/lodash/_isIterateeCall.js\");\n\n/**\n * Creates an array of elements, sorted in ascending order by the results of\n * running each element in a collection thru each iteratee. This method\n * performs a stable sort, that is, it preserves the original sort order of\n * equal elements. The iteratees are invoked with one argument: (value).\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {...(Function|Function[])} [iteratees=[_.identity]]\n *  The iteratees to sort by.\n * @returns {Array} Returns the new sorted array.\n * @example\n *\n * var users = [\n *   { 'user': 'fred',   'age': 48 },\n *   { 'user': 'barney', 'age': 36 },\n *   { 'user': 'fred',   'age': 30 },\n *   { 'user': 'barney', 'age': 34 }\n * ];\n *\n * _.sortBy(users, [function(o) { return o.user; }]);\n * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 30]]\n *\n * _.sortBy(users, ['user', 'age']);\n * // => objects for [['barney', 34], ['barney', 36], ['fred', 30], ['fred', 48]]\n */\nvar sortBy = baseRest(function(collection, iteratees) {\n  if (collection == null) {\n    return [];\n  }\n  var length = iteratees.length;\n  if (length > 1 && isIterateeCall(collection, iteratees[0], iteratees[1])) {\n    iteratees = [];\n  } else if (length > 2 && isIterateeCall(iteratees[0], iteratees[1], iteratees[2])) {\n    iteratees = [iteratees[0]];\n  }\n  return baseOrderBy(collection, baseFlatten(iteratees, 1), []);\n});\n\nmodule.exports = sortBy;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/sortBy.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/stubArray.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/stubArray.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * This method returns a new empty array.\n *\n * @static\n * @memberOf _\n * @since 4.13.0\n * @category Util\n * @returns {Array} Returns the new empty array.\n * @example\n *\n * var arrays = _.times(2, _.stubArray);\n *\n * console.log(arrays);\n * // => [[], []]\n *\n * console.log(arrays[0] === arrays[1]);\n * // => false\n */\nfunction stubArray() {\n  return [];\n}\n\nmodule.exports = stubArray;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/stubArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/stubFalse.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/stubFalse.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+eval("/**\n * This method returns `false`.\n *\n * @static\n * @memberOf _\n * @since 4.13.0\n * @category Util\n * @returns {boolean} Returns `false`.\n * @example\n *\n * _.times(2, _.stubFalse);\n * // => [false, false]\n */\nfunction stubFalse() {\n  return false;\n}\n\nmodule.exports = stubFalse;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/stubFalse.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toFinite.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/toFinite.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var toNumber = __webpack_require__(/*! ./toNumber */ \"./node_modules/lodash/toNumber.js\");\n\n/** Used as references for various `Number` constants. */\nvar INFINITY = 1 / 0,\n    MAX_INTEGER = 1.7976931348623157e+308;\n\n/**\n * Converts `value` to a finite number.\n *\n * @static\n * @memberOf _\n * @since 4.12.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {number} Returns the converted number.\n * @example\n *\n * _.toFinite(3.2);\n * // => 3.2\n *\n * _.toFinite(Number.MIN_VALUE);\n * // => 5e-324\n *\n * _.toFinite(Infinity);\n * // => 1.7976931348623157e+308\n *\n * _.toFinite('3.2');\n * // => 3.2\n */\nfunction toFinite(value) {\n  if (!value) {\n    return value === 0 ? value : 0;\n  }\n  value = toNumber(value);\n  if (value === INFINITY || value === -INFINITY) {\n    var sign = (value < 0 ? -1 : 1);\n    return sign * MAX_INTEGER;\n  }\n  return value === value ? value : 0;\n}\n\nmodule.exports = toFinite;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/toFinite.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toInteger.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/toInteger.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var toFinite = __webpack_require__(/*! ./toFinite */ \"./node_modules/lodash/toFinite.js\");\n\n/**\n * Converts `value` to an integer.\n *\n * **Note:** This method is loosely based on\n * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {number} Returns the converted integer.\n * @example\n *\n * _.toInteger(3.2);\n * // => 3\n *\n * _.toInteger(Number.MIN_VALUE);\n * // => 0\n *\n * _.toInteger(Infinity);\n * // => 1.7976931348623157e+308\n *\n * _.toInteger('3.2');\n * // => 3\n */\nfunction toInteger(value) {\n  var result = toFinite(value),\n      remainder = result % 1;\n\n  return result === result ? (remainder ? result - remainder : result) : 0;\n}\n\nmodule.exports = toInteger;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/toInteger.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toNumber.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/toNumber.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseTrim = __webpack_require__(/*! ./_baseTrim */ \"./node_modules/lodash/_baseTrim.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    isSymbol = __webpack_require__(/*! ./isSymbol */ \"./node_modules/lodash/isSymbol.js\");\n\n/** Used as references for various `Number` constants. */\nvar NAN = 0 / 0;\n\n/** Used to detect bad signed hexadecimal string values. */\nvar reIsBadHex = /^[-+]0x[0-9a-f]+$/i;\n\n/** Used to detect binary string values. */\nvar reIsBinary = /^0b[01]+$/i;\n\n/** Used to detect octal string values. */\nvar reIsOctal = /^0o[0-7]+$/i;\n\n/** Built-in method references without a dependency on `root`. */\nvar freeParseInt = parseInt;\n\n/**\n * Converts `value` to a number.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to process.\n * @returns {number} Returns the number.\n * @example\n *\n * _.toNumber(3.2);\n * // => 3.2\n *\n * _.toNumber(Number.MIN_VALUE);\n * // => 5e-324\n *\n * _.toNumber(Infinity);\n * // => Infinity\n *\n * _.toNumber('3.2');\n * // => 3.2\n */\nfunction toNumber(value) {\n  if (typeof value == 'number') {\n    return value;\n  }\n  if (isSymbol(value)) {\n    return NAN;\n  }\n  if (isObject(value)) {\n    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;\n    value = isObject(other) ? (other + '') : other;\n  }\n  if (typeof value != 'string') {\n    return value === 0 ? value : +value;\n  }\n  value = baseTrim(value);\n  var isBinary = reIsBinary.test(value);\n  return (isBinary || reIsOctal.test(value))\n    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)\n    : (reIsBadHex.test(value) ? NAN : +value);\n}\n\nmodule.exports = toNumber;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/toNumber.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toPlainObject.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash/toPlainObject.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var copyObject = __webpack_require__(/*! ./_copyObject */ \"./node_modules/lodash/_copyObject.js\"),\n    keysIn = __webpack_require__(/*! ./keysIn */ \"./node_modules/lodash/keysIn.js\");\n\n/**\n * Converts `value` to a plain object flattening inherited enumerable string\n * keyed properties of `value` to own properties of the plain object.\n *\n * @static\n * @memberOf _\n * @since 3.0.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {Object} Returns the converted plain object.\n * @example\n *\n * function Foo() {\n *   this.b = 2;\n * }\n *\n * Foo.prototype.c = 3;\n *\n * _.assign({ 'a': 1 }, new Foo);\n * // => { 'a': 1, 'b': 2 }\n *\n * _.assign({ 'a': 1 }, _.toPlainObject(new Foo));\n * // => { 'a': 1, 'b': 2, 'c': 3 }\n */\nfunction toPlainObject(value) {\n  return copyObject(value, keysIn(value));\n}\n\nmodule.exports = toPlainObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/toPlainObject.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/toString.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/toString.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseToString = __webpack_require__(/*! ./_baseToString */ \"./node_modules/lodash/_baseToString.js\");\n\n/**\n * Converts `value` to a string. An empty string is returned for `null`\n * and `undefined` values. The sign of `-0` is preserved.\n *\n * @static\n * @memberOf _\n * @since 4.0.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {string} Returns the converted string.\n * @example\n *\n * _.toString(null);\n * // => ''\n *\n * _.toString(-0);\n * // => '-0'\n *\n * _.toString([1, 2, 3]);\n * // => '1,2,3'\n */\nfunction toString(value) {\n  return value == null ? '' : baseToString(value);\n}\n\nmodule.exports = toString;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/toString.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/transform.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/transform.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var arrayEach = __webpack_require__(/*! ./_arrayEach */ \"./node_modules/lodash/_arrayEach.js\"),\n    baseCreate = __webpack_require__(/*! ./_baseCreate */ \"./node_modules/lodash/_baseCreate.js\"),\n    baseForOwn = __webpack_require__(/*! ./_baseForOwn */ \"./node_modules/lodash/_baseForOwn.js\"),\n    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ \"./node_modules/lodash/_baseIteratee.js\"),\n    getPrototype = __webpack_require__(/*! ./_getPrototype */ \"./node_modules/lodash/_getPrototype.js\"),\n    isArray = __webpack_require__(/*! ./isArray */ \"./node_modules/lodash/isArray.js\"),\n    isBuffer = __webpack_require__(/*! ./isBuffer */ \"./node_modules/lodash/isBuffer.js\"),\n    isFunction = __webpack_require__(/*! ./isFunction */ \"./node_modules/lodash/isFunction.js\"),\n    isObject = __webpack_require__(/*! ./isObject */ \"./node_modules/lodash/isObject.js\"),\n    isTypedArray = __webpack_require__(/*! ./isTypedArray */ \"./node_modules/lodash/isTypedArray.js\");\n\n/**\n * An alternative to `_.reduce`; this method transforms `object` to a new\n * `accumulator` object which is the result of running each of its own\n * enumerable string keyed properties thru `iteratee`, with each invocation\n * potentially mutating the `accumulator` object. If `accumulator` is not\n * provided, a new object with the same `[[Prototype]]` will be used. The\n * iteratee is invoked with four arguments: (accumulator, value, key, object).\n * Iteratee functions may exit iteration early by explicitly returning `false`.\n *\n * @static\n * @memberOf _\n * @since 1.3.0\n * @category Object\n * @param {Object} object The object to iterate over.\n * @param {Function} [iteratee=_.identity] The function invoked per iteration.\n * @param {*} [accumulator] The custom accumulator value.\n * @returns {*} Returns the accumulated value.\n * @example\n *\n * _.transform([2, 3, 4], function(result, n) {\n *   result.push(n *= n);\n *   return n % 2 == 0;\n * }, []);\n * // => [4, 9]\n *\n * _.transform({ 'a': 1, 'b': 2, 'c': 1 }, function(result, value, key) {\n *   (result[value] || (result[value] = [])).push(key);\n * }, {});\n * // => { '1': ['a', 'c'], '2': ['b'] }\n */\nfunction transform(object, iteratee, accumulator) {\n  var isArr = isArray(object),\n      isArrLike = isArr || isBuffer(object) || isTypedArray(object);\n\n  iteratee = baseIteratee(iteratee, 4);\n  if (accumulator == null) {\n    var Ctor = object && object.constructor;\n    if (isArrLike) {\n      accumulator = isArr ? new Ctor : [];\n    }\n    else if (isObject(object)) {\n      accumulator = isFunction(Ctor) ? baseCreate(getPrototype(object)) : {};\n    }\n    else {\n      accumulator = {};\n    }\n  }\n  (isArrLike ? arrayEach : baseForOwn)(object, function(value, index, object) {\n    return iteratee(accumulator, value, index, object);\n  });\n  return accumulator;\n}\n\nmodule.exports = transform;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/transform.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/union.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/union.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseFlatten = __webpack_require__(/*! ./_baseFlatten */ \"./node_modules/lodash/_baseFlatten.js\"),\n    baseRest = __webpack_require__(/*! ./_baseRest */ \"./node_modules/lodash/_baseRest.js\"),\n    baseUniq = __webpack_require__(/*! ./_baseUniq */ \"./node_modules/lodash/_baseUniq.js\"),\n    isArrayLikeObject = __webpack_require__(/*! ./isArrayLikeObject */ \"./node_modules/lodash/isArrayLikeObject.js\");\n\n/**\n * Creates an array of unique values, in order, from all given arrays using\n * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)\n * for equality comparisons.\n *\n * @static\n * @memberOf _\n * @since 0.1.0\n * @category Array\n * @param {...Array} [arrays] The arrays to inspect.\n * @returns {Array} Returns the new array of combined values.\n * @example\n *\n * _.union([2], [1, 2]);\n * // => [2, 1]\n */\nvar union = baseRest(function(arrays) {\n  return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true));\n});\n\nmodule.exports = union;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/union.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/uniqueId.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/uniqueId.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var toString = __webpack_require__(/*! ./toString */ \"./node_modules/lodash/toString.js\");\n\n/** Used to generate unique IDs. */\nvar idCounter = 0;\n\n/**\n * Generates a unique ID. If `prefix` is given, the ID is appended to it.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Util\n * @param {string} [prefix=''] The value to prefix the ID with.\n * @returns {string} Returns the unique ID.\n * @example\n *\n * _.uniqueId('contact_');\n * // => 'contact_104'\n *\n * _.uniqueId();\n * // => '105'\n */\nfunction uniqueId(prefix) {\n  var id = ++idCounter;\n  return toString(prefix) + id;\n}\n\nmodule.exports = uniqueId;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/uniqueId.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/values.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/values.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var baseValues = __webpack_require__(/*! ./_baseValues */ \"./node_modules/lodash/_baseValues.js\"),\n    keys = __webpack_require__(/*! ./keys */ \"./node_modules/lodash/keys.js\");\n\n/**\n * Creates an array of the own enumerable string keyed property values of `object`.\n *\n * **Note:** Non-object values are coerced to objects.\n *\n * @static\n * @since 0.1.0\n * @memberOf _\n * @category Object\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property values.\n * @example\n *\n * function Foo() {\n *   this.a = 1;\n *   this.b = 2;\n * }\n *\n * Foo.prototype.c = 3;\n *\n * _.values(new Foo);\n * // => [1, 2] (iteration order is not guaranteed)\n *\n * _.values('hi');\n * // => ['h', 'i']\n */\nfunction values(object) {\n  return object == null ? [] : baseValues(object, keys(object));\n}\n\nmodule.exports = values;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/values.js?");
+
+/***/ }),
+
+/***/ "./node_modules/lodash/zipObject.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/zipObject.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var assignValue = __webpack_require__(/*! ./_assignValue */ \"./node_modules/lodash/_assignValue.js\"),\n    baseZipObject = __webpack_require__(/*! ./_baseZipObject */ \"./node_modules/lodash/_baseZipObject.js\");\n\n/**\n * This method is like `_.fromPairs` except that it accepts two arrays,\n * one of property identifiers and one of corresponding values.\n *\n * @static\n * @memberOf _\n * @since 0.4.0\n * @category Array\n * @param {Array} [props=[]] The property identifiers.\n * @param {Array} [values=[]] The property values.\n * @returns {Object} Returns the new object.\n * @example\n *\n * _.zipObject(['a', 'b'], [1, 2]);\n * // => { 'a': 1, 'b': 2 }\n */\nfunction zipObject(props, values) {\n  return baseZipObject(props || [], values || [], assignValue);\n}\n\nmodule.exports = zipObject;\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/lodash/zipObject.js?");
 
 /***/ }),
 
@@ -2193,50 +5044,6 @@ eval("/** @license React v16.13.1\n * react-is.development.js\n *\n * Copyright 
 
 "use strict";
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ \"./node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js\");\n}\n\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/prop-types/node_modules/react-is/index.js?");
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/FloatingLabel.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/FloatingLabel.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ \"./node_modules/classnames/index.js\");\n/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _FormGroup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormGroup */ \"./node_modules/react-bootstrap/esm/FormGroup.js\");\n/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ThemeProvider */ \"./node_modules/react-bootstrap/esm/ThemeProvider.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\n\n\nconst FloatingLabel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({\n  bsPrefix,\n  className,\n  children,\n  controlId,\n  label,\n  ...props\n}, ref) => {\n  bsPrefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_3__.useBootstrapPrefix)(bsPrefix, 'form-floating');\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_FormGroup__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    ref: ref,\n    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, bsPrefix),\n    controlId: controlId,\n    ...props,\n    children: [children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(\"label\", {\n      htmlFor: controlId,\n      children: label\n    })]\n  });\n});\nFloatingLabel.displayName = 'FloatingLabel';\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FloatingLabel);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/react-bootstrap/esm/FloatingLabel.js?");
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/FormContext.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/FormContext.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// TODO\n\nconst FormContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext({});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormContext);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/react-bootstrap/esm/FormContext.js?");
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/FormGroup.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/FormGroup.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormContext */ \"./node_modules/react-bootstrap/esm/FormContext.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\n\nconst FormGroup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(({\n  controlId,\n  // Need to define the default \"as\" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595\n  as: Component = 'div',\n  ...props\n}, ref) => {\n  const context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => ({\n    controlId\n  }), [controlId]);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_FormContext__WEBPACK_IMPORTED_MODULE_2__[\"default\"].Provider, {\n    value: context,\n    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Component, {\n      ...props,\n      ref: ref\n    })\n  });\n});\nFormGroup.displayName = 'FormGroup';\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormGroup);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/react-bootstrap/esm/FormGroup.js?");
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/ThemeProvider.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/ThemeProvider.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"DEFAULT_BREAKPOINTS\": () => (/* binding */ DEFAULT_BREAKPOINTS),\n/* harmony export */   \"DEFAULT_MIN_BREAKPOINT\": () => (/* binding */ DEFAULT_MIN_BREAKPOINT),\n/* harmony export */   \"ThemeConsumer\": () => (/* binding */ Consumer),\n/* harmony export */   \"createBootstrapComponent\": () => (/* binding */ createBootstrapComponent),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"useBootstrapBreakpoints\": () => (/* binding */ useBootstrapBreakpoints),\n/* harmony export */   \"useBootstrapMinBreakpoint\": () => (/* binding */ useBootstrapMinBreakpoint),\n/* harmony export */   \"useBootstrapPrefix\": () => (/* binding */ useBootstrapPrefix),\n/* harmony export */   \"useIsRTL\": () => (/* binding */ useIsRTL)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\n\n\n\nconst DEFAULT_BREAKPOINTS = ['xxl', 'xl', 'lg', 'md', 'sm', 'xs'];\nconst DEFAULT_MIN_BREAKPOINT = 'xs';\nconst ThemeContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext({\n  prefixes: {},\n  breakpoints: DEFAULT_BREAKPOINTS,\n  minBreakpoint: DEFAULT_MIN_BREAKPOINT\n});\nconst {\n  Consumer,\n  Provider\n} = ThemeContext;\nfunction ThemeProvider({\n  prefixes = {},\n  breakpoints = DEFAULT_BREAKPOINTS,\n  minBreakpoint = DEFAULT_MIN_BREAKPOINT,\n  dir,\n  children\n}) {\n  const contextValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => ({\n    prefixes: {\n      ...prefixes\n    },\n    breakpoints,\n    minBreakpoint,\n    dir\n  }), [prefixes, breakpoints, minBreakpoint, dir]);\n  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Provider, {\n    value: contextValue,\n    children: children\n  });\n}\nfunction useBootstrapPrefix(prefix, defaultPrefix) {\n  const {\n    prefixes\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(ThemeContext);\n  return prefix || prefixes[defaultPrefix] || defaultPrefix;\n}\nfunction useBootstrapBreakpoints() {\n  const {\n    breakpoints\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(ThemeContext);\n  return breakpoints;\n}\nfunction useBootstrapMinBreakpoint() {\n  const {\n    minBreakpoint\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(ThemeContext);\n  return minBreakpoint;\n}\nfunction useIsRTL() {\n  const {\n    dir\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(ThemeContext);\n  return dir === 'rtl';\n}\nfunction createBootstrapComponent(Component, opts) {\n  if (typeof opts === 'string') opts = {\n    prefix: opts\n  };\n  const isClassy = Component.prototype && Component.prototype.isReactComponent;\n  // If it's a functional component make sure we don't break it with a ref\n  const {\n    prefix,\n    forwardRefAs = isClassy ? 'ref' : 'innerRef'\n  } = opts;\n  const Wrapped = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(({\n    ...props\n  }, ref) => {\n    props[forwardRefAs] = ref;\n    const bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);\n    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Component, {\n      ...props,\n      bsPrefix: bsPrefix\n    });\n  });\n  Wrapped.displayName = `Bootstrap(${Component.displayName || Component.name})`;\n  return Wrapped;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThemeProvider);\n\n//# sourceURL=webpack://webgme-cwl/./node_modules/react-bootstrap/esm/ThemeProvider.js?");
 
 /***/ }),
 
