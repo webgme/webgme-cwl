@@ -1,5 +1,5 @@
 The examples collection of the CWL Design Studio
-========================================
+===========================================================
 
 The goal
 ________
@@ -15,22 +15,19 @@ scenarios where the use of CWL models gives a boost
 to productivity.
 
 Example 1: Building graph classification workflow
-==============================================
-
-
+===============================================================
 Problem statement
-________
-
+______________________
 The main goal of this workflow is to provide a graph machine learning framework which predicts the probability of a given compound’s toxicity provided in the form of a graph. This problem setting falls under the well-known task of graph classification. 
 
 Model Input, Output
-_____________
+___________________________
 
 The model input comprises a collection of graphs and their corresponding label set, which are structured within a dictionary container with the keys 'graphs' and 'labels'. This dictionary is then serialized in a pickle format. The graphs themselves are represented in Networkx format. The model returns the performance in terms of accuracy and write it to a csv file. 
 
 
 Graph Classification
-________________
+__________________________
 
 The graph classification framework consists of two stages, namely (a) graph representation generation, and (b) training of a Random Forest classifier on those generated representations. For the first step, we utilize the newly proposed Distributed Graph Descriptor (DGSD)[1], and NetLSD [2]. DGSD leverages a pair-wise distances approach for computing distances among all pairs of nodes within a given graph. The resulting distance matrix is then used to generate histograms, which serve as the graph representation. NetLSD uses spectral graph properties to generate graph representations. Once these representations have been computed using one of the above descriptor (NetLSD by default), a Random Forest classifier is trained to make predictions based on the generated features. We would like to note that this workflow can be easily updated to incorporate any other graph machine learning approaches such as graph neural networks and graph kernels. 
 
@@ -38,17 +35,24 @@ The graph classification framework consists of two stages, namely (a) graph repr
 To summarize, this workflow comprises of three components: input (pickle file), a model (docker image) and output as a csv file. Considering these three components, we define our workflow detailed below. 
 
 Implementation details and dockerization
-________________
+___________________________________________
 
-The implementation uses publicly available netlsd and dgsd python packages, scikit-learn and networkx. The package has been streamlined to main.py, requirement.txt and a dockerfile. The docker image can be created with “gc_docker:latest” id as follows.
-
-``
-docker build -t gc_docker:latest .
-``
+The implementation uses publicly available netlsd and dgsd python packages, scikit-learn and networkx. The package has been streamlined to main.py, requirement.txt and a dockerfile. 
 
 
-::
-$ docker build -t gc_docker:latest .
+To create the docker image for this project, the following command can be executed. 
+
+.. code-block:: bash
+
+   docker build -t gc_docker:latest .
+
+Before building the docker, make sure to change your console to the project directory "GraphML_workflow". Once the docker has been built, next we would like to upload the docker image to the docker hub. To do this, we will login to the docker hub first and then will upload the image. Use the following commands to login and upload the image to the docker hub. 
+
+.. code-block:: bash
+
+   docker login -u <your_docker_id> --password <your_docker_password>
+   docker push gc_docker:latest
+
 
 Create workflow model
 ______________________________
@@ -67,7 +71,7 @@ Finally, we'll create a FileOutput component and name it "results". Under the Do
    :figwidth: 80%
    
 Input - sample graphs
-_________________
+__________________________
 
 The following figure shows four sample graphs that were used as part of the input for the model. These graphs were obtained from the MUTAG dataset, which is a benchmark for graph classification. The graphs with red nodes are labelled as toxic, while the ones with blue nodes are labelled as non-toxic.
 
