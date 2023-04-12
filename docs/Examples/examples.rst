@@ -85,8 +85,9 @@ ____________________________________
 
 To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from the `source <https://github.com/webgme/webgme-cwl/tree/master/docs/Examples/GraphML_workflow>`_ and placed within the downloaded “GC_toxicity” workflow.  Once the data folder is placed and all dependencies has been met, the following command may be invoked to launch the workflow. 
 
-.. code-block::dos
-cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR GC_toxicity.cwl.json --FileInput data/dataset.pkl
+.. code-block:: bash
+
+   cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR GC_toxicity.cwl.json --FileInput data/dataset.pkl
 
 
 In the following, we show the execution of the workflow on local machine. 
@@ -94,3 +95,7 @@ In the following, we show the execution of the workflow on local machine.
 .. figure:: execution.gif
    :align: center
    :figwidth: 80%
+
+`Link to the github repository of example <https://github.com/Anwar-Said/Graph_classification_cwl_example>`_
+[1]. `Anwar Said, et al. "DGSD: Distributed graph representation via graph statistical properties." Future Generation Computer Systems 119 (2021): 166-175 <https://www.sciencedirect.com/science/article/pii/S0167739X21000571?casa_token=ICH0PA1ch3EAAAAA:qXYRK5oOEH8irGnKczcs3UDh1nnlgKtyKeDCyd65IKd1UGcqgBbGPoeS52wlRhBYowwNwG1m>`_
+[2].`Anton, Tsitsulin, et al. "Netlsd: hearing the shape of a graph." Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. 2018. <https://dl.acm.org/doi/abs/10.1145/3219819.3219991?casa_token=Fs34Ggee8E4AAAAA:oycODo6pu8y3PrwiUj9bD-uXI8uJ54_s1t4gcBhJb5uOK8ztjcdhwXcSZsUmwLJlX1jLZrHJszMH>`_
