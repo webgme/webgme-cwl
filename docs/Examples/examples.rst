@@ -111,8 +111,8 @@ In the following, we show the execution of the workflow on local machine.
    :align: center
    :figwidth: 80%
 
-You can find this example either in its own `repository <https://github.com/Anwar-Said/Graph_classification_cwl_example->` or among other examples
-in the codebase of the `design studio <https://github.com/webgme/webgme-cwl/tree/master/examples/GraphML_workflow>`.
+You can find this example either in its own `repository <https://github.com/Anwar-Said/Graph_classification_cwl_example->`_ or among other examples
+in the codebase of the `design studio <https://github.com/webgme/webgme-cwl/tree/master/examples/GraphML_workflow>`_.
 
 [1]. `Anwar Said, et al. "DGSD: Distributed graph representation via graph statistical properties." Future Generation Computer Systems 119 (2021): 166-175 <https://www.sciencedirect.com/science/article/pii/S0167739X21000571?casa_token=ICH0PA1ch3EAAAAA:qXYRK5oOEH8irGnKczcs3UDh1nnlgKtyKeDCyd65IKd1UGcqgBbGPoeS52wlRhBYowwNwG1m>`_
 
