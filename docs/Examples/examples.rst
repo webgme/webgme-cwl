@@ -1,9 +1,5 @@
 The examples collection of the CWL Design Studio
 ===========================================================
-
-The goal
-________
-
 The goal of this collection is to provide additional
 examples that new users can leverage for the early
 learning of the features and how-to's of this

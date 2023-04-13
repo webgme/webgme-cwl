@@ -32,6 +32,18 @@ Welcome to WebGME-CWL's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: How to build workflow with remote data access:
+   
+   HowTos/building.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: How to identify computation to step granularity:
+   
+   HowTos/granule.rst
+
+.. toctree::
+   :maxdepth: 2
    :caption: Steps:
    
    Steps/index.rst
