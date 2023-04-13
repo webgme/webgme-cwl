@@ -8,8 +8,7 @@ In short
 _______________
 1. Build your workflow preparing it to run completely locally, 
    meaning all inputation will be done from your file system.
-2. Secondly build a workflow for every remote data download 
-   (and protentially its prehandling).
+2. Secondly build a workflow for every remote data download (and protentially its prehandling). 
 3. Finally create a composite workflow that will have the previous 
    workflows as sub-workflows and automate the process end-to-end 
    grabbing the input from remote source.

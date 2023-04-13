@@ -6,6 +6,7 @@ of it. By granularity, we mean the task of each step or
 sub-workflow in the workflow (one end of the spectrum is the 
 singular compute workflow step). While each use-case is unique 
 we can provide a few things to take into consideration:
+
 * Identify whether there are any intermediate file states 
   as those could provide natural cuts on ytour computation.
 * Another aspect is the re-use of any atomic element. You 
