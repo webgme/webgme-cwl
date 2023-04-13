@@ -7,12 +7,12 @@ of workflow models and the generated workflow artifacts.
 In short
 _______________
 1. Build your workflow preparing it to run completely locally, 
-meaning all inputation will be done from your file system.
+   meaning all inputation will be done from your file system.
 2. Secondly build a workflow for every remote data download 
 (and protentially its prehandling).
 3. Finally create a composite workflow that will have the previous 
-workflows as sub-workflows and automate the process end-to-end 
-grabbing the input from remote source.
+   workflows as sub-workflows and automate the process end-to-end 
+   grabbing the input from remote source.
 
 1. Initial computation build
 _____________________________
