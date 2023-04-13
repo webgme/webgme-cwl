@@ -32,13 +32,13 @@ Welcome to WebGME-CWL's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: How to - wf iwth remote data:
+   :caption: How to - wf with remote data:
    
    HowTos/building.rst
 
 .. toctree::
    :maxdepth: 2
-   :caption: How to identify computation to step granularity:
+   :caption: How to - wf step granularity:
    
    HowTos/granule.rst
 
