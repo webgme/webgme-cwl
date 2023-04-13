@@ -32,7 +32,7 @@ Welcome to WebGME-CWL's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: How to build workflow with remote data access:
+   :caption: How to - wf iwth remote data:
    
    HowTos/building.rst
 

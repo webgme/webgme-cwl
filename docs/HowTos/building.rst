@@ -65,7 +65,7 @@ Why?
 ________ 
 Designing your workflows this way will allow a better portability of 
 the generated CWL artifacts. Design Studio will generate two important 
-artifact: the run.sh and the README.md. The script will cover the cwltool 
+artifact: the **run.sh** and the **README.md**_. The script will cover the cwltool 
 execution for the end-to-end scenario using the defautl values for the 
 inputs. Meanwhile, the markdown file will have example cli commands for 
 the subworkflows as well. This allows a better reuse, as it allows the 

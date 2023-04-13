@@ -13,7 +13,7 @@ This specific step is a shortcut option to allow the user to have a
 computational project (for example python) coupled with a Dockerfile 
 that contains the description of the required computational environment. 
 The step itself accepts two inputs (a directory and a string), the project 
-**dir**ectory and the **nametag**. It has a single string output **id**, 
+**dir** and the **nametag**. It has a single string output **id**, 
 which should be identical to the nametag if the building is successful. 
 The step does not require any further configuration and once the output 
 is available, the completed docker image is ready to use (in a DickerImage 
