@@ -14,7 +14,7 @@ rather they will focus on different (real-life)
 scenarios where the use of CWL models gives a boost
 to productivity.
 
-Example 1: Building graph classification workflow
+Building a graph classification workflow example
 ===============================================================
 Problem statement
 ______________________
@@ -72,7 +72,7 @@ Before building the docker, make sure to change your console to the project dire
 Create workflow model
 ______________________________
 
-To understand the basic of the workflow, we refer the reader to  :ref:`domain intro section <The Common Workflow Language modeling language>`
+To understand the basics of the workflow, we refer the reader to  :ref:`domain intro section <The Common Workflow Language modeling language>`
 
 To begin, we'll create a new workflow project using a simple drag-and-drop technique from the partBrowsers to the composition screen. We'll provide a name and context to help us keep everything organized.
 
@@ -98,7 +98,7 @@ Workflow Execution
 ____________________________________
  
 
-To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from the `source <https://github.com/webgme/webgme-cwl/tree/master/docs/Examples/GraphML_workflow>`_ and placed within the downloaded “GC_toxicity” workflow.  Once the data folder is placed and all dependencies has been met, the following command may be invoked to launch the workflow. 
+To commence with the workflow execution process, the initial step would entail building and downloading the workflow onto the local machine. Subsequently, the data folder can be downloaded from the `source <https://github.com/webgme/webgme-cwl/tree/master/examples/GraphML_workflow>`_ and placed within the downloaded “GC_toxicity” workflow.  Once the data folder is placed and all dependencies has been met, the following command may be invoked to launch the workflow. 
 
 .. code-block:: bash
 
@@ -111,7 +111,8 @@ In the following, we show the execution of the workflow on local machine.
    :align: center
    :figwidth: 80%
 
-`Link to the github repository of this example <https://github.com/Anwar-Said/Graph_classification_cwl_example>`_
+You can find this example either in its own `repository <https://github.com/Anwar-Said/Graph_classification_cwl_example->` or among other examples
+in the codebase of the `design studio <https://github.com/webgme/webgme-cwl/tree/master/examples/GraphML_workflow>`.
 
 [1]. `Anwar Said, et al. "DGSD: Distributed graph representation via graph statistical properties." Future Generation Computer Systems 119 (2021): 166-175 <https://www.sciencedirect.com/science/article/pii/S0167739X21000571?casa_token=ICH0PA1ch3EAAAAA:qXYRK5oOEH8irGnKczcs3UDh1nnlgKtyKeDCyd65IKd1UGcqgBbGPoeS52wlRhBYowwNwG1m>`_
 

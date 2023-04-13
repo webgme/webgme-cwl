@@ -9,3 +9,5 @@ as the detailed description will be placed inside the sub-folder so that the exa
 standalone manner.
 
 ## List
+#### GraphML workflow by [Anwar](https://github.com/Anwar-Said)
+The goal of this workflow is to automate a graph machine learning process which predicts the probability of a given compound’s toxicity provided in the form of a graph. This problem setting falls under the well-known task of graph classification. You can find the compete description [here](https://webgme-cwl.readthedocs.io/en/latest/Examples/examples.html#building-a-graph-classification-workflow-example).

@@ -1,0 +1,136 @@
+{
+  "guid": "54e57661-7728-ddde-712f-232b4e33a64a",
+  "attributes": {
+    "name": "GC_toxicity"
+  },
+  "registry": {
+    "position": {
+      "x": 257,
+      "y": 136
+    }
+  },
+  "steps": {
+    "f": {
+      "guid": "387d17ca-0a88-24a5-39d9-272212b4de1f",
+      "type": {
+        "guid": "5c01cb9d-4d8d-5721-4f1a-8ff630c35cde",
+        "name": "DockerImage"
+      },
+      "attributes": {
+        "command": "python main.py",
+        "workdir": "/app",
+        "imageId": "anwarsaid135/leapdockers:latest",
+        "name": "gc_docker"
+      },
+      "registry": {
+        "position": {
+          "x": 300,
+          "y": 250
+        }
+      },
+      "ports": {
+        "Y": {
+          "guid": "2a446a4c-b5be-8b47-dbf6-654f8b67b097",
+          "type": {
+            "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+            "name": "FileOutput"
+          },
+          "attributes": {
+            "pattern": "results.txt",
+            "name": "result"
+          },
+          "registry": {
+            "position": {
+              "x": 370,
+              "y": 166
+            }
+          }
+        },
+        "w": {
+          "guid": "37fe1ab5-c522-7755-4c8e-32bed45f97f8",
+          "type": {
+            "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+            "name": "FileInput"
+          },
+          "attributes": {
+            "position": 1,
+            "asArgument": true
+          },
+          "registry": {
+            "position": {
+              "x": 151,
+              "y": 203
+            }
+          }
+        }
+      }
+    }
+  },
+  "subs": {},
+  "ports": {
+    "q": {
+      "guid": "c3dcca99-a596-5b15-d985-4ef5317ed852",
+      "type": {
+        "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+        "name": "FileOutput"
+      },
+      "attributes": {
+        "name": "result"
+      },
+      "registry": {
+        "position": {
+          "x": 535,
+          "y": 252
+        }
+      }
+    },
+    "R": {
+      "guid": "d3228ec7-f32e-2090-3cc0-7c85dd6bec6d",
+      "type": {
+        "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+        "name": "FileInput"
+      },
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 165,
+          "y": 247
+        }
+      }
+    }
+  },
+  "flows": {
+    "6": {
+      "guid": "ce450cee-5716-ee5b-267c-c1ed1d8444e5",
+      "type": {
+        "guid": "f48be115-5970-17d5-79d7-4b326ca2a9a2",
+        "name": "FlowFo2Fo"
+      },
+      "src": "/f/Y",
+      "dst": "/q",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 420,
+          "y": 265
+        }
+      }
+    },
+    "B": {
+      "guid": "cdd17fa1-e308-e044-3803-ab11564f1865",
+      "type": {
+        "guid": "27e32b11-8c39-fac6-baad-ae01140827bc",
+        "name": "FlowFi2Fi"
+      },
+      "src": "/R",
+      "dst": "/f/w",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 230,
+          "y": 265
+        }
+      }
+    }
+  }
+}
