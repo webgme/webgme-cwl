@@ -84,19 +84,26 @@
             });
             const files = {};
             const artifacts = [];
-            files[core.getAttribute(activeNode, 'name') + '.cwl.json'] = this.processWorkflow(activeNode, files, artifacts);
+            const mainFileName = core.getAttribute(activeNode, 'name') + '.cwl.json'
+            files[mainFileName] = this.processWorkflow(activeNode, files, artifacts);
             const mainContext = this.getWorkflowContext(activeNode);
             const mainInputs = [];
             mainContext.inputs.forEach(input => {
                 mainInputs.push(core.getAttribute(this._nodes[input], 'name'));
             });
             const defaultInfo = {};
+            const runDefaults = [];
             artifacts.forEach(artifact => {
                 if(mainInputs.indexOf(artifact.input) !== -1) {
                     defaultInfo[artifact.input] = artifact.name;
+                    runDefaults.push({name: artifact.input, value: artifact.name});
                 }
             });
+            console.log(mainInputs);
+            console.log(defaultInfo);
+            console.log(runDefaults);
             files['README.md'] = Workflow.getReadMeContent(core, META, activeNode, this._nodes, defaultInfo);
+            files['run.sh'] = Workflow.getRunScriptContent(mainFileName, runDefaults);
 
             return this.generateArtifact(files, artifacts, mainInputs, saveDirectory);
         })
@@ -120,25 +127,17 @@
             steps:{},
             requirements:{
                 InlineJavascriptRequirement:{},
-                SubworkflowFeatureRequirement:{},
-                InitialWorkDirRequirement:{
-                    listing:[]
-                }
+                SubworkflowFeatureRequirement:{}
             },
-            arguments:[
-                {
-                  "shellQuote": false,
-                  "valueFrom": "mkdir download\ndownload_pdp pull -d ./download/ -i 364"
-                }
-            ]
+            arguments:[{}]
         };
 
         //Inputs
         context.inputs.forEach(input => {
             Steps.processInput(context.core, context.META, context.nodes[input], cwlContent, artifacts);
         });
+
         delete cwlContent.arguments;
-        delete cwlContent.requirements.InitialWorkDirRequirement;
 
         //Steps and sub-workflows
         context.steps.forEach(step => {
@@ -153,7 +152,8 @@
         });
         context.subworkflows.forEach(swf => {
             const swfNode = context.nodes[swf];
-            const fileName = context.core.getGuid(swfNode) + '_swf.cwl.json';
+            const topLevel = context.core.getGuid(context.core.getParent(swfNode)) === context.core.getGuid(this.activeNode);
+            const fileName = topLevel ? context.core.getAttribute(swfNode, 'name') + '_swf.cwl.json' : context.core.getGuid(swfNode) + '_swf.cwl.json';
             files[fileName] = this.processWorkflow(swfNode, files);
             cwlContent.steps[context.core.getAttribute(swfNode, 'name')] = {
                 run: fileName,
@@ -279,13 +279,13 @@
         const saveToDisc = (path, content) => {
             const defd = Q.defer();
             const options = {};
-            // console.log('WO:', path);
+            console.log('WO:', path);
             fs.writeFile(saveDirectory + '/' + path, content, err => {
                 if (err) {
-                    // console.log('WO-err:', path);
+                    console.log('WO-err:', path);
                     defd.reject(err);
                 } else {
-                    // console.log('WO-done:', path);
+                    console.log('WO-done:', path);
                     defd.resolve(null);
                 }
             });
@@ -295,25 +295,33 @@
         if (saveDirectory) {
             fs = require('fs');
             fileNames.forEach(fileName => {
-                if (fileName === 'README.md') {
+                if (fileName === 'README.md' || fileName === 'run.sh') {
                     promises.push(saveToDisc(fileName, files[fileName]));
                 } else {
                     promises.push(saveToDisc(fileName, JSON.stringify(files[fileName], null, 2)));
                 }
             });
             artifacts.forEach(fileinfo => {
-                promises.push(saveToDisc(fileinfo.name, fileinfo.content));
+                if (fileinfo.isDefaultDirectory) {
+                    promises.push(saveToDisc(fileinfo.name + '/_default_', ''));
+                } else {
+                    promises.push(saveToDisc(fileinfo.name, fileinfo.content));
+                }
             });
         } else {
             fileNames.forEach(fileName => {
-                if (fileName === 'README.md') {
+                if (fileName === 'README.md' || fileName === 'run.sh') {
                     promises.push(artifact.addFile(fileName, files[fileName]));
                 } else {
                     promises.push(artifact.addFile(fileName, JSON.stringify(files[fileName], null, 2)));
                 }
             });
             artifacts.forEach(fileinfo => {
-                promises.push(artifact.addFile(fileinfo.name, fileinfo.content));
+                if (fileinfo.isDefaultDirectory) {
+                    promises.push(artifact.addFile(fileinfo.name + '/_default_', ''));
+                } else {
+                    promises.push(artifact.addFile(fileinfo.name, fileinfo.content));
+                }
             });
         }
 

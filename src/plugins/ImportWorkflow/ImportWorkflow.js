@@ -90,6 +90,7 @@ define([
             parent: parentNode, 
             base: META['Workflow']
         };
+        const sourcesToAdd = [];
         let mainWorkflow = false;
         
         if (relid) {
@@ -103,6 +104,7 @@ define([
         if (mainWorkflow) {
             this._newNodes[''] = node;
             this.workflowNode = node;
+            this.workflowPath = core.getPath(node);
         } else {
             this._newNodes[this.getOwnPath(node)] = node;
         }
@@ -111,11 +113,11 @@ define([
         this.setRegistry(node, jsonNode);
 
         Object.keys(jsonNode.ports || {}).forEach(rid => {
-            this.portFromJSON(node, jsonNode.ports[rid], rid);
+            this.portFromJSON(node, jsonNode.ports[rid], rid, sourcesToAdd);
         });
 
         Object.keys(jsonNode.steps || {}).forEach(rid => {
-            this.stepFromJSON(node, jsonNode.steps[rid], rid);
+            this.stepFromJSON(node, jsonNode.steps[rid], rid, sourcesToAdd);
         });
 
         Object.keys(jsonNode.subs || {}).forEach(rid => {
@@ -125,9 +127,14 @@ define([
         Object.keys(jsonNode.flows || {}).forEach(rid => {
             this.flowFromJSON(node, jsonNode.flows[rid], rid);
         });
+
+        // finally we set the source po{inters of ports if needed
+        sourcesToAdd.forEach(source => {
+            core.setPointer(this._newNodes[source.path],'source', this._newNodes[source.source]);
+        });
     };
 
-    ImportWorkflow.prototype.stepFromJSON = function (parentNode, jsonNode, relid) {
+    ImportWorkflow.prototype.stepFromJSON = function (parentNode, jsonNode, relid, sourcesToAdd) {
         const {core, META} = this;
         const node =core.createNode({
             parent: parentNode, 
@@ -140,11 +147,32 @@ define([
         this.setRegistry(node, jsonNode);
 
         Object.keys(jsonNode.ports).forEach(rid => {
-            this.portFromJSON(node, jsonNode.ports[rid], rid);
+            this.portFromJSON(node, jsonNode.ports[rid], rid, sourcesToAdd);
         });
     };
 
-    ImportWorkflow.prototype.portFromJSON = function (parentNode, jsonNode, relid) {
+    ImportWorkflow.prototype.portFromJSON = function (parentNode, jsonNode, relid, sourcesToAdd) {
+        const {core, META} = this;
+        const templatePorts = core.getChildrenRelids(parentNode);
+        const node = templatePorts.indexOf(relid) !== -1 ? 
+            core.getChild(parentNode, relid) :
+            core.createNode({
+                parent: parentNode, 
+                base: META[jsonNode.type.name],
+                relid: relid
+            });
+        this._newNodes[this.getOwnPath(node)] = node;
+
+        this.setAttributes(node, jsonNode);
+        this.setRegistry(node, jsonNode);
+
+        if(jsonNode.source) {
+            sourcesToAdd.push({path:this.getOwnPath(node),source:jsonNode.source});
+        }
+
+    };
+
+    ImportWorkflow.prototype.portSourceFromJSON = function (parentNode, jsonNode, relid) {
         const {core, META} = this;
         const templatePorts = core.getChildrenRelids(parentNode);
         const node = templatePorts.indexOf(relid) !== -1 ? 

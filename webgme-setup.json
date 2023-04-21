@@ -44,6 +44,10 @@
       "UpgradeCWLCore": {
         "src": "src/plugins/UpgradeCWLCore",
         "test": "test/plugins/UpgradeCWLCore"
+      },
+      "CheckWorkflow": {
+        "src": "src/plugins/CheckWorkflow",
+        "test": "test/plugins/CheckWorkflow"
       }
     },
     "routers": {

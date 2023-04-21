@@ -1,0 +1,15 @@
+{
+  "id": "CheckWorkflow",
+  "name": "CheckWorkflow",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-check",
+    "src": ""
+  },
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": false,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": []
+}

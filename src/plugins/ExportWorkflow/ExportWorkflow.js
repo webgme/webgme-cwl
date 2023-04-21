@@ -138,7 +138,8 @@ define([
             guid: core.getGuid(node),
             type: this.getNodeType(node),
             attributes: this.attributesToJSON(node),
-            registry: this.registryToJSON(node)
+            registry: this.registryToJSON(node),
+            source: core.getPointerPath(node,'source') ? this.getOwnPath(this._nodes[core.getPointerPath(node,'source')]) || null : null
         }
     };
 

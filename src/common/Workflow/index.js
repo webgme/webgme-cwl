@@ -1,4 +1,4 @@
-define(['ejs','text!./read.me.ejs'], function (ejs, readME) {
+define(['ejs','text!./read.me.ejs', 'text!./run.sh.ejs'], function (ejs, readME, runScript) {
 
     function getReadMeContent (core, META, workflowNode, nodes, defaultInfo) {
         const childrenPaths = core.getChildrenPaths(workflowNode);
@@ -26,7 +26,13 @@ define(['ejs','text!./read.me.ejs'], function (ejs, readME) {
         return ejs.render(readME, renderContext);
     }
 
+    function getRunScriptContent (mainFileName, defaults) {
+        const renderContext = {name: mainFileName, defaults: defaults};
+        return ejs.render(runScript, renderContext);
+    }
+
     return {
-        getReadMeContent: getReadMeContent
+        getReadMeContent: getReadMeContent,
+        getRunScriptContent: getRunScriptContent
     }
 })

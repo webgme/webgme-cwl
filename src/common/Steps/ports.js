@@ -21,7 +21,7 @@ define([], function() {
         const value = '' + core.getAttribute(portNode,'value');
         const inputs = cwlStep.inputs;
         const hasSource = core.getCollectionPaths(portNode,'dst').length > 0;
-        const staging = cwlStep.requirements.InitialWorkDirRequirement.listing;
+        const staging = cwlStep.requirements.InitialWorkDirRequirement ? cwlStep.requirements.InitialWorkDirRequirement.listing || [] : [];
 
         //TODO: by default we change all inputs to in/out values therefore, we are going to stage all inputs with writable
         if (asArgument) {
@@ -39,6 +39,9 @@ define([], function() {
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                     staging.push({entry:'$(inputs.' + name + ')', writable: true});
+                    if (!hasSource && value && location.indexOf('./') === 0) {
+                        artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
+                    }
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
@@ -54,6 +57,9 @@ define([], function() {
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: position}};
                     staging.push({entry:'$(inputs.' + name + ')', writable: true});
+                    if (!hasSource && value && location.indexOf('./') === 0) {
+                        artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
+                    }
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
@@ -93,6 +99,9 @@ define([], function() {
                     entry: '$(inputs[\'' + name + '\'])',
                     writable: true
                 });
+                if (!hasSource && value && location.indexOf('./') === 0) {
+                    artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
+                }
             } else {
                 throw new Error('missing processing for this input type!!!');
             }

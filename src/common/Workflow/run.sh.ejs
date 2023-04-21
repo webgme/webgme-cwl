@@ -1,0 +1,5 @@
+cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR <%=name%> <%
+for (let i=0; i<defaults.length; i+=1) {
+    %>--<%=defaults[i].name%> <%=defaults[i].value%> <%
+}
+%>
