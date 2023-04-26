@@ -1,0 +1,36 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "CommandLineTool",
+  "requirements": {
+    "InlineJavascriptRequirement": {},
+    "DockerRequirement": {
+      "dockerImageId": "example2:latest"
+    },
+    "ShellCommandRequirement": {},
+    "InitialWorkDirRequirement": {
+      "listing": [
+        {
+          "entry": "$(inputs['s'])",
+          "writable": true
+        }
+      ]
+    }
+  },
+  "inputs": {
+    "s": "File"
+  },
+  "outputs": {
+    "result": {
+      "type": "File",
+      "outputBinding": {
+        "glob": "output.txt"
+      }
+    }
+  },
+  "arguments": [
+    {
+      "shellQuote": false,
+      "valueFrom": "ln -s /code/* ./\npython RF.py"
+    }
+  ]
+}

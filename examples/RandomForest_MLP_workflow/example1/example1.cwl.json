@@ -1,0 +1,39 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "Workflow",
+  "inputs": {
+    "FileInput": "File"
+  },
+  "outputs": {
+    "FileOutput": {
+      "type": "File",
+      "outputSource": "training/result"
+    }
+  },
+  "steps": {
+    "training": {
+      "run": "71bb7116-c852-750b-a45f-4c5561cef8d3_step.cwl.json",
+      "in": {
+        "s": "data_processing/data_output"
+      },
+      "out": [
+        "result"
+      ]
+    },
+    "data_processing": {
+      "run": "bbaae372-dfa6-ed50-5d9c-404408c3c3b7_step.cwl.json",
+      "in": {
+        "f": "FileInput"
+      },
+      "out": [
+        "data_output"
+      ]
+    }
+  },
+  "requirements": {
+    "SubworkflowFeatureRequirement": {},
+    "InitialWorkDirRequirement": {
+      "listing": []
+    }
+  }
+}

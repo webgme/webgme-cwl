@@ -1,0 +1,319 @@
+{
+  "guid": "0d2edf8f-78ce-20d2-b2f8-02a148c72378",
+  "attributes": {
+    "name": "example2"
+  },
+  "registry": {
+    "position": {
+      "x": 456,
+      "y": 585
+    }
+  },
+  "steps": {
+    "8": {
+      "guid": "e1f09146-906d-dbbb-19ef-01699b7b004a",
+      "type": {
+        "guid": "5c01cb9d-4d8d-5721-4f1a-8ff630c35cde",
+        "name": "DockerImage"
+      },
+      "attributes": {
+        "name": "MLP",
+        "workdir": "/code",
+        "imageId": "example2:latest",
+        "command": "python neural_network.py"
+      },
+      "registry": {
+        "position": {
+          "x": 739,
+          "y": 270
+        }
+      },
+      "ports": {
+        "9": {
+          "guid": "22cd7199-6430-5daa-d190-3761efb0ecf4",
+          "type": {
+            "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+            "name": "FileOutput"
+          },
+          "attributes": {
+            "pattern": "output2.txt",
+            "name": "MLP_result"
+          },
+          "registry": {
+            "position": {
+              "x": 439,
+              "y": 220
+            }
+          }
+        },
+        "b": {
+          "guid": "b57fc78e-276d-02d9-aae9-219bb46a73e5",
+          "type": {
+            "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+            "name": "FileInput"
+          },
+          "attributes": {
+            "location": "",
+            "name": "s",
+            "asArgument": false
+          },
+          "registry": {
+            "position": {
+              "x": 279,
+              "y": 223
+            }
+          }
+        }
+      }
+    },
+    "Q": {
+      "guid": "3cae67b7-5de2-df01-34a1-2ddfabd680e8",
+      "type": {
+        "guid": "5c01cb9d-4d8d-5721-4f1a-8ff630c35cde",
+        "name": "DockerImage"
+      },
+      "attributes": {
+        "name": "Random_Forest",
+        "workdir": "/code",
+        "imageId": "example2:latest",
+        "command": "python RF.py"
+      },
+      "registry": {
+        "position": {
+          "x": 739,
+          "y": 419
+        }
+      },
+      "ports": {
+        "9": {
+          "guid": "ff938768-a9bf-5910-fcde-1bd7df1d6c56",
+          "type": {
+            "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+            "name": "FileOutput"
+          },
+          "attributes": {
+            "pattern": "output.txt",
+            "name": "result"
+          },
+          "registry": {
+            "position": {
+              "x": 441,
+              "y": 215
+            }
+          }
+        },
+        "b": {
+          "guid": "6821317f-eae2-0663-87a7-0d2d84c7f347",
+          "type": {
+            "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+            "name": "FileInput"
+          },
+          "attributes": {
+            "location": "",
+            "name": "s",
+            "asArgument": false
+          },
+          "registry": {
+            "position": {
+              "x": 279,
+              "y": 219
+            }
+          }
+        }
+      }
+    },
+    "R": {
+      "guid": "f6bff5d3-4a16-475a-cd62-21cec2dbbb8c",
+      "type": {
+        "guid": "5c01cb9d-4d8d-5721-4f1a-8ff630c35cde",
+        "name": "DockerImage"
+      },
+      "attributes": {
+        "name": "data_processing",
+        "workdir": "/code",
+        "imageId": "example2:latest",
+        "command": "python clean_data.py"
+      },
+      "registry": {
+        "position": {
+          "x": 511,
+          "y": 340
+        }
+      },
+      "ports": {
+        "9": {
+          "guid": "3582150c-be4b-c14b-051d-17c6b6105732",
+          "type": {
+            "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+            "name": "FileOutput"
+          },
+          "attributes": {
+            "pattern": "cleaned_data.csv",
+            "name": "data_output"
+          },
+          "registry": {
+            "position": {
+              "x": 441,
+              "y": 215
+            }
+          }
+        },
+        "X": {
+          "guid": "ecaa1e95-22d1-c314-16e0-3f1a19aeea5f",
+          "type": {
+            "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+            "name": "FileInput"
+          },
+          "attributes": {
+            "asArgument": true,
+            "position": 1,
+            "name": "f"
+          },
+          "registry": {
+            "position": {
+              "x": 240,
+              "y": 218
+            }
+          }
+        }
+      }
+    }
+  },
+  "subs": {},
+  "ports": {
+    "g": {
+      "guid": "3bcc6ead-18a5-a16f-b526-c14202d88cb0",
+      "type": {
+        "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+        "name": "FileOutput"
+      },
+      "attributes": {
+        "name": "RF_ouput",
+        "pattern": ""
+      },
+      "registry": {
+        "position": {
+          "x": 959,
+          "y": 401
+        }
+      }
+    },
+    "G": {
+      "guid": "be4d046b-4cec-5ce4-78d1-c05412dd0ecb",
+      "type": {
+        "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+        "name": "FileInput"
+      },
+      "attributes": {
+        "name": "fetch_raw_data",
+        "position": -1,
+        "asArgument": false
+      },
+      "registry": {
+        "position": {
+          "x": 355,
+          "y": 327
+        }
+      }
+    },
+    "z": {
+      "guid": "13a50940-b33c-7af1-7161-1c08b09cf1e4",
+      "type": {
+        "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+        "name": "FileOutput"
+      },
+      "attributes": {
+        "name": "MLP_ouput",
+        "pattern": ""
+      },
+      "registry": {
+        "position": {
+          "x": 958,
+          "y": 261
+        }
+      }
+    }
+  },
+  "flows": {
+    "3": {
+      "guid": "0281fcdf-5e04-2afd-2ef5-145d29492402",
+      "type": {
+        "guid": "70c10a44-3e2e-a7df-1297-3e8c506c1023",
+        "name": "FlowFo2Fi"
+      },
+      "src": "/R/9",
+      "dst": "/8/b",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 625,
+          "y": 305
+        }
+      }
+    },
+    "Y": {
+      "guid": "04802529-bac8-eb51-c3f7-5eccdaeec995",
+      "type": {
+        "guid": "70c10a44-3e2e-a7df-1297-3e8c506c1023",
+        "name": "FlowFo2Fi"
+      },
+      "src": "/R/9",
+      "dst": "/Q/b",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 625,
+          "y": 340
+        }
+      }
+    },
+    "m": {
+      "guid": "1178d6bc-9cc9-3a4b-d6db-cbace3c6e2d3",
+      "type": {
+        "guid": "f48be115-5970-17d5-79d7-4b326ca2a9a2",
+        "name": "FlowFo2Fo"
+      },
+      "src": "/8/9",
+      "dst": "/z",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 850,
+          "y": 300
+        }
+      }
+    },
+    "J": {
+      "guid": "f4856cbc-6fe9-c317-2258-b8eb8df3a742",
+      "type": {
+        "guid": "27e32b11-8c39-fac6-baad-ae01140827bc",
+        "name": "FlowFi2Fi"
+      },
+      "src": "/G",
+      "dst": "/R/X",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 430,
+          "y": 280
+        }
+      }
+    },
+    "C": {
+      "guid": "b23a12ef-5f58-1143-38e1-4140d8cfcefe",
+      "type": {
+        "guid": "f48be115-5970-17d5-79d7-4b326ca2a9a2",
+        "name": "FlowFo2Fo"
+      },
+      "src": "/Q/9",
+      "dst": "/g",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 850,
+          "y": 410
+        }
+      }
+    }
+  }
+}

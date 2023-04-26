@@ -1,0 +1,52 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "Workflow",
+  "inputs": {
+    "fetch_raw_data": "File"
+  },
+  "outputs": {
+    "MLP_ouput": {
+      "type": "File",
+      "outputSource": "MLP/MLP_result"
+    },
+    "RF_ouput": {
+      "type": "File",
+      "outputSource": "Random_Forest/result"
+    }
+  },
+  "steps": {
+    "MLP": {
+      "run": "e1f09146-906d-dbbb-19ef-01699b7b004a_step.cwl.json",
+      "in": {
+        "s": "data_processing/data_output"
+      },
+      "out": [
+        "MLP_result"
+      ]
+    },
+    "Random_Forest": {
+      "run": "3cae67b7-5de2-df01-34a1-2ddfabd680e8_step.cwl.json",
+      "in": {
+        "s": "data_processing/data_output"
+      },
+      "out": [
+        "result"
+      ]
+    },
+    "data_processing": {
+      "run": "f6bff5d3-4a16-475a-cd62-21cec2dbbb8c_step.cwl.json",
+      "in": {
+        "f": "fetch_raw_data"
+      },
+      "out": [
+        "data_output"
+      ]
+    }
+  },
+  "requirements": {
+    "SubworkflowFeatureRequirement": {},
+    "InitialWorkDirRequirement": {
+      "listing": []
+    }
+  }
+}

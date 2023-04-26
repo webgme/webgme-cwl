@@ -1,0 +1,36 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "CommandLineTool",
+  "requirements": {
+    "InlineJavascriptRequirement": {},
+    "DockerRequirement": {
+      "dockerImageId": "example2:latest"
+    },
+    "ShellCommandRequirement": {},
+    "InitialWorkDirRequirement": {
+      "listing": [
+        {
+          "entry": "$(inputs['s'])",
+          "writable": true
+        }
+      ]
+    }
+  },
+  "inputs": {
+    "s": "File"
+  },
+  "outputs": {
+    "MLP_result": {
+      "type": "File",
+      "outputBinding": {
+        "glob": "output2.txt"
+      }
+    }
+  },
+  "arguments": [
+    {
+      "shellQuote": false,
+      "valueFrom": "ln -s /code/* ./\npython neural_network.py"
+    }
+  ]
+}
