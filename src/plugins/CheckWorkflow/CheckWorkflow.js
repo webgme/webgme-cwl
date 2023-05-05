@@ -44,6 +44,61 @@ define([
     CheckWorkflow.prototype.constructor = CheckWorkflow;
 
     /**
+     * For some of the checking, we require a graph representation...
+     */
+    CheckWorkflow.prototype.generateSimpleGraph = function () {
+        const {core, _nodes, activeNode,} = this;
+        const graph = {v:[],e:[], i:[]};
+        core.getChildrenPaths(activeNode).forEach(path => {
+            if (core.isInstanceOf(_nodes[path], META['Flow'])) {
+                graph.e.push({s:core.getPointerPath(_nodes[path],'src'), d:core.getPointerPath(_nodes[path],'dst')});
+            } else {
+                graph.v.push(path);
+                if (core.isInstanceOf(_nodes[path], META['Input'])) {
+                    graph.i.push(path);
+                }
+
+            }
+        });
+
+        this._graph = graph;
+    };
+
+    CheckWorkflow.prototype._isReachableFrom = function (targetPath, startPath) {
+        const {_graph} = this;
+        const queue = [startPath];
+        const reached = [startPath];
+        while(queue.length > 0) {
+            const current = queue.shift();
+            _graph.e.forEach(edge => {
+                if(edge.s === current && reached.indexOf(edge.d) === -1) {
+                    reached.push(edge.d);
+                    queue.push[edge.d];
+                }
+            });
+        }
+        
+        return reached.indexOf(targetPath) !== -1;
+    };
+
+    CheckWorkflow.prototype._getReachableList = function (startPath) {
+        const {_graph} = this;
+        const queue = [startPath];
+        const reached = [startPath];
+        while(queue.length > 0) {
+            const current = queue.shift();
+            _graph.e.forEach(edge => {
+                if(edge.s === current && reached.indexOf(edge.d) === -1) {
+                    reached.push(edge.d);
+                    queue.push[edge.d];
+                }
+            });
+        }
+        
+        return reached;
+    };
+
+    /**
     /* It can be confusing to have multiple nodes with the same name on the same level
     /* and will generally cause a faulty CWL artifacts generation
     */
@@ -78,6 +133,67 @@ define([
             }
         });
     };
+
+    /**
+     * While it is again not an error, the user should be warned if there is no input for the
+     * workflow as it shows that the reusability of it might be not on 
+     */
+    CheckWorkflow.prototype.checkInput = function () {
+        const {core, activeNode, _nodes, META, createMessage} = this;
+        let numOfInputs = 0;
+        core.getChildrenPaths(activeNode).forEach(path => {
+            if (core.isInstanceOf(_nodes[path], META['Input'])) {
+                numOfInputs += 1;
+            }
+        });
+
+        if (numOfInputs === 0) {
+            createMessage(activeNode, 'There is no input in the workflow, you might want to check it as this limits its reusability!', 'warning');
+        }
+    };
+
+    /**
+     * While it is not an error, the user should be warned if there is no output for the
+     * workflow as it could show that there is no way of checking whether any  
+     */
+    CheckWorkflow.prototype.checkOutput = function () {
+        const {core, activeNode, _nodes, META, createMessage} = this;
+        let numOfOutputs = 0;
+        core.getChildrenPaths(activeNode).forEach(path => {
+            if (core.isInstanceOf(_nodes[path], META['Output'])) {
+                numOfOutputs += 1;
+            }
+        });
+
+        if (numOfOutputs === 0) {
+            createMessage(activeNode, 'There is no output in the workflow, you might want to check it this makes its verification questionable!', 'warning');
+        }
+    };
+
+    /**
+     * Having unreachable elements in a workflow means that it is not formed to its potential.
+     * While it only warrants a warning, all such elements should be either fed with intput flow
+     * or removed from the workflow.
+     * 
+     */
+    CheckWorkflow.prototype.checkUnreachable = function () {
+        const {_graph, createMessage, _nodes, _getReachableList} = this;
+        const unreachables = [];
+        const reachables = [];
+        _graph.i.forEach(inputVertexPath => {
+            reachables.push(..._getReachableList(inputVertexPath));
+        });
+
+        _graph.v.forEach(vertexPath => {
+            if (reachables.indexOf(vertexPath) === -1) {
+                unreachables.push(vertexPath);
+            }
+        });
+
+        unreachables.forEach(unreachablePath => {
+            createMessage(_nodes[unreachablePath], 'The element cannot be reached from any inputs which means it is processing without context!', 'warning');
+        })
+    }
 
     CheckWorkflow.prototype.getChecks = function () {
         const members = Object.getOwnPropertyNames(this);
