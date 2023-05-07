@@ -93,7 +93,7 @@
         })
         .then(innerResult => {
             if(!innerResult.success || !innerResult.messages[0]) {
-                throw new Error ('cannot get the exchange format of thw workflow!');
+                throw new Error ('cannot get the exchange format of the workflow!');
             }
 
             return fs.writeFile(

@@ -7,11 +7,22 @@
         "panel": "src/visualizers/panels/CommonWorkflowEditor",
         "secondary": false,
         "widget": "src/visualizers/widgets/CommonWorkflowEditor"
+      },
+      "WorkflowBrowser": {
+        "src": "panels/WorkflowBrowser/WorkflowBrowserPanel",
+        "title": "WorkflowBrowser",
+        "panel": "src/visualizers/panels/WorkflowBrowser",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/WorkflowBrowser"
       }
     },
     "addons": {},
     "decorators": {},
-    "layouts": {},
+    "layouts": {
+      "FocusedCWL": {
+        "src": "src/layouts/FocusedCWL"
+      }
+    },
     "plugins": {
       "BuildWorkflow": {
         "src": "src/plugins/BuildWorkflow",
@@ -127,33 +138,7 @@
         "path": "node_modules/webgme-taxonomy/src/plugins/ExportSearchFilterData"
       }
     },
-    "routers": {
-      "Search": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/Search",
-        "mount": "routers/Search"
-      },
-      "TagFormat": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/TagFormat",
-        "mount": "routers/TagFormat"
-      },
-      "TagCreator": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/TagCreator",
-        "mount": "routers/TagCreator"
-      },
-      "JSONSchema": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/JSONSchema",
-        "mount": "routers/JSONSchema"
-      },
-      "Dashboard": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/Dashboard",
-        "mount": "routers/Dashboard"
-      }
-    },
+    "routers": {},
     "seeds": {
       "taxonomy": {
         "project": "webgme-taxonomy",

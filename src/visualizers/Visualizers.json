@@ -28,5 +28,11 @@
     "title": "TagCreator",
     "panel": "panels/TagCreator/TagCreatorPanel",
     "DEBUG_ONLY": false
+  },
+  {
+    "id": "WorkflowBrowser",
+    "title": "WorkflowBrowser",
+    "panel": "panels/WorkflowBrowser/WorkflowBrowserPanel",
+    "DEBUG_ONLY": false
   }
 ]

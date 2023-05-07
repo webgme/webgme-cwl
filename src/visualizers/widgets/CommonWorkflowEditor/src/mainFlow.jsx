@@ -82,6 +82,7 @@ export default function Flow(props) {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         nodeTypes={nodeTypes}
+        nodesDraggable={false}
         fitView
       >
       <Fab size="small" style={{position:'fixed'}}>

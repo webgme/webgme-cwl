@@ -6,28 +6,28 @@
 define([
     'js/PanelBase/PanelBaseWithHeader',
     'js/PanelManager/IActivePanel',
-    'webgme-cwl/bundles/CommonWorkflowEditorWidget.bundle',
-    './CommonWorkflowEditorControl',
-    'css!webgme-cwl/bundles/styles/CommonWorkflowEditorWidget.bundle.css'
+    'webgme-cwl/bundles/WorkflowBrowserWidget.bundle',
+    './WorkflowBrowserControl',
+    'css!webgme-cwl/bundles/styles/WorkflowBrowserWidget.bundle.css'
 ], function (
     PanelBaseWithHeader,
     IActivePanel,
-    CommonWorkflowEditorWidget,
-    CommonWorkflowEditorControl
+    WorkflowBrowserWidget,
+    WorkflowBrowserControl
 ) {
     'use strict';
 
-    function CommonWorkflowEditorPanel(layoutManager, params) {
+    function WorkflowBrowserPanel(layoutManager, params) {
         var options = {};
         //set properties from options
-        options[PanelBaseWithHeader.OPTIONS.LOGGER_INSTANCE_NAME] = 'CommonWorkflowEditorPanel';
+        options[PanelBaseWithHeader.OPTIONS.LOGGER_INSTANCE_NAME] = 'WorkflowBrowserPanel';
         options[PanelBaseWithHeader.OPTIONS.FLOATING_TITLE] = true;
 
         //call parent's constructor
         PanelBaseWithHeader.apply(this, [options, layoutManager]);
 
         this._client = params.client;
-        this.appId = `my-react-viz-id`;
+        this.appId = `react-workflow-browser`;
 
         //initialize UI
         this._initialize();
@@ -36,10 +36,10 @@ define([
     }
 
     //inherit from PanelBaseWithHeader
-    _.extend(CommonWorkflowEditorPanel.prototype, PanelBaseWithHeader.prototype);
-    _.extend(CommonWorkflowEditorPanel.prototype, IActivePanel.prototype);
+    _.extend(WorkflowBrowserPanel.prototype, PanelBaseWithHeader.prototype);
+    _.extend(WorkflowBrowserPanel.prototype, IActivePanel.prototype);
 
-    CommonWorkflowEditorPanel.prototype._initialize = function () {
+    WorkflowBrowserPanel.prototype._initialize = function () {
         var self = this;
 
         this.$el.prop('id', this.appId);
@@ -57,7 +57,7 @@ define([
             // self.setTitle(title);
         // };
 
-        this.control = new CommonWorkflowEditorControl({
+        this.control = new WorkflowBrowserControl({
             logger: this.logger,
             client: this._client,
             widget: this.widget
@@ -66,26 +66,26 @@ define([
         this.onActivate();
     };
 
-    CommonWorkflowEditorPanel.prototype.afterAppend = function afterAppend() {
+    WorkflowBrowserPanel.prototype.afterAppend = function afterAppend() {
         console.log('AFTER APPEND');
-        CommonWorkflowEditorWidget(this.appId, this.control, this);
+        WorkflowBrowserWidget(this.appId, this.control, this);
     };
 
     /* OVERRIDE FROM WIDGET-WITH-HEADER */
     /* METHOD CALLED WHEN THE WIDGET'S READ-ONLY PROPERTY CHANGES */
-    CommonWorkflowEditorPanel.prototype.onReadOnlyChanged = function (isReadOnly) {
+    WorkflowBrowserPanel.prototype.onReadOnlyChanged = function (isReadOnly) {
         //apply parent's onReadOnlyChanged
         PanelBaseWithHeader.prototype.onReadOnlyChanged.call(this, isReadOnly);
 
     };
 
-    CommonWorkflowEditorPanel.prototype.onResize = function (width, height) {
+    WorkflowBrowserPanel.prototype.onResize = function (width, height) {
         this.logger.debug('onResize --> width: ' + width + ', height: ' + height);
         // this.widget.onWidgetContainerResize(width, height);
     };
 
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */
-    CommonWorkflowEditorPanel.prototype.destroy = function () {
+    WorkflowBrowserPanel.prototype.destroy = function () {
         this.control.destroy();
         // this.widget.destroy();
 
@@ -94,19 +94,19 @@ define([
         WebGMEGlobal.Toolbar.refresh();
     };
 
-    CommonWorkflowEditorPanel.prototype.onActivate = function () {
+    WorkflowBrowserPanel.prototype.onActivate = function () {
         // this.widget.onActivate();
         this.control.onActivate();
         WebGMEGlobal.KeyboardManager.setListener(this.widget);
         WebGMEGlobal.Toolbar.refresh();
     };
 
-    CommonWorkflowEditorPanel.prototype.onDeactivate = function () {
+    WorkflowBrowserPanel.prototype.onDeactivate = function () {
         // this.widget.onDeactivate();
         this.control.onDeactivate();
         WebGMEGlobal.KeyboardManager.setListener(undefined);
         WebGMEGlobal.Toolbar.refresh();
     };
 
-    return CommonWorkflowEditorPanel;
+    return WorkflowBrowserPanel;
 });
