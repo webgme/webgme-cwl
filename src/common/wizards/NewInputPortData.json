@@ -1,0 +1,91 @@
+{
+    "title":"Add new step input",
+    "description": "Define a new input argument for your workflow step",
+    "type":"object",
+    "required":["name", "type", "role"],
+    "properties":{
+        "name":{
+            "type":"string",
+            "description": "the unique name of the parameter",
+            "not":{"enum":[]}
+        },
+        "description":{
+            "type":"string",
+            "description": "optional short description of the argument's role"
+        },
+        "type":{
+            "type":"string",
+            "description":"select the type of input",
+            "enum":["File", "FileArray", "Directory", "DirectoryArray", "String", "StringArray", "PDPiD"]
+        },
+        "role": {
+            "type": "string",
+            "description":"define how your argument should be passed to the step",
+            "enum": ["named", "positional", "location"]
+        }
+    },
+    "allOf":[
+        {
+            "if":{
+                "properties":{
+                    "role":{
+                        "const":"named"
+                    }
+                },
+                "required":["role"]
+            },
+            "then":{
+                "properties":{
+                    "prefix":{
+                        "type":"string",
+                        "description": "the prefix that has to be used when passed to the command",
+                        "default":"-"
+                    }
+                },
+                "required":["prefix"]
+            }
+        },
+        {
+            "if":{
+                "properties":{
+                    "role":{
+                        "const":"positional"
+                    }
+                },
+                "required":["role"]
+            },
+            "then":{
+                "properties":{
+                    "position":{
+                        "type":"string",
+                        "enum":["_first_"],
+                        "description": "point to the previous positional argument or '_first_' if to order the argument among other positional arguments"
+                    }
+                },
+                "required":["position"]
+            }
+        },
+        {
+            "if":{
+                "properties":{
+                    "role":{
+                        "const":"location"
+                    }
+                },
+                "required":["role"]
+            },
+            "then":{
+                "properties":{
+                    "location":{
+                        "type":"string",
+                        "description": "relative - to the execution directory - or static path of the file/directory argument in the execution context"
+                    }
+                },
+                "required":["location"]
+            }
+        },
+        {
+            "required":["role"]
+        }
+    ]
+}

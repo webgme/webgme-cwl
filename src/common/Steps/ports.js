@@ -33,12 +33,12 @@ define([], function() {
                     if (!hasSource && value) {
                         artifacts.push({input:name, name:location, content:value});
                     }
-                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
+                    staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition + 1, prefix:prefix + name}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
-                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
+                    staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                     if (!hasSource && value && location.indexOf('./') === 0) {
                         artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
                     }
@@ -51,12 +51,12 @@ define([], function() {
                     if (!hasSource && value) {
                         artifacts.push({input:name, name:location, content:value});
                     }
-                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
+                    staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: position}};
-                    staging.push({entry:'$(inputs.' + name + ')', writable: true});
+                    staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                     if (!hasSource && value && location.indexOf('./') === 0) {
                         artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
                     }

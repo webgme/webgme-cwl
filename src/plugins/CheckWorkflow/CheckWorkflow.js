@@ -195,6 +195,28 @@ define([
         })
     }
 
+    /**
+     * 
+     * Having default value for a file input without location will cause crash in the generation so 
+     * it should be handled as a violation
+     */
+    CheckWorkflow.prototype.checkNoDefaultLocation = function () {
+        const {core, activeNode, _nodes, META, createMessage} = this;
+        let inputWithDefaultAndNoLocation = false;
+        core.getChildrenPaths(activeNode).forEach(path => {
+            if (core.isInstanceOf(_nodes[path], META['FileInput'])) {
+                if(core.getAttribute(_nodes[path], 'value') && !core.getAttribute(_nodes[path], 'location')) {
+                    inputWithDefaultAndNoLocation = true;
+                    createMessage(_nodes[path], 'This file input has a default content without a default filename which will cause build error!', 'error');
+                }
+            }
+        });
+
+        if (inputWithDefaultAndNoLocation) {
+            result.setSuccess(false);
+        }
+    };
+
     CheckWorkflow.prototype.getChecks = function () {
         const members = Object.getOwnPropertyNames(this);
         const checks = [];

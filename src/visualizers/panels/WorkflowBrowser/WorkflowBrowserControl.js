@@ -6,11 +6,15 @@
 define([
     'js/Constants',
     'js/Utils/GMEConcepts',
-    'js/NodePropertyNames'
+    'js/NodePropertyNames',
+    'js/Dialogs/Projects/ProjectsDialog',
+    'blob/BlobClient'
 ], function (
     CONSTANTS,
     GMEConcepts,
-    nodePropertyNames
+    nodePropertyNames,
+    ProjectsDialog,
+    BlobClient
 ) {
 
     'use strict';
@@ -20,9 +24,18 @@ define([
         this._logger = options.logger.fork('Control');
         this._client = options.client;
         this._currentNodeId = null;
-        this._currentNodeParentId = undefined;
         this._updateWidget = null;
+        this._descriptor = null;
 
+        //build meta info - does it necessary? where is the shorthand?
+        this._META = {};
+        this._id2meta = {};
+        this._client.getAllMetaNodes(false).forEach(metaNode => {
+            this._META[metaNode.getFullyQualifiedName()] = metaNode;
+            this._id2meta[metaNode.getId()] = metaNode.getFullyQualifiedName();
+        });
+
+        this._eventCallback = this._eventCallback.bind(this);
         this._logger.debug('ctor finished');
     }
 
@@ -31,35 +44,51 @@ define([
     // defines the parts of the project that the visualizer is interested in
     // (this allows the browser to then only load those relevant parts).
     WorkflowBrowserControl.prototype.selectedObjectChanged = function (nodeId) {
-        var self = this;
+        const {_logger, _client, _eventCallback} = this;
 
-        self._logger.debug('activeObject nodeId \'' + nodeId + '\'');
+        _logger.debug('activeObject nodeId \'' + nodeId + '\'');
 
         // Remove current territory patterns
-        if (self._currentNodeId) {
-            self._client.removeUI(self._territoryId);
+        if (this._currentNodeId) {
+            _client.removeUI(this._territoryId);
         }
 
-        self._currentNodeId = nodeId;
-        self._currentNodeParentId = undefined;
+        this._currentNodeId = nodeId;
 
-        if (typeof self._currentNodeId === 'string' && this._currentNodeParentId === '/f') {
+        if (typeof this._currentNodeId === 'string' && this._currentNodeId === '/f') {
             // Put new node's info into territory rules
-            self._selfPatterns = {};
+            this._selfPatterns = {};
             this._selfPatterns['/f'] = {children: 1}; //all workflows in the project
 
-            this._territoryId = this._client.addUI(this, events => {
-                this._eventCallback(events);
+            this._territoryId = _client.addUI(this, events => {
+                _eventCallback(events);
             });
 
             // Update the territory
-            this._client.updateTerritory(this._territoryId, this._selfPatterns);
+            _client.updateTerritory(this._territoryId, this._selfPatterns);
         }
     };
 
     // This next function retrieves the relevant node information for the widget
-    WorkflowBrowserControl.prototype._createDescriptor = function (nodeId) {
-        return {};
+    WorkflowBrowserControl.prototype._createDescriptor = function () {
+        const {_client, _META, _updateWidget, _currentNodeId} = this;
+        if (typeof _currentNodeId === 'string') {
+            const descriptor = {locals:[]};
+            const node = _client.getNode(_currentNodeId);
+            node.getChildrenIds().forEach(childId => {
+                const desc = {id: childId};
+                const child = _client.getNode(childId);
+                if(child.isInstanceOf(_META['CWL.Workflow'].getId())) {
+                    desc.name = child.getAttribute('name');
+                    desc.documentation = child.getAttribute('documentation');
+                    descriptor.locals.push(desc);
+                }
+            });
+            this._descriptor = descriptor;
+            if(_updateWidget) {
+                _updateWidget(descriptor);
+            }
+        }
     };
 
     /* * * * * * * * Node Event Handling * * * * * * * */
@@ -87,6 +116,91 @@ define([
         } else {
             this.selectedObjectChanged(activeObjectId);
         }
+    };
+
+    WorkflowBrowserControl.prototype.deleteComponent = function (id) {
+        const {_client} = this;
+        _client.deleteNode(id);
+    };
+
+    WorkflowBrowserControl.prototype.openProjectManager = function () {
+        const {_client} = this;
+        const pd = new ProjectsDialog(_client);
+        pd.show();
+    };
+
+    WorkflowBrowserControl.prototype.createEmptyWorkflow = function (name) {
+        const {_client, _META} = this;
+        _client.createNode(
+            {parentId:'/f', baseId:_META['CWL.Workflow'].getId()},
+            {attributes: {name: name}},
+            'adding new worklfow [' + name + ']');
+    };
+
+    WorkflowBrowserControl.prototype.runExportPlugin = function (workflowId) {
+        const {_client, _logger} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('ExportWorkflow');
+        context.managerConfig.activeNode = workflowId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('ExportWorkflow', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                const url = bc.getDownloadURL(result.artifacts[0]);
+                window.open(url, '_blank');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to export', err);
+            }
+        });
+    };
+
+    WorkflowBrowserControl.prototype.runBuildPlugin = function (workflowId) {
+        const {_client, _logger} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('BuildWorkflow');
+        context.managerConfig.activeNode = workflowId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('BuildWorkflow', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                const url = bc.getDownloadURL(result.artifacts[0]);
+                window.open(url, '_blank');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to build', err);
+            }
+        });
+    };
+
+    WorkflowBrowserControl.prototype.getCurrentWorkflowDescription = function(workflowId) {
+        const {_client} = this;
+        const node = _client.getNode(workflowId);
+
+        if (node) {
+            return node.getAttribute('documentation');
+        } else {
+            return null;
+        }
+    };
+
+    WorkflowBrowserControl.prototype.setWorkflowDescription = function(description) {
+        const {_client} = this;
+
+        _client.setAttribute(description.id, 'documentation', description.text);
+    };
+
+    WorkflowBrowserControl.prototype.updateCoreLibrary = function() {
+        const {_client} = this;
+
+        _client.updateLibrary('CWL','cwl_core', (err, result) => {
+            console.log(err);
+            console.log(result);
+        });
     };
 
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */
@@ -122,7 +236,6 @@ define([
         const firstTry = this._updateWidget === null ? true : false;
         this._updateWidget = func;
         if(this._descriptor && firstTry) {
-            this._updateWidget(this._descriptor);
             this._updateWidget(this._descriptor);
         }
     };
