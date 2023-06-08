@@ -13,8 +13,6 @@
     'plugin/PluginBase',
     'webgme-cwl/graph',
     'webgme-cwl/naming',
-    'webgme-cwl/step',
-    'webgme-json/jsonFunctions',
     'webgme-cwl/Steps/index',
     'webgme-cwl/Workflow/index',
     'q',
@@ -25,8 +23,6 @@
     PluginBase,
     Graph,
     NAMING,
-    StepHelper,
-    JSONFunctions,
     Steps,
     Workflow,
     Q,
@@ -94,7 +90,7 @@
             const defaultInfo = {};
             const runDefaults = [];
             artifacts.forEach(artifact => {
-                if(mainInputs.indexOf(artifact.input) !== -1) {
+                if(mainInputs.indexOf(artifact.input) !== -1 && artifact.name) {
                     defaultInfo[artifact.input] = artifact.name;
                     runDefaults.push({name: artifact.input, value: artifact.name});
                 }
@@ -312,15 +308,17 @@
             fileNames.forEach(fileName => {
                 if (fileName === 'README.md' || fileName === 'run.sh') {
                     promises.push(artifact.addFile(fileName, files[fileName]));
-                } else {
+                } else if (fileName) {
                     promises.push(artifact.addFile(fileName, JSON.stringify(files[fileName], null, 2)));
                 }
             });
             artifacts.forEach(fileinfo => {
-                if (fileinfo.isDefaultDirectory) {
-                    promises.push(artifact.addFile(fileinfo.name + '/_default_', ''));
-                } else {
-                    promises.push(artifact.addFile(fileinfo.name, fileinfo.content));
+                if (fileinfo.name) {
+                    if (fileinfo.isDefaultDirectory) {
+                        promises.push(artifact.addFile(fileinfo.name + '/_default_', ''));
+                    } else {
+                        promises.push(artifact.addFile(fileinfo.name, fileinfo.content));
+                    }
                 }
             });
         }

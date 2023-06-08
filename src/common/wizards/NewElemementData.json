@@ -1,0 +1,138 @@
+{
+    "title": "Add",
+    "description": "Extend your workflow with a new element.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type":"string",
+            "description":"the name of the new element"
+        },
+        "element": {
+            "type":"string",
+            "description":"the category of the new element",
+            "enum": [
+                "Workflow",
+                "Step",
+                "Input",
+                "Output"
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "element": {
+                        "const": "Workflow"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "prototype": {
+                        "type": "string",
+                        "description": "select a sub-workflow to add",
+                        "enum": [
+                            "empty"
+                        ]
+                    }
+                },
+                "required": [
+                    "prototype"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "element": {
+                        "const": "Step"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "prototype": {
+                        "type": "string",
+                        "description": "select a step prototype to use",
+                        "enum": [
+                            "FetchFromPDP",
+                            "DockerPull",
+                            "DockerImage",
+                            "DockerFile",
+                            "GetFile",
+                            "UnzipFile",
+                            "SAMatlab",
+                            "BuildDockerFromDir"
+                        ]
+                    }
+                },
+                "required": [
+                    "prototype"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "element": {
+                        "const": "Input"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "prototype": {
+                        "type": "string",
+                        "description": "What kind of input you need?",
+                        "enum": [
+                            "FileInput",
+                            "DirectoryInput",
+                            "StringInput",
+                            "FileArrayInput",
+                            "DirectoryArrayInput",
+                            "StringArrayInput"
+                        ]
+                    }
+                },
+                "required": [
+                    "prototype"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "element": {
+                        "const": "Output"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "prototype": {
+                        "type": "string",
+                        "description": "What kind of output you need?",
+                        "enum": [
+                            "FileOutput",
+                            "DirectoryOutput",
+                            "StringOutput",
+                            "FileArrayOutput",
+                            "DirectoryArrayOutput",
+                            "StringArrayOutput"
+                        ]
+                    }
+                },
+                "required": [
+                    "prototype"
+                ]
+            }
+        },
+        {
+            "required": [
+                "element",
+                "name"
+            ]
+        }
+    ]
+}

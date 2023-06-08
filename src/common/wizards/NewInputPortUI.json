@@ -1,0 +1,12 @@
+{
+    "ui:submitButtonOptions": {"submitText": "Create"},
+    "role": {
+        "ui:widget": "radio"
+    },
+    "description": {
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 3
+        }
+    }
+  }
