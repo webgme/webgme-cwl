@@ -88,6 +88,18 @@ define([
         return result;
     };
 
+    CommonWorkflowEditorControl.prototype._getChildrenNameList = function(excludes) {
+        const result = [];
+        this._client.getNode(this._currentNodeId).getChildrenIds().forEach(childId => {
+            const name = this._client.getNode(childId).getAttribute('name');
+            if(excludes.indexOf(name) === -1) {
+                result.push(name);
+            }
+        });
+
+        return result;
+    };
+
     CommonWorkflowEditorControl.prototype._createDescriptor = function () {
         const MainNode = this._client.getNode(this._currentNodeId);
         const descriptor = {nodes:[], edges:[], global: this._createGlobalDescriptor()};
@@ -159,8 +171,18 @@ define([
         const node = this._client.getNode(nodeId);
         const childrenIds = node.getChildrenIds();
         const type = node.isInstanceOf(this._META['CWL.Step'].getId()) ? 'step' : 'workflow';
-        const descriptor = {id:nodeId, type:type, position:node.getRegistry('position'), 
-            data:{name: node.getAttribute('name'), inputs: {}, outputs: {}, variablePorts: false, type: this._id2meta[node.getMetaTypeId()]}
+        const descriptor = {
+            id:nodeId, 
+            type:type, 
+            position:node.getRegistry('position'), 
+            data:{
+                name: node.getAttribute('name'), 
+                inputs: {}, 
+                outputs: {}, 
+                variablePorts: false, 
+                type: this._id2meta[node.getMetaTypeId()], 
+                names: this._getChildrenNameList([node.getAttribute('name')])
+            }
         };
 
         switch(descriptor.data.type) {
@@ -357,7 +379,7 @@ define([
         if (data.description) {
             attributes.description = data.description;
         }
-        
+
         switch (data.role) {
             case "named":
                 attributes.asArgument = true;
