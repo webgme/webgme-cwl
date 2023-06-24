@@ -1,0 +1,12 @@
+{
+    "title": "Configure - FetchFromPDP",
+    "description": "Edit the configuration of your FetchFromPDP step",
+    "type": "object",
+    "required":["name"],
+    "properties": {
+
+        "name":{
+            "type":"string"
+        }
+    }
+}
