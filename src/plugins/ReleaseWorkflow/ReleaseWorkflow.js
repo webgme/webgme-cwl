@@ -78,7 +78,7 @@
         const currentConfig = this.getCurrentConfig();
         const workflowName = core.getAttribute(activeNode, 'name');
 
-        // console.log('AAD:', this.__aadToken);
+        console.log('AAD:', this.__aadToken);
         // 87dc1607-5d63-4073-9424-720f86ecef43 - workflow process
         // const previousReleasePDP = core.getAttribute(nodeObject,'pdpId') || '98df2486-153f-4ce0-93bf-c06cdd94657a_1';
         // const previousVersion = core.getAttribute(nodeObject, 'version') || 0;
@@ -152,7 +152,7 @@
             // const pushing = spawn('./release.sh', [],{cwd:saveDirectory});
             const pushing = spawn('java',
                 ['-jar',
-                process.env.LEAP_CLI + 'leap_cli.jar',
+                process.env.LEAP_CLI + 'leap_cli_server.jar',
                 'upload', 
                 '-d', 
                 './' + executionId +'/cwl',
@@ -281,24 +281,18 @@
         metadata.taxonomyVersion = myConf.taxonomy;
         metadata.taxonomyTags = [];
         
-        metadata.taxonomyTags.push({
-            Workflow: {
-                isComposite: {
-                    value: false
-            }
-        }});
         if(hasSubflow) {
-            metadata.taxonomyTags[0].Workflow.isComposite.value = true;
+            metadata.taxonomyTags.push({
+                Workflow: {
+                    isComposite: {}
+            }});
         }
         
-        metadata.taxonomyTags.push({
-            Workflow: {
-                needsDataLakeAccess: {
-                    value: false
-            }
-        }});
         if(hasFetchStep && hasPDPIdInput) {
-            metadata.taxonomyTags[1].Workflow.needsDataLakeAccess.value = true;
+            metadata.taxonomyTags.push({
+                Workflow: {
+                    needsDataLakeAccess: {}
+            }});
         }
 
         metadata.taxonomyTags.push({
@@ -308,12 +302,9 @@
             }
         }});
 
-        metadata.taxonomyTags.push({
-            Workflow: {
-                type: {}
-        }});
-        metadata.taxonomyTags[3].Workflow.type[config.workflowType] = {};
-
+        const tag = {Workflow:{type:{value:{}}}};
+        tag.Workflow.type.value[config.workflowType] = {};
+        metadata.taxonomyTags.push(tag);
         return metadata;
     };
 

@@ -1,9 +1,8 @@
 {
     "ReleaseWorkflow":{
         "taxonomy": {
-            "id": "aadid_tamas_p_kecskes_at_Vanderbilt_p_Edu+mytax",
-            "branch": "master",
-            "commit": "#b9a5373208f0a39c0e041da693f73c44a8be8751",
+            "id": "aadid_yogesh_p_d_p_barve_at_vanderbilt_p_edu+testTax",
+            "commit": "#0f2746a4a1d893574f2fbbc2afc3fb62a2a27a95",
             "url": "leapdev.centralus.cloudapp.azure.com"
         },
         "processId": "87dc1607-5d63-4073-9424-720f86ecef43"
