@@ -125,8 +125,9 @@
                 throw new Error('unable to generate the workflow artifacts!!');
             }
             const timeStamp = new Date();
+            console.log('CONF:', JSON.stringify(myConf, null, 2));
             const releaseMetadata = this.composeMetadata(currentConfig);
-            // console.log('METADATA:', JSON.stringify(releaseMetadata, null, 2));
+            console.log('METADATA:', JSON.stringify(releaseMetadata, null, 2));
             return fs.writeFile(
                 saveDirectory+'/metadata.json', 
                 JSON.stringify(releaseMetadata, null, 2)

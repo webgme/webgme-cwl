@@ -13,9 +13,9 @@ config.requirejsPaths['lodash'] = './node_modules/lodash-amd/main';
 config.requirejsPaths['ansi-up'] = './node_modules/ansi_up/ansi_up';
 config.core.overlayShardSize = 100000;
 
-config.requirejsPaths.react = 'node_modules/webgme-taxonomy/src/visualizers/widgets/TagCreator/lib/react.production.min';
-
 config.seedProjects.defaultProject = 'cwl_base';
+
+config.plugin.allowServerExecution = true;
 
 //removing all seeds but Taxonomy and CWL related ones
 const oldbases = config.seedProjects.basePaths;
@@ -26,5 +26,6 @@ oldbases.forEach(base => {
     }
 });
 console.log(config.seedProjects);
+
 validateConfig(config);
 module.exports = config;
