@@ -1,0 +1,15 @@
+{
+  "id": "OpenDashboard",
+  "name": "OpenDashboard",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-list-alt",
+    "src": ""
+  },
+  "disableServerSideExecution": true,
+  "disableBrowserSideExecution": false,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": []
+}

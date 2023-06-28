@@ -13,18 +13,18 @@
     'plugin/PluginBase',
     'q',
     'superagent',
-    'text!webgme-cwl/pluginconf.json'
+    'webgme-cwl/config'
 ], function (
     PluginConfig,
     pluginMetadata,
     PluginBase,
     Q,
     superagent,
-    CONF) {
+    CONFIG) {
     'use strict';
 
     pluginMetadata = JSON.parse(pluginMetadata);
-    const myConf = JSON.parse(CONF)[pluginMetadata.name] || {};
+    const myConf = CONFIG.getMyConfig([pluginMetadata.name]);
     /**
      * Initializes a new instance of ReleaseWorkflow.
      * @class

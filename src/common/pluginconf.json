@@ -1,10 +1,14 @@
 {
-    "ReleaseWorkflow":{
+    "common":{
         "taxonomy": {
-            "id": "aadid_yogesh_p_d_p_barve_at_vanderbilt_p_edu+testTax",
-            "commit": "#0f2746a4a1d893574f2fbbc2afc3fb62a2a27a95",
-            "url": "leapdev.centralus.cloudapp.azure.com"
-        },
-        "processId": "87dc1607-5d63-4073-9424-720f86ecef43"
+            "id": "aadid_tamas_p_kecskes_at_vanderbilt_p_edu+wftest",
+            "commit": "#50fd8c46ca00ea3542e6db54c3f58e132d9a8ec7",
+            "url": "https://leapdev.centralus.cloudapp.azure.com"
+        }
+    },
+    "ReleaseWorkflow":{
+        "processId": "649b9bbc24c3e89806b2dccc"
+    },
+    "SelectDataSource": {
     }
 }

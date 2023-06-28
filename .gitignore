@@ -41,3 +41,6 @@ test/manual
 
 # readthedocs
 docs/_build
+
+src/common/.sample_cache.json
+OUTPUT/

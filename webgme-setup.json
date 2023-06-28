@@ -59,6 +59,10 @@
       "CheckWorkflow": {
         "src": "src/plugins/CheckWorkflow",
         "test": "test/plugins/CheckWorkflow"
+      },
+      "OpenDashboard": {
+        "src": "src/plugins/OpenDashboard",
+        "test": "test/plugins/OpenDashboard"
       }
     },
     "routers": {
