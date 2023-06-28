@@ -10,13 +10,11 @@ define(['text!./pluginconf.json'], function (CONF) {
     const getMyConfig = function(pluginName) {
         const resultConfig = {};
         Object.keys(everyConfig.common || {}).forEach(key => {
-            resultConfig[key] = everyConfig[key];
+            resultConfig[key] = everyConfig.common[key];
         });
-
         Object.keys(everyConfig[pluginName] || {}).forEach(key => {
             resultConfig[key] = everyConfig[pluginName][key];
         });
-
         return resultConfig;
     };
 
