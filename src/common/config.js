@@ -1,4 +1,4 @@
-define(['text!./pluginconf.json'], function (CONF) {
+define(['text!./pluginconfig.json'], function (CONF) {
 
     let everyConfig = {};
     try {
