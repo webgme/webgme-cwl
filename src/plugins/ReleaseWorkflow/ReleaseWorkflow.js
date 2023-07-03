@@ -153,7 +153,8 @@
             // const pushing = spawn('./release.sh', [],{cwd:saveDirectory});
             const pushing = spawn('java',
                 ['-jar',
-                process.env.LEAP_CLI + 'leap_cli_server.jar',
+                '-Dspring.profiles.active=passthrough',
+                process.env.LEAP_CLI + 'leap_cli.jar',
                 'upload', 
                 '-d', 
                 './' + executionId +'/cwl',

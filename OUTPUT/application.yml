@@ -1,0 +1,4 @@
+cliclient:
+  taxonomyServiceUrl: "https://leapdev.centralus.cloudapp.azure.com"
+  taxonomyProject: "aadid_yogesh_p_d_p_barve_at_vanderbilt_p_edu+testTax"
+  taxonomyBranch: "master"
