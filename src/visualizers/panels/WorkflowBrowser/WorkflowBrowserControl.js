@@ -177,6 +177,10 @@ define([
         });
     };
 
+    WorkflowBrowserControl.prototype.runReleasePlugin = function (workflowId) {
+        
+    };
+
     WorkflowBrowserControl.prototype.getCurrentWorkflowDescription = function(workflowId) {
         const {_client} = this;
         const node = _client.getNode(workflowId);

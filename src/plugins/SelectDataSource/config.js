@@ -66,25 +66,10 @@
 
         const listener = data => {
             console.log('message arrived:', data);
-            window.removeEventListener('message', listener);
-            dialog.modal('hide');
-            if (data.origin === window.location.origin) {
-                try {
-                    // const msg = JSON.parse(data.data);
-                    const msg = data.data;
-                    if (msg.type === 'selectArtifact') {
-                        callback(globalConfig, {value:msg.value}, false);
-                    } else {
-                        console.error('Invalid message type!');
-                        callback(globalConfig, {value:null}, false);
-                    }
-                } catch (e) {
-                    console.error(e);
-                    callback(globalConfig, {value:null}, false);
-                }
-            } else {
-                console.error('Only same origin clients can communicate!!!');
-                callback(globalConfig, {value:null}, false);
+            if(data && data.data && data.data.type === 'selectArtifact') {
+                window.removeEventListener('message', listener);
+                dialog.modal('hide');
+                callback(globalConfig, {value:data.data.value}, false);
             }
         };
         
