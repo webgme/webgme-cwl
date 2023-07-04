@@ -31,9 +31,46 @@ define(['text!./pluginconfig.json'], function (CONF) {
         }
     };
 
+    const getWorkflowSearchUrl = () => {
+        try {
+            let url = everyConfig.common.taxonomy.url + '/routers/Search/';
+            url += encodeURIComponent(everyConfig.common.taxonomy.id);
+            url += '/branch/master/';
+            url += encodeURIComponent(everyConfig.common.workflowRepoPath);
+            url += '/static/';
+
+            return url;
+        } catch {
+            return 'https://google.com';
+        }
+    };
+
+    const makeid = () => {
+        const length = 16;
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength = characters.length;
+        for (let i = 0; i < length; i += 1 ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+       return 'rel_' + result;
+    };
+
+    const strToPDP = (text) => {
+        const elements = text.split('_');
+        const result = {process: null, index: null, version: null};
+
+        result.process = elements[0];
+        result.index = elements[1];
+        result.version = elements[2];
+
+    };
+
     return {
         getMyConfig: getMyConfig,
-        getDashboardUrl: getDashboardUrl
-
+        getDashboardUrl: getDashboardUrl,
+        getWorkflowSearchUrl: getWorkflowSearchUrl,
+        makeid: makeid,
+        strToPDP: strToPDP
     };
 });

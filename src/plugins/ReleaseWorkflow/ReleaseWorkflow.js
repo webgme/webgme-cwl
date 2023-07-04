@@ -38,17 +38,6 @@
         this.pluginMetadata = pluginMetadata;
     }
 
-    function makeid() {
-        const length = 16;
-        let result = '';
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        const charactersLength = characters.length;
-        for (let i = 0; i < length; i += 1 ) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-       return 'rel_' + result;
-    }
-
     /**
      * Metadata associated with the plugin. Contains id, name, version, description, icon, configStructure etc.
      * This is also available at the instance at this.pluginMetadata.
@@ -71,7 +60,7 @@
      */
     ReleaseWorkflow.prototype.main = function (callback) {
         const {core, logger, activeNode, project, result, commitHash, __aadToken} = this;
-        const executionId = makeid();
+        const executionId = CONFIG.makeid();
         const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
         const fs = require('fs').promises;
         const path = require('path');
@@ -244,7 +233,7 @@
         .then(tags => {
             // console.log(tags);
             const mytags = {};
-            deferred.resolve(makeid());
+            deferred.resolve(CONFIG.makeid());
         })
         .catch(deferred.reject);
 

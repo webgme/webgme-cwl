@@ -1,0 +1,16 @@
+{
+  "id": "FetchWorkflow",
+  "name": "FetchWorkflow",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-cog",
+    "src": ""
+  },
+  "configWidget": "plugin/FetchWorkflow/FetchWorkflow/config",
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": true,
+  "dependencies": [],
+  "writeAccessRequired": false,
+  "configStructure": []
+}

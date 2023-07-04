@@ -18,6 +18,7 @@ import AddIcon from '@mui/icons-material/Add';
 import MenuIcon from '@mui/icons-material/Menu';
 import PublishIcon from '@mui/icons-material/Publish';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 export default function Browser(props) {
   
@@ -111,7 +112,8 @@ export default function Browser(props) {
     };
 
     const createWorkflow = (id, config) => {
-      WEBGME_CONTROL.createEmptyWorkflow(config.name);
+      const newid = WEBGME_CONTROL.createEmptyWorkflow(config.name);
+      onEditWorkflow(newid);
       setOperation('normal');
     };
 
@@ -138,10 +140,15 @@ export default function Browser(props) {
           <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Export workflow model</h3>}>
             <IconButton size='small'  onClick={()=>{WEBGME_CONTROL.runExportPlugin(id);}}><FontAwesomeIcon icon={icon({name: 'file-export', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
           </Tooltip>
-          <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Release workflow model</h3>}>
-            <IconButton size='small'  onClick={()=>{WEBGME_CONTROL.runExportPlugin(id);}}><FontAwesomeIcon icon={icon({name: 'cloud', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
+          <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Check workflow model for design flaws</h3>}>
+            <IconButton size='small'  onClick={()=>{WEBGME_CONTROL.runCheckPlugin(id);}}><FontAwesomeIcon icon={icon({name: 'circle-check', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
           </Tooltip>
-          <IconButton size='small' onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
+          <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Release workflow model</h3>}>
+            <IconButton size='small'  onClick={()=>{WEBGME_CONTROL.runReleasePlugin(id);}}><FontAwesomeIcon icon={icon({name: 'cloud', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
+          </Tooltip>
+          <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Delete workflow model</h3>}>
+            <IconButton size='small' onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
+          </Tooltip>
         </ButtonGroup>
       );
     };
@@ -151,9 +158,13 @@ export default function Browser(props) {
         console.log('import res', result);
       });
     };
+    const runFetchPlugin = () => {
+      WebGMEGlobal.InterpreterManager.configureAndRun(WebGMEGlobal.allPluginsMetadata['FetchWorkflow'], result => {
+        console.log('fetch res', result);
+      });
+    };
 
     const runCoreUpdatePlugin = () => {
-      console.log('TODO - run core library refresh');
       WEBGME_CONTROL.updateCoreLibrary();
     };
 
@@ -177,6 +188,7 @@ export default function Browser(props) {
             <Button color='warning' startIcon={<MenuIcon/>} onClick={()=>{WEBGME_CONTROL.openProjectManager();}}>Projects</Button>
             <Button color='primary' startIcon={<AddIcon/>} onClick={()=>{setOperation('new');}}>New...</Button>
             <Button color='success' startIcon={<PublishIcon/>} onClick={()=>{runImportPlugin()}}>Import...</Button>
+            <Button color='success' startIcon={<CloudDownloadIcon/>} onClick={()=>{runFetchPlugin()}}>Fetch...</Button>
             <Button color='warning' startIcon={<AutoStoriesIcon/>} onClick={()=>{runCoreUpdatePlugin()}}>Core Refresh</Button>
           </ButtonGroup>
           <FlowList>

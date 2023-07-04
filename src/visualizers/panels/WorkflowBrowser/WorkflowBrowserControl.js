@@ -131,10 +131,11 @@ define([
 
     WorkflowBrowserControl.prototype.createEmptyWorkflow = function (name) {
         const {_client, _META} = this;
-        _client.createNode(
+        const newid = _client.createNode(
             {parentId:'/f', baseId:_META['CWL.Workflow'].getId()},
             {attributes: {name: name}},
             'adding new worklfow [' + name + ']');
+        return newid;
     };
 
     WorkflowBrowserControl.prototype.runExportPlugin = function (workflowId) {
@@ -154,6 +155,33 @@ define([
                 //TODO - make a proper way of handling this
                 _logger.error('Failed to export', err);
             }
+        });
+    };
+
+    WorkflowBrowserControl.prototype.runCheckPlugin = function (workflowId) {
+        const {_client, _logger} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('CheckWorkflow');
+        context.managerConfig.activeNode = workflowId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('CheckWorkflow', context, (err, result)=>{
+            // console.log('check:', err, result);
+            let text = 'Checking finished<br/>';
+            const options = {type:'info'};
+            let icon = 'glyphicon glyphicon-info-sign';
+            if(!result.success) {
+                options.type = 'warning';
+            }
+            if(result.messages.length > 0) {
+                result.messages.forEach(message => {
+                    text += message.severity === 'warning' ? '[W] - ' : '[E] - ';
+                    text += '{'+ message.activeNode.name + '} - ';
+                    text += message.message +'<br/>';
+                });
+            }
+            $.notify({icon: icon, message: text}, options);
         });
     };
 
@@ -178,7 +206,27 @@ define([
     };
 
     WorkflowBrowserControl.prototype.runReleasePlugin = function (workflowId) {
-        
+        let metadata = WebGMEGlobal.allPluginsMetadata['ReleaseWorkflow'];
+        metadata['__context'] = {activeNodeId: workflowId, activeSelectionIds: []};
+        WebGMEGlobal.InterpreterManager.configureAndRun(metadata, function (result) {
+            let text = 'PluginRelease finished<br/>';
+            const options = {type:'info'};
+            let icon = 'glyphicon glyphicon-info-sign';
+            if (result.success) {
+                text += "- success -<br/>"
+                if(result.messages.length > 0) {
+                    result.messages.forEach(message => {
+                        text += ' -- ' + message.message +'<br/>';
+                    });
+                }
+            } else {
+                icon = 'glyphicon glyphicon-exclamation-sign';
+                text += "- faliure -<br/>";
+                options.type = 'warning';
+                text += result.error ? result.error : 'Unknown error happened during execution!';
+            }
+            $.notify({icon: icon, message: text}, options);
+        });
     };
 
     WorkflowBrowserControl.prototype.getCurrentWorkflowDescription = function(workflowId) {

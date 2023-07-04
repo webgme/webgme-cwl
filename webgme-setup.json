@@ -63,6 +63,10 @@
       "OpenDashboard": {
         "src": "src/plugins/OpenDashboard",
         "test": "test/plugins/OpenDashboard"
+      },
+      "FetchWorkflow": {
+        "src": "src/plugins/FetchWorkflow",
+        "test": "test/plugins/FetchWorkflow"
       }
     },
     "routers": {
