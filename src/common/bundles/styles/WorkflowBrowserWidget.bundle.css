@@ -1054,6 +1054,7 @@ body[data-color-mode*='light'] {
   box-sizing: inherit;
   display: inherit;
   font-family: inherit;
+  font-family: var(--md-editor-font-family) !important;
   font-size: inherit;
   font-style: inherit;
   -webkit-font-variant-ligatures: inherit;
@@ -1071,11 +1072,6 @@ body[data-color-mode*='light'] {
   word-break: normal;
   padding: 0;
 }
-.w-md-editor-text-pre > code,
-.w-md-editor-text-input > code,
-.w-md-editor-text > .w-md-editor-text-pre > code {
-  font-family: inherit;
-}
 .w-md-editor-text-pre {
   position: relative;
   margin: 0px !important;
@@ -1084,7 +1080,7 @@ body[data-color-mode*='light'] {
 }
 .w-md-editor-text-pre > code {
   padding: 0 !important;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-family: var(--md-editor-font-family) !important;
   font-size: 14px !important;
   line-height: 18px !important;
 }
@@ -1129,17 +1125,17 @@ body[data-color-mode*='light'] {
   }
 }
 .w-md-editor-text-pre .punctuation {
-  color: var(--color-prettylights-syntax-comment) !important;
+  color: var(--color-prettylights-syntax-comment, #8b949e) !important;
 }
 .w-md-editor-text-pre .token.url,
 .w-md-editor-text-pre .token.content {
-  color: var(--color-prettylights-syntax-constant) !important;
+  color: var(--color-prettylights-syntax-constant, #0550ae) !important;
 }
 .w-md-editor-text-pre .token.title.important {
-  color: var(--color-prettylights-syntax-markup-bold);
+  color: var(--color-prettylights-syntax-markup-bold, #24292f);
 }
 .w-md-editor-text-pre .token.code-block .function {
-  color: var(--color-prettylights-syntax-entity);
+  color: var(--color-prettylights-syntax-entity, #8250df);
 }
 .w-md-editor-text-pre .token.bold {
   font-weight: unset !important;
@@ -1150,11 +1146,11 @@ body[data-color-mode*='light'] {
   font-weight: unset !important;
 }
 .w-md-editor-text-pre .token.code.keyword {
-  color: var(--color-prettylights-syntax-constant) !important;
+  color: var(--color-prettylights-syntax-constant, #0550ae) !important;
 }
 .w-md-editor-text-pre .token.strike,
 .w-md-editor-text-pre .token.strike .content {
-  color: var(--color-prettylights-syntax-markup-deleted-text) !important;
+  color: var(--color-prettylights-syntax-markup-deleted-text, #82071e) !important;
 }
 
 /*!**********************************************************************************************************************!*\
@@ -1163,8 +1159,8 @@ body[data-color-mode*='light'] {
 .w-md-editor-toolbar-child {
   position: absolute;
   border-radius: 3px;
-  box-shadow: 0 0 0 1px var(--color-border-default), 0 0 0 var(--color-border-default), 0 1px 1px var(--color-border-default);
-  background-color: var(--color-canvas-default);
+  box-shadow: 0 0 0 1px var(--md-editor-box-shadow-color), 0 0 0 var(--md-editor-box-shadow-color), 0 1px 1px var(--md-editor-box-shadow-color);
+  background-color: var(--md-editor-background-color);
   z-index: 1;
   display: none;
 }
@@ -1191,8 +1187,8 @@ body[data-color-mode*='light'] {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-md-editor/esm/components/Toolbar/index.css ***!
   \**********************************************************************************************************************/
 .w-md-editor-toolbar {
-  border-bottom: 1px solid var(--color-border-default);
-  background-color: var(--color-canvas-default);
+  border-bottom: 1px solid var(--md-editor-box-shadow-color);
+  background-color: var(--md-editor-background-color);
   padding: 5px 5px;
   display: flex;
   justify-content: space-between;
@@ -1204,7 +1200,7 @@ body[data-color-mode*='light'] {
 }
 .w-md-editor-toolbar.bottom {
   border-bottom: 0px;
-  border-top: 1px solid var(--color-border-default);
+  border-top: 1px solid var(--md-editor-box-shadow-color);
   border-radius: 0 0 3px 3px;
 }
 .w-md-editor-toolbar ul,
@@ -1248,12 +1244,12 @@ body[data-color-mode*='light'] {
   color: var(--color-danger-fg);
 }
 .w-md-editor-toolbar li > button:disabled {
-  color: var(--color-border-default);
+  color: var(--md-editor-box-shadow-color);
   cursor: not-allowed;
 }
 .w-md-editor-toolbar li > button:disabled:hover {
   background-color: transparent;
-  color: var(--color-border-default);
+  color: var(--md-editor-box-shadow-color);
 }
 .w-md-editor-toolbar li.active > button {
   color: var(--color-accent-fg);
@@ -1264,7 +1260,7 @@ body[data-color-mode*='light'] {
   width: 1px;
   margin: -3px 3px 0 3px !important;
   vertical-align: middle;
-  background-color: var(--color-border-default);
+  background-color: var(--md-editor-box-shadow-color);
 }
 
 /*!**********************************************************************************************************************!*\
@@ -1298,8 +1294,11 @@ body[data-color-mode*='light'] {
   padding-bottom: 1px;
   position: relative;
   color: var(--color-fg-default);
-  box-shadow: 0 0 0 1px var(--color-border-default), 0 0 0 var(--color-border-default), 0 1px 1px var(--color-border-default);
-  background-color: var(--color-canvas-default);
+  --md-editor-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --md-editor-background-color: var(--color-canvas-default, #ffffff);
+  --md-editor-box-shadow-color: var(--color-border-default, #d0d7de);
+  box-shadow: 0 0 0 1px var(--md-editor-box-shadow-color), 0 0 0 var(--md-editor-box-shadow-color), 0 1px 1px var(--md-editor-box-shadow-color);
+  background-color: var(--md-editor-background-color);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -1312,7 +1311,7 @@ body[data-color-mode*='light'] {
   right: unset !important;
   left: 0;
   text-align: right !important;
-  box-shadow: inset -1px 0 0 0 var(--color-border-default);
+  box-shadow: inset -1px 0 0 0 var(--md-editor-box-shadow-color);
 }
 .w-md-editor.w-md-editor-rtl .w-md-editor-text {
   text-align: right !important;
@@ -1341,7 +1340,7 @@ body[data-color-mode*='light'] {
 .w-md-editor-preview {
   width: 50%;
   box-sizing: border-box;
-  box-shadow: inset 1px 0 0 0 var(--color-border-default);
+  box-shadow: inset 1px 0 0 0 var(--md-editor-box-shadow-color);
   position: absolute;
   padding: 10px 20px;
   overflow: auto;
@@ -1355,13 +1354,13 @@ body[data-color-mode*='light'] {
 .w-md-editor-preview .anchor {
   display: none;
 }
-.w-md-editor-preview .contains-task-list {
+.w-md-editor-preview .contains-task-list li.task-list-item {
   list-style: none;
 }
 .w-md-editor-show-preview .w-md-editor-input {
   width: 0%;
   overflow: hidden;
-  background-color: var(--color-canvas-default);
+  background-color: var(--md-editor-background-color);
 }
 .w-md-editor-show-preview .w-md-editor-preview {
   width: 100%;

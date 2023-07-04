@@ -55,7 +55,6 @@ define([
      * @param {function(Error|null, plugin.PluginResult)} callback - the result callback
      */
     ImportWorkflow.prototype.main = function (callback) {
-        const config = this.getCurrentConfig();
         this._newNodes = {};
         this.getJsonWorkflow()
         .then(jsonWorkflow => {

@@ -300,6 +300,12 @@
       max-width: 12px;
       max-height: 12px;
     }
+.react-flow__controls-button:disabled {
+      pointer-events: none;
+    }
+.react-flow__controls-button:disabled svg {
+        fill-opacity: 0.4;
+      }
 .react-flow__minimap {
   background-color: #fff;
 }
