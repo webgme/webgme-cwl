@@ -58,8 +58,8 @@ define([
      */
     FetchWorkflow.prototype.main = function (callback) {
         // Use this to access core, project, result, logger etc from PluginBase.
-        const {core, logger, activeNode, project, result, commitHash, __aadToken} = this;
-        const executionId = CONFIG.makeid();
+        const {core, logger, activeNode, result, __aadToken} = this;
+        const executionId = CONFIG.makeid('fetch_');
         const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
         const fs = require('fs').promises;
         const path = require('path');
@@ -109,50 +109,71 @@ define([
             return spawndef.promise;
         })
         .then(() => {
-            return fs.readdir(path.normalize(saveDirectory+'/cwl/ds'));
+            // return fs.readdir(path.normalize(saveDirectory+'/cwl/ds'));
+            return this.walkDir(saveDirectory);
         })
         .then((files) => {
             console.log(files)
             //TODO now we should find the exchange file and pass it to the import plugin
-            return Q(null);
+            let filepath = null;
+            files.forEach(file => {
+                if (file.indexOf('.CWF') !== -1) {
+                    filepath = path.resolve(process.cwd(),file); 
+                }
+            });
+
+            console.log(filepath);
+            if(!filepath) {
+                return Q(null);
+            }
+            
+            return fs.readFile(filepath,{encoding:'utf8'});
         })
-        .then((json) => {
+        .then((content) => {
+            console.log(content);
+            if(!content) {
+                throw new Error('unable to find workflow exchange file!');
+            }
+            const json = JSON.parse(content);
             return this.invokePlugin('ImportWorkflow',{pluginConfig:{json}});
         })
         .then(innerResult => {
-            if(!innerResult.success || !innerResult.messages[0]) {
+            if(!innerResult.success) {
                 throw new Error ('cannot get the exchange format of the workflow!');
             }
+            return this.save('ImportWorkflow have added a new workflow to the project');
+        })
+        .then(()=>{
+            result.setSuccess(true);
+            callback(null, result);
         })
         .catch(e => {
             logger.error(e);
             return callback(e);
         });
 
-        // Using the logger.
-        self.logger.debug('This is a debug message.');
-        self.logger.info('This is an info message.');
-        self.logger.warn('This is a warning message.');
-        self.logger.error('This is an error message.');
+    };
 
-        // Using the coreAPI to make changes.
-        const nodeObject = self.activeNode;
-        self.core.setAttribute(nodeObject, 'name', 'My new obj');
-        self.core.setRegistry(nodeObject, 'position', {x: 70, y: 70});
-
-
-        // This will save the changes. If you don't want to save;
-        // exclude self.save and call callback directly from this scope.
-        self.save('FetchWorkflow updated model.')
-            .then(() => {
-                self.result.setSuccess(true);
-                callback(null, self.result);
-            })
-            .catch((err) => {
-                // Result success is false at invocation.
-                self.logger.error(err.stack);
-                callback(err, self.result);
+    FetchWorkflow.prototype.walkDir = function (startDir) {
+        const fs = require('fs');
+        const walk = (dir) => {
+            let results = [];
+            const list = fs.readdirSync(dir);
+            list.forEach(file => {
+                file = dir + '/' + file;
+                const stat = fs.statSync(file);
+                if (stat && stat.isDirectory()) { 
+                    /* Recurse into a subdirectory */
+                    results = results.concat(walk(file));
+                } else { 
+                    /* Is a file */
+                    results.push(file);
+                }
             });
+            return results;
+        }
+
+        return walk(startDir);
     };
 
     return FetchWorkflow;

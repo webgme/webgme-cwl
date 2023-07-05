@@ -45,7 +45,7 @@ define(['text!./pluginconfig.json'], function (CONF) {
         }
     };
 
-    const makeid = () => {
+    const makeid = (prefix) => {
         const length = 16;
         let result = '';
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -53,7 +53,10 @@ define(['text!./pluginconfig.json'], function (CONF) {
         for (let i = 0; i < length; i += 1 ) {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
-       return 'rel_' + result;
+
+        prefix = prefix || 'rel_';
+
+       return prefix + result;
     };
 
     const strToPDP = (text) => {
@@ -64,6 +67,7 @@ define(['text!./pluginconfig.json'], function (CONF) {
         result.index = elements[1];
         result.version = elements[2];
 
+        return result;
     };
 
     return {
