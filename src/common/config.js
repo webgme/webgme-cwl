@@ -23,7 +23,7 @@ define(['text!./pluginconfig.json'], function (CONF) {
         try {
             let url = everyConfig.common.taxonomy.url + '/routers/Dashboard/';
             url += encodeURIComponent(everyConfig.common.taxonomy.id);
-            url += '/branch/master/static/index.html';
+            url += '/tag/' + everyConfig.common.taxonomy.tag + '/static/index.html';
 
             return url;
         } catch {
@@ -35,7 +35,7 @@ define(['text!./pluginconfig.json'], function (CONF) {
         try {
             let url = everyConfig.common.taxonomy.url + '/routers/Search/';
             url += encodeURIComponent(everyConfig.common.taxonomy.id);
-            url += '/branch/master/';
+            url += '/tag/' + everyConfig.common.taxonomy.tag + '/';
             url += encodeURIComponent(everyConfig.common.workflowRepoPath);
             url += '/static/';
 
