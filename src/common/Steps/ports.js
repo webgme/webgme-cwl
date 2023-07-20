@@ -130,8 +130,25 @@ define([], function() {
         }
     }
 
+    function getValueFromInputOrAttribute (propertyName, node, context) {
+        const {inputs, core, nodes} = context; 
+        let result = core.getAttribute(node, propertyName);
+        inputs.forEach(input => {
+            const port = nodes[input];
+            if(core.getAttribute(port, 'name') === propertyName) {
+              const edgePath = core.getCollectionPaths(port,'dst')[0] || null;
+              if(edgePath) {
+                result = core.getAttribute(core.getParent(nodes[core.getPointerPath(nodes[edgePath],'src')]),'name');
+              }
+            }
+        });
+        return result;
+
+    }
+
     return {
         processInput: processInput,
-        processOutput: processOutput
+        processOutput: processOutput,
+        getValueFromInputOrAttribute: getValueFromInputOrAttribute
     }
 })

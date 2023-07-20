@@ -8,13 +8,15 @@ define([
     'js/Utils/GMEConcepts',
     'js/NodePropertyNames',
     'js/Dialogs/Projects/ProjectsDialog',
-    'blob/BlobClient'
+    'blob/BlobClient',
+    'js/Loader/ProgressNotification'
 ], function (
     CONSTANTS,
     GMEConcepts,
     nodePropertyNames,
     ProjectsDialog,
-    BlobClient
+    BlobClient,
+    ProgressNotification
 ) {
 
     'use strict';
@@ -206,6 +208,7 @@ define([
     };
 
     WorkflowBrowserControl.prototype.runReleasePlugin = function (workflowId) {
+        const progress = ProgressNotification.start('Releasing workflow');
         let metadata = WebGMEGlobal.allPluginsMetadata['ReleaseWorkflow'];
         metadata['__context'] = {activeNodeId: workflowId, activeSelectionIds: []};
         WebGMEGlobal.InterpreterManager.configureAndRun(metadata, function (result) {
@@ -219,14 +222,64 @@ define([
                         text += ' -- ' + message.message +'<br/>';
                     });
                 }
+                progress.note.update({
+                    message: text,
+                    progress: 100,
+                    type: 'success'
+                });
             } else {
                 icon = 'glyphicon glyphicon-exclamation-sign';
                 text += "- faliure -<br/>";
                 options.type = 'warning';
                 text += result.error ? result.error : 'Unknown error happened during execution!';
+                progress.note.update({
+                    message: text,
+                    type: 'danger',
+                    progress: 100
+                });
             }
-            $.notify({icon: icon, message: text}, options);
+            // $.notify({icon: icon, message: text}, options);
         });
+    };
+    
+    WorkflowBrowserControl.prototype.runImportPlugin = function () {
+        const progress = ProgressNotification.start('Importing workflow');
+        WebGMEGlobal.InterpreterManager.configureAndRun(WebGMEGlobal.allPluginsMetadata['ImportWorkflow'], result => {
+            console.log('import res', result);
+            if(result.success) {
+                progress.note.update({
+                    message: 'finished importing',
+                    progress: 100,
+                    type: 'success'
+                });
+            } else {
+                progress.note.update({
+                    message: 'import failed!',
+                    type: 'danger',
+                    progress: 100
+                });
+            }
+          });
+    };
+
+    WorkflowBrowserControl.prototype.runFetchPlugin = function () {
+        const progress = ProgressNotification.start('Fetching workflow from repository');
+        WebGMEGlobal.InterpreterManager.configureAndRun(WebGMEGlobal.allPluginsMetadata['FetchWorkflow'], result => {
+            console.log('fetch res', result);
+            if(result.success) {
+                progress.note.update({
+                    message: 'finished fetching',
+                    progress: 100,
+                    type: 'success'
+                });
+            } else {
+                progress.note.update({
+                    message: 'fetch failed!',
+                    type: 'danger',
+                    progress: 100
+                });
+            }
+          });
     };
 
     WorkflowBrowserControl.prototype.getCurrentWorkflowDescription = function(workflowId) {
@@ -272,7 +325,7 @@ define([
 
     WorkflowBrowserControl.prototype.onActivate = function () {
         this._attachClientEventListeners();
-        this._displayToolbarItems();
+        // this._displayToolbarItems();
 
         if (typeof this._currentNodeId === 'string') {
             WebGMEGlobal.State.registerActiveObject(this._currentNodeId, {suppressVisualizerFromNode: true});

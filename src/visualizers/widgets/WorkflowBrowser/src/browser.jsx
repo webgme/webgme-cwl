@@ -128,9 +128,9 @@ export default function Browser(props) {
     const getActions = (id) => {
       return (
         <ButtonGroup size='large' fullWidth={true}>
-          <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>View or edit description of the workflow</h3>}>
+          {/*<Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>View or edit description of the workflow</h3>}>
             <IconButton size='small' onClick={()=>{editDescription(id);}}><FontAwesomeIcon icon={icon({name: 'paragraph', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
-          </Tooltip>
+          </Tooltip>*/}
           <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Edit the workflow</h3>}>
             <IconButton size='small' onClick={()=>{onEditWorkflow(id);}}><FontAwesomeIcon icon={icon({name: 'right-to-bracket', family: 'classic', style: 'solid'})} size='xl'/></IconButton>
           </Tooltip>
@@ -154,14 +154,10 @@ export default function Browser(props) {
     };
 
     const runImportPlugin = () => {
-      WebGMEGlobal.InterpreterManager.configureAndRun(WebGMEGlobal.allPluginsMetadata['ImportWorkflow'], result => {
-        console.log('import res', result);
-      });
+      WEBGME_CONTROL.runImportPlugin();
     };
     const runFetchPlugin = () => {
-      WebGMEGlobal.InterpreterManager.configureAndRun(WebGMEGlobal.allPluginsMetadata['FetchWorkflow'], result => {
-        console.log('fetch res', result);
-      });
+      WEBGME_CONTROL.runFetchPlugin();
     };
 
     const runCoreUpdatePlugin = () => {
@@ -185,11 +181,21 @@ export default function Browser(props) {
         <>
           {getModalWindow()}
           <ButtonGroup variant="contained" size="large">
-            <Button color='warning' startIcon={<MenuIcon/>} onClick={()=>{WEBGME_CONTROL.openProjectManager();}}>Projects</Button>
-            <Button color='primary' startIcon={<AddIcon/>} onClick={()=>{setOperation('new');}}>New...</Button>
-            <Button color='success' startIcon={<PublishIcon/>} onClick={()=>{runImportPlugin()}}>Import...</Button>
-            <Button color='success' startIcon={<CloudDownloadIcon/>} onClick={()=>{runFetchPlugin()}}>Fetch...</Button>
-            <Button color='warning' startIcon={<AutoStoriesIcon/>} onClick={()=>{runCoreUpdatePlugin()}}>Core Refresh</Button>
+            <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Manage your workflow projects...</h3>}>
+              <Button color='warning' startIcon={<MenuIcon/>} onClick={()=>{WEBGME_CONTROL.openProjectManager();}}>Projects</Button>
+            </Tooltip>
+            <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Create a new empty workflow</h3>}>
+              <Button color='primary' startIcon={<AddIcon/>} onClick={()=>{setOperation('new');}}>New...</Button>
+            </Tooltip>
+            <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Import a workflow from your computer...</h3>}>
+              <Button color='success' startIcon={<PublishIcon/>} onClick={()=>{runImportPlugin()}}>Import...</Button>
+            </Tooltip>
+            <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Import a workflow from the workflow repository...</h3>}>
+              <Button color='success' startIcon={<CloudDownloadIcon/>} onClick={()=>{runFetchPlugin()}}>Fetch...</Button>
+            </Tooltip>
+            {/*<Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Update the Step template definitions</h3>}>
+              <Button color='warning' startIcon={<AutoStoriesIcon/>} onClick={()=>{runCoreUpdatePlugin()}}>Core Refresh</Button>
+            </Tooltip>*/}
           </ButtonGroup>
           <FlowList>
             {items}
