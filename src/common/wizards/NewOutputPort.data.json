@@ -1,0 +1,46 @@
+{
+    "title": "Add output",
+    "description": "Add an output to your component.",
+    "type":"object",
+    "properties": {
+        "name": {
+            "type":"string",
+            "description":"the name of the output"
+        },
+        "type": {
+            "type":"string",
+            "description":"select if the output is pattern based or input reference",
+            "enum":["pattern", "reference"]
+        }
+    },
+    "allOf":[
+        {
+            "if":{
+                "properties":{
+                    "type":{
+                        "const":"pattern"
+                    }
+                }
+            },
+            "then":{
+                "properties":{
+                    "class":{
+                        "type":"string",
+                        "description":"pick the class of the output",
+                        "enum":[
+                            "File",
+                            "Directory",
+                            "FileArray",
+                            "DirectoryArray"
+                        ]
+                    },
+                    "pattern":{
+                        "type":"string",
+                        "description":"enter the lookup pattern"
+                    }
+                },
+                "required":["class","pattern"]
+            }
+        }
+    ]
+}

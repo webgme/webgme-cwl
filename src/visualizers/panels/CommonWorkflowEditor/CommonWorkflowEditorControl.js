@@ -415,6 +415,21 @@ define([
         }
     };
 
+    CommonWorkflowEditorControl.prototype.createOutput = function (containerStepId, data) {
+        const {_client, _META} = this;
+        const attributes = {};
+
+        attributes.name = data.name;
+        if(data.type === 'pattern') {
+            const typeName = 'CWL.' + data.class + 'Output';
+            attributes.pattern = data.pattern;
+            this._client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
+            {attributes},'added new output');
+        } else {
+
+        }
+    };
+
     CommonWorkflowEditorControl.prototype.deleteComponent = function (id) {
         //deleting the component and all edges that touches it
         const {_client, _MHelp} = this;

@@ -12,8 +12,19 @@ import MenuItem from '@mui/material/MenuItem';
 import ConfigWizard from '../../../../common/react/configWizard';
 import newInputPortData from '../../../../common/wizards/NewInputPortData.json';
 import newInputPortUI from '../../../../common/wizards/NewInputPortUI.json';
+import newOutputPortData from '../../../../common/wizards/NewOutputPort.data.json';
+import newOutputPortUI from '../../../../common/wizards/NewOutputPort.ui.json';
 
-const nodeHeight = 30;
+const nodeHeight = 38;
+const buttonStyle = {
+    backgroundColor: "#B85F61", 
+    borderRadius: "3px",
+    borderColor: "black",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    cursor:'pointer', 
+    padding:'2px'
+};
 // const zoomSelector = (s) => s.transform[2];
 function getHandleColoring(typeName) {
     let backgroundColor = 'black';
@@ -79,6 +90,25 @@ export default function StepNode({id, data}) {
     const [contextMenu, setContextMenu] = React.useState(null);
     const [configWizard, setCofigWizard] = React.useState(null);
 
+    const getTypeIcon = () => {
+        switch (data.type) {
+            case 'CWL.DockerPull':
+            case 'CWL.DockerFile':
+            case 'CWL.DockerImage':
+                return <FontAwesomeIcon icon={icon({name: 'docker', family: 'classic', style: 'brands'})} size='1x'/>;
+            case 'CWL.FetchFromPDP':
+                return <FontAwesomeIcon icon={icon({name: 'database', family: 'classic', style: 'solid'})} size='1x'/>;
+            case 'CWL.SAMatlab':
+                return <FontAwesomeIcon icon={icon({name: 'cash-register', family: 'classic', style: 'solid'})} size='1x'/>;
+            case 'CWL.UnzipFile':
+                return <FontAwesomeIcon icon={icon({name: 'file-zipper', family: 'classic', style: 'solid'})} size='1x'/>;
+            case 'CWL.GetFile':
+                return <FontAwesomeIcon icon={icon({name: 'file-export', family: 'classic', style: 'solid'})} size='1x'/>;
+            default:
+                return <FontAwesomeIcon icon={icon({name: 'shoe-prints', family: 'classic', style: 'solid'})} size='1x'/>;
+        }
+    };
+
     const handleContextMenu = (event, name) => {
         event.preventDefault();
         setContextMenu(
@@ -113,18 +143,27 @@ export default function StepNode({id, data}) {
         setCofigWizard(null);
     };
 
+    const addOutput = () => {
+        setCofigWizard({schema:newOutputPortData,ui:newOutputPortUI,cb:processNewOutput});
+    };
+    const processNewOutput = (formId, formData) => {
+        console.log(id, formData);
+        WEBGME_CONTROL.createOutput(id, formData);
+        setCofigWizard(null);
+    };
+
     const inputHandles = getInputHandles(data.inputs, handleContextMenu);
     const outputHandles = getOuputHandles(data.outputs, handleContextMenu);
     const update = useUpdateNodeInternals();
     const getActions = () => {
         const actions = [];
         if(data.variablePorts) {
-            actions.push(<FontAwesomeIcon icon={icon({name: 'arrow-right-to-bracket', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{addInput();}}/>);
+            actions.push(<Tooltip key="inport" title="Add new input"><FontAwesomeIcon icon={icon({name: 'arrow-right-to-bracket', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{addInput();}}/></Tooltip>);
         }
-        actions.push(<FontAwesomeIcon icon={icon({name: 'gear', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{console.log('config step');}}/>);
-        actions.push(<FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/>);
+        actions.push(<Tooltip key="config" title="Config step"><FontAwesomeIcon icon={icon({name: 'gear', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{console.log('config step');}}/></Tooltip>);
+        actions.push(<Tooltip key="delete" title="Delete step"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>);
         if(data.variablePorts) {
-            actions.push(<FontAwesomeIcon icon={icon({name: 'arrow-right-from-bracket', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{console.log(data.outputs);}}/>);
+            actions.push(<Tooltip key="outport" title="Add new output"><FontAwesomeIcon icon={icon({name: 'arrow-right-from-bracket', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{addOutput();}}/></Tooltip>);
         }
 
         return actions;
@@ -142,19 +181,21 @@ export default function StepNode({id, data}) {
     return (
         <>
         {inputHandles}
-        <div style={{
-            width: data.name.length*6 + "px", 
-            height: "30px",
-            minWidth:"80px",
+        <Tooltip title={'<<' + data.type.substring(4) + '>>'}><div style={{
+            width: data.name.length*6.5 + "px", 
+            height: "38px",
+            minWidth:"76px",
             backgroundColor: "#f3cea1", 
             borderRadius: "3px",
             borderColor: "black",
             borderWidth: "1px",
             borderStyle: "solid",
             fontSize: "8px",
-            textAlign:"center"}}>{data.name}<br/>
+            textAlign:"center"}}>
+            {getTypeIcon()}
+            <br/>{data.name}<br/>
             {actions}
-        </div>
+        </div></Tooltip>
         {outputHandles}
         <Menu
         open={contextMenu !== null}
