@@ -7,6 +7,16 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 
+const buttonStyle = {
+    backgroundColor: "#B85F61", 
+    borderRadius: "3px",
+    borderColor: "black",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    cursor:'pointer', 
+    padding:'2px'
+};
+
 function getHandleColoring(typeName) {
     console.log('coloring:', typeName);
     let backgroundColor = 'black';
@@ -31,12 +41,29 @@ function getHandleColoring(typeName) {
 export default function PortNode({id, data}) {
     const {name, isInput, type} = data;
     const style = getHandleColoring(type);
+    const getTypeIcon = () => {
+        /* maybe later add array as an icon too
+        if (type.indexOf('Array') !== -1) {
+            borderColor = '#CA686B';
+        } else {
+            borderColor = '#86A5B4';
+        }*/
+    
+        if(type.indexOf('String') !== -1 || type.indexOf('PDP') !== -1) {
+            return <FontAwesomeIcon icon={icon({name: 'font', family: 'classic', style: 'solid'})} size='1x'/>;
+        } else if(type.indexOf('Directory') !== -1) {
+            return <FontAwesomeIcon icon={icon({name: 'folder-open', family: 'classic', style: 'solid'})} size='1x'/>
+        } else if(type.indexOf('File') !== -1) {
+            return <FontAwesomeIcon icon={icon({name: 'file-lines', family: 'classic', style: 'solid'})} size='1x'/>
+        }
+    };
+
     return (
         <>
-        <div style={{
-            width: data.name.length*6 + "px", 
-            height: "30px",
-            minWidth: "60px", 
+        <Tooltip title={'<<' + type.substring(4) + '>>'}><div style={{
+            width: data.name.length*6.5 + "px", 
+            height: "38px",
+            minWidth: "38px", 
             backgroundColor: "#93ddf4", 
             borderRadius: "3px",
             borderColor: "black",
@@ -44,10 +71,10 @@ export default function PortNode({id, data}) {
             borderStyle: "solid",
             fontSize: "8px",
             textAlign:"center",
-            textSizeAdjust:"auto"}}>{data.name}<br/>
-            <FontAwesomeIcon icon={icon({name: 'pen-to-square', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}}/>
-            <FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/>
-        </div>
+            textSizeAdjust:"auto"}}>{getTypeIcon()}<br/>{data.name}<br/>
+            <Tooltip title="Config item"><FontAwesomeIcon icon={icon({name: 'pen-to-square', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle}/></Tooltip>
+            <Tooltip title="Remove item"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>
+        </div></Tooltip>
         <Handle type={isInput?"source":"target"} position={isInput?Position.Right:Position.Left} style={style}/>
         </>
     );

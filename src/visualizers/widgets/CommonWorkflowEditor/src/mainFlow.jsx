@@ -31,11 +31,11 @@ const finishNewElementBaseData = (wfnames2ids) => {
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
 
-const nodeWidth = 80;
-const nodeHeight = 30;
+const nodeWidth = 78;
+const nodeHeight = 38;
 
 const getLayoutedElements = (nodes, edges) => {
-  dagreGraph.setGraph({ rankdir: 'LR', nodesep:20, ranksep:20});
+  dagreGraph.setGraph({ rankdir: 'LR', nodesep:40, ranksep:40});
   nodes.forEach((node) => {
     dagreGraph.setNode(node.id, { width: nodeWidth, height: nodeHeight });
   });
@@ -214,7 +214,7 @@ export default function Flow(props) {
         nodeTypes={nodeTypes}
         nodesDraggable={false}
         fitView
-        maxZoom={5}
+        maxZoom={6}
         edgesUpdatable={false}
         nodesFocusable={false}
         elevateNodesOnSelect={false}>

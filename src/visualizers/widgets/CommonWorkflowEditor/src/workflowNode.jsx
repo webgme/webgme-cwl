@@ -6,7 +6,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Tooltip from '@mui/material/Tooltip';
 
-const nodeHeight = 30;
+const nodeHeight = 38;
+const buttonStyle = {
+    backgroundColor: "#B85F61", 
+    borderRadius: "3px",
+    borderColor: "black",
+    borderWidth: "1px",
+    borderStyle: "solid",
+    cursor:'pointer', 
+    padding:'2px'
+};
+
 // const zoomSelector = (s) => s.transform[2];
 function getHandleColoring(typeName) {
     let backgroundColor = 'black';
@@ -78,8 +88,8 @@ export default function WorkflowNode({id, data}) {
     const update = useUpdateNodeInternals();
     const getActions = () => {
         const actions = [];
-        actions.push(<FontAwesomeIcon icon={icon({name: 'up-right-from-square', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{onEnterSubWorkflow(id);}}/>);
-        actions.push(<FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={{cursor:'pointer', padding:'2px'}} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/>);
+        actions.push(<Tooltip key="enter" title="Enter workflow"><FontAwesomeIcon icon={icon({name: 'up-right-from-square', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{onEnterSubWorkflow(id);}}/></Tooltip>);
+        actions.push(<Tooltip key="delete" title="Remove workflow"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>);
         
         return actions;
     };
@@ -90,16 +100,18 @@ export default function WorkflowNode({id, data}) {
         <>
         {inputHandles}
         <div style={{
-            width: data.name.length*6 + "px", 
-            height: "30px",
-            minWidth:"80px",
-            backgroundColor: "#ddbb92", 
+            width: data.name.length*6.5 + "px", 
+            height: "38px",
+            minWidth:"76px",
+            backgroundColor: "#DDBB92", 
             borderRadius: "3px",
             borderColor: "black",
             borderWidth: "1px",
             borderStyle: "solid",
             fontSize: "8px",
-            textAlign:"center"}}>{data.name}<br/>
+            textAlign:"center"}}>
+            <FontAwesomeIcon icon={icon({name: 'diagram-project', family: 'classic', style: 'solid'})} size='1x'/>
+            <br/>{data.name}<br/>
             {actions}
         </div>
         {outputHandles}
