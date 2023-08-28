@@ -83,6 +83,8 @@ const onEnterSubWorkflow = (id) => {
 
 export default function WorkflowNode({id, data}) {
     // const zoom = useStore(zoomSelector)/2;
+
+    
     const inputHandles = getInputHandles(data.inputs);
     const outputHandles = getOuputHandles(data.outputs);
     const update = useUpdateNodeInternals();

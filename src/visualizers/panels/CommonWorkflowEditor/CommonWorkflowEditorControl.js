@@ -88,6 +88,19 @@ define([
         return result;
     };
 
+    CommonWorkflowEditorControl.prototype.setAttributes = function(nodeId, newData, oldData) {
+        const {_client} = this;
+        const node = this._client.getNode(nodeId);
+
+        _client.startTransaction();
+        node.getValidAttributeNames().forEach(name => {
+            if(newData[name] && newData[name] !== oldData[name]) {
+                _client.setAttribute(nodeId,name,newData[name]);
+            }
+        });
+        _client.completeTransaction('updated Step');
+    };
+
     CommonWorkflowEditorControl.prototype._getChildrenNameList = function(excludes) {
         const result = [];
         this._client.getNode(this._currentNodeId).getChildrenIds().forEach(childId => {
@@ -146,6 +159,7 @@ define([
             return false;
         };
 
+        global.id = _currentNodeId;
         global.parentId = selfNode.getParentId();
         global.wfnames2ids = {};
         folderNode.getChildrenIds().forEach(wfId => {
@@ -181,7 +195,8 @@ define([
                 outputs: {}, 
                 variablePorts: false, 
                 type: this._id2meta[node.getMetaTypeId()], 
-                names: this._getChildrenNameList([node.getAttribute('name')])
+                names: this._getChildrenNameList([node.getAttribute('name')]),
+                attributes: this._getAttributes(nodeId)
             }
         };
 
@@ -423,10 +438,15 @@ define([
         if(data.type === 'pattern') {
             const typeName = 'CWL.' + data.class + 'Output';
             attributes.pattern = data.pattern;
-            this._client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
+            _client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
             {attributes},'added new output');
         } else {
-
+            const typeName = data.reference.type.replace('Input','Output');
+            _client.startTransaction();
+            const newNodeId = _client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
+            {attributes});
+            _client.setPointer(_client.getNode(newNodeId),'source', _client.getNode(data.reference.id));
+            _client.completeTransaction('added new reference output');
         }
     };
 
@@ -442,6 +462,26 @@ define([
     CommonWorkflowEditorControl.prototype.deleteEdge = function (id) {
         const {_client, _currentNodeId} = this;
         _client.deleteNode(id, 'removing edge from workflow [' + _client.getNode(this._currentNodeId).getAttribute('name') + ']');
+    };
+
+    CommonWorkflowEditorControl.prototype.runPropagatePortsPlugin = function(wId, childId) {
+        const {_client, _logger, _currentNodeId} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('PropagatePorts');
+        context.managerConfig.activeNode = wId;
+        context.managerConfig.namespace = 'CWL';
+        context.managerConfig.activeSelection = [childId];
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('PropagatePorts', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                _logger.info('sucessfull execution of port propagation');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to build', err);
+            }
+        });
     };
 
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */

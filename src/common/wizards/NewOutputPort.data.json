@@ -41,6 +41,26 @@
                 },
                 "required":["class","pattern"]
             }
-        }
+        },
+        {
+            "if":{
+                "properties":{
+                    "type":{
+                        "const":"reference"
+                    }
+                }
+            },
+            "then":{
+                "properties":{
+                    "reference":{
+                        "type":"string",
+                        "description":"pick the input source for this output",
+                        "enum":[]
+                    }
+                },
+                "required":["reference"]
+            }
+        },
+        {"required":["name","type"]}
     ]
 }

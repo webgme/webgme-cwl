@@ -7,7 +7,7 @@ import './styles/ConfigWizard.css';
 
 export default function ConfigWizard(props) {
     const {dataSchema, UISchema, setFunction, exitFunction, id, defaultData} = props;
-    console.log(dataSchema);
+    // console.log(dataSchema);
     return (
         <Dialog open onClose={()=>{exitFunction()}}>
             <Form schema={dataSchema} uiSchema={UISchema} validator={validator} onSubmit={(e) => {setFunction(id, e.formData);}} className='cwl-config-wizard-padding' formData={defaultData}/>

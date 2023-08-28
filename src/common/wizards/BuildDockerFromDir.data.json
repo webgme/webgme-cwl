@@ -1,0 +1,11 @@
+{
+    "title": "Configure - BuildDockerFromDir",
+    "description": "Edit the configuration of your SABuildDockerFromDirMatlab step",
+    "type": "object",
+    "required":["name"],
+    "properties": {
+        "name":{
+            "type":"string"
+        }
+    }
+}

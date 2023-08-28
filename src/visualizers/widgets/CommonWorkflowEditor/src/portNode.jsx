@@ -18,7 +18,7 @@ const buttonStyle = {
 };
 
 function getHandleColoring(typeName) {
-    console.log('coloring:', typeName);
+    // console.log('coloring:', typeName);
     let backgroundColor = 'black';
     let borderColor = 'black';
     if (typeName.indexOf('Array') !== -1) {
