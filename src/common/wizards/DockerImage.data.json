@@ -1,0 +1,24 @@
+{
+    "title": "Configure - DockerImage",
+    "description": "Edit the configuration of your DockerImage step",
+    "type": "object",
+    "required":["name", "command","imageId"],
+    "properties": {
+        "name":{
+            "type":"string"
+        },
+        "command":{
+            "type":"string",
+            "description":"the command that is going to be executed once the container is up and running"
+        },
+        "imageId":{
+            "type":"string",
+            "description":"the docker image identifier to be used from the local repository (like: mine/wflow:latest)"
+        },
+        "workdir":{
+            "type":"string",
+            "description":"set the absolute path of the execution directory inside the container - if not set, the system will generate a temporary directory, place all the inputs there and call the command"
+        }
+
+    }
+}

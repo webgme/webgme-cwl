@@ -67,6 +67,10 @@
       "FetchWorkflow": {
         "src": "src/plugins/FetchWorkflow",
         "test": "test/plugins/FetchWorkflow"
+      },
+      "PropagatePorts": {
+        "src": "src/plugins/PropagatePorts",
+        "test": "test/plugins/PropagatePorts"
       }
     },
     "routers": {

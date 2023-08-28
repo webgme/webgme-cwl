@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import ReactFlow, { useNodesState, useEdgesState, addEdge, updateEdge, Controls } from 'reactflow';
+import ReactFlow, { useNodesState, useEdgesState, addEdge, updateEdge, Controls, useNodesInitialized, ReactFlowProvider, useReactFlow  } from 'reactflow';
 import dagre from 'dagre';
 import 'reactflow/dist/style.css';
 import Grid from '@mui/material/Grid';
@@ -9,6 +9,9 @@ import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { SiEnvoyproxy } from "react-icons/si";
+import { AiOutlineCloud } from "react-icons/ai";
+import { FaFileExport, FaFileZipper } from "react-icons/fa6";
 
 //custom nodes
 import PortNode from './portnode';
@@ -71,11 +74,13 @@ const getLayoutedElements = (nodes, edges) => {
  * -modal: pop-up configwizard is on
  */
 
-export default function Flow(props) {
+function BareFlow(props) {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [global, setGlobal, onGlobalChange] = useState({});
   const [menu, setMenu, onMenuChange] = useState(false);
+  const [selection, setSelection, onSelectionChange] = useState({nodes:[],edges:[]});
+  const flow = useReactFlow();
 
   const [operation, setOperation] = useState('standard');
   const onUpdateFromControl = useCallback(descriptor => {
@@ -156,8 +161,27 @@ export default function Flow(props) {
       });
   };
 
+  const workflowOrStepIsSelected = () => {
+    // console.log(selection);
+    const goodTypes = [
+      'CWL.Workflow', 'CWL.DockerImage','CWL.DockerPull',
+      'CWL.DockerFile','CWL.FetchFromPDP','CWL.GetFile',
+      'CWL.UnzipFile','CWL.SAMatlab','CWL.BuildDockerFromDir'];
+    if(selection.nodes.length > 0) {
+      return goodTypes.indexOf(selection.nodes[0].data.type) !== -1;
+    }
+    return false;
+  };
+
+  const propagatePorts = () => {
+    console.log('G:',global);
+    console.log('S:',selection);
+    WEBGME_CONTROL.runPropagatePortsPlugin(global.id, selection.nodes[0].id);
+  };
+
   const getMenu = () => {
     if(menu) {
+      const hideOperation = !workflowOrStepIsSelected();
       return (
         <Box sx={{ '& > :not(style)': { m: 1 } }} style={{position: 'fixed', zIndex: 999}}>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Close operation menu</h4>}>
@@ -173,13 +197,16 @@ export default function Flow(props) {
             <Fab size='small' onClick={()=>{setOperation('new');}}><FontAwesomeIcon icon={icon({name: 'pen-nib'})} size='xl'/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Build and download CWL artifacts</h4>}>
-            <Fab size='small' onClick={()=>{WEBGME_CONTROL.runBuildPlugin();}}><FontAwesomeIcon icon={icon({name: 'file-zipper', family: 'classic', style: 'solid'})} size='xl' /></Fab>
+            <Fab size='small' onClick={()=>{WEBGME_CONTROL.runBuildPlugin();}}><FaFileZipper size={'2em'} /></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Export workflow model</h4>}>
-            <Fab size='small' onClick={()=>{WEBGME_CONTROL.runExportPlugin();}}><FontAwesomeIcon icon={icon({name: 'file-export', family: 'classic', style: 'solid'})} size='xl' /></Fab>
+            <Fab size='small' onClick={()=>{WEBGME_CONTROL.runExportPlugin();}}><FaFileExport size={'2em'} /></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Release workflow model</h4>}>
-            <Fab size='small' onClick={()=>{console.log('release');}}><FontAwesomeIcon icon={icon({name: 'cloud', family: 'classic', style: 'solid'})} size='xl' /></Fab>
+            <Fab size='small' onClick={()=>{console.log('release');}}><AiOutlineCloud size={'2em'}/></Fab>
+          </Tooltip>
+          <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Propagate Selected components ports</h4>}>
+            <span><Fab size='small' style={{backgroundColor: "#DDBB92"}} onClick={()=>{propagatePorts();}} disabled={hideOperation}><SiEnvoyproxy size={'2em'}/></Fab></span>
           </Tooltip>
         </Box>
       );
@@ -192,8 +219,24 @@ export default function Flow(props) {
         </Box>
       );
     }
+  };
+
+  const handleSelectionChange = (changes) => {
+    // console.log(changes);
+    setSelection(changes);
   }
-  console.log('OP:',operation);
+
+  // console.log('OP:',operation);
+
+  const nodesInitialized = useNodesInitialized({});
+  // console.log('fitting view');
+  useEffect(()=>{
+    if(nodesInitialized) {
+      flow.fitView();
+      console.log('view should be fitted');
+    }
+  },[nodesInitialized]);
+
   let modalWindow;
   if (operation === 'new') {
     modalWindow = <ConfigWizard dataSchema={newElementBaseData} UISchema={{"ui:submitButtonOptions": {"submitText": "Create"}}} setFunction={addNewElement} exitFunction={()=>{setOperation('standard');}} id={'addelement'}/>;
@@ -217,10 +260,19 @@ export default function Flow(props) {
         maxZoom={6}
         edgesUpdatable={false}
         nodesFocusable={false}
-        elevateNodesOnSelect={false}>
+        elevateNodesOnSelect={false}
+        onSelectionChange={handleSelectionChange}>
         <Controls showInteractive={false} position="top-right"/>
         {getMenu()}
       </ReactFlow>
       {modalWindow}
     </div>  );
+}
+
+export default function Flow(props) {
+  return (
+    <ReactFlowProvider>
+      <BareFlow {...props}/>
+    </ReactFlowProvider>
+  )
 }

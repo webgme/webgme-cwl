@@ -1,5 +1,8 @@
 {
     "type":{
         "ui:widget": "RadioWidget"
+    },
+    "reference":{
+        "ui:widget":"RadioWidget"
     }
 }

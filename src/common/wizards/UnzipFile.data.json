@@ -1,0 +1,11 @@
+{
+    "title": "Configure - UnzipFile",
+    "description": "Edit the configuration of your UnzipFile step",
+    "type": "object",
+    "required":["name"],
+    "properties": {
+        "name":{
+            "type":"string"
+        }
+    }
+}
