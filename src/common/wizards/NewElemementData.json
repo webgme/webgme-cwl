@@ -25,7 +25,8 @@
                     "element": {
                         "const": "Workflow"
                     }
-                }
+                },
+                "required":["element"]
             },
             "then": {
                 "properties": {
@@ -48,7 +49,8 @@
                     "element": {
                         "const": "Step"
                     }
-                }
+                },
+                "required":["element"]
             },
             "then": {
                 "properties": {
@@ -78,7 +80,8 @@
                     "element": {
                         "const": "Input"
                     }
-                }
+                },
+                "required":["element"]
             },
             "then": {
                 "properties": {
@@ -106,7 +109,8 @@
                     "element": {
                         "const": "Output"
                     }
-                }
+                },
+                "required":["element"]
             },
             "then": {
                 "properties": {

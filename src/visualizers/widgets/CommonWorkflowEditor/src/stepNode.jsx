@@ -16,6 +16,9 @@ import newOutputPortData from '../../../../common/wizards/NewOutputPort.data.jso
 import newOutputPortUI from '../../../../common/wizards/NewOutputPort.ui.json';
 import stepWizards from '../../../../common/wizards/steps';
 import steps from '../../../../common/wizards/steps';
+import configPositional from '../../../../common/wizards/ConfigPositionalInput.data.json';
+import configNamed from '../../../../common/wizards/ConfigNamedInput.data.json';
+import configLocation from '../../../../common/wizards/ConfigLocationInput.data.json';
 
 const nodeHeight = 38;
 const buttonStyle = {
@@ -137,6 +140,30 @@ export default function StepNode({id, data}) {
         handleContextMenuClose();
     };
 
+    const configPort = () => {
+        if (contextMenu.isInput) {
+            const attributes = data.inputs[contextMenu.focusedParam].attributes;
+            console.log(attributes);
+            if(attributes.position !== -1) {
+                //positional
+                setCofigWizard({schema:configPositional, ui:{}, cb:processConfigInput, exitFunction:handleContextMenuClose, data:attributes});
+            } else if(attributes.asArgument) {
+                //named
+                setCofigWizard({schema:configNamed, ui:{}, cb:processConfigInput, exitFunction:handleContextMenuClose, data:attributes});
+            } else {
+                //location
+                setCofigWizard({schema:configNamed, ui:{}, cb:processConfigInput, exitFunction:handleContextMenuClose, data:attributes});
+            }
+        } else {
+            //output variants
+        }
+        // setCofigWizard({schema:newInputPortData,ui:newInputPortUI,cb:processNewInput});
+    };
+
+    const processConfigInput = () => {
+
+    };
+
     const addInput = () => {
         console.log(data.inputs);
         const names = Object.keys(data.inputs);
@@ -144,6 +171,7 @@ export default function StepNode({id, data}) {
 
         setCofigWizard({schema:newInputPortData,ui:newInputPortUI,cb:processNewInput});
     };
+
     const processNewInput = (formId, formData) => {
         WEBGME_CONTROL.createInput(id, formData);
         setCofigWizard(null);
@@ -153,10 +181,12 @@ export default function StepNode({id, data}) {
         newOutputPortData.allOf[1].then.properties.reference.enum = Object.keys(data.inputs);
 
     };
+
     const addOutput = () => {
         fillNewOutputConfig();
         setCofigWizard({schema:newOutputPortData,ui:newOutputPortUI,cb:processNewOutput});
     };
+
     const processNewOutput = (formId, formData) => {
         console.log(id, formData);
         if(formData.reference) {
@@ -233,7 +263,7 @@ export default function StepNode({id, data}) {
             : undefined
         }
         >
-            <MenuItem onClick={console.log(contextMenu ? contextMenu.focusedParam : 'na')}>Edit parameter</MenuItem>
+            <MenuItem onClick={() => {configPort();}}>Edit parameter</MenuItem>
             <MenuItem onClick={() => {removePort();}}>Delete Parameter</MenuItem>
         </Menu>
         {configWizardDialog}

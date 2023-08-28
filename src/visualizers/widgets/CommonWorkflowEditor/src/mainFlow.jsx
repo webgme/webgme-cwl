@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import ReactFlow, { useNodesState, useEdgesState, addEdge, updateEdge, Controls, useNodesInitialized, ReactFlowProvider, useReactFlow  } from 'reactflow';
+import React, { useEffect, useState } from 'react';
+import ReactFlow, { Controls, useNodesInitialized, ReactFlowProvider, useReactFlow, useOnSelectionChange } from 'reactflow';
 import dagre from 'dagre';
 import 'reactflow/dist/style.css';
 import Grid from '@mui/material/Grid';
@@ -31,42 +31,6 @@ const finishNewElementBaseData = (wfnames2ids) => {
   });
 }
 
-const dagreGraph = new dagre.graphlib.Graph();
-dagreGraph.setDefaultEdgeLabel(() => ({}));
-
-const nodeWidth = 78;
-const nodeHeight = 38;
-
-const getLayoutedElements = (nodes, edges) => {
-  dagreGraph.setGraph({ rankdir: 'LR', nodesep:40, ranksep:40});
-  nodes.forEach((node) => {
-    dagreGraph.setNode(node.id, { width: nodeWidth, height: nodeHeight });
-  });
-
-  edges.forEach((edge) => {
-    dagreGraph.setEdge(edge.source, edge.target);
-  });
-
-  dagre.layout(dagreGraph);
-
-  nodes.forEach((node) => {
-    const nodeWithPosition = dagreGraph.node(node.id);
-    node.targetPosition = 'left';
-    node.sourcePosition = 'right';
-
-    // We are shifting the dagre node position (anchor=center center) to the top left
-    // so it matches the React Flow node anchor point (top left).
-    node.position = {
-      x: nodeWithPosition.x - nodeWidth / 2,
-      y: nodeWithPosition.y - nodeHeight / 2,
-    };
-
-    return node;
-  });
-
-  return { nodes, edges };
-};
-
 /**
  * 
  * Operational states:
@@ -75,34 +39,13 @@ const getLayoutedElements = (nodes, edges) => {
  */
 
 function BareFlow(props) {
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
-  const [global, setGlobal, onGlobalChange] = useState({});
-  const [menu, setMenu, onMenuChange] = useState(false);
-  const [selection, setSelection, onSelectionChange] = useState({nodes:[],edges:[]});
+  const {nodes, edges, global} = props;
+  const [menu, setMenu] = useState(false);
+  const [selection, setSelection] = useState({nodes:[],edges:[]});
   const flow = useReactFlow();
 
   const [operation, setOperation] = useState('standard');
-  const onUpdateFromControl = useCallback(descriptor => {
-    console.log('update from control', descriptor);
-    finishNewElementBaseData(descriptor.global.wfnames2ids);
-    const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-      descriptor.nodes,
-      descriptor.edges
-    );
-    layoutedEdges.forEach(edge => {
-      edge.markerEnd = {type:'arrowclosed'};
-      edge.interactionWidth = 2;
-      edge.style = {color:'black'};
-    });
-    setNodes(layoutedNodes);
-    setEdges(layoutedEdges);
-    setGlobal(descriptor.global);
-  });
-  
-  WEBGME_CONTROL.registerUpdate(onUpdateFromControl);
 
-  //const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
   const onConnect = params => {
     const {source, target} = getSourceAndTarget(params);
@@ -142,6 +85,7 @@ function BareFlow(props) {
   };
 
   const addNewElement = (id, event) => {
+    console.log('who called me??');
     WEBGME_CONTROL.addNewElement(id, event);
     setOperation('standard');
   };
@@ -194,7 +138,7 @@ function BareFlow(props) {
             <Fab size='small' onClick={()=>{onGoToParent();}}><FontAwesomeIcon icon={icon({name: 'arrow-up'})} size='xl'/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Add new element to workflow</h4>}>
-            <Fab size='small' onClick={()=>{setOperation('new');}}><FontAwesomeIcon icon={icon({name: 'pen-nib'})} size='xl'/></Fab>
+            <Fab size='small' onClick={()=>{console.log('anyone?');setOperation('new');}}><FontAwesomeIcon icon={icon({name: 'pen-nib'})} size='xl'/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Build and download CWL artifacts</h4>}>
             <Fab size='small' onClick={()=>{WEBGME_CONTROL.runBuildPlugin();}}><FaFileZipper size={'2em'} /></Fab>
@@ -222,11 +166,11 @@ function BareFlow(props) {
   };
 
   const handleSelectionChange = (changes) => {
-    // console.log(changes);
+    console.log('really?', changes);
     setSelection(changes);
   }
 
-  // console.log('OP:',operation);
+  console.log('OP:',operation);
 
   const nodesInitialized = useNodesInitialized({});
   // console.log('fitting view');
@@ -237,20 +181,24 @@ function BareFlow(props) {
     }
   },[nodesInitialized]);
 
-  let modalWindow;
-  if (operation === 'new') {
-    modalWindow = <ConfigWizard dataSchema={newElementBaseData} UISchema={{"ui:submitButtonOptions": {"submitText": "Create"}}} setFunction={addNewElement} exitFunction={()=>{setOperation('standard');}} id={'addelement'}/>;
-  } else {
-    modalWindow = null;
+  const getPopUp = () => {
+    if (operation === 'new') {
+      finishNewElementBaseData(global.wfnames2ids);
+      return <ConfigWizard dataSchema={newElementBaseData} UISchema={{"ui:submitButtonOptions": {"submitText": "Create"}}} setFunction={addNewElement} exitFunction={()=>{console.log('who calls this?');setOperation('standard');}} id={'addelement'}/>;
+    } else {
+      return null;
+    }
   }
+
+  useOnSelectionChange({
+    onChange: ({ nodes, edges }) => setSelection({nodes, edges}),
+  });
 
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
         onEdgeDoubleClick={(e,edge)=> {WEBGME_CONTROL.deleteEdge(edge.id);}}
         onConnect={onConnect}
         isValidConnection={isValidConnection}
@@ -260,19 +208,21 @@ function BareFlow(props) {
         maxZoom={6}
         edgesUpdatable={false}
         nodesFocusable={false}
-        elevateNodesOnSelect={false}
-        onSelectionChange={handleSelectionChange}>
+        elevateNodesOnSelect={false}>
         <Controls showInteractive={false} position="top-right"/>
         {getMenu()}
+        {getPopUp()}
       </ReactFlow>
-      {modalWindow}
     </div>  );
 }
 
+
 export default function Flow(props) {
+
   return (
     <ReactFlowProvider>
       <BareFlow {...props}/>
     </ReactFlowProvider>
   )
 }
+
