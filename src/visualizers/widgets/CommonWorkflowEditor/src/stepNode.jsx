@@ -14,11 +14,12 @@ import newInputPortData from '../../../../common/wizards/NewInputPort.data.json'
 import newInputPortUI from '../../../../common/wizards/NewInputPort.ui.json';
 import newOutputPortData from '../../../../common/wizards/NewOutputPort.data.json';
 import newOutputPortUI from '../../../../common/wizards/NewOutputPort.ui.json';
-import stepWizards from '../../../../common/wizards/steps';
 import steps from '../../../../common/wizards/steps';
 import configPositional from '../../../../common/wizards/ConfigPositionalInput.data.json';
 import configNamed from '../../../../common/wizards/ConfigNamedInput.data.json';
 import configLocation from '../../../../common/wizards/ConfigLocationInput.data.json';
+import configReference from '../../../../common/wizards/ConfigOutputReference.data.json';
+import configPattern from '../../../../common/wizards/ConfigPatternOutput.data.json';
 
 const nodeHeight = 38;
 const buttonStyle = {
@@ -60,7 +61,11 @@ function getInputHandles(inputs, handleFn) {
     names.forEach(name => {
         const style = getHandleColoring(inputs[name].type);
         style.top = offset + 'px';
-        handles.push(<Tooltip key={name} title={name} arrow={true} syle={{fontSize:'24px'}}>
+        let title = name;
+        if(inputs[name].attributes.position !== -1 && inputs[name].attributes.asArgument) {
+            title += ' [' + inputs[name].attributes.position + ']';
+        }
+        handles.push(<Tooltip key={name} title={title} arrow={true} syle={{fontSize:'24px'}}>
             <Handle id={name} type="target" position={Position.Left} style={style} onContextMenu={(event)=>{
                 event.preventDefault();
                 handleFn(event, name, true);
@@ -130,44 +135,88 @@ export default function StepNode({id, data}) {
             : null
         );
     };
+
     const handleContextMenuClose = () => {
         setContextMenu(null);
-      };
+    };
 
     const removePort = () => {
-        const id = contextMenu.isInput ? data.inputs[contextMenu.focusedParam].id : data.outputs[contextMenu.focusedParam].id;
-        WEBGME_CONTROL.deleteComponent(id);
+        const portId = contextMenu.isInput ? data.inputs[contextMenu.focusedParam].id : data.outputs[contextMenu.focusedParam].id;
+        const containerId = contextMenu.isInput ? id : null;
+        WEBGME_CONTROL.deleteComponent(portId, containerId);
         handleContextMenuClose();
     };
 
     const configPort = () => {
+        const invalidNames = [].concat(Object.keys(data.inputs), Object.keys(data.outputs));
+        invalidNames.splice(invalidNames.indexOf(data.inputs[contextMenu.focusedParam].attributes.name), 1);
         if (contextMenu.isInput) {
             const attributes = data.inputs[contextMenu.focusedParam].attributes;
-            console.log(attributes);
             if(attributes.position !== -1) {
-                //positional
-                setCofigWizard({schema:configPositional, ui:{}, cb:processConfigInput, exitFunction:handleContextMenuClose, data:attributes});
+                attributes.role = 'positional';
+                configPositional.properties.name.not.enum = invalidNames;
+                configPositional.properties.position.enum = Object.keys(data.order.name2id);
+                configPositional.properties.position.enum.splice(Object.keys(data.order.name2id).indexOf(contextMenu.focusedParam), 1);
+                configPositional.properties.position.enum.unshift('_first_');
+                setCofigWizard({schema:configPositional, ui:{}, cb:processConfigInput, exitFunction:clearAllPopups, data:attributes});
             } else if(attributes.asArgument) {
-                //named
-                setCofigWizard({schema:configNamed, ui:{}, cb:processConfigInput, exitFunction:handleContextMenuClose, data:attributes});
+                attributes.role = 'named';
+                configNamed.properties.name.not.enum = invalidNames;
+                setCofigWizard({schema:configNamed, ui:{}, cb:processConfigInput, exitFunction:clearAllPopups, data:attributes});
             } else {
-                //location
-                setCofigWizard({schema:configNamed, ui:{}, cb:processConfigInput, exitFunction:handleContextMenuClose, data:attributes});
+                attributes.role = 'location';
+                configLocation.properties.name.not.enum = invalidNames;
+                setCofigWizard({schema:configLocation, ui:{}, cb:processConfigInput, exitFunction:clearAllPopups, data:attributes});
             }
         } else {
             //output variants
+            const source = data.outputs[contextMenu.focusedParam].source;
+            const attributes = data.outputs[contextMenu.focusedParam].attributes;
+
+            if(source) {
+                //reference based output
+                configReference.properties.reference.enum = Object.keys(data.inputs);
+                configReference.properties.name.not.enum = invalidNames;
+                const currentData = {name: attributes.name};
+                Object.keys(data.inputs).forEach(input => {
+                    if(data.inputs[input].id === source) {
+                        currentData.reference = data.inputs[input].attributes.name;
+                    }
+                });
+                setCofigWizard({schema:configReference, ui:{}, cb:processConfigOutput, exitFunction:clearAllPopups, data:currentData});
+            } else {
+                configPattern.properties.name.not.enum = invalidNames;
+                const currentData = {name: attributes.name, pattern: attributes.pattern};
+                setCofigWizard({schema:configPattern, ui:{}, cb:processConfigOutput, exitFunction:clearAllPopups, data:currentData});
+            }
         }
         // setCofigWizard({schema:newInputPortData,ui:newInputPortUI,cb:processNewInput});
     };
 
-    const processConfigInput = () => {
-
+    const processConfigInput = (formId, formData) => {
+        WEBGME_CONTROL.updateInput(id, data.inputs[contextMenu.focusedParam].id, formData);
+        clearAllPopups();
     };
 
+    const processConfigOutput = (formId, formData) => {
+        if(formData.reference) {
+            formData.reference = data.inputs[formData.reference].id;
+        }
+        WEBGME_CONTROL.updateOutput(data.outputs[contextMenu.focusedParam].id, formData);
+        clearAllPopups();
+    };
+
+    const clearAllPopups = () => {
+        console.log('removing all popups');
+        setCofigWizard(null);
+        setContextMenu(null);
+    }
+
     const addInput = () => {
-        console.log(data.inputs);
-        const names = Object.keys(data.inputs);
-        newInputPortData.properties.name.not.enum = names;
+        newInputPortData.properties.name.not.enum = [].concat(Object.keys(data.inputs), Object.keys(data.outputs));
+        newInputPortData.allOf[1].then.properties.position.enum = Object.keys(data.order.name2id);
+        newInputPortData.allOf[1].then.properties.position.enum.unshift('_first_');
+
 
         setCofigWizard({schema:newInputPortData,ui:newInputPortUI,cb:processNewInput});
     };
@@ -184,6 +233,7 @@ export default function StepNode({id, data}) {
 
     const addOutput = () => {
         fillNewOutputConfig();
+        newOutputPortData.properties.name.not.enum = [].concat(Object.keys(data.inputs), Object.keys(data.outputs));
         setCofigWizard({schema:newOutputPortData,ui:newOutputPortUI,cb:processNewOutput});
     };
 
@@ -231,7 +281,8 @@ export default function StepNode({id, data}) {
     let configWizardDialog = null;
 
     if (configWizard) {
-        configWizardDialog = <ConfigWizard dataSchema={configWizard.schema} UISchema={configWizard.ui} setFunction={configWizard.cb} exitFunction={()=>{setCofigWizard(null);}} id={'add-input'} defaultData={configWizard.data}/>
+        const defaultExitFunction = () => {setCofigWizard(null);}
+        configWizardDialog = <ConfigWizard dataSchema={configWizard.schema} UISchema={configWizard.ui} setFunction={configWizard.cb} exitFunction={configWizard.exitFunction || defaultExitFunction} id={'add-input'} defaultData={configWizard.data}/>
     }
 
     return (

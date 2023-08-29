@@ -5,7 +5,8 @@
     "required":["name", "position"],
     "properties": {
         "name":{
-            "type":"string"
+            "type":"string",
+            "not":{"enum":[]}
         },
         "position":{
             "type":"string",
