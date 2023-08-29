@@ -5,7 +5,10 @@
     "required":["name", "prefix"],
     "properties": {
         "name":{
-            "type":"string"
+            "type":"string",
+            "not":{
+                "enum":[]
+            }
         },
         "prefix":{
             "type":"string",

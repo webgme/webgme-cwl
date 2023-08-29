@@ -176,7 +176,17 @@ define([
         const node = this._client.getNode(nodeId);
         const input = node.isInstanceOf(this._META['CWL.Input'].getId());
 
-        const descriptor = {id: nodeId, type:'port', position: node.getRegistry('position'), data:{name: node.getAttribute('name'), isInput:input, type: this._id2meta[node.getMetaTypeId()]}};
+        const descriptor = {
+            id: nodeId, 
+            type:'port', 
+            position: node.getRegistry('position'), 
+            data:{
+                name: node.getAttribute('name'), 
+                isInput:input, 
+                type: this._id2meta[node.getMetaTypeId()],
+                value: node.getAttribute('value'),
+                location: node.getAttribute('location')
+            }};
 
         return descriptor;
     };
@@ -196,7 +206,8 @@ define([
                 variablePorts: false, 
                 type: this._id2meta[node.getMetaTypeId()], 
                 names: this._getChildrenNameList([node.getAttribute('name')]),
-                attributes: this._getAttributes(nodeId)
+                attributes: this._getAttributes(nodeId),
+                order: this._getCurrentInputOrder(nodeId)
             }
         };
 
@@ -378,7 +389,7 @@ define([
         const max = Object.keys(result.raw).length;
 
         for(let i=0; i<max; i+=1) {
-            order.push(result.raw[i]);
+            result.order.push(result.raw[i]);
         }
 
         return result;
@@ -430,6 +441,59 @@ define([
         }
     };
 
+    CommonWorkflowEditorControl.prototype.updateInput = function (containerStepId, inputId, data) {
+        const {_client} = this;
+        const attributes = {};
+        const currentAttributes = this._getAttributes(inputId);
+
+        if (data.name !== currentAttributes.name) {
+            attributes.name = data.name;
+        }
+
+        if (data.description !== currentAttributes.description) {
+            attributes.description = data.description;
+        }
+
+        switch (data.role) {
+            case "named":
+                if (typeof data.prefix === 'string' && data.prefix !== currentAttributes.prefix) {
+                    attributes.prefix = data.prefix;
+                }
+                if(Object.keys(attributes).length > 0) {
+                    return this.setAttributes(inputId, attributes, currentAttributes);
+                }
+                break;
+            case "positional":
+                const order = this._getCurrentInputOrder(containerStepId);
+                const length = order.order.length;
+                const oldPosition = order.order.indexOf(data.name);
+                const newPosition = data.position === '_first_' ? 0 : order.order.indexOf(data.position) + 1;
+                if (oldPosition !== newPosition) {
+                    order.order.splice(oldPosition,1);
+                    order.order.splice(newPosition,0,data.name);
+                    _client.startTransaction();
+                    order.order.forEach((name,index) => {
+                        _client.setAttribute(order.name2id[name],'position', index);
+                    });
+                    Object.keys(attributes).forEach(name => {
+                        _client.setAttribute(inputId, name, attributes[name]);
+                    });
+                    _client.completeTransaction('Updated positional input.');
+                } else if(Object.keys(attributes).length > 0) {
+                    return this.setAttributes(inputId, attributes, currentAttributes);
+                }
+                break;
+            case "location":
+                if(data.location !== currentAttributes.location) {
+                    attributes.location = data.location;
+                }
+                if(Object.keys(attributes).length > 0) {
+                    return this.setAttributes(inputId, attributes, currentAttributes);
+                }
+                break;
+        }
+    };
+
     CommonWorkflowEditorControl.prototype.createOutput = function (containerStepId, data) {
         const {_client, _META} = this;
         const attributes = {};
@@ -450,11 +514,38 @@ define([
         }
     };
 
-    CommonWorkflowEditorControl.prototype.deleteComponent = function (id) {
+    CommonWorkflowEditorControl.prototype.updateOutput = function (outputId, data) {
+        const {_client, _META} = this;
+        const node = _client.getNode(outputId);
+        const currentData = {name: node.getAttribute('name')};
+        if(data.reference) {
+            currentData.reference = node.getPointerId('source');
+            if(JSON.stringify(currentData) !== JSON.stringify(data)) {
+                _client.startTransaction();
+                _client.setAttribute(outputId, 'name', data.name);
+                _client.setPointer(outputId, 'source', data.source);
+                _client.completeTransaction();
+            }
+        } else {
+            currentData.pattern = node.getAttribute('pattern');
+            this.setAttributes(outputId, data, currentData);
+        }
+    }
+    CommonWorkflowEditorControl.prototype.deleteComponent = function (id, containerStepId) {
         //deleting the component and all edges that touches it
         const {_client, _MHelp} = this;
         const ids = _MHelp.getRemovals(id);
         _client.startTransaction();
+        if (containerStepId) {
+            //it is a positional input port, so we need to readjust positions
+            const order = this._getCurrentInputOrder(containerStepId);
+            const node = _client.getNode(id);
+            const name = node.getAttribute('name');
+            order.order.splice(order.order.indexOf(name), 1);
+            order.order.forEach((portName, index) => {
+                _client.setAttribute(order.name2id[portName],'position', index);
+            });
+        }
         ids.forEach(toRemoveId => _client.deleteNode(toRemoveId));
         _client.completeTransaction('removed element [' + id + '] and its connections');
     };
@@ -482,6 +573,26 @@ define([
                 _logger.error('Failed to build', err);
             }
         });
+    };
+
+    CommonWorkflowEditorControl.prototype.setInputDefault = function(inputId, inputType, data) {
+        const {_client} = this;
+        const attributes = {};
+        switch (inputType) {
+            case 'CWL.FileInput':
+                attributes.value = data.value;
+                attributes.location = data.name;
+                break;
+            case 'CWL.StringInput':
+                attributes.value = data.value;
+                break;
+            case 'CWL.DirectoryInput':
+                attributes.value = true;
+                attributes.location = data.value;
+                break;
+        }
+
+        this.setAttributes(inputId, attributes, {});
     };
 
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */

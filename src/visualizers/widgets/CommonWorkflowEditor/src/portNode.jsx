@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import {Handle, Position, NodeToolbar} from 'reactflow';
 import IconButton from '@mui/material/IconButton';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
+
+import ConfigWizard from '../../../../common/react/configWizard';
 
 const buttonStyle = {
     backgroundColor: "#B85F61", 
@@ -39,8 +41,11 @@ function getHandleColoring(typeName) {
 }
 
 export default function PortNode({id, data}) {
-    const {name, isInput, type} = data;
+    const {name, isInput, type, value, location} = data;
     const style = getHandleColoring(type);
+
+    const [configWizard, setCofigWizard] = useState(null);
+
     const getTypeIcon = () => {
         /* maybe later add array as an icon too
         if (type.indexOf('Array') !== -1) {
@@ -58,6 +63,57 @@ export default function PortNode({id, data}) {
         }
     };
 
+    const setDefault = () => {
+
+        const schema = {
+            "title":"Set default value",
+            "type":"object",
+            "properties":{
+                "value":{
+                    "type":"string",
+                    "description":"the default content of the file"
+                }
+            }
+        };
+        const ui = {
+            "value":{"ui:widget":"textarea","ui:options":{"rows":"10"}}
+        };
+
+        if (type === 'CWL.FileInput') {
+            schema.properties.name = {"type": "string","description":"the name of the file to generate with the default content"};
+            setCofigWizard({id:'popup', schema:schema, ui:ui, cb:onSetDefault, data:{value, name:location}});
+        } else if (type === 'CWL.StringInput') {
+            schema.properties.value.description = "the default value of the string";
+            setCofigWizard({id:'popup', schema:schema, ui:{}, cb:onSetDefault, data:{value}});
+        } else if (type === 'CWL.DirectoryInput') {
+            schema.properties.value.description = "set the default place of the directory input's place-holder relative to the main artifact directory - has to start with ./";
+            schema.properties.value.pattern = '^\.\/';
+            setCofigWizard({id:'popup', schema:schema, ui:{}, cb:onSetDefault, data:{value:location}});
+        }
+    };
+
+    const onSetDefault = (formId, formData) => {
+        console.log(formData);
+        WEBGME_CONTROL.setInputDefault(id, type, formData);
+    };
+
+    const getActions = () => {
+        if (isInput && type.indexOf('Array') === -1) {
+            return <span>
+                <Tooltip title="Set default value"><FontAwesomeIcon icon={icon({name: 'pen-to-square', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={() => {setDefault();}}/></Tooltip>
+            <Tooltip title="Delete"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>
+            </span>
+        } else {
+            return <Tooltip title="Delete"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>;
+        }
+    };
+
+    let configWizardDialog = null;
+
+    if (configWizard) {
+        configWizardDialog = <ConfigWizard dataSchema={configWizard.schema} UISchema={configWizard.ui} setFunction={configWizard.cb} exitFunction={() => setCofigWizard(null)} id={'pop-up'} defaultData={configWizard.data}/>
+    }
+
     return (
         <>
         <Tooltip title={'<<' + type.substring(4) + '>>'}><div style={{
@@ -72,10 +128,10 @@ export default function PortNode({id, data}) {
             fontSize: "8px",
             textAlign:"center",
             textSizeAdjust:"auto"}}>{getTypeIcon()}<br/>{data.name}<br/>
-            <Tooltip title="Config item"><FontAwesomeIcon icon={icon({name: 'pen-to-square', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle}/></Tooltip>
-            <Tooltip title="Remove item"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>
+            {getActions()}
         </div></Tooltip>
         <Handle type={isInput?"source":"target"} position={isInput?Position.Right:Position.Left} style={style}/>
+        {configWizardDialog}
         </>
     );
 }

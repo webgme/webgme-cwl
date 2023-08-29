@@ -5,7 +5,10 @@
     "required":["name", "location"],
     "properties": {
         "name":{
-            "type":"string"
+            "type":"string",
+            "not":{
+                "enum":[]
+            }
         },
         "location":{
             "type":"string",
