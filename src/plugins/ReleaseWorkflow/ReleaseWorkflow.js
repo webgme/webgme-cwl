@@ -200,6 +200,9 @@
             return fs.rm(saveDirectory, { recursive: true });
         })
         .then(() => {
+            return this.save('releasing at [' + composeUri() + ']');
+        })
+        .then(() => {
             result.setSuccess(true);
             return callback(null, result);
         })
