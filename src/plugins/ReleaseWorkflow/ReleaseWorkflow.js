@@ -270,7 +270,7 @@
             console.log('JSONRESPONSE:', jsonResponse);
             nextIndex = jsonResponse.numObservations || 'errortag';
 
-            core.setAttribute(activeNode, 'previousUri', core.getAttribute(activeNode, 'uri'));
+            core.setAttribute(activeNode, 'previousUri', core.getAttribute(activeNode, 'uri') || 'none');
             core.setAttribute(activeNode, 'uri', composeUri());
             return project.createTag(nextIndex)
         })
