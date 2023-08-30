@@ -195,8 +195,25 @@ function BareFlow(props) {
     }
   }
 
+  const onSelectionChange = ({nodes, edges}) => {
+    // console.log(nodes,edges);
+    const selection = [];
+    nodes.forEach(node => {
+      selection.push(node.id);
+    });
+    edges.forEach(edge => {
+      selection.push(edge.id);
+    });
+    const newState = {activeSelection: selection};
+    WebGMEGlobal.State.set(newState, {
+        suppressVisualizerFromNode: true
+    });
+
+    setSelection({nodes, edges});
+  };
+
   useOnSelectionChange({
-    onChange: ({ nodes, edges }) => setSelection({nodes, edges}),
+    onChange: onSelectionChange,
   });
 
   return (
