@@ -11,6 +11,6 @@
   "disableServerSideExecution": false,
   "disableBrowserSideExecution": false,
   "dependencies": [],
-  "writeAccessRequired": false,
+  "writeAccessRequired": true,
   "configStructure": []
 }

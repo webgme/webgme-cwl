@@ -242,6 +242,24 @@ define([
         });
     };
     
+    WorkflowBrowserControl.prototype.runOpenDashboardPlugin = function () {
+        const {_client, _logger, _currentNodeId} = this;
+        const context = _client.getCurrentPluginContext('OpenDashboard');
+        context.managerConfig.activeNode = _currentNodeId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('OpenDashboard', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                _logger.info('opened dashboard in new window');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to open dashboard', err);
+            }
+        });
+    };
+
     WorkflowBrowserControl.prototype.runImportPlugin = function () {
         const progress = ProgressNotification.start('Importing workflow');
         WebGMEGlobal.InterpreterManager.configureAndRun(WebGMEGlobal.allPluginsMetadata['ImportWorkflow'], result => {

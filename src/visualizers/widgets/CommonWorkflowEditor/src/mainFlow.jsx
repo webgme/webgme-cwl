@@ -12,6 +12,8 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { SiEnvoyproxy } from "react-icons/si";
 import { AiOutlineCloud } from "react-icons/ai";
 import { FaFileExport, FaFileZipper } from "react-icons/fa6";
+import { TfiDashboard } from "react-icons/tfi";
+import { FiMinus, FiPlus } from "react-icons/fi";
 
 //custom nodes
 import PortNode from './portnode';
@@ -118,8 +120,8 @@ function BareFlow(props) {
   };
 
   const propagatePorts = () => {
-    console.log('G:',global);
-    console.log('S:',selection);
+    // console.log('G:',global);
+    // console.log('S:',selection);
     WEBGME_CONTROL.runPropagatePortsPlugin(global.id, selection.nodes[0].id);
   };
 
@@ -129,13 +131,16 @@ function BareFlow(props) {
       return (
         <Box sx={{ '& > :not(style)': { m: 1 } }} style={{position: 'fixed', zIndex: 999}}>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Close operation menu</h4>}>
-            <Fab size='small' onClick={()=>{setMenu(false);}}><FontAwesomeIcon icon={icon({name: 'minus'})} size='xl'/></Fab>
+            <Fab size='small' onClick={()=>{setMenu(false);}}><FiMinus size={'2em'}/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Go to workflow browser</h4>}>
             <Fab size='small' onClick={()=>{onGoToBrowser();}}><FontAwesomeIcon icon={icon({name: 'house-chimney'})} size='xl'/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Go to parent element</h4>}>
             <Fab size='small' onClick={()=>{onGoToParent();}}><FontAwesomeIcon icon={icon({name: 'arrow-up'})} size='xl'/></Fab>
+          </Tooltip>
+          <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Go to dashboard</h4>}>
+            <Fab size='small' onClick={()=>{WEBGME_CONTROL.runOpenDashboardPlugin();}}><TfiDashboard size={'2em'}/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Add new element to workflow</h4>}>
             <Fab size='small' onClick={()=>{console.log('anyone?');setOperation('new');}}><FontAwesomeIcon icon={icon({name: 'pen-nib'})} size='xl'/></Fab>
@@ -158,7 +163,7 @@ function BareFlow(props) {
       return (
         <Box sx={{ '& > :not(style)': { m: 1 } }} style={{position: 'fixed', zIndex: 999}}>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Open operation menu</h4>}>
-            <Fab size='small' onClick={()=>{setMenu(true);}}><FontAwesomeIcon icon={icon({name: 'plus'})} size='xl'/></Fab>
+            <Fab size='small' onClick={()=>{setMenu(true);}}><FiPlus size={'2em'}/></Fab>
             </Tooltip>
         </Box>
       );

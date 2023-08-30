@@ -65,7 +65,7 @@ define([
         // Using the coreAPI to make changes.
         const nodeObject = self.activeNode;
         //TODO set the proper id with the index and use that during execution
-        self.core.setAttribute(nodeObject, 'value', config.value);
+        self.core.setAttribute(nodeObject, 'value', config.uri || config.value);
 
 
         // This will save the changes. If you don't want to save;

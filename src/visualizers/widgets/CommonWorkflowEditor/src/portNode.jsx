@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
+import { VscReferences } from "react-icons/vsc";
 
 import ConfigWizard from '../../../../common/react/configWizard';
 
@@ -99,10 +100,17 @@ export default function PortNode({id, data}) {
 
     const getActions = () => {
         if (isInput && type.indexOf('Array') === -1) {
-            return <span>
-                <Tooltip title="Set default value"><FontAwesomeIcon icon={icon({name: 'pen-to-square', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={() => {setDefault();}}/></Tooltip>
-            <Tooltip title="Delete"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>
-            </span>
+            if(type === 'CWL.PDPiD') {
+                return <span>
+                    <Tooltip title="Set default source"><VscReferences size={'1.4em'} style={buttonStyle} onClick={() => {WEBGME_CONTROL.runSelectDataSourcePlugin(id);}}/></Tooltip>
+                    <Tooltip title="Delete"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>
+                </span>;
+            } else {
+                return <span>
+                    <Tooltip title="Set default value"><FontAwesomeIcon icon={icon({name: 'pen-to-square', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={() => {setDefault();}}/></Tooltip>
+                    <Tooltip title="Delete"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>
+                </span>;
+            }
         } else {
             return <Tooltip title="Delete"><FontAwesomeIcon icon={icon({name: 'trash-can', family: 'classic', style: 'solid'})} size='2xs' style={buttonStyle} onClick={()=>{WEBGME_CONTROL.deleteComponent(id);}}/></Tooltip>;
         }

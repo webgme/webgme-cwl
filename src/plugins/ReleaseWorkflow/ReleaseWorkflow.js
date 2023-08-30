@@ -59,6 +59,7 @@
      * @param {function(Error|null, plugin.PluginResult)} callback - the result callback
      */
     ReleaseWorkflow.prototype.main = function (callback) {
+        const fetch = require('node-fetch');
         const {core, logger, activeNode, project, result, commitHash, __aadToken} = this;
         const executionId = CONFIG.makeid();
         const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
@@ -67,7 +68,7 @@
         const currentConfig = this.getCurrentConfig();
         const workflowName = core.getAttribute(activeNode, 'name');
 
-        console.log('AAD:', this.__aadToken);
+        // console.log('AAD:', this.__aadToken);
         // 87dc1607-5d63-4073-9424-720f86ecef43 - workflow process
         // const previousReleasePDP = core.getAttribute(nodeObject,'pdpId') || '98df2486-153f-4ce0-93bf-c06cdd94657a_1';
         // const previousVersion = core.getAttribute(nodeObject, 'version') || 0;
@@ -75,11 +76,11 @@
         // console.log(this.currentHash, this.commitHash, this.branchHash);
         this.buildNodes()
         .then(()=> {
-            return this.getUpcomingTag(currentConfig.isMajor);
+            return this.stampProject();
         })
-        .then(tag => {
+        /*.then(tag => {
             return project.createTag(tag, commitHash);
-        })
+        })*/
         .then(() => {return fs.mkdir(saveDirectory);})
         .then(() => {return fs.mkdir(saveDirectory+'/cwl');})
         .then(() => {return fs.mkdir(saveDirectory+'/cwl/cwl');})
@@ -229,9 +230,10 @@
         //TODO - need to figure out proper versioning
         const {core, logger, activeNode, project, result} = this;
         const deferred = Q.defer();
+        console.log(Object.keys(project));
         project.getTags()
         .then(tags => {
-            // console.log(tags);
+            console.log('TAGS:', tags);
             const mytags = {};
             deferred.resolve(CONFIG.makeid());
         })
@@ -239,6 +241,43 @@
 
         return deferred.promise;
     };
+    ReleaseWorkflow.prototype.stampProject = function () {
+        const fetch = require('node-fetch');
+        const deferred = Q.defer();
+        const {core, logger, activeNode, project, result} = this;
+        let nextIndex = -1;
+        const composeUri = () => {
+            return 'pdp://leappremonitiondev.azurewebsites.net/demoworkflow/87dc1607-5d63-4073-9424-720f86ecef43/' + nextIndex +'/0';
+        };
+
+        fetch('https://leappremonitiondev.azurewebsites.net/v2/Process/GetProcessState?processId=87dc1607-5d63-4073-9424-720f86ecef43',
+            {
+                method:'GET',
+                headers:{
+                    accept:'application/json',
+                    Authorization:'Bearer ' + __aadToken
+                }
+            }
+        )
+        .then(response => {
+            // console.log('RESP',response);
+            return response.json();
+        })
+        .then(jsonResponse => {
+            // console.log('JSONRESPONSE:', jsonResponse);
+            nextIndex = jsonResponse.numObservations;
+
+            core.setAttribute(activeNode, 'previousUri', core.getAttribute(activeNode, 'uri'));
+            core.setAttribute(activeNode, 'uri', composeUri());
+            return project.createTag(nextIndex)
+        })
+        .catch(e=> {
+            logger.error(e);
+            deferred.reject(e);
+        });
+
+        return deferred.promise;
+    }
 
     ReleaseWorkflow.prototype.composeMetadata = function(config) {
         /**

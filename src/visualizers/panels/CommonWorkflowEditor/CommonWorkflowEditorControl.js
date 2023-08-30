@@ -8,13 +8,15 @@ define([
     'js/Utils/GMEConcepts',
     'js/NodePropertyNames',
     'webgme-cwl/metahelper',
-    'blob/BlobClient'
+    'blob/BlobClient',
+    'plugin/SelectDataSource/SelectDataSource/config.js'
 ], function (
     CONSTANTS,
     GMEConcepts,
     nodePropertyNames,
     MetaHelper,
-    BlobClient
+    BlobClient,
+    SDCConfig
 ) {
 
     'use strict';
@@ -338,6 +340,27 @@ define([
         });
     };
 
+    CommonWorkflowEditorControl.prototype.runSelectDataSourcePlugin = function(portId) {
+        const {_client, _logger, _currentNodeId} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('SelectDataSource');
+        context.managerConfig.activeNode = portId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+        const configDialog = new SDCConfig({client: _client, logger: _logger});
+        configDialog.show([],{},{}, (globalConfig, config, storeInUser) => {
+            context.pluginConfig = config;
+            _client.runBrowserPlugin('SelectDataSource', context, (err, result)=>{
+                // console.log('export:', err, result);
+                if (err === null && result && result.success) {
+                    _logger.info('sucessfully selected PDP source');
+                } else {
+                    //TODO - make a proper way of handling this
+                    _logger.error('Failed to build', err);
+                }
+            });
+        });
+    }
     CommonWorkflowEditorControl.prototype.addNewElement = function (id, event) {
         console.log('addnew', id, event);
         const {_client, _currentNodeId, _META} = this;
@@ -595,6 +618,23 @@ define([
         this.setAttributes(inputId, attributes, {});
     };
 
+    CommonWorkflowEditorControl.prototype.runOpenDashboardPlugin = function () {
+        const {_client, _logger, _currentNodeId} = this;
+        const context = _client.getCurrentPluginContext('OpenDashboard');
+        context.managerConfig.activeNode = _currentNodeId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('OpenDashboard', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                _logger.info('opened dashboard in new window');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to open dashboard', err);
+            }
+        });
+    };
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */
     CommonWorkflowEditorControl.prototype.destroy = function () {
         this._detachClientEventListeners();
