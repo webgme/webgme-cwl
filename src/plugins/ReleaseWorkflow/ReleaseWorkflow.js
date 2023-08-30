@@ -247,7 +247,7 @@
     ReleaseWorkflow.prototype.stampProject = function () {
         const fetch = require('node-fetch');
         const deferred = Q.defer();
-        const {core, logger, activeNode, project, result} = this;
+        const {core, logger, activeNode, project, __aadToken} = this;
         let nextIndex = -1;
         const composeUri = () => {
             return 'pdp://leappremonitiondev.azurewebsites.net/demoworkflow/87dc1607-5d63-4073-9424-720f86ecef43/' + nextIndex +'/0';
