@@ -152,7 +152,7 @@ function BareFlow(props) {
             <Fab size='small' onClick={()=>{WEBGME_CONTROL.runExportPlugin();}}><FaFileExport size={'2em'} /></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Release workflow model</h4>}>
-            <Fab size='small' onClick={()=>{console.log('release');}}><AiOutlineCloud size={'2em'}/></Fab>
+            <Fab size='small' onClick={()=>{WEBGME_CONTROL.runReleasePlugin();}}><AiOutlineCloud size={'2em'}/></Fab>
           </Tooltip>
           <Tooltip arrow title={<h4 style={{ color: "#93ddf4" }}>Propagate Selected components ports</h4>}>
             <span><Fab size='small' style={{backgroundColor: "#DDBB92"}} onClick={()=>{propagatePorts();}} disabled={hideOperation}><SiEnvoyproxy size={'2em'}/></Fab></span>

@@ -1,0 +1,8 @@
+cliclient:
+  TOKEN_CACHE_FILE_PATH: ".authentication_cache.json"
+  TaxonomyServer:
+    ServiceUrl: "https://leapstage.centralus.cloudapp.azure.com/"
+    ProjectID: "AllLeap+TaxonomyBootcamp"
+    ProjectType: "tag"
+    ProjectTypeValue: "1_0_0"
+    CookieName: "udcp_taxonomy_aad"
