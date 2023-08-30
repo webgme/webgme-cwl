@@ -268,7 +268,7 @@
         })
         .then(jsonResponse => {
             console.log('JSONRESPONSE:', jsonResponse);
-            nextIndex = jsonResponse.numObservations || 'errortag';
+            nextIndex = '_rel_' + jsonResponse.numObservations;
 
             core.setAttribute(activeNode, 'previousUri', core.getAttribute(activeNode, 'uri') || 'none');
             core.setAttribute(activeNode, 'uri', composeUri());
