@@ -272,8 +272,10 @@
 
             core.setAttribute(activeNode, 'previousUri', core.getAttribute(activeNode, 'uri') || 'none');
             core.setAttribute(activeNode, 'uri', composeUri());
-            return project.createTag(nextIndex)
+            // return project.createTag(nextIndex)
+            return Q(null);
         })
+        .then(deferred.resolve)
         .catch(e=> {
             logger.error(e);
             deferred.reject(e);
