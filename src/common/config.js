@@ -22,6 +22,9 @@ define(['text!./pluginconfig.json'], function (CONF) {
 
         try {
             let url = everyConfig.common.taxonomy.url + '/routers/Dashboard/';
+            if(url.indexOf('https://') === -1) {
+                url = 'https://' + url;
+            }
             url += encodeURIComponent(everyConfig.common.taxonomy.id);
             url += '/tag/' + everyConfig.common.taxonomy.tag + '/static/index.html';
 
