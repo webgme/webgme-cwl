@@ -9,14 +9,16 @@ define([
     'js/NodePropertyNames',
     'webgme-cwl/metahelper',
     'blob/BlobClient',
-    'plugin/SelectDataSource/SelectDataSource/config.js'
+    'plugin/SelectDataSource/SelectDataSource/config.js',
+    'js/Loader/ProgressNotification'
 ], function (
     CONSTANTS,
     GMEConcepts,
     nodePropertyNames,
     MetaHelper,
     BlobClient,
-    SDCConfig
+    SDCConfig,
+    ProgressNotification
 ) {
 
     'use strict';
@@ -633,6 +635,42 @@ define([
                 //TODO - make a proper way of handling this
                 _logger.error('Failed to open dashboard', err);
             }
+        });
+    };
+
+    CommonWorkflowEditorControl.prototype.runReleasePlugin = function () {
+        const progress = ProgressNotification.start('Releasing workflow');
+        const workflowId = this._currentNodeId;
+        let metadata = WebGMEGlobal.allPluginsMetadata['ReleaseWorkflow'];
+        metadata['__context'] = {activeNodeId: workflowId, activeSelectionIds: []};
+        WebGMEGlobal.InterpreterManager.configureAndRun(metadata, function (result) {
+            let text = 'PluginRelease finished<br/>';
+            const options = {type:'info'};
+            let icon = 'glyphicon glyphicon-info-sign';
+            if (result.success) {
+                text += "- success -<br/>"
+                if(result.messages.length > 0) {
+                    result.messages.forEach(message => {
+                        text += ' -- ' + message.message +'<br/>';
+                    });
+                }
+                progress.note.update({
+                    message: text,
+                    progress: 100,
+                    type: 'success'
+                });
+            } else {
+                icon = 'glyphicon glyphicon-exclamation-sign';
+                text += "- faliure -<br/>";
+                options.type = 'warning';
+                text += result.error ? result.error : 'Unknown error happened during execution!';
+                progress.note.update({
+                    message: text,
+                    type: 'danger',
+                    progress: 100
+                });
+            }
+            // $.notify({icon: icon, message: text}, options);
         });
     };
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */
