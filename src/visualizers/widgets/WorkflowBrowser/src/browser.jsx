@@ -19,6 +19,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import PublishIcon from '@mui/icons-material/Publish';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import { TfiDashboard } from "react-icons/tfi";
 
 export default function Browser(props) {
   
@@ -196,6 +197,9 @@ export default function Browser(props) {
             {/*<Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Update the Step template definitions</h3>}>
               <Button color='warning' startIcon={<AutoStoriesIcon/>} onClick={()=>{runCoreUpdatePlugin()}}>Core Refresh</Button>
             </Tooltip>*/}
+            <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Open the data dashboard</h3>}>
+              <Button color='warning' startIcon={<TfiDashboard size={'1em'}/>} onClick={()=>{WEBGME_CONTROL.runOpenDashboardPlugin();}}>Dashboard...</Button>
+            </Tooltip>
           </ButtonGroup>
           <FlowList>
             {items}
