@@ -34,6 +34,9 @@ define(['text!./pluginconfig.json'], function (CONF) {
     const getWorkflowSearchUrl = () => {
         try {
             let url = everyConfig.common.taxonomy.url + '/routers/Search/';
+            if(url.indexOf('https://') === -1) {
+                url = 'https://' + url;
+            }
             url += encodeURIComponent(everyConfig.common.taxonomy.id);
             url += '/tag/' + everyConfig.common.taxonomy.tag + '/';
             url += encodeURIComponent(everyConfig.common.workflowRepoPath);
