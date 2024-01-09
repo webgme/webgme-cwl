@@ -1,0 +1,191 @@
+{
+  "guid": "c5a59f34-88f3-10e6-45f0-1e380b8121cd",
+  "attributes": {
+    "name": "scatter"
+  },
+  "registry": {
+    "position": {
+      "x": 100,
+      "y": 100
+    }
+  },
+  "steps": {},
+  "subs": {
+    "3": {
+      "guid": "a2592630-005e-92be-bcb4-da4387706b54",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 357,
+          "y": 179
+        }
+      },
+      "steps": {
+        "I": {
+          "guid": "ee9ed084-bf69-8da9-9aa8-3ad35ab3602d",
+          "type": {
+            "guid": "e8aa74cf-8e74-f2f4-f4b2-83f70f260674",
+            "name": "DockerPull"
+          },
+          "attributes": {},
+          "registry": {
+            "position": {
+              "x": 350,
+              "y": 271
+            }
+          },
+          "ports": {
+            "0": {
+              "guid": "c8b848dc-cad0-eae6-af09-f4370360c779",
+              "type": {
+                "guid": "b8fc6bcd-e849-1d84-71f5-67be9c74100e",
+                "name": "StringInput"
+              },
+              "attributes": {},
+              "registry": {},
+              "source": null
+            },
+            "2": {
+              "guid": "98385246-246b-ae30-cadd-16be4ba2530e",
+              "type": {
+                "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+                "name": "FileInput"
+              },
+              "attributes": {},
+              "registry": {},
+              "source": null
+            },
+            "y": {
+              "guid": "4a35d0f7-83ac-b8fc-33d1-a0455d4abe77",
+              "type": {
+                "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+                "name": "FileOutput"
+              },
+              "attributes": {},
+              "registry": {},
+              "source": null
+            }
+          }
+        }
+      },
+      "subs": {},
+      "ports": {
+        "o": {
+          "guid": "51d58ec2-a5b1-aea3-ae6b-23ea7f1bb9a4",
+          "type": {
+            "guid": "b8fc6bcd-e849-1d84-71f5-67be9c74100e",
+            "name": "StringInput"
+          },
+          "attributes": {},
+          "registry": {},
+          "source": null
+        },
+        "c": {
+          "guid": "c9a1a553-b121-ec97-16b0-5e9ec3d16471",
+          "type": {
+            "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+            "name": "FileOutput"
+          },
+          "attributes": {},
+          "registry": {},
+          "source": null
+        }
+      },
+      "flows": {
+        "9": {
+          "guid": "65da9510-5f0d-2d6a-831a-db98a174d819",
+          "type": {
+            "guid": "f48be115-5970-17d5-79d7-4b326ca2a9a2",
+            "name": "FlowFo2Fo"
+          },
+          "src": "/3/I/y",
+          "dst": "/3/c",
+          "attributes": {},
+          "registry": {}
+        },
+        "p": {
+          "guid": "1e349341-fbc8-541a-48ae-5bf9e7a2ccf4",
+          "type": {
+            "guid": "56535c6e-7101-033f-b8e3-9f5bc1aaa773",
+            "name": "FlowSi2Si"
+          },
+          "src": "/3/o",
+          "dst": "/3/I/0",
+          "attributes": {},
+          "registry": {}
+        }
+      }
+    }
+  },
+  "ports": {
+    "h": {
+      "guid": "7493f3ab-1b12-1882-57dc-b251bef81fbc",
+      "type": {
+        "guid": "da0b068e-3f04-6251-827a-d7f60535ef63",
+        "name": "StringArrayInput"
+      },
+      "attributes": {
+        "value": "[\"1\", \"2\", \"3\"]",
+        "name": "firsts"
+      },
+      "registry": {
+        "position": {
+          "x": 132,
+          "y": 169
+        }
+      },
+      "source": null
+    },
+    "g": {
+      "guid": "a01e8b3e-d43e-b6c8-d01e-f79c8b004438",
+      "type": {
+        "guid": "84c33953-b91d-a592-cccb-46bf059c491d",
+        "name": "FileArrayOutput"
+      },
+      "attributes": {
+        "name": "outputs"
+      },
+      "registry": {
+        "position": {
+          "x": 612,
+          "y": 188
+        }
+      },
+      "source": null
+    }
+  },
+  "flows": {
+    "r": {
+      "guid": "89fde020-12d4-e781-b5b5-42e92801b6cd",
+      "type": {
+        "guid": "2f02c742-3763-e3f5-7a7b-2996e7e45494",
+        "name": "FlowSai2Si"
+      },
+      "src": "/h",
+      "dst": "/3/o",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 245,
+          "y": 175
+        }
+      }
+    },
+    "T": {
+      "guid": "c4014999-ab7a-bfb0-4ede-86b8ad2c9c59",
+      "type": {
+        "guid": "97c36530-afd6-c147-de1a-436f1cc3aeec",
+        "name": "FlowFo2Fao"
+      },
+      "src": "/3/c",
+      "dst": "/g",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 485,
+          "y": 185
+        }
+      }
+    }
+  }
+}
