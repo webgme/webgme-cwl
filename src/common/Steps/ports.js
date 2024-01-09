@@ -18,7 +18,7 @@ define([], function() {
         const prefix = core.getAttribute(portNode,'prefix');
         const asArgument = core.getAttribute(portNode,'asArgument');
         const position = core.getAttribute(portNode, 'position')
-        const value = '' + core.getAttribute(portNode,'value');
+        let value = '' + core.getAttribute(portNode,'value');
         const inputs = cwlStep.inputs;
         const hasSource = core.getCollectionPaths(portNode,'dst').length > 0;
         const staging = cwlStep.requirements.InitialWorkDirRequirement ? cwlStep.requirements.InitialWorkDirRequirement.listing || [] : [];
@@ -31,17 +31,36 @@ define([], function() {
                 if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
                     inputs[name] = {type:'File',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                     if (!hasSource && value) {
-                        artifacts.push({input:name, name:location, content:value});
+                        //artifacts.push({input:name, name:location, content:value});
+                        inputs[name].default =
+                        {
+                            class:'File',
+                            basename:location || name+'.txt',
+                            contents: value
+                        };
                     }
                     staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
+                } else if (core.isInstanceOf(portNode,CWLMETA['FileArrayInput'])) {
+                    inputs[name] = {type:'File[]',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: maxPosition + 1, prefix:prefix + name}, default: value};
+                } else if (core.isInstanceOf(portNode,CWLMETA['StringArrayInput'])) {
+                    try {
+                        value = JSON.parse(value || []);
+                    } catch (e) {
+                        //TODO: should we add something here???
+                        value = null;
+                    }
+                    inputs[name] = {type:'string[]' + (value ? '?' : ''),inputBinding:{position: maxPosition + 1, prefix:prefix + name}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
                     staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                     if (!hasSource && value && location.indexOf('./') === 0) {
                         artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
                     }
+                } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryArrayInput'])) {
+                    inputs[name] = {type:'Directory[]',inputBinding:{position: maxPosition + 1, prefix:prefix + name}};
+                    staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
@@ -49,17 +68,36 @@ define([], function() {
                 if (core.isInstanceOf(portNode,CWLMETA['FileInput'])) {
                     inputs[name] = {type:'File',inputBinding:{position: position}};
                     if (!hasSource && value) {
-                        artifacts.push({input:name, name:location, content:value});
+                        //artifacts.push({input:name, name:location, content:value});
+                        inputs[name].default =
+                        {
+                            class:'File',
+                            basename:location || name+'.txt',
+                            contents: value
+                        };
                     }
                     staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
+                } else if (core.isInstanceOf(portNode,CWLMETA['FileArrayInput'])) {
+                    inputs[name] = {type:'File[]',inputBinding:{position: position}};
                 } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                     inputs[name] = {type:'string' + (value ? '?' : ''),inputBinding:{position: position}, default: value};
+                } else if (core.isInstanceOf(portNode,CWLMETA['StringArrayInput'])) {
+                    try {
+                        value = JSON.parse(value || []);
+                    } catch (e) {
+                        //TODO: should we add something here???
+                        value = null;
+                    }
+                    inputs[name] = {type:'string[]' + (value ? '?' : ''),inputBinding:{position: position}, default: value};
                 } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                     inputs[name] = {type:'Directory',inputBinding:{position: position}};
                     staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                     if (!hasSource && value && location.indexOf('./') === 0) {
                         artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
                     }
+                } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryArrayInput'])) {
+                    inputs[name] = {type:'Directory',inputBinding:{position: position}};
+                    staging.push({entry:'$(inputs[\'' + name + '\'])', writable: true});
                 } else {
                     throw new Error('missing processing for this input type!!!');
                 }
@@ -84,10 +122,28 @@ define([], function() {
                         entryname: location,
                         entry: value
                     });*/
-                    artifacts.push({input:name, name:location, content:value});
+                    /*artifacts.push({input:name, name:location, content:value});*/
+                    inputs[name] = {
+                        type:'File?',
+                        default:{
+                            class:'File',
+                            basename:location || name+'.txt',
+                            contents: value
+                        }
+                    };
                 } 
+            } else if (core.isInstanceOf(portNode, CWLMETA['FileArrayInput'])) {
+                inputs[name] = 'File[]';
             } else if (core.isInstanceOf(portNode,CWLMETA['StringInput'])) {
                 inputs[name] = {type:'string' + (value ? '?' : ''), default: value};
+            } else if (core.isInstanceOf(portNode,CWLMETA['StringArrayInput'])) {
+                try {
+                    value = JSON.parse(value || []);
+                } catch (e) {
+                    //TODO: should we add something here???
+                    value = null;
+                }
+                inputs[name] = {type:'string[]' + (value ? '?' : ''), default: value};
             } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryInput'])) {
                 inputs[name] = 'Directory';
                 if (location) {
@@ -102,6 +158,12 @@ define([], function() {
                 if (!hasSource && value && location.indexOf('./') === 0) {
                     artifacts.push({input:name, name:location.slice(2), isDefaultDirectory: true});
                 }
+            } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryArrayInput'])) {
+                inputs[name] = 'Directory[]';
+                staging.push({
+                    entry: '$(inputs[\'' + name + '\'])',
+                    writable: true
+                });
             } else {
                 throw new Error('missing processing for this input type!!!');
             }
@@ -116,8 +178,12 @@ define([], function() {
         
         if (core.isInstanceOf(portNode,CWLMETA['FileOutput'])) {
             outputs[name] = {type:'File',outputBinding:{glob: pattern}};
+        } else if (core.isInstanceOf(portNode,CWLMETA['FileArrayOutput'])) {
+            outputs[name] = {type:'File[]',outputBinding:{glob: pattern}};
         } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryOutput'])) {
             outputs[name] = {type:'Directory',outputBinding:{glob: pattern}};
+        } else if (core.isInstanceOf(portNode,CWLMETA['DirectoryArrayOutput'])) {
+            outputs[name] = {type:'Directory[]',outputBinding:{glob: pattern}};
         } else {
             throw new Error('missing processing for this input type!!!');
         }

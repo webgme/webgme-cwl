@@ -12,7 +12,7 @@
     "pluginHook": "node ./node_modules/webgme-engine/src/bin/plugin_hook.js",
     "users": "node ./node_modules/webgme-engine/src/bin/usermanager.js",
     "clean_up": "node ./node_modules/webgme-engine/src/bin/clean_up.js",
-    "webpack": "node ./node_modules/webpack/bin/webpack.js",
+    "webpack": "node ./node_modules/webpack/bin/webpack.js --mode=production",
     "webpack_dev": "node ./node_modules/webpack/bin/webpack.js --mode=development"
   },
   "version": "1.0.0",
@@ -63,7 +63,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.3.0",
     "reactflow": "^11.7.0",
-    "webgme": "github:webgme/webgme#azure",
+    "webgme": "^2.45.0",
     "webpack": "^5.77.0",
     "wrapper-webpack-plugin": "^2.2.2",
     "zip-a-folder": "^1.1.3"

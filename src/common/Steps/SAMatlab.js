@@ -32,7 +32,7 @@ define(['./ports','text!./mlab_dockerfile.ejs', 'ejs', 'text!./mlab_func_scripts
 
     return function(stepNode, context) {
         const result = [];
-        const {core, META, inputs, outputs, nodes} = context;
+        const {core, META, inputs, outputs, nodes, artifacts} = context;
         const mlabversion = core.getAttribute(stepNode,'version');
         const dockerfile = ejs.render(Dockerfile,{mlab:sources[mlabversion], mfile:files[mlabversion], mversion:mlabversion});
         const stepCwl = {
@@ -64,7 +64,7 @@ define(['./ports','text!./mlab_dockerfile.ejs', 'ejs', 'text!./mlab_func_scripts
         };
   
         inputs.forEach(input => {
-          Ports.processInput(core, META, nodes[input], stepCwl);
+          Ports.processInput(core, META, nodes[input], stepCwl, artifacts);
         });
   
         outputs.forEach(output => {
