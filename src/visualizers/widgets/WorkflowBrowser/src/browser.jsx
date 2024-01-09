@@ -194,9 +194,9 @@ export default function Browser(props) {
             <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Import a workflow from the workflow repository...</h3>}>
               <Button color='success' startIcon={<CloudDownloadIcon/>} onClick={()=>{runFetchPlugin()}}>Fetch...</Button>
             </Tooltip>
-            {/*<Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Update the Step template definitions</h3>}>
+            {<Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Update the Step template definitions</h3>}>
               <Button color='warning' startIcon={<AutoStoriesIcon/>} onClick={()=>{runCoreUpdatePlugin()}}>Core Refresh</Button>
-            </Tooltip>*/}
+            </Tooltip>}
             <Tooltip arrow title={<h3 style={{ color: "#93ddf4" }}>Open the data dashboard</h3>}>
               <Button color='warning' startIcon={<TfiDashboard size={'1em'}/>} onClick={()=>{WEBGME_CONTROL.runOpenDashboardPlugin();}}>Dashboard...</Button>
             </Tooltip>

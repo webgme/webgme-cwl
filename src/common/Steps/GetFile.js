@@ -2,7 +2,7 @@
 define(['./ports','text!./getfile_script.step.ejs','ejs'], function (Ports, ScriptTemplate, ejs) {
     return function(stepNode, context) {
         const result = [];
-        const {core, META, inputs, outputs, nodes} = context;
+        const {core, META, inputs, outputs, nodes, artifacts} = context;
         const Script = ejs.render(ScriptTemplate,{isArray: false, pattern: core.getAttribute(stepNode,'fileName')});
         const stepCwl = {
             cwlVersion:'v1.1',

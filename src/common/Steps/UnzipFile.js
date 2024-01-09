@@ -2,7 +2,7 @@
 define([], function () {
     return function(stepNode, context) {
         const result = [];
-        const {core, META, inputs, outputs, nodes} = context;
+        const {core, META, inputs, outputs, nodes, artifacts} = context;
         const stepCwl = {
             cwlVersion:'v1.1',
             class:'CommandLineTool',

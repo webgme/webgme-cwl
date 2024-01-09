@@ -64,14 +64,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/**
- * @mui/styled-engine v5.13.2
- *
- * @license MIT
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 /** @license React v16.13.1
  * react-is.production.min.js
  *
@@ -84,7 +76,7 @@
 /** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
 
 /**! 
- * @uiw/copy-to-clipboard v1.0.15 
+ * @uiw/copy-to-clipboard v1.0.16 
  * Copy to clipboard. 
  * 
  * Copyright (c) 2023 Kenny Wang 
