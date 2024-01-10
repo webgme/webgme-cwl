@@ -1,3 +1,6 @@
+/*!*****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/reactflow/dist/style.css ***!
+  \*****************************************************************************************/
 /* this gets exported as style.css and can be used for the default theming */
 /* these are the necessary styles for React Flow, they get used by base.css and style.css */
 .react-flow__container {
@@ -399,6 +402,9 @@
   top: 100%;
 }
 
+/*!********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/common/react/styles/ConfigWizard.css ***!
+  \********************************************************************************************/
 .cwl-config-wizard-padding {
     padding: 10px;
   }
