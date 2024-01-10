@@ -1,6 +1,12 @@
+/*!********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/common/react/styles/ConfigWizard.css ***!
+  \********************************************************************************************/
 .cwl-config-wizard-padding {
     padding: 10px;
   }
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-markdown-preview/esm/styles/markdown.css ***!
+  \********************************************************************************************************************/
 @media (prefers-color-scheme: dark) {
   .wmde-markdown,
   .wmde-markdown-var {
@@ -1017,6 +1023,9 @@ body[data-color-mode*='light'] {
   cursor: help;
 }
 
+/*!***********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-md-editor/esm/components/TextArea/index.css ***!
+  \***********************************************************************************************************************/
 .w-md-editor-area {
   overflow: auto;
   border-radius: 5px;
@@ -1144,6 +1153,9 @@ body[data-color-mode*='light'] {
   color: var(--color-prettylights-syntax-markup-deleted-text, #82071e) !important;
 }
 
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-md-editor/esm/components/Toolbar/Child.css ***!
+  \**********************************************************************************************************************/
 .w-md-editor-toolbar-child {
   position: absolute;
   border-radius: 3px;
@@ -1171,6 +1183,9 @@ body[data-color-mode*='light'] {
   margin: 0;
 }
 
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-md-editor/esm/components/Toolbar/index.css ***!
+  \**********************************************************************************************************************/
 .w-md-editor-toolbar {
   border-bottom: 1px solid var(--md-editor-box-shadow-color);
   background-color: var(--md-editor-background-color);
@@ -1248,6 +1263,9 @@ body[data-color-mode*='light'] {
   background-color: var(--md-editor-box-shadow-color);
 }
 
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-md-editor/esm/components/DragBar/index.css ***!
+  \**********************************************************************************************************************/
 .w-md-editor-bar {
   position: absolute;
   cursor: s-resize;
@@ -1267,6 +1285,9 @@ body[data-color-mode*='light'] {
   margin: 0 auto;
 }
 
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@uiw/react-md-editor/esm/index.css ***!
+  \***************************************************************************************************/
 .w-md-editor {
   text-align: left;
   border-radius: 3px;

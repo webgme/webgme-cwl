@@ -213,9 +213,14 @@ export default function StepNode({id, data}) {
     }
 
     const addInput = () => {
+        newInputPortData.properties.name.not ={enum:[]};
         newInputPortData.properties.name.not.enum = [].concat(Object.keys(data.inputs), Object.keys(data.outputs));
+        if (newInputPortData.properties.name.not.enum.length === 0) {
+            delete newInputPortData.properties.name.not;
+        }
         newInputPortData.allOf[1].then.properties.position.enum = Object.keys(data.order.name2id);
         newInputPortData.allOf[1].then.properties.position.enum.unshift('_first_');
+        console.log(newInputPortData);
 
 
         setCofigWizard({schema:newInputPortData,ui:newInputPortUI,cb:processNewInput});
