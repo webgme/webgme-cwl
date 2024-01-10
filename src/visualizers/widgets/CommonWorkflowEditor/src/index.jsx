@@ -41,7 +41,21 @@ const getLayoutedElements = (nodes, edges) => {
   edges.forEach(edge => {
     edge.markerEnd = {type:'arrowclosed'};
     edge.interactionWidth = 2;
+    edge.type = 'step';
     edge.style = {color:'black'};
+    if(edge.data.scatter) {
+      edge.style = {
+        stroke: '#B85F61',
+        strokeDasharray:"1 1"
+      }
+    }
+
+    if(edge.data.gather) {
+      edge.style = {
+        stroke: '#B85F61',
+        strokeDasharray:"3 1"
+      }
+    }
   });
 
   return { nodes, edges };
