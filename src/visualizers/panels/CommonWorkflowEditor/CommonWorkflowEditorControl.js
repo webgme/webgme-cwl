@@ -245,6 +245,7 @@ define([
         const descriptor = {id: nodeId};
         const sourceNode = this._client.getNode(node.getPointerId('src'));
         const destNode = this._client.getNode(node.getPointerId('dst'));
+        const flowType = this._client.getNode(node.getMetaTypeId()).getAttribute('name');
         const sourceIsPort = sourceNode.getParentId() === this._currentNodeId ? false : true;
         const destIsPort = destNode.getParentId() === this._currentNodeId ? false : true;
 
@@ -264,6 +265,21 @@ define([
             descriptor.targetHandle = null;
         }
 
+        descriptor.data = {
+            type:flowType,
+            scatter:false
+        };
+        switch(flowType) {
+            case 'FlowFai2Fi':
+            case 'FlowDai2Di':
+            case 'FlowSai2Si':
+                descriptor.data.scatter = true;
+                break;
+            case 'FlowFo2Fao':
+            case 'FlowDo2Dao':
+            case 'FlowSo2Sao':
+                descriptor.data.gather = true;
+        }
         return descriptor;
     };
 
