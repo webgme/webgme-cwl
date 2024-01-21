@@ -29,7 +29,7 @@ the containerized computing elements.
 ## Execution
 To run the workflow, you need to give the following command:
 ```
-cwltool --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR <%=name%>.cwl.json <%
+cwltool  --custom-net "host" --no-match-user --no-read-only --tmpdir $PWD --preserve-environment LEAP_CLI_DIR <%=name%>.cwl.json <%
 for (let i=0; i<inputs.length; i+=1) {
     %>--<%=inputs[i].name%> <%=defaultInfo[inputs[i].name] ? defaultInfo[inputs[i].name] : '...'%> <%
 }
