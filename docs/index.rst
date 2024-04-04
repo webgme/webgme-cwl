@@ -50,6 +50,12 @@ Welcome to WebGME-CWL's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: How to - ml Matlab with Python integration:
+   
+   HowTos/matlab_sciki.rst
+
+.. toctree::
+   :maxdepth: 2
    :caption: Steps:
    
    Steps/index.rst
