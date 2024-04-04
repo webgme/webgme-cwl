@@ -44,6 +44,12 @@ Welcome to WebGME-CWL's documentation!
 
 .. toctree::
    :maxdepth: 2
+   :caption: How to - ml a universal blueprint for model customization:
+   
+   HowTos/python_custom.rst
+
+.. toctree::
+   :maxdepth: 2
    :caption: Steps:
    
    Steps/index.rst
