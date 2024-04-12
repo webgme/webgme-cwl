@@ -1,0 +1,19 @@
+{
+    "title": "Configure - name based input",
+    "description": "Edit the configuration of your name based input",
+    "type": "object",
+    "required":["name", "prefix"],
+    "properties": {
+        "name":{
+            "type":"string",
+            "not":{
+                "enum":[]
+            }
+        },
+        "prefix":{
+            "type":"string",
+            "description":"the prefix that has to be used when passed to the command"
+        }
+
+    }
+}

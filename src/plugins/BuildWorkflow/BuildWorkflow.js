@@ -13,8 +13,6 @@
     'plugin/PluginBase',
     'webgme-cwl/graph',
     'webgme-cwl/naming',
-    'webgme-cwl/step',
-    'webgme-json/jsonFunctions',
     'webgme-cwl/Steps/index',
     'webgme-cwl/Workflow/index',
     'q',
@@ -25,8 +23,6 @@
     PluginBase,
     Graph,
     NAMING,
-    StepHelper,
-    JSONFunctions,
     Steps,
     Workflow,
     Q,
@@ -94,7 +90,7 @@
             const defaultInfo = {};
             const runDefaults = [];
             artifacts.forEach(artifact => {
-                if(mainInputs.indexOf(artifact.input) !== -1) {
+                if(mainInputs.indexOf(artifact.input) !== -1 && artifact.name) {
                     defaultInfo[artifact.input] = artifact.name;
                     runDefaults.push({name: artifact.input, value: artifact.name});
                 }
@@ -143,7 +139,7 @@
         context.steps.forEach(step => {
             const stepNode = context.nodes[step];
             const fileName = context.core.getGuid(stepNode) + '_step.cwl.json';
-            files[fileName] = this.processStep(stepNode);
+            files[fileName] = this.processStep(stepNode, artifacts);
             cwlContent.steps[context.core.getAttribute(stepNode, 'name')] = {
                 run: fileName,
                 in:{},
@@ -154,7 +150,7 @@
             const swfNode = context.nodes[swf];
             const topLevel = context.core.getGuid(context.core.getParent(swfNode)) === context.core.getGuid(this.activeNode);
             const fileName = topLevel ? context.core.getAttribute(swfNode, 'name') + '_swf.cwl.json' : context.core.getGuid(swfNode) + '_swf.cwl.json';
-            files[fileName] = this.processWorkflow(swfNode, files);
+            files[fileName] = this.processWorkflow(swfNode, files, artifacts);
             cwlContent.steps[context.core.getAttribute(swfNode, 'name')] = {
                 run: fileName,
                 in:{},
@@ -165,6 +161,13 @@
         //Finally: flows
         context.flows.forEach(flow => {
             if (flow.dstHost) {
+                if(flow.scatter){
+                    cwlContent.requirements['ScatterFeatureRequirement'] = {};
+                    const scatterStep = cwlContent.steps[flow.dstHost];
+                    scatterStep.scatterMethod = 'dotproduct';
+                    scatterStep.scatter = scatterStep.scatter || [];
+                    scatterStep.scatter.push(flow.dst);
+                }
                 cwlContent.steps[flow.dstHost].in[flow.dst] = flow.srcHost ? flow.srcHost + '/' + flow.src : flow.src;
             } else {
                 cwlContent.outputs[flow.dst] = {
@@ -194,47 +197,73 @@
 
         const myPath = this.core.getPath(workflowNode);
         this.core.getChildrenPaths(workflowNode).forEach(childPath => {
-            if (this.core.isInstanceOf(this._nodes[childPath], this.META['Input'])) {
+            const childNode = this._nodes[childPath];
+            if (this.core.isInstanceOf(childNode, this.META['Input'])) {
                 context.inputs.push(childPath);
-            } else if (this.core.isInstanceOf(this._nodes[childPath], this.META['Output'])) {
+            } else if (this.core.isInstanceOf(childNode, this.META['Output'])) {
                 context.outputs.push(childPath);
-            } else if (this.core.isInstanceOf(this._nodes[childPath], this.META['Step'])) {
+            } else if (this.core.isInstanceOf(childNode, this.META['Step'])) {
                 context.steps.push(childPath);
-            } else if (this.core.isInstanceOf(this._nodes[childPath], this.META['Workflow'])) {
+            } else if (this.core.isInstanceOf(childNode, this.META['Workflow'])) {
                 context.subworkflows.push(childPath);
-            } else if (this.core.isInstanceOf(this._nodes[childPath], this.META['Flow'])) {
+            } else if (this.core.isInstanceOf(childNode, this.META['Flow'])) {
                 //TODO this needs to be more sophisticated when it comes to scatter and merge patterns
                 const element = {path: childPath};
                 const srcHostNode = this.core.getParent(
-                    this._nodes[this.core.getPointerPath(this._nodes[childPath], 'src')]);
+                    this._nodes[this.core.getPointerPath(childNode, 'src')]);
                 const dstHostNode = this.core.getParent(
-                    this._nodes[this.core.getPointerPath(this._nodes[childPath], 'dst')]);
+                    this._nodes[this.core.getPointerPath(childNode, 'dst')]);
                 element.srcHost = this.core.getPath(srcHostNode) === myPath ? 
                     null : this.core.getAttribute(srcHostNode, 'name');
                 element.src = this.core.getAttribute(
-                    this._nodes[this.core.getPointerPath(this._nodes[childPath], 'src')], 'name');
+                    this._nodes[this.core.getPointerPath(childNode, 'src')], 'name');
                 element.dstHost = this.core.getPath(dstHostNode) === myPath ? 
                     null : this.core.getAttribute(dstHostNode, 'name');
                 element.dst = this.core.getAttribute(
-                    this._nodes[this.core.getPointerPath(this._nodes[childPath], 'dst')], 'name');
+                    this._nodes[this.core.getPointerPath(childNode, 'dst')], 'name');
                 
                 if(!element.dstHost) {
                     if(this.core.isInstanceOf(
-                        this._nodes[this.core.getPointerPath(this._nodes[childPath], 'dst')],
+                        this._nodes[this.core.getPointerPath(childNode, 'dst')],
                         this.META['FileOutput'])) {
                             element.type = 'File';
                         }
                     else if(this.core.isInstanceOf(
-                        this._nodes[this.core.getPointerPath(this._nodes[childPath], 'dst')],
+                            this._nodes[this.core.getPointerPath(childNode, 'dst')],
+                            this.META['FileArrayOutput'])) {
+                                element.type = 'File[]';
+                            }
+                    else if(this.core.isInstanceOf(
+                        this._nodes[this.core.getPointerPath(childNode, 'dst')],
                         this.META['DirectoryOutput'])) {
                             element.type = 'Directory';
                         }
                     else if(this.core.isInstanceOf(
-                        this._nodes[this.core.getPointerPath(this._nodes[childPath], 'dst')],
+                        this._nodes[this.core.getPointerPath(childNode, 'dst')],
+                        this.META['DirectoryArrayOutput'])) {
+                            element.type = 'Directory[]';
+                        }
+                    else if(this.core.isInstanceOf(
+                        this._nodes[this.core.getPointerPath(childNode, 'dst')],
                         this.META['StringOutput'])) {
                             element.type = 'string';
                         }
+                    else if(this.core.isInstanceOf(
+                        this._nodes[this.core.getPointerPath(childNode, 'dst')],
+                        this.META['StringArrayOutput'])) {
+                            element.type = 'string';
+                        }
                 }
+
+                //check for scatter
+                const flowTypeName = this.core.getAttribute(this.core.getMetaType(childNode),'name');
+                switch(flowTypeName) {
+                    case 'FlowFai2Fi':
+                    case 'FlowDai2Di':
+                    case 'FlowSai2Si':
+                        element.scatter = true;
+                }
+
                 context.flows.push(element);
             }
         });
@@ -242,13 +271,14 @@
         return context;
     };
 
-    BuildWorkflow.prototype.getStepContext = function(stepNode) {
+    BuildWorkflow.prototype.getStepContext = function(stepNode, artifacts) {
         const context = {
             inputs:[], 
             outputs:[], 
             core: this.core, 
             META: this.META, 
-            nodes: this._nodes
+            nodes: this._nodes,
+            artifacts: artifacts
         };
         
         context.core.getChildrenPaths(stepNode).forEach(childPath => {
@@ -262,8 +292,8 @@
         return context;
     };
 
-    BuildWorkflow.prototype.processStep = function(stepNode) {
-        const context = this.getStepContext(stepNode);
+    BuildWorkflow.prototype.processStep = function(stepNode, artifacts) {
+        const context = this.getStepContext(stepNode, artifacts);
         const stepName = context.core.getAttribute(context.core.getMetaType(stepNode), 'name');
         return Steps[stepName](stepNode, context);
     };
@@ -312,15 +342,17 @@
             fileNames.forEach(fileName => {
                 if (fileName === 'README.md' || fileName === 'run.sh') {
                     promises.push(artifact.addFile(fileName, files[fileName]));
-                } else {
+                } else if (fileName) {
                     promises.push(artifact.addFile(fileName, JSON.stringify(files[fileName], null, 2)));
                 }
             });
             artifacts.forEach(fileinfo => {
-                if (fileinfo.isDefaultDirectory) {
-                    promises.push(artifact.addFile(fileinfo.name + '/_default_', ''));
-                } else {
-                    promises.push(artifact.addFile(fileinfo.name, fileinfo.content));
+                if (fileinfo.name) {
+                    if (fileinfo.isDefaultDirectory) {
+                        promises.push(artifact.addFile(fileinfo.name + '/_default_', ''));
+                    } else {
+                        promises.push(artifact.addFile(fileinfo.name, fileinfo.content));
+                    }
                 }
             });
         }

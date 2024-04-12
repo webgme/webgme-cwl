@@ -30,6 +30,8 @@ define([
         // Call base class' constructor.
         PluginBase.call(this);
         this.pluginMetadata = pluginMetadata;
+        this.createMessage = this.createMessage.bind(this);
+        this._getReachableList = this._getReachableList.bind(this);
     }
 
     /**
@@ -47,7 +49,7 @@ define([
      * For some of the checking, we require a graph representation...
      */
     CheckWorkflow.prototype.generateSimpleGraph = function () {
-        const {core, _nodes, activeNode,} = this;
+        const {core, _nodes, activeNode, META} = this;
         const graph = {v:[],e:[], i:[]};
         core.getChildrenPaths(activeNode).forEach(path => {
             if (core.isInstanceOf(_nodes[path], META['Flow'])) {
@@ -195,12 +197,34 @@ define([
         })
     }
 
+    /**
+     * 
+     * Having default value for a file input without location will cause crash in the generation so 
+     * it should be handled as a violation
+     */
+    CheckWorkflow.prototype.checkNoDefaultLocation = function () {
+        const {core, activeNode, _nodes, META, createMessage} = this;
+        let inputWithDefaultAndNoLocation = false;
+        core.getChildrenPaths(activeNode).forEach(path => {
+            if (core.isInstanceOf(_nodes[path], META['FileInput'])) {
+                if(core.getAttribute(_nodes[path], 'value') && !core.getAttribute(_nodes[path], 'location')) {
+                    inputWithDefaultAndNoLocation = true;
+                    createMessage(_nodes[path], 'This file input has a default content without a default filename which will cause build error!', 'error');
+                }
+            }
+        });
+
+        if (inputWithDefaultAndNoLocation) {
+            result.setSuccess(false);
+        }
+    };
+
     CheckWorkflow.prototype.getChecks = function () {
-        const members = Object.getOwnPropertyNames(this);
+        const members = Object.getOwnPropertyNames(this.__proto__);
         const checks = [];
 
         members.forEach(member => {
-            if( typeof member === 'function' && member.name.indexOf('check') === 0) {
+            if( member.indexOf('check') === 0) {
                 checks.push(member);
             }
         });
@@ -219,15 +243,16 @@ define([
      */
     CheckWorkflow.prototype.main = function (callback) {
         const checks = this.getChecks();
-        const {result, activeNode, loadNodeMap} = this;
+        const {result, activeNode} = this;
 
         result.setSuccess(true);
 
-        loadNodeMap(activeNode)
+        this.loadNodeMap(activeNode)
         .then(map => {
             this._nodes = map;
+            this.generateSimpleGraph();
             checks.forEach(check => {
-                check();
+                this[check]();
             });
             callback(null, result);
         })

@@ -1,0 +1,16 @@
+{
+    "title": "Configure - GetFile",
+    "description": "Edit the configuration of your GetFile step",
+    "type": "object",
+    "required":["name", "fileName"],
+    "properties": {
+        "name":{
+            "type":"string"
+        },
+        "fileName":{
+            "type":"string",
+            "description":"the name of the file that has to be picked up from the input directory"
+        }
+
+    }
+}

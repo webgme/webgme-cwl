@@ -1,0 +1,18 @@
+{
+    "title": "Configure - position based input",
+    "description": "Edit the configuration of your position based input",
+    "type": "object",
+    "required":["name", "position"],
+    "properties": {
+        "name":{
+            "type":"string",
+            "not":{"enum":[]}
+        },
+        "position":{
+            "type":"string",
+            "enum":["_first_"],
+            "description": "point to the previous positional argument or '_first_' if to order the argument among other positional arguments"
+        }
+
+    }
+}

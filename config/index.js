@@ -4,6 +4,7 @@
  * @author pmeijer / https://github.com/pmeijer
  */
 
+console.log('environment:', process.env.NODE_ENV);
 var env = process.env.NODE_ENV || 'default',
     configFilename = __dirname + '/config.' + env + '.js',
     config = require(configFilename),

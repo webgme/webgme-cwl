@@ -1,0 +1,21 @@
+{
+    "title": "Configure - refernce output",
+    "description": "Edit the configuration of your input referring output",
+    "type": "object",
+    "required":["name", "location"],
+    "properties": {
+        "name":{
+            "type":"string",
+            "not":{
+                "enum":[]
+            }
+        },
+        "reference":{
+            "type":"string",
+            "description":"pick the input source for this output",
+            "enum":[]
+        },
+        "required":["name","reference"]
+
+    }
+}

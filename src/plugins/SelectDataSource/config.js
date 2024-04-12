@@ -6,10 +6,11 @@
 
  define([
     'text!./config.html',
+    'webgme-cwl/config',
     'ansi-up',
     'blob/BlobClient',
     'css!./config.css',
- ], function (DialogTemplate, AnsiUp, BlobClient) {
+ ], function (DialogTemplate, CONFIG, AnsiUp, BlobClient) {
     'use strict';
 
     function ConfigWidget(params) {
@@ -57,6 +58,7 @@
         src += 'path='+decodeURI(activeNode.getId());
         src += '&projectid='+ this._client.getActiveProjectId();
 
+        DialogTemplate = DialogTemplate.replace('<iframe src=""', '<iframe src="'+ CONFIG.getDashboardUrl() +'"');
         const dialog = $(DialogTemplate);
         dialog.on('shown', function () {
             //TODO we might want to handle something here
@@ -64,25 +66,10 @@
 
         const listener = data => {
             console.log('message arrived:', data);
-            window.removeEventListener('message', listener);
-            dialog.modal('hide');
-            if (data.origin === window.location.origin) {
-                try {
-                    // const msg = JSON.parse(data.data);
-                    const msg = data.data;
-                    if (msg.type === 'selectArtifact') {
-                        callback(globalConfig, {value:msg.value}, false);
-                    } else {
-                        console.error('Invalid message type!');
-                        callback(globalConfig, {value:null}, false);
-                    }
-                } catch (e) {
-                    console.error(e);
-                    callback(globalConfig, {value:null}, false);
-                }
-            } else {
-                console.error('Only same origin clients can communicate!!!');
-                callback(globalConfig, {value:null}, false);
+            if(data && data.data && data.data.type === 'selectArtifact') {
+                window.removeEventListener('message', listener);
+                dialog.modal('hide');
+                callback(globalConfig, {value:data.data.value}, false);
             }
         };
         

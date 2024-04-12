@@ -1,0 +1,24 @@
+{
+    "title": "Configure - DockerPull",
+    "description": "Edit the configuration of your DockerPull step",
+    "type": "object",
+    "required":["name", "command","image"],
+    "properties": {
+        "name":{
+            "type":"string"
+        },
+        "command":{
+            "type":"string",
+            "description":"the command that is going to be executed once the container is up and running"
+        },
+        "image":{
+            "type":"string",
+            "description":"the docker image identifier to be pulled from docker hub (like: mathworks/matlab-deep-learning:r2023a)"
+        },
+        "workdir":{
+            "type":"string",
+            "description":"set the absolute path of the execution directory inside the container - if not set, the system will generate a temporary directory, place all the inputs there and call the command"
+        }
+
+    }
+}

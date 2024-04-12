@@ -1,0 +1,20 @@
+{
+    "title": "Configure - pattern output",
+    "description": "Edit the configuration of your pattern matching output",
+    "type": "object",
+    "required":["name", "location"],
+    "properties": {
+        "name":{
+            "type":"string",
+            "not":{
+                "enum":[]
+            }
+        },
+        "pattern":{
+            "type":"string",
+            "description":"enter the lookup pattern"
+        },
+        "required":["name","pattern"]
+
+    }
+}

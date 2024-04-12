@@ -1,0 +1,28 @@
+{
+    "title": "Configure - DockerFile",
+    "description": "Edit the configuration of your DockerFile step",
+    "type": "object",
+    "required":["name", "command","dockerfile", "image"],
+    "properties": {
+        "name":{
+            "type":"string"
+        },
+        "command":{
+            "type":"string",
+            "description":"the command that is going to be executed once the container is up and running"
+        },
+        "dockerfile":{
+            "type":"string",
+            "description":"the content of the dockerfile"
+        },
+        "image":{
+            "type":"string",
+            "description":"the image id that is going to be used with the dockerfile (like: mine/wflow:latest)"
+        },
+        "workdir":{
+            "type":"string",
+            "description":"set the absolute path of the execution directory inside the container - if not set, the system will generate a temporary directory, place all the inputs there and call the command"
+        }
+
+    }
+}

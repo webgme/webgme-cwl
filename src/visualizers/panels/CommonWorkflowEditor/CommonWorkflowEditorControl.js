@@ -6,11 +6,19 @@
 define([
     'js/Constants',
     'js/Utils/GMEConcepts',
-    'js/NodePropertyNames'
+    'js/NodePropertyNames',
+    'webgme-cwl/metahelper',
+    'blob/BlobClient',
+    'plugin/SelectDataSource/SelectDataSource/config.js',
+    'js/Loader/ProgressNotification'
 ], function (
     CONSTANTS,
     GMEConcepts,
-    nodePropertyNames
+    nodePropertyNames,
+    MetaHelper,
+    BlobClient,
+    SDCConfig,
+    ProgressNotification
 ) {
 
     'use strict';
@@ -18,87 +26,269 @@ define([
     function CommonWorkflowEditorControl(options) {
 
         this._logger = options.logger.fork('Control');
-
         this._client = options.client;
-
-        // Initialize core collections and variables
-        this._widget = options.widget;
-
         this._currentNodeId = null;
         this._currentNodeParentId = undefined;
+        this._updateWidget = null;
+        this._descriptor = null;
 
-        this._initWidgetEventHandlers();
+        //build meta info - does it necessary? where is the shorthand?
+        this._META = {};
+        this._id2meta = {};
+        this._client.getAllMetaNodes(false).forEach(metaNode => {
+            this._META[metaNode.getFullyQualifiedName()] = metaNode;
+            this._id2meta[metaNode.getId()] = metaNode.getFullyQualifiedName();
+        });
 
+        this._MHelp = new MetaHelper(this._client, this._META, this._id2meta);
         this._logger.debug('ctor finished');
-    }
 
-    CommonWorkflowEditorControl.prototype._initWidgetEventHandlers = function () {
-        this._widget.onNodeClick = function (id) {
-            // Change the current active object
-            WebGMEGlobal.State.registerActiveObject(id);
-        };
-    };
+    }
 
     /* * * * * * * * Visualizer content update callbacks * * * * * * * */
     // One major concept here is with managing the territory. The territory
     // defines the parts of the project that the visualizer is interested in
     // (this allows the browser to then only load those relevant parts).
     CommonWorkflowEditorControl.prototype.selectedObjectChanged = function (nodeId) {
-        var desc = this._getObjectDescriptor(nodeId),
-            self = this;
 
-        self._logger.debug('activeObject nodeId \'' + nodeId + '\'');
+        this._logger.debug('activeObject nodeId \'' + nodeId + '\'');
 
         // Remove current territory patterns
-        if (self._currentNodeId) {
-            self._client.removeUI(self._territoryId);
+        if (this._currentNodeId) {
+            this._client.removeUI(this._territoryId);
         }
 
-        self._currentNodeId = nodeId;
-        self._currentNodeParentId = undefined;
+        this._currentNodeId = nodeId;
+        this._currentNodeParentId = undefined;
 
-        if (typeof self._currentNodeId === 'string') {
-            // Put new node's info into territory rules
-            self._selfPatterns = {};
-            self._selfPatterns[nodeId] = {children: 0};  // Territory "rule"
-
-            self._widget.setTitle(desc.name.toUpperCase());
-
-            if (typeof desc.parentId === 'string') {
-                self.$btnModelHierarchyUp.show();
-            } else {
-                self.$btnModelHierarchyUp.hide();
+        if (typeof this._currentNodeId === 'string') {
+            const node = this._client.getNode(nodeId);
+            this._currentNodeParentId = node.getParentId();
+            if(this._currentNodeParentId !== '/f' && this._currentNodeParentId.indexOf('/f/') !== 0) {
+                this._descriptor = null;
+                return;
             }
+            this._selfPatterns = {};
+            this._selfPatterns[nodeId] = {children: 2};
+            this._selfPatterns['/f'] = {children: 1}; //all workflows in the project
 
-            self._currentNodeParentId = desc.parentId;
-
-            self._territoryId = self._client.addUI(self, function (events) {
-                self._eventCallback(events);
+            this._territoryId = this._client.addUI(this, events => {
+                this._eventCallback(events);
             });
 
             // Update the territory
-            self._client.updateTerritory(self._territoryId, self._selfPatterns);
-
-            self._selfPatterns[nodeId] = {children: 1};
-            self._client.updateTerritory(self._territoryId, self._selfPatterns);
+            this._client.updateTerritory(this._territoryId, this._selfPatterns);
         }
     };
 
     // This next function retrieves the relevant node information for the widget
-    CommonWorkflowEditorControl.prototype._getObjectDescriptor = function (nodeId) {
-        var node = this._client.getNode(nodeId),
-            objDescriptor;
-        if (node) {
-            objDescriptor = {
-                id: node.getId(),
-                name: node.getAttribute(nodePropertyNames.Attributes.name),
-                childrenIds: node.getChildrenIds(),
-                parentId: node.getParentId(),
-                isConnection: GMEConcepts.isConnection(nodeId)
-            };
+    CommonWorkflowEditorControl.prototype._getAttributes = function(nodeId) {
+        const node = this._client.getNode(nodeId);
+        const result = {};
+        node.getValidAttributeNames().forEach(name => {
+            result[name] = node.getAttribute(name);
+        });
+
+        return result;
+    };
+
+    CommonWorkflowEditorControl.prototype.setAttributes = function(nodeId, newData, oldData) {
+        const {_client} = this;
+        const node = this._client.getNode(nodeId);
+
+        _client.startTransaction();
+        node.getValidAttributeNames().forEach(name => {
+            if(newData[name] && newData[name] !== oldData[name]) {
+                _client.setAttribute(nodeId,name,newData[name]);
+            }
+        });
+        _client.completeTransaction('updated Step');
+    };
+
+    CommonWorkflowEditorControl.prototype._getChildrenNameList = function(excludes) {
+        const result = [];
+        this._client.getNode(this._currentNodeId).getChildrenIds().forEach(childId => {
+            const name = this._client.getNode(childId).getAttribute('name');
+            if(excludes.indexOf(name) === -1) {
+                result.push(name);
+            }
+        });
+
+        return result;
+    };
+
+    CommonWorkflowEditorControl.prototype._createDescriptor = function () {
+        const MainNode = this._client.getNode(this._currentNodeId);
+        const descriptor = {nodes:[], edges:[], global: this._createGlobalDescriptor()};
+        const nodeId2index = {};
+        this._MHelp.initialize(this._currentNodeId);
+
+        MainNode.getChildrenIds().forEach(childId => {
+            const childNode = this._client.getNode(childId);
+            if(childNode.isInstanceOf(this._META['CWL.Step'].getId())) {
+                nodeId2index[childId] = descriptor.nodes.length;
+                descriptor.nodes.push(this._createStepDescriptor(childId));
+            } else if(childNode.isInstanceOf(this._META['CWL.Input'].getId())) {
+                nodeId2index[childId] = descriptor.nodes.length;
+                descriptor.nodes.push(this._createPortNodeDescriptor(childId));
+            } else if(childNode.isInstanceOf(this._META['CWL.Output'].getId())) {
+                nodeId2index[childId] = descriptor.nodes.length;
+                descriptor.nodes.push(this._createPortNodeDescriptor(childId));
+            } else if(childNode.isConnection()) {
+                descriptor.edges.push(this._createEdgeDescriptor(childId));
+            } else if(childNode.isInstanceOf(this._META['CWL.Workflow'].getId())) {
+                nodeId2index[childId] = descriptor.nodes.length;
+                descriptor.nodes.push(this._createStepDescriptor(childId));
+            }
+        });
+
+        descriptor.global.nodeId2index = nodeId2index;
+        return this._setDescriptor(descriptor);
+    };
+
+    CommonWorkflowEditorControl.prototype._createGlobalDescriptor = function() {
+        const {_client, _currentNodeId, _MHelp} = this;
+        const global = {};
+        const folderNode = _client.getNode('/f'); //TODO - should be configurable, just in case
+        const selfNode = _client.getNode(_currentNodeId);
+        const isSelfAncestor = (id) => {
+            let node = selfNode;
+            while(node.getId() !== '/f') {
+                if (id === node.getId()) {
+                    return true;
+                } else {
+                    node = _client.getNode(node.getParentId());
+                }
+            }
+            return false;
+        };
+
+        global.id = _currentNodeId;
+        global.parentId = selfNode.getParentId();
+        global.wfnames2ids = {};
+        folderNode.getChildrenIds().forEach(wfId => {
+            if(!isSelfAncestor(wfId)) {
+                global.wfnames2ids[_client.getNode(wfId).getAttribute('name')] = wfId;
+            }
+        });
+
+        global.getConnectTypeId = _MHelp.getConnectTypeId.bind(_MHelp);
+        return global;
+    };
+
+    CommonWorkflowEditorControl.prototype._createPortNodeDescriptor = function (nodeId) {
+        const node = this._client.getNode(nodeId);
+        const input = node.isInstanceOf(this._META['CWL.Input'].getId());
+
+        const descriptor = {
+            id: nodeId, 
+            type:'port', 
+            position: node.getRegistry('position'), 
+            data:{
+                name: node.getAttribute('name'), 
+                isInput:input, 
+                type: this._id2meta[node.getMetaTypeId()],
+                value: node.getAttribute('value'),
+                location: node.getAttribute('location')
+            }};
+
+        return descriptor;
+    };
+
+    CommonWorkflowEditorControl.prototype._createStepDescriptor = function (nodeId) {
+        const node = this._client.getNode(nodeId);
+        const childrenIds = node.getChildrenIds();
+        const type = node.isInstanceOf(this._META['CWL.Step'].getId()) ? 'step' : 'workflow';
+        const descriptor = {
+            id:nodeId, 
+            type:type, 
+            position:node.getRegistry('position'), 
+            data:{
+                name: node.getAttribute('name'), 
+                inputs: {}, 
+                outputs: {}, 
+                variablePorts: false, 
+                type: this._id2meta[node.getMetaTypeId()], 
+                names: this._getChildrenNameList([node.getAttribute('name')]),
+                attributes: this._getAttributes(nodeId),
+                order: this._getCurrentInputOrder(nodeId)
+            }
+        };
+
+        switch(descriptor.data.type) {
+            case 'CWL.DockerPull':
+            case 'CWL.DockerFile':
+            case 'CWL.DockerImage':
+            case 'CWL.FilesToDirectory':
+                descriptor.data.variablePorts = true;
+        };
+
+        childrenIds.forEach(childId => {
+            const childNode = this._client.getNode(childId);
+            if(childNode.isInstanceOf(this._META['CWL.Input'].getId())) {
+                descriptor.data.inputs[childNode.getAttribute('name')] = {type:this._id2meta[childNode.getMetaTypeId()], id:childId, attributes: this._getAttributes(childId)};
+            } else if(childNode.isInstanceOf(this._META['CWL.Output'].getId())){
+                descriptor.data.outputs[childNode.getAttribute('name')] = {
+                    type:this._id2meta[childNode.getMetaTypeId()], 
+                    id:childId, 
+                    attributes: this._getAttributes(childId), 
+                    source: childNode.getPointerId('source')};
+            }
+        });
+
+        return descriptor;
+    };
+
+    CommonWorkflowEditorControl.prototype._createEdgeDescriptor = function (nodeId) {
+        const node = this._client.getNode(nodeId);
+        const childrenIds = node.getChildrenIds();
+        const descriptor = {id: nodeId};
+        const sourceNode = this._client.getNode(node.getPointerId('src'));
+        const destNode = this._client.getNode(node.getPointerId('dst'));
+        const flowType = this._client.getNode(node.getMetaTypeId()).getAttribute('name');
+        const sourceIsPort = sourceNode.getParentId() === this._currentNodeId ? false : true;
+        const destIsPort = destNode.getParentId() === this._currentNodeId ? false : true;
+
+        if(sourceIsPort) {
+            descriptor.source = sourceNode.getParentId();
+            descriptor.sourceHandle = sourceNode.getAttribute('name');
+        } else {
+            descriptor.source = sourceNode.getId();
+            descriptor.sourceHandle = null;
         }
 
-        return objDescriptor;
+        if(destIsPort) {
+            descriptor.target = destNode.getParentId();
+            descriptor.targetHandle = destNode.getAttribute('name');
+        } else {
+            descriptor.target = destNode.getId();
+            descriptor.targetHandle = null;
+        }
+
+        descriptor.data = {
+            type:flowType,
+            scatter:false
+        };
+        switch(flowType) {
+            case 'FlowFai2Fi':
+            case 'FlowDai2Di':
+            case 'FlowSai2Si':
+                descriptor.data.scatter = true;
+                break;
+            case 'FlowFo2Fao':
+            case 'FlowDo2Dao':
+            case 'FlowSo2Sao':
+                descriptor.data.gather = true;
+        }
+        return descriptor;
+    };
+
+    CommonWorkflowEditorControl.prototype._setDescriptor = function (descriptor) {
+        this._descriptor = descriptor;
+
+        if(this._updateWidget) {
+            this._updateWidget(descriptor);
+        }
     };
 
     /* * * * * * * * Node Event Handling * * * * * * * */
@@ -107,40 +297,16 @@ define([
             event;
 
         this._logger.debug('_eventCallback \'' + i + '\' items');
+        // if(this._updateWidget !== null) {
+            // console.log('we got widget connection');
+            // this._updateWidget([],[],{});
+        // }
 
-        while (i--) {
-            event = events[i];
-            switch (event.etype) {
-
-            case CONSTANTS.TERRITORY_EVENT_LOAD:
-                this._onLoad(event.eid);
-                break;
-            case CONSTANTS.TERRITORY_EVENT_UPDATE:
-                this._onUpdate(event.eid);
-                break;
-            case CONSTANTS.TERRITORY_EVENT_UNLOAD:
-                this._onUnload(event.eid);
-                break;
-            default:
-                break;
-            }
+        if (events[0] && events[0].etype === 'complete') {
+            //we have what we need
+            this._createDescriptor();
         }
-
         this._logger.debug('_eventCallback \'' + events.length + '\' items - DONE');
-    };
-
-    CommonWorkflowEditorControl.prototype._onLoad = function (gmeId) {
-        var description = this._getObjectDescriptor(gmeId);
-        this._widget.addNode(description);
-    };
-
-    CommonWorkflowEditorControl.prototype._onUpdate = function (gmeId) {
-        var description = this._getObjectDescriptor(gmeId);
-        this._widget.updateNode(description);
-    };
-
-    CommonWorkflowEditorControl.prototype._onUnload = function (gmeId) {
-        this._widget.removeNode(gmeId);
     };
 
     CommonWorkflowEditorControl.prototype._stateActiveObjectChanged = function (model, activeObjectId) {
@@ -151,6 +317,378 @@ define([
         }
     };
 
+    /* * * * * * * * Manipulation and check functions  * * * * * * * * * * * */
+    CommonWorkflowEditorControl.prototype.runExportPlugin = function () {
+        const {_client, _logger,_currentNodeId} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('ExportWorkflow');
+        context.managerConfig.activeNode = _currentNodeId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('ExportWorkflow', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                const url = bc.getDownloadURL(result.artifacts[0]);
+                window.open(url, '_blank');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to export', err);
+            }
+        });
+    };
+
+    CommonWorkflowEditorControl.prototype.runBuildPlugin = function () {
+        const {_client, _logger, _currentNodeId} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('BuildWorkflow');
+        context.managerConfig.activeNode = _currentNodeId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('BuildWorkflow', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                const url = bc.getDownloadURL(result.artifacts[0]);
+                window.open(url, '_blank');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to build', err);
+            }
+        });
+    };
+
+    CommonWorkflowEditorControl.prototype.runSelectDataSourcePlugin = function(portId) {
+        const {_client, _logger, _currentNodeId} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('SelectDataSource');
+        context.managerConfig.activeNode = portId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+        const configDialog = new SDCConfig({client: _client, logger: _logger});
+        configDialog.show([],{},{}, (globalConfig, config, storeInUser) => {
+            context.pluginConfig = config;
+            _client.runBrowserPlugin('SelectDataSource', context, (err, result)=>{
+                // console.log('export:', err, result);
+                if (err === null && result && result.success) {
+                    _logger.info('sucessfully selected PDP source');
+                } else {
+                    //TODO - make a proper way of handling this
+                    _logger.error('Failed to build', err);
+                }
+            });
+        });
+    }
+    CommonWorkflowEditorControl.prototype.addNewElement = function (id, event) {
+        console.log('addnew', id, event);
+        const {_client, _currentNodeId, _META} = this;
+        let newId = null;
+        if(event.element === 'Workflow') {
+            if(event.prototype === '- empty -') {
+                newId = _client.createNode(
+                    {parentId:_currentNodeId, baseId:_META['CWL.Workflow'].getId()},
+                    {attributes: {name: event.name}},
+                    'added new subworkflow');
+            } else {
+
+            }
+        } else {
+            newId = _client.createNode(
+                {parentId:_currentNodeId, baseId:_META['CWL.' + event.prototype].getId()},
+                {attributes: {name: event.name}},
+                'added new node instance of [' + event.prototype + ']');
+        }
+    };
+
+    CommonWorkflowEditorControl.prototype.createConnection = function (typeName, source, target) {
+        const {_client, _currentNodeId, _META} = this;
+        _client.startTransaction();
+        const newId = _client.createNode({parentId:_currentNodeId, baseId: _META[typeName].getId()});
+        _client.setPointer(newId, 'src', source);
+        _client.setPointer(newId, 'dst', target);
+        _client.completeTransaction('connected elements [' + source + ',' + target +']');
+    };
+
+    CommonWorkflowEditorControl.prototype._getCurrentInputOrder = function (nodeId) {
+
+        const node = this._client.getNode(nodeId);
+        const childrenIds = node.getChildrenIds();
+        const type = node.isInstanceOf(this._META['CWL.Step'].getId()) ? 'step' : 'workflow';
+        const descriptor = {id:nodeId, type:type, position:node.getRegistry('position'), 
+            data:{name: node.getAttribute('name'), inputs: {}, outputs: {}, variablePorts: false, type: this._id2meta[node.getMetaTypeId()]}
+        };
+        const result = {name2id:{},order:[], raw:{}};
+
+        childrenIds.forEach(childId => {
+            const childNode = this._client.getNode(childId);
+            if(childNode.isInstanceOf(this._META['CWL.Input'].getId()) && childNode.getAttribute('position') !== -1) {
+                result.name2id[childNode.getAttribute('name')] = childId;
+                result.raw[childNode.getAttribute('position')] = childNode.getAttribute('name');
+            }
+        });
+
+        const max = Object.keys(result.raw).length;
+
+        for(let i=0; i<max; i+=1) {
+            result.order.push(result.raw[i]);
+        }
+
+        return result;
+    };
+
+    CommonWorkflowEditorControl.prototype.createInput = function (containerStepId, data) {
+        const {_client, _META} = this;
+        const attributes = {};
+        const typeName = data.type === 'PDPiD' ? 'CWL.PDPiD' : "CWL." + data.type + 'Input';
+        let inTransaction = false;
+
+        attributes.name = data.name;
+        if (data.description) {
+            attributes.description = data.description;
+        }
+
+        switch (data.role) {
+            case "named":
+                attributes.asArgument = true;
+                if (typeof data.prefix === 'string') {
+                    attributes.prefix = data.prefix;
+                }
+                break;
+            case "positional":
+                const order = this._getCurrentInputOrder(containerStepId);
+                const length = order.order.length;
+                const index = data.position === '_first_' ? 0 : order.order.indexOf(data.position) + 1;
+                if (length > index) {
+                    inTransaction = true;
+                    _client.startTransaction();
+                    for (let i=index; i<order.order.length; i+=1) {
+                        const id = order.name2id[order.order[i]];
+                        _client.setAttribute(id, 'position', i+1);
+                    }
+                }
+                attributes.position = index;
+                attributes.asArgument = true;
+                break;
+            case "location":
+                attributes.location = data.location;
+                break;
+        }
+        _client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
+        {attributes},
+        'added new input');
+
+        if (inTransaction) {
+            _client.completeTransaction();
+        }
+    };
+
+    CommonWorkflowEditorControl.prototype.updateInput = function (containerStepId, inputId, data) {
+        const {_client} = this;
+        const attributes = {};
+        const currentAttributes = this._getAttributes(inputId);
+
+        if (data.name !== currentAttributes.name) {
+            attributes.name = data.name;
+        }
+
+        if (data.description !== currentAttributes.description) {
+            attributes.description = data.description;
+        }
+
+        switch (data.role) {
+            case "named":
+                if (typeof data.prefix === 'string' && data.prefix !== currentAttributes.prefix) {
+                    attributes.prefix = data.prefix;
+                }
+                if(Object.keys(attributes).length > 0) {
+                    return this.setAttributes(inputId, attributes, currentAttributes);
+                }
+                break;
+            case "positional":
+                const order = this._getCurrentInputOrder(containerStepId);
+                const length = order.order.length;
+                const oldPosition = order.order.indexOf(data.name);
+                const newPosition = data.position === '_first_' ? 0 : order.order.indexOf(data.position) + 1;
+                if (oldPosition !== newPosition) {
+                    order.order.splice(oldPosition,1);
+                    order.order.splice(newPosition,0,data.name);
+                    _client.startTransaction();
+                    order.order.forEach((name,index) => {
+                        _client.setAttribute(order.name2id[name],'position', index);
+                    });
+                    Object.keys(attributes).forEach(name => {
+                        _client.setAttribute(inputId, name, attributes[name]);
+                    });
+                    _client.completeTransaction('Updated positional input.');
+                } else if(Object.keys(attributes).length > 0) {
+                    return this.setAttributes(inputId, attributes, currentAttributes);
+                }
+                break;
+            case "location":
+                if(data.location !== currentAttributes.location) {
+                    attributes.location = data.location;
+                }
+                if(Object.keys(attributes).length > 0) {
+                    return this.setAttributes(inputId, attributes, currentAttributes);
+                }
+                break;
+        }
+    };
+
+    CommonWorkflowEditorControl.prototype.createOutput = function (containerStepId, data) {
+        const {_client, _META} = this;
+        const attributes = {};
+
+        attributes.name = data.name;
+        if(data.type === 'pattern') {
+            const typeName = 'CWL.' + data.class + 'Output';
+            attributes.pattern = data.pattern;
+            _client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
+            {attributes},'added new output');
+        } else {
+            const typeName = data.reference.type.replace('Input','Output');
+            _client.startTransaction();
+            const newNodeId = _client.createNode({parentId:containerStepId, baseId:_META[typeName].getId()},
+            {attributes});
+            _client.setPointer(_client.getNode(newNodeId),'source', _client.getNode(data.reference.id));
+            _client.completeTransaction('added new reference output');
+        }
+    };
+
+    CommonWorkflowEditorControl.prototype.updateOutput = function (outputId, data) {
+        const {_client, _META} = this;
+        const node = _client.getNode(outputId);
+        const currentData = {name: node.getAttribute('name')};
+        if(data.reference) {
+            currentData.reference = node.getPointerId('source');
+            if(JSON.stringify(currentData) !== JSON.stringify(data)) {
+                _client.startTransaction();
+                _client.setAttribute(outputId, 'name', data.name);
+                _client.setPointer(outputId, 'source', data.source);
+                _client.completeTransaction();
+            }
+        } else {
+            currentData.pattern = node.getAttribute('pattern');
+            this.setAttributes(outputId, data, currentData);
+        }
+    }
+    CommonWorkflowEditorControl.prototype.deleteComponent = function (id, containerStepId) {
+        //deleting the component and all edges that touches it
+        const {_client, _MHelp} = this;
+        const ids = _MHelp.getRemovals(id);
+        _client.startTransaction();
+        if (containerStepId) {
+            //it is a positional input port, so we need to readjust positions
+            const order = this._getCurrentInputOrder(containerStepId);
+            const node = _client.getNode(id);
+            const name = node.getAttribute('name');
+            order.order.splice(order.order.indexOf(name), 1);
+            order.order.forEach((portName, index) => {
+                _client.setAttribute(order.name2id[portName],'position', index);
+            });
+        }
+        ids.forEach(toRemoveId => _client.deleteNode(toRemoveId));
+        _client.completeTransaction('removed element [' + id + '] and its connections');
+    };
+
+    CommonWorkflowEditorControl.prototype.deleteEdge = function (id) {
+        const {_client, _currentNodeId} = this;
+        _client.deleteNode(id, 'removing edge from workflow [' + _client.getNode(this._currentNodeId).getAttribute('name') + ']');
+    };
+
+    CommonWorkflowEditorControl.prototype.runPropagatePortsPlugin = function(wId, childId) {
+        const {_client, _logger, _currentNodeId} = this;
+        const bc = new BlobClient({logger: _logger.fork('BlobClient')});
+        const context = _client.getCurrentPluginContext('PropagatePorts');
+        context.managerConfig.activeNode = wId;
+        context.managerConfig.namespace = 'CWL';
+        context.managerConfig.activeSelection = [childId];
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('PropagatePorts', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                _logger.info('sucessfull execution of port propagation');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to build', err);
+            }
+        });
+    };
+
+    CommonWorkflowEditorControl.prototype.setInputDefault = function(inputId, inputType, data) {
+        const {_client} = this;
+        const attributes = {};
+        switch (inputType) {
+            case 'CWL.FileInput':
+                attributes.value = data.value;
+                attributes.location = data.name;
+                break;
+            case 'CWL.StringInput':
+                attributes.value = data.value;
+                break;
+            case 'CWL.DirectoryInput':
+                attributes.value = true;
+                attributes.location = data.value;
+                break;
+        }
+
+        this.setAttributes(inputId, attributes, {});
+    };
+
+    CommonWorkflowEditorControl.prototype.runOpenDashboardPlugin = function () {
+        const {_client, _logger, _currentNodeId} = this;
+        const context = _client.getCurrentPluginContext('OpenDashboard');
+        context.managerConfig.activeNode = _currentNodeId;
+        context.managerConfig.namespace = 'CWL';
+        context.pluginConfig = {};
+
+        _client.runBrowserPlugin('OpenDashboard', context, (err, result)=>{
+            // console.log('export:', err, result);
+            if (err === null && result && result.success) {
+                _logger.info('opened dashboard in new window');
+            } else {
+                //TODO - make a proper way of handling this
+                _logger.error('Failed to open dashboard', err);
+            }
+        });
+    };
+
+    CommonWorkflowEditorControl.prototype.runReleasePlugin = function () {
+        const progress = ProgressNotification.start('Releasing workflow');
+        const workflowId = this._currentNodeId;
+        let metadata = WebGMEGlobal.allPluginsMetadata['ReleaseWorkflow'];
+        metadata['__context'] = {activeNodeId: workflowId, activeSelectionIds: []};
+        WebGMEGlobal.InterpreterManager.configureAndRun(metadata, function (result) {
+            let text = 'PluginRelease finished<br/>';
+            const options = {type:'info'};
+            let icon = 'glyphicon glyphicon-info-sign';
+            if (result.success) {
+                text += "- success -<br/>"
+                if(result.messages.length > 0) {
+                    result.messages.forEach(message => {
+                        text += ' -- ' + message.message +'<br/>';
+                    });
+                }
+                progress.note.update({
+                    message: text,
+                    progress: 100,
+                    type: 'success'
+                });
+            } else {
+                icon = 'glyphicon glyphicon-exclamation-sign';
+                text += "- faliure -<br/>";
+                options.type = 'warning';
+                text += result.error ? result.error : 'Unknown error happened during execution!';
+                progress.note.update({
+                    message: text,
+                    type: 'danger',
+                    progress: 100
+                });
+            }
+            // $.notify({icon: icon, message: text}, options);
+        });
+    };
     /* * * * * * * * Visualizer life cycle callbacks * * * * * * * */
     CommonWorkflowEditorControl.prototype.destroy = function () {
         this._detachClientEventListeners();
@@ -178,6 +716,14 @@ define([
     CommonWorkflowEditorControl.prototype.onDeactivate = function () {
         this._detachClientEventListeners();
         this._hideToolbarItems();
+    };
+
+    CommonWorkflowEditorControl.prototype.registerUpdate = function (func) {
+        const firstTry = this._updateWidget === null ? true : false;
+        this._updateWidget = func;
+        if(this._descriptor && firstTry) {
+            this._updateWidget(this._descriptor);
+        }
     };
 
     /* * * * * * * * * * Updating the toolbar * * * * * * * * * */
@@ -215,6 +761,8 @@ define([
             toolBar = WebGMEGlobal.Toolbar;
 
         this._toolbarItems = [];
+
+        return;
 
         this._toolbarItems.push(toolBar.addSeparator());
 

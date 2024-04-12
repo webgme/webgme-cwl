@@ -7,11 +7,22 @@
         "panel": "src/visualizers/panels/CommonWorkflowEditor",
         "secondary": false,
         "widget": "src/visualizers/widgets/CommonWorkflowEditor"
+      },
+      "WorkflowBrowser": {
+        "src": "panels/WorkflowBrowser/WorkflowBrowserPanel",
+        "title": "WorkflowBrowser",
+        "panel": "src/visualizers/panels/WorkflowBrowser",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/WorkflowBrowser"
       }
     },
     "addons": {},
     "decorators": {},
-    "layouts": {},
+    "layouts": {
+      "FocusedCWL": {
+        "src": "src/layouts/FocusedCWL"
+      }
+    },
     "plugins": {
       "BuildWorkflow": {
         "src": "src/plugins/BuildWorkflow",
@@ -48,6 +59,18 @@
       "CheckWorkflow": {
         "src": "src/plugins/CheckWorkflow",
         "test": "test/plugins/CheckWorkflow"
+      },
+      "OpenDashboard": {
+        "src": "src/plugins/OpenDashboard",
+        "test": "test/plugins/OpenDashboard"
+      },
+      "FetchWorkflow": {
+        "src": "src/plugins/FetchWorkflow",
+        "test": "test/plugins/FetchWorkflow"
+      },
+      "PropagatePorts": {
+        "src": "src/plugins/PropagatePorts",
+        "test": "test/plugins/PropagatePorts"
       }
     },
     "routers": {
@@ -64,105 +87,12 @@
     }
   },
   "dependencies": {
-    "visualizers": {
-      "TextualJSONEditor": {
-        "src": "panels/TextualJSONEditor/TextualJSONEditorPanel",
-        "title": "TextualJSONEditor",
-        "panel": "src/visualizers/panels/TextualJSONEditor",
-        "secondary": false,
-        "widget": "src/visualizers/widgets/TextualJSONEditor",
-        "project": "webgme-json"
-      },
-      "TagCreator": {
-        "src": "panels/TagCreator/TagCreatorPanel",
-        "title": "TagCreator",
-        "panel": "src/visualizers/panels/TagCreator",
-        "secondary": false,
-        "widget": "src/visualizers/widgets/TagCreator",
-        "project": "webgme-taxonomy"
-      }
-    },
+    "visualizers": {},
     "addons": {},
     "decorators": {},
     "layouts": {},
-    "plugins": {
-      "ExportJSON": {
-        "project": "webgme-json",
-        "path": "node_modules/webgme-json/src/plugins/ExportJSON"
-      },
-      "ImportJSON": {
-        "project": "webgme-json",
-        "path": "node_modules/webgme-json/src/plugins/ImportJSON"
-      },
-      "ModelToJSON": {
-        "project": "webgme-json",
-        "path": "node_modules/webgme-json/src/plugins/ModelToJSON"
-      },
-      "JSONToModel": {
-        "project": "webgme-json",
-        "path": "node_modules/webgme-json/src/plugins/JSONToModel"
-      },
-      "CreateConfig": {
-        "project": "webgme-json",
-        "path": "node_modules/webgme-json/src/plugins/CreateConfig"
-      },
-      "ExportOntology": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/plugins/ExportOntology"
-      },
-      "ExportToJSONSchema": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/plugins/ExportToJSONSchema"
-      },
-      "SetStateFromJSON": {
-        "project": "webgme-json-importer",
-        "path": "node_modules/webgme-json-importer/src/plugins/SetStateFromJSON"
-      },
-      "ExportToJSON": {
-        "project": "webgme-json-importer",
-        "path": "node_modules/webgme-json-importer/src/plugins/ExportToJSON"
-      },
-      "ExportSearchFilterData": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/plugins/ExportSearchFilterData"
-      }
-    },
-    "routers": {
-      "Search": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/Search",
-        "mount": "routers/Search"
-      },
-      "TagFormat": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/TagFormat",
-        "mount": "routers/TagFormat"
-      },
-      "TagCreator": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/TagCreator",
-        "mount": "routers/TagCreator"
-      },
-      "JSONSchema": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/JSONSchema",
-        "mount": "routers/JSONSchema"
-      },
-      "Dashboard": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/routers/Dashboard",
-        "mount": "routers/Dashboard"
-      }
-    },
-    "seeds": {
-      "taxonomy": {
-        "project": "webgme-taxonomy",
-        "path": "node_modules/webgme-taxonomy/src/seeds/taxonomy"
-      },
-      "test": {
-        "project": "webgme-json-importer",
-        "path": "node_modules/webgme-json-importer/src/seeds/test"
-      }
-    }
+    "plugins": {},
+    "routers": {},
+    "seeds": {}
   }
 }

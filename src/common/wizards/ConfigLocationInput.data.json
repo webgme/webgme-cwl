@@ -1,0 +1,19 @@
+{
+    "title": "Configure - location based input",
+    "description": "Edit the configuration of your location based input",
+    "type": "object",
+    "required":["name", "location"],
+    "properties": {
+        "name":{
+            "type":"string",
+            "not":{
+                "enum":[]
+            }
+        },
+        "location":{
+            "type":"string",
+            "description":"relative - to the execution directory - or static path of the file/directory argument in the execution context"
+        }
+
+    }
+}

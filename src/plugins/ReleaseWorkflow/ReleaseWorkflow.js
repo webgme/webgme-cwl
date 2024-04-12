@@ -12,17 +12,19 @@
     'text!./metadata.json',
     'plugin/PluginBase',
     'q',
-    'superagent'
+    'superagent',
+    'webgme-cwl/config'
 ], function (
     PluginConfig,
     pluginMetadata,
     PluginBase,
     Q,
-    superagent) {
+    superagent,
+    CONFIG) {
     'use strict';
 
     pluginMetadata = JSON.parse(pluginMetadata);
-
+    const myConf = CONFIG.getMyConfig([pluginMetadata.name]);
     /**
      * Initializes a new instance of ReleaseWorkflow.
      * @class
@@ -34,17 +36,6 @@
         // Call base class' constructor.
         PluginBase.call(this);
         this.pluginMetadata = pluginMetadata;
-    }
-
-    function makeid() {
-        const length = 16;
-        let result = '';
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        const charactersLength = characters.length;
-        for (let i = 0; i < length; i += 1 ) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-       return 'rel_' + result;
     }
 
     /**
@@ -68,22 +59,28 @@
      * @param {function(Error|null, plugin.PluginResult)} callback - the result callback
      */
     ReleaseWorkflow.prototype.main = function (callback) {
-        const {core, logger, activeNode, project, result, commitHash} = this;
-        const executionId = makeid();
+        const fetch = require('node-fetch');
+        const {core, logger, activeNode, project, result, commitHash, __aadToken} = this;
+        const executionId = CONFIG.makeid();
         const saveDirectory = './OUTPUT/' + executionId;  //TODO how to properly set this and create a temporary directory
         const fs = require('fs').promises;
         const path = require('path');
         const currentConfig = this.getCurrentConfig();
         const workflowName = core.getAttribute(activeNode, 'name');
+
+        // console.log('AAD:', this.__aadToken);
         // 87dc1607-5d63-4073-9424-720f86ecef43 - workflow process
         // const previousReleasePDP = core.getAttribute(nodeObject,'pdpId') || '98df2486-153f-4ce0-93bf-c06cdd94657a_1';
         // const previousVersion = core.getAttribute(nodeObject, 'version') || 0;
         // const previousIndexPDP = previousReleasePDP.split('_')[1]; //TODO proper index needed from get status or sg
         // console.log(this.currentHash, this.commitHash, this.branchHash);
-        this.getUpcomingTag(currentConfig.isMajor)
-        .then(tag => {
-            return project.createTag(tag, commitHash);
+        this.buildNodes()
+        .then(()=> {
+            return this.stampProject();
         })
+        /*.then(tag => {
+            return project.createTag(tag, commitHash);
+        })*/
         .then(() => {return fs.mkdir(saveDirectory);})
         .then(() => {return fs.mkdir(saveDirectory+'/cwl');})
         .then(() => {return fs.mkdir(saveDirectory+'/cwl/cwl');})
@@ -93,7 +90,7 @@
         })
         .then(innerResult => {
             if(!innerResult.success || !innerResult.messages[0]) {
-                throw new Error ('cannot get the exchange format of thw workflow!');
+                throw new Error ('cannot get the exchange format of the workflow!');
             }
 
             return fs.writeFile(
@@ -118,40 +115,12 @@
                 throw new Error('unable to generate the workflow artifacts!!');
             }
             const timeStamp = new Date();
-            const releaseMetadata = {
-                taxonomyVersion:{
-                    id:"AllLeap+TaxonomyBootcamp",
-                    branch:"master",
-                    commit:"#a6ca25a503ed11f3c004c60b0308c4aab4293e65",
-                    url:"wellcomewebgme.centralus.cloudapp.azure.com"
-                },
-                taxonomyTags:[
-                    {
-                        Workflow:{
-                            type:{
-                                value:currentConfig.workflowType
-                            }
-                        }
-                    },
-                    {
-                        Workflow:{
-                            source:{
-                                url:project.projectId + '_@_' + commitHash
-                            }
-                        }
-                    },
-                    {
-                        Base:{
-                            uploadTime:{
-                                value: timeStamp.toString()
-                            }
-                        }
-                    }
-                ]
-            };
+            console.log('CONF:', JSON.stringify(myConf, null, 2));
+            const releaseMetadata = this.composeMetadata(currentConfig);
+            console.log('METADATA:', JSON.stringify(releaseMetadata, null, 2));
             return fs.writeFile(
                 saveDirectory+'/metadata.json', 
-                JSON.stringify(releaseMetadata)
+                JSON.stringify(releaseMetadata, null, 2)
             );
 
         })
@@ -174,14 +143,19 @@
             // const pushing = spawn('./release.sh', [],{cwd:saveDirectory});
             const pushing = spawn('java',
                 ['-jar',
-                'leap_cli.jar',
+                '-Dspring.profiles.active=passthrough',
+                process.env.LEAP_CLI + 'leap_cli.jar',
                 'upload', 
                 '-d', 
                 './' + executionId +'/cwl',
                 '-p',
-                '87dc1607-5d63-4073-9424-720f86ecef43',
+                myConf.processId,
+                '-t',
+                __aadToken,
                 '-f',
-                './' + executionId + '/metadata.json'],
+                './' + executionId + '/metadata.json',
+                '-m',
+                workflowName],
                 {cwd:path.normalize('OUTPUT')}
             );
             pushing.stdout.on('data', (data) => {
@@ -226,6 +200,9 @@
             return fs.rm(saveDirectory, { recursive: true });
         })
         .then(() => {
+            return this.save('releasing at [' + composeUri() + ']');
+        })
+        .then(() => {
             result.setSuccess(true);
             return callback(null, result);
         })
@@ -235,19 +212,137 @@
         });
     };
 
+    ReleaseWorkflow.prototype.buildNodes = function () {
+        const nodes = {};
+        const {core} = this;
+        const deferred = Q.defer();
+        core.loadSubTree(this.activeNode)
+        .then(nodesraw => {
+            nodesraw.forEach(node => {
+                nodes[core.getPath(node)] = node;
+            });
+
+            this._nodes = nodes;
+            deferred.resolve(null);
+        })
+        .catch(deferred.reject);
+        return deferred.promise;
+    };
+
     ReleaseWorkflow.prototype.getUpcomingTag = function (isMajor) {
         //TODO - need to figure out proper versioning
         const {core, logger, activeNode, project, result} = this;
         const deferred = Q.defer();
+        console.log(Object.keys(project));
         project.getTags()
         .then(tags => {
-            // console.log(tags);
+            console.log('TAGS:', tags);
             const mytags = {};
-            deferred.resolve(makeid());
+            deferred.resolve(CONFIG.makeid());
         })
         .catch(deferred.reject);
 
         return deferred.promise;
+    };
+    ReleaseWorkflow.prototype.stampProject = function () {
+        const fetch = require('node-fetch');
+        const deferred = Q.defer();
+        const {core, logger, activeNode, project, __aadToken} = this;
+        let nextIndex = -1;
+        let nextIndexTxt = 'na';
+        const composeUri = () => {
+            return 'pdp://leappremonitiondev.azurewebsites.net/demoworkflow/87dc1607-5d63-4073-9424-720f86ecef43/' + nextIndex +'/0';
+        };
+
+        fetch('https://leappremonitiondev.azurewebsites.net/v2/Process/GetProcessState?processId=87dc1607-5d63-4073-9424-720f86ecef43',
+            {
+                method:'GET',
+                headers:{
+                    accept:'application/json',
+                    Authorization:'Bearer ' + __aadToken
+                }
+            }
+        )
+        .then(response => {
+            // console.log('RESP',response);
+            return response.json();
+        })
+        .then(jsonResponse => {
+            console.log('JSONRESPONSE:', jsonResponse);
+            nextIndex = jsonResponse.numObservations;
+            nextIndexTxt = '_rel_' + jsonResponse.numObservations;
+
+            core.setAttribute(activeNode, 'previousUri', core.getAttribute(activeNode, 'uri') || 'none');
+            core.setAttribute(activeNode, 'uri', composeUri());
+            // return project.createTag(nextIndex)
+            return Q(null);
+        })
+        .then(deferred.resolve)
+        .catch(e=> {
+            logger.error(e);
+            deferred.reject(e);
+        });
+
+        return deferred.promise;
+    }
+
+    ReleaseWorkflow.prototype.composeMetadata = function(config) {
+        /**
+         * 0. composite === has subworkflow
+         * 1. needsDataLakeAccess === has FetchFromPDP step
+         * 2. source === url pointing to this 
+         * 3. type === whatever the user selected at plugin triggering
+         * + taxonomyVersion === coming from the config file
+         */
+
+        const {core, activeNode, META, _nodes, project, commitHash} = this;
+        const metadata = {};
+
+
+        let hasFetchStep = false;
+        let hasPDPIdInput = false;
+        let hasSubflow = false;
+        core.getChildrenPaths(activeNode).forEach(childId => {
+            const child = _nodes[childId];
+            if(core.isInstanceOf(child, META.PDPiD)) {
+                hasPDPIdInput = true;
+            }
+            if(core.isInstanceOf(child, META.FetchFromPDP)) {
+                hasFetchStep = true;
+            }
+            if(core.isInstanceOf(child, META.Workflow)) {
+                hasSubflow = true;
+            }
+        });
+
+        metadata.taxonomyVersion = myConf.taxonomy;
+        metadata.taxonomyTags = [];
+        
+        if(hasSubflow) {
+            metadata.taxonomyTags.push({
+                Workflow: {
+                    isComposite: {}
+            }});
+        }
+        
+        if(hasFetchStep && hasPDPIdInput) {
+            metadata.taxonomyTags.push({
+                Workflow: {
+                    needsDataLakeAccess: {}
+            }});
+        }
+
+        metadata.taxonomyTags.push({
+            Workflow: {
+                source: {
+                    url:project.projectId + '_@_' + commitHash
+            }
+        }});
+
+        const tag = {Workflow:{type:{value:{}}}};
+        tag.Workflow.type.value[config.workflowType] = {};
+        metadata.taxonomyTags.push(tag);
+        return metadata;
     };
 
     ReleaseWorkflow.prototype.getInputDependency = function () {

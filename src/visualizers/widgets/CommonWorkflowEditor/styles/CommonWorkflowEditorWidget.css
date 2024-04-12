@@ -6,5 +6,4 @@
  * simply write css if you prefer
  */
 
-.common-workflow-editor {
-  outline: none; }
+@import "CommonWorkflowEditorWidget.bundle.css"

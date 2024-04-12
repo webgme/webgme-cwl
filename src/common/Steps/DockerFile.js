@@ -2,11 +2,12 @@
 define(['./ports'], function (Ports) {
   return function(stepNode, context) {
       const result = [];
-      const {core, META, inputs, outputs, nodes} = context;
+      const {core, META, inputs, outputs, nodes, artifatcs} = context;
       const stepCwl = {
           cwlVersion:'v1.1',
           class:'CommandLineTool',
           requirements: {
+              NetworkAccess: {networkAccess: true},
               InlineJavascriptRequirement:{},
               DockerRequirement: {
                 dockerFile: core.getAttribute(stepNode,'dockerfile')
@@ -31,7 +32,7 @@ define(['./ports'], function (Ports) {
       }
 
       inputs.forEach(input => {
-        Ports.processInput(core, META, nodes[input], stepCwl);
+        Ports.processInput(core, META, nodes[input], stepCwl, artifacts);
       });
 
       outputs.forEach(output => {
